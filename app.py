@@ -19,7 +19,6 @@ else:
 
 
 # --- 1. Configuração da API do GitHub ---
-# GITHUB_TOKEN = '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' # SUBSTITUA PELO SEU TOKEN REAL
 HEADERS = {
     'Authorization': f'token {GITHUB_TOKEN}',
     'Accept': 'application/vnd.github.v3+json'
