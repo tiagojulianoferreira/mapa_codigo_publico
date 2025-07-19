@@ -2,6 +2,8 @@
 
 Este projeto é uma ferramenta simples baseada em web para visualizar e filtrar repositórios GitHub de instituições federais brasileiras. Ele exibe informações como linguagens de programação, licenças, estrelas e datas de atualização, além de fornecer estatísticas globais e por instituição.
 
+Contruido com auxílio do Gemini.
+
 ## Como Usar
 
 1.  Certifique-se de ter um arquivo `repositorios_federais.json` no mesmo diretório que `index.html` e `style.css`. Este arquivo JSON deve conter os dados dos repositórios.
