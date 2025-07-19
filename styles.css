@@ -250,15 +250,63 @@ main {
     border-collapse: collapse;
     margin-top: 20px;
     font-size: 0.95em;
+    /* Adicionar table-layout fixed para controle de largura de coluna */
+    table-layout: fixed; /* Isso permite que as larguras de coluna sejam definidas explicitamente ou via conteúdo, mas evita que uma coluna "empurre" as outras desnecessariamente */
 }
 
 .results-section th,
 .results-section td {
     border: 1px solid var(--border-color);
-    padding: 12px 15px;
+    /* Diminuir o padding para reduzir a largura das colunas */
+    padding: 8px 10px; /* Era 12px 15px; */
     text-align: left;
-    vertical-align: top; /* Garante que o conteúdo comece no topo da célula */
+    vertical-align: top;
+    word-wrap: break-word; /* Para garantir que palavras longas quebrem e não estourem a célula */
 }
+
+/* Ajustar larguras de colunas específicas para a tabela de repositórios.
+   As porcentagens devem somar 100% ou um pouco menos para a largura da borda.
+   Ajuste estes valores conforme a prioridade de cada coluna. */
+.results-section th:nth-child(1), /* Nome do Repositório */
+.results-section td:nth-child(1) {
+    width: 25%; /* Mais espaço para o nome do repositório */
+}
+
+.results-section th:nth-child(2), /* Sigla Instituição */
+.results-section td:nth-child(2) {
+    width: 10%; /* Sigla pode ser menor */
+}
+
+.results-section th:nth-child(3), /* Descrição */
+.results-section td:nth-child(3) {
+    width: 30%; /* Descrição precisa de um bom espaço */
+}
+
+.results-section th:nth-child(4), /* Linguagem Principal */
+.results-section td:nth-child(4) {
+    width: 12%;
+}
+
+.results-section th:nth-child(5), /* Estrelas */
+.results-section td:nth-child(5) {
+    width: 8%;
+}
+
+.results-section th:nth-child(6), /* Licença */
+.results-section td:nth-child(6) {
+    width: 8%;
+}
+
+.results-section th:nth-child(7), /* Última Atualização */
+.results-section td:nth-child(7) {
+    width: 10%;
+}
+
+.results-section th:nth-child(8), /* Cluster ID */
+.results-section td:nth-child(8) {
+    width: 7%;
+}
+
 
 .results-section th {
     background-color: #f0f4f7;
@@ -305,9 +353,17 @@ main {
 
 /* Descrição e meta dados do repositório na tabela */
 .results-section td .repo-description {
-    font-size: 0.85em;
+    font-size: 0.8em; /* Levemente menor para caber mais texto */
     color: #777;
     margin-top: 5px;
+    /* Adicionar estilos para truncar a descrição e evitar quebra de layout */
+    white-space: normal; /* Permite quebrar a linha */
+    max-height: 3.6em; /* Aproximadamente 3 linhas de texto com font-size 0.8em e line-height 1.6 */
+    overflow: hidden;
+    text-overflow: ellipsis; /* Adiciona reticências se o texto for cortado */
+    display: -webkit-box; /* Para multi-linha ellipsis no WebKit (Chrome, Safari) */
+    -webkit-line-clamp: 3; /* Limita a 3 linhas */
+    -webkit-box-orient: vertical;
 }
 
 /* Estilos para mensagens de carregamento/erro */
@@ -331,7 +387,7 @@ main {
 
 /* --- NOVOS ESTILOS PARA FILTROS DE COLUNA --- */
 #allReposTable thead #filterRow th {
-    padding: 5px 15px; /* Reduz o padding para os inputs */
+    padding: 5px 10px; /* Reduz o padding para os inputs */
     background-color: #f2f2f2;
 }
 .filter-input {
