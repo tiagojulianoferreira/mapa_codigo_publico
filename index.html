@@ -134,7 +134,7 @@
 
             async function fetchAndDisplayData() {
                 try {
-                    const response = await fetch('repositorios_federais.json');
+                    const response = await fetch('repositorios_federais_filtrado_idioma.json');
                     if (!response.ok) {
                         throw new Error(`Erro ao carregar o JSON: ${response.statusText}`);
                     }
