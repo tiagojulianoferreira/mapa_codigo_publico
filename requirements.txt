@@ -1,2 +1,6 @@
 pandas
 requests
+langdetect
+scikit-learn
+nltk
+dotenv

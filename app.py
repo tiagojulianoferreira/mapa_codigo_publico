@@ -2,9 +2,24 @@ import pandas as pd
 import requests
 import json
 import time
+from dotenv import load_dotenv
+import os
+
+# Carrega as variáveis de ambiente do arquivo .env
+load_dotenv()
+
+# Obtém o valor do token
+GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")
+
+# Verifica se o token foi encontrado
+if GITHUB_TOKEN:
+    print(f"Token encontrado: {GITHUB_TOKEN}")
+else:
+    print("Token não encontrado no arquivo .env")
+
 
 # --- 1. Configuração da API do GitHub ---
-GITHUB_TOKEN = 'PERSONAL TOKEN GITHUB' # SUBSTITUA PELO SEU TOKEN REAL
+# GITHUB_TOKEN = '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' # SUBSTITUA PELO SEU TOKEN REAL
 HEADERS = {
     'Authorization': f'token {GITHUB_TOKEN}',
     'Accept': 'application/vnd.github.v3+json'
@@ -96,9 +111,9 @@ def generate_institutions_repos_json(institutions_df, search_column):
 
 if __name__ == "__main__":
     # Carregue o CSV de Institutos
-    institutos_df = load_institutions_data('institutos_federais.csv')
+    institutos_df = load_institutions_data('dados/institutos_federais.csv')
     # Carregue o CSV de Universidades
-    universidades_df = load_institutions_data('universidades_federais.csv')
+    universidades_df = load_institutions_data('dados/universidades_federais.csv')
 
     all_institutions_json_data = []
 
