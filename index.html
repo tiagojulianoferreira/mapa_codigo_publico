@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repositórios de Instituições Federais</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><i class="fas fa-university"></i> Repositórios de Instituições Federais no GitHub</h1>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="filters-section card">
+            <h2><i class="fas fa-filter"></i> Filtros de Busca</h2>
+            <div class="filters-grid">
+                <div class="filter-group">
+                    <label for="generalSearchInput">Buscar:</label>
+                    <input type="text" id="generalSearchInput" placeholder="Instituição, repositório, descrição...">
+                </div>
+                
+                <div class="filter-group">
+                    <label for="languageFilter">Linguagem:</label>
+                    <select id="languageFilter">
+                        <option value="">Todas</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label for="licenseFilter">Licença:</label>
+                    <select id="licenseFilter">
+                        <option value="">Todas</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group filter-actions">
+                    <button id="clearFilters" class="btn-clear"><i class="fas fa-broom"></i> Limpar Filtros</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="global-stats-section card">
+            <h2><i class="fas fa-chart-bar"></i> Estatísticas Globais (com filtros aplicados)</h2>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h3>Total de Repositórios</h3>
+                    <p id="totalReposGlobal">0</p>
+                </div>
+                <div class="stat-item">
+                    <h3>Linguagem Mais Usada</h3>
+                    <p id="mostUsedLanguageGlobal">N/A</p>
+                </div>
+                <div class="stat-item">
+                    <h3>Licença Mais Usada</h3>
+                    <p id="mostUsedLicenseGlobal">N/A</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="top-repos-section card">
+            <h2><i class="fas fa-fire"></i> Top 5 Repositórios Mais Ativos (Global)</h2>
+            <div class="table-responsive">
+                <table id="topReposTable">
+                    <thead>
+                        <tr>
+                            <th>Repositório</th>
+                            <th>Instituição</th>
+                            <th>Linguagem</th>
+                            <th>Estrelas</th>
+                            <th>Última Atualização</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td colspan="5" class="loading-message">Carregando Top Repositórios...</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <p id="noTopReposMessage" class="hidden">Nenhum repositório ativo encontrado.</p>
+        </section>
+
+
+        <section class="results-section card">
+            <h2><i class="fas fa-list-alt"></i> Resultados da Busca</h2>
+            <div class="table-responsive">
+                <table id="institutionsTable">
+                    <thead>
+                        <tr>
+                            <th>Sigla</th>
+                            <th>Nome Completo</th>
+                            <th>Site Oficial</th>
+                            <th class="stat-col">Estatísticas da Instituição</th>
+                            <th id="sortRepos" class="sortable">Repositórios no GitHub <i class="fas fa-sort"></i></th> </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td colspan="5" class="loading-message">Carregando dados...</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <p id="noResultsMessage" class="hidden">Nenhuma instituição ou repositório encontrado com os filtros aplicados.</p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Mapeamento de Repositórios. Dados do <a href="https://github.com" target="_blank">GitHub</a>.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const institutionsTableBody = document.querySelector('#institutionsTable tbody');
+            const noResultsMessage = document.getElementById('noResultsMessage');
+            const topReposTableBody = document.querySelector('#topReposTable tbody'); // Novo
+            const noTopReposMessage = document.getElementById('noTopReposMessage'); // Novo
+
+            const generalSearchInput = document.getElementById('generalSearchInput');
+            const languageFilter = document.getElementById('languageFilter');
+            const licenseFilter = document.getElementById('licenseFilter');
+            const clearFiltersBtn = document.getElementById('clearFilters');
+            const sortReposHeader = document.getElementById('sortRepos'); // Novo
+
+            const totalReposGlobal = document.getElementById('totalReposGlobal');
+            const mostUsedLanguageGlobal = document.getElementById('mostUsedLanguageGlobal');
+            const mostUsedLicenseGlobal = document.getElementById('mostUsedLicenseGlobal');
+
+            let allInstitutionsData = [];
+            let availableLanguages = new Set();
+            let availableLicenses = new Set();
+            let sortOrder = 'desc'; // 'desc' para mais recente, 'asc' para mais antigo
+
+            async function fetchAndDisplayData() {
+                try {
+                    const response = await fetch('repositorios_federais.json');
+                    if (!response.ok) {
+                        throw new Error(`Erro ao carregar o JSON: ${response.statusText}`);
+                    }
+                    allInstitutionsData = await response.json();
+                    
+                    allInstitutionsData.forEach(institution => {
+                        institution.Repositorios.forEach(repo => {
+                            if (repo['Linguagem Principal'] && repo['Linguagem Principal'] !== 'N/A') {
+                                availableLanguages.add(repo['Linguagem Principal']);
+                            }
+                            if (repo.Licenca && repo.Licenca !== 'N/A') {
+                                availableLicenses.add(repo.Licenca);
+                            }
+                        });
+                    });
+                    populateFilter(languageFilter, Array.from(availableLanguages).sort());
+                    populateFilter(licenseFilter, Array.from(availableLicenses).sort());
+                    
+                    applyFilters(); // Aplica os filtros iniciais ao carregar os dados
+                } catch (error) {
+                    console.error("Erro ao carregar ou processar os dados:", error);
+                    institutionsTableBody.innerHTML = `<tr><td colspan="5" class="error-message">Não foi possível carregar os dados: ${error.message}. Por favor, verifique se o arquivo 'repositorios_federais.json' existe e está no diretório correto.</td></tr>`;
+                    topReposTableBody.innerHTML = `<tr><td colspan="5" class="error-message">Erro ao carregar top repositórios: ${error.message}.</td></tr>`; // Erro para top repos
+                }
+            }
+
+            function populateFilter(selectElement, optionsArray) {
+                selectElement.innerHTML = '<option value="">Todas</option>';
+                optionsArray.forEach(optionText => {
+                    const option = document.createElement('option');
+                    option.value = optionText;
+                    option.textContent = optionText;
+                    selectElement.appendChild(option);
+                });
+            }
+
+            function getMostCommon(list) {
+                if (list.length === 0) return 'N/A';
+                const counts = {};
+                let maxCount = 0;
+                let mostCommonItem = 'N/A';
+
+                for (const item of list) {
+                    counts[item] = (counts[item] || 0) + 1;
+                    if (counts[item] > maxCount) {
+                        maxCount = counts[item];
+                        mostCommonItem = item;
+                    }
+                }
+                return mostCommonItem;
+            }
+
+            function updateGlobalStatistics(filteredInstitutionsData) {
+                let totalRepos = 0;
+                const allLanguages = [];
+                const allLicenses = [];
+
+                filteredInstitutionsData.forEach(institution => {
+                    totalRepos += institution.Repositorios.length;
+                    institution.Repositorios.forEach(repo => {
+                        if (repo['Linguagem Principal'] && repo['Linguagem Principal'] !== 'N/A') {
+                            allLanguages.push(repo['Linguagem Principal']);
+                        }
+                        if (repo.Licenca && repo.Licenca !== 'N/A') {
+                            allLicenses.push(repo.Licenca);
+                        }
+                    });
+                });
+
+                totalReposGlobal.textContent = totalRepos;
+                mostUsedLanguageGlobal.textContent = getMostCommon(allLanguages);
+                mostUsedLicenseGlobal.textContent = getMostCommon(allLicenses);
+            }
+
+            // NOVA FUNÇÃO: Exibir Top 5 Repositórios Mais Ativos
+            function displayTop5ActiveRepos(filteredInstitutionsData) {
+                topReposTableBody.innerHTML = '';
+                noTopReposMessage.classList.add('hidden');
+
+                const allRepos = [];
+                filteredInstitutionsData.forEach(inst => {
+                    inst.Repositorios.forEach(repo => {
+                        allRepos.push({
+                            ...repo,
+                            institutionSigla: inst.Sigla // Adiciona a sigla da instituição ao repo
+                        });
+                    });
+                });
+
+                // Ordena por data de atualização (mais recente primeiro)
+                allRepos.sort((a, b) => {
+                    const dateA = new Date(a['Ultima Atualizacao'] || 0);
+                    const dateB = new Date(b['Ultima Atualizacao'] || 0);
+                    return dateB.getTime() - dateA.getTime();
+                });
+
+                const top5Repos = allRepos.slice(0, 5);
+
+                if (top5Repos.length === 0) {
+                    noTopReposMessage.classList.remove('hidden');
+                    return;
+                }
+
+                top5Repos.forEach(repo => {
+                    const row = topReposTableBody.insertRow();
+                    row.insertCell().innerHTML = `<a href="${repo['Link de Acesso']}" target="_blank">${repo['Nome do Repositório']}</a>`;
+                    row.insertCell().textContent = repo.institutionSigla;
+                    row.insertCell().textContent = repo['Linguagem Principal'] || 'N/A';
+                    row.insertCell().textContent = `${repo.Estrelas} ⭐`;
+                    row.insertCell().textContent = repo['Ultima Atualizacao'] ? new Date(repo['Ultima Atualizacao']).toLocaleDateString('pt-BR') : 'N/A';
+                });
+            }
+
+
+            function displayInstitutions(data) {
+                institutionsTableBody.innerHTML = ''; 
+                noResultsMessage.classList.add('hidden'); 
+
+                if (data.length === 0) {
+                    noResultsMessage.classList.remove('hidden');
+                    return;
+                }
+
+                // Aplica a ordenação global dos repositórios dentro de cada instituição
+                data.forEach(institution => {
+                    institution.Repositorios.sort((a, b) => {
+                        const dateA = new Date(a['Ultima Atualizacao'] || 0);
+                        const dateB = new Date(b['Ultima Atualizacao'] || 0);
+                        if (sortOrder === 'desc') {
+                            return dateB.getTime() - dateA.getTime(); // Mais recente primeiro
+                        } else {
+                            return dateA.getTime() - dateB.getTime(); // Mais antigo primeiro
+                        }
+                    });
+                });
+
+                data.forEach(institution => {
+                    const filteredRepos = institution.Repositorios; 
+
+                    const row = institutionsTableBody.insertRow();
+                    row.insertCell().textContent = institution.Sigla;
+                    row.insertCell().textContent = institution['Nome Completo'];
+                    
+                    const urlCell = row.insertCell();
+                    if (institution['URL Oficial'] && institution['URL Oficial'] !== 'N/A') {
+                        const link = document.createElement('a');
+                        link.href = institution['URL Oficial'];
+                        link.target = '_blank';
+                        link.textContent = 'Site Oficial';
+                        urlCell.appendChild(link);
+                    } else {
+                        urlCell.textContent = 'N/A';
+                    }
+
+                    const institutionStatsCell = row.insertCell();
+                    institutionStatsCell.className = 'institution-stats-cell';
+
+                    const institutionLanguages = filteredRepos.map(repo => repo['Linguagem Principal']).filter(l => l && l !== 'N/A');
+                    const institutionLicenses = filteredRepos.map(repo => repo.Licenca).filter(l => l && l !== 'N/A');
+
+                    institutionStatsCell.innerHTML = `
+                        <p><strong>Total Repos:</strong> ${filteredRepos.length}</p>
+                        <p><strong>Linguagem Mais Usada:</strong> ${getMostCommon(institutionLanguages)}</p>
+                        <p><strong>Licença Mais Usada:</strong> ${getMostCommon(institutionLicenses)}</p>
+                    `;
+
+                    const reposCell = row.insertCell();
+                    if (filteredRepos.length > 0) {
+                        const repoList = document.createElement('ul');
+                        repoList.className = 'repo-list';
+                        filteredRepos.forEach(repo => {
+                            const listItem = document.createElement('li');
+                            listItem.innerHTML = `
+                                <a href="${repo['Link de Acesso']}" target="_blank">
+                                    ${repo['Nome do Repositório']} 
+                                    <span class="repo-meta">(${repo['Linguagem Principal'] || 'N/A'} | ${repo.Estrelas} ⭐)</span>
+                                </a>
+                                <p class="repo-description">${repo.Descricao || 'Sem descrição.'}</p>
+                            `;
+                            repoList.appendChild(listItem);
+                        });
+                        reposCell.appendChild(repoList);
+                    } else {
+                        const noReposText = document.createElement('span');
+                        noReposText.textContent = 'Nenhum repositório relevante.';
+                        reposCell.appendChild(noReposText);
+                    }
+                });
+            }
+
+            function applyFilters() {
+                const generalSearchTerm = generalSearchInput.value.toLowerCase().trim();
+                const selectedLanguage = languageFilter.value;
+                const selectedLicense = licenseFilter.value;
+
+                const filteredData = allInstitutionsData.map(institution => {
+                    const institutionMatchesGeneralSearch = institution.Sigla.toLowerCase().includes(generalSearchTerm) ||
+                                                            institution['Nome Completo'].toLowerCase().includes(generalSearchTerm);
+
+                    const reposMatchingSpecificFilters = institution.Repositorios.filter(repo => {
+                        const languageMatch = selectedLanguage === '' || (repo['Linguagem Principal'] && repo['Linguagem Principal'] === selectedLanguage);
+                        const licenseMatch = selectedLicense === '' || (repo.Licenca && repo.Licenca === selectedLicense);
+                        
+                        const repoMatchesGeneralSearch = repo['Nome do Repositório'].toLowerCase().includes(generalSearchTerm) ||
+                                                        repo.Descricao.toLowerCase().includes(generalSearchTerm) ||
+                                                        (repo['Linguagem Principal'] && repo['Linguagem Principal'].toLowerCase().includes(generalSearchTerm));
+
+                        return languageMatch && licenseMatch && repoMatchesGeneralSearch;
+                    });
+
+                    return { ...institution, Repositorios: reposMatchingSpecificFilters };
+                }).filter(institution => {
+                    return (generalSearchTerm && institutionMatchesGeneralSearch) || (institution.Repositorios.length > 0);
+                });
+
+                updateGlobalStatistics(filteredData);
+                displayTop5ActiveRepos(filteredData); // Atualiza os top 5 repositórios
+                displayInstitutions(filteredData);
+            }
+
+            // Event Listeners
+            generalSearchInput.addEventListener('input', applyFilters);
+            languageFilter.addEventListener('change', applyFilters);
+            licenseFilter.addEventListener('change', applyFilters);
+            
+            clearFiltersBtn.addEventListener('click', () => {
+                generalSearchInput.value = '';
+                languageFilter.value = '';
+                licenseFilter.value = '';
+                sortOrder = 'desc'; // Reseta a ordem ao limpar
+                sortReposHeader.querySelector('.fas').className = 'fas fa-sort'; // Reseta ícone
+                applyFilters();
+            });
+
+            // NOVA LÓGICA DE ORDENAÇÃO
+            sortReposHeader.addEventListener('click', () => {
+                sortOrder = (sortOrder === 'desc') ? 'asc' : 'desc'; // Alterna a ordem
+                const icon = sortReposHeader.querySelector('.fas');
+                if (sortOrder === 'desc') {
+                    icon.className = 'fas fa-sort-down'; // Seta para baixo
+                } else {
+                    icon.className = 'fas fa-sort-up'; // Seta para cima
+                }
+                applyFilters(); // Re-aplica filtros para re-renderizar com a nova ordem
+            });
+
+            fetchAndDisplayData();
+        });
+    </script>
+</body>
+</html>
