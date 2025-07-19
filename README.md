@@ -1,6 +1,6 @@
 # Mapeamento de Repositórios de Instituições Federais no GitHub
 
-Este projeto é uma ferramenta simples baseada em web para visualizar e filtrar repositórios GitHub de instituições federais brasileiras. Ele exibe informações como linguagens de programação, licenças, estrelas e datas de atualização, além de fornecer estatísticas globais e por instituição.
+Ferramenta simples baseada em web para visualizar e filtrar repositórios GitHub de instituições federais brasileiras. Ele exibe informações como linguagens de programação, licenças, estrelas e datas de atualização, além de fornecer estatísticas globais e por instituição.
 
 Contruido com auxílio do Gemini.
 
