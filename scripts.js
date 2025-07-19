@@ -29,12 +29,17 @@ document.addEventListener('DOMContentLoaded', () => {
     const clustersTbody = document.getElementById('clustersTbody');
     const noClustersMessage = document.getElementById('noClustersMessage');
 
+    // === Elementos de Paginação ADICIONADOS ===
+    const prevPageBtn = document.getElementById('prevPageBtn');
+    const nextPageBtn = document.getElementById('nextPageBtn');
+    const pageInfoSpan = document.getElementById('pageInfo');
+
 
     // === Variáveis de Dados ===
     let allInstitutionsData = []; // Dados brutos das instituições (do JSON)
     let clusterDescriptions = []; // Descrições dos clusters (do JSON)
     let allFlattenedRepos = []; // Todos os repositórios, achatados em uma lista
-    let calculatedTop10Languages = []; // NOVO: Para armazenar as top 5 linguagens calculadas
+    let calculatedTopLanguages = []; // Para armazenar as top 5 linguagens calculadas
 
     let availableLanguages = new Set();
     let availableLicenses = new Set();
@@ -45,6 +50,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Objeto para armazenar os valores dos filtros de coluna
     let columnFilters = {};
+
+    // === Variáveis de Paginação ADICIONADAS ===
+    let currentPage = 1;
+    const itemsPerPage = 50; // Defina quantos itens você quer por página
+    let currentFilteredAndSortedRepos = []; // Armazena os repositórios após filtros e ordenação, antes da paginação
 
 
     // === Lógica de Carregamento de Dados ===
@@ -82,7 +92,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     // Coleta linguagens disponíveis para o filtro
                     if (repo['Linguagem Principal'] && repo['Linguagem Principal'] !== 'N/A' && repo['Linguagem Principal'] !== 'null') {
                         availableLanguages.add(repo['Linguagem Principal']);
-                        // Conta a linguagem para o ranking top 5
+                        // Conta a linguagem para o ranking top 
                         const lang = repo['Linguagem Principal'];
                         tempLanguageCounts[lang] = (tempLanguageCounts[lang] || 0) + 1;
                     }
@@ -93,8 +103,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
             });
 
-            // Calcula as top 5 linguagens com base na contagem
-            calculatedTop5Languages = Object.entries(tempLanguageCounts)
+            // Calcula as top linguagens com base na contagem
+            calculatedTopLanguages = Object.entries(tempLanguageCounts)
                 .map(([language, count]) => ({ language, count }))
                 .sort((a, b) => b.count - a.count) // Ordena em ordem decrescente de contagem
                 .slice(0, 10); // Pega apenas as 5 primeiras
@@ -103,8 +113,10 @@ document.addEventListener('DOMContentLoaded', () => {
             populateFilter(licenseFilter, Array.from(availableLicenses).sort());
             
             populateClustersTable(); // Popula a tabela de clusters
-            displayTop5LanguagesTable(calculatedTop5Languages); // NOVO: Passa os dados calculados
-            applyFiltersAndDisplay(); // Aplica todos os filtros e exibe os dados
+            displayTopLanguagesTable(calculatedTopLanguages); // Passa os dados calculados
+
+            // Após carregar os dados, aplica filtros e exibe a primeira página
+            applyFiltersAndDisplay(); 
 
         } catch (error) {
             console.error("Erro ao carregar ou processar os dados:", error);
@@ -150,8 +162,7 @@ document.addEventListener('DOMContentLoaded', () => {
         mostUsedLicenseGlobal.textContent = getMostCommon(allLicenses);
     }
 
-    // NOVO: Função para exibir a tabela das 5 linguagens mais utilizadas (agora recebe dados)
-    function displayTop5LanguagesTable(data) {
+    function displayTopLanguagesTable(data) {
         topLanguagesTbody.innerHTML = ''; // Limpa o conteúdo atual da tabela
         noTopLanguagesMessage.classList.add('hidden'); // Oculta a mensagem de "nenhuma linguagem"
 
@@ -173,6 +184,8 @@ document.addEventListener('DOMContentLoaded', () => {
         topReposTbody.innerHTML = '';
         noTopReposMessage.classList.add('hidden');
 
+        // Note: top 10 ativos ainda usa allFlattenedRepos, não os filtrados da tabela principal.
+        // Se quiser que seja os 10 mais ativos *dentre os filtrados*, mude reposData para currentFilteredAndSortedRepos
         const activeRepos = reposData.filter(repo => repo['Ultima Atualizacao'])
                                      .sort((a, b) => new Date(b['Ultima Atualizacao']).getTime() - new Date(a['Ultima Atualizacao']).getTime());
 
@@ -193,21 +206,22 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    function displayAllReposTable(repos) {
+    // MODIFICADA para receber APENAS os repositórios da página atual
+    function displayAllReposTable(reposOnCurrentPage) {
         allReposTbody.innerHTML = '';
-        if (repos.length === 0) {
+        if (reposOnCurrentPage.length === 0) {
             const row = allReposTbody.insertRow();
             const cell = row.insertCell();
             const numCols = document.querySelectorAll('#allReposTable thead th').length;
             cell.colSpan = numCols; 
-            cell.textContent = 'Nenhum repositório encontrado com os filtros aplicados.';
+            cell.textContent = 'Nenhum repositório encontrado com os filtros e paginação aplicados.';
             cell.style.textAlign = 'center';
             cell.style.fontStyle = 'italic';
             cell.classList.add('no-results-message');
             return;
         }
 
-        repos.forEach(repo => {
+        reposOnCurrentPage.forEach(repo => {
             const row = allReposTbody.insertRow();
             
             const repoNameCell = row.insertCell();
@@ -244,6 +258,16 @@ document.addEventListener('DOMContentLoaded', () => {
             row.insertCell().textContent = cluster.id;
             row.insertCell().textContent = cluster.description || 'N/A';
         });
+    }
+
+    // === Nova Função para Atualizar os Controles de Paginação ===
+    function updatePaginationControls() {
+        const totalItems = currentFilteredAndSortedRepos.length;
+        const totalPages = Math.ceil(totalItems / itemsPerPage);
+
+        pageInfoSpan.textContent = `Página ${currentPage} de ${totalPages || 1}`;
+        prevPageBtn.disabled = (currentPage === 1);
+        nextPageBtn.disabled = (currentPage === totalPages || totalPages === 0);
     }
 
 
@@ -305,7 +329,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                     
                     // Verifica se o valor da coluna COMEÇA COM o valor do filtro
-                    // Para 'contém' em vez de 'começa com', mude para: !repoValue.toLowerCase().includes(filterValue)
                     if (!repoValue.toLowerCase().startsWith(filterValue)) { 
                         return false; // Se não corresponder a este filtro de coluna, a linha não é incluída
                     }
@@ -342,10 +365,28 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
 
-        // --- 4. Atualizar Estatísticas e Renderizar Tabelas ---
-        updateGlobalStatistics(dataToProcess); // Atualiza estatísticas com base nos dados filtrados e ordenados
+        // === NOVO: Salva os dados filtrados e ordenados antes da paginação ===
+        currentFilteredAndSortedRepos = dataToProcess;
+
+        // === NOVO: Resetar a página para 1 se os filtros ou a ordenação mudarem ===
+        // Isso evita que o usuário fique em uma página que não existe mais após filtrar
+        const totalPagesAfterFilter = Math.ceil(currentFilteredAndSortedRepos.length / itemsPerPage);
+        if (currentPage > totalPagesAfterFilter && totalPagesAfterFilter > 0) {
+            currentPage = totalPagesAfterFilter;
+        } else if (totalPagesAfterFilter === 0) {
+            currentPage = 1; // Se não houver resultados, volta para a página 1
+        }
+        
+        // --- 4. Aplicar Paginação ---
+        const startIndex = (currentPage - 1) * itemsPerPage;
+        const endIndex = startIndex + itemsPerPage;
+        const reposToDisplay = currentFilteredAndSortedRepos.slice(startIndex, endIndex);
+
+        // --- 5. Atualizar Estatísticas e Renderizar Tabelas ---
+        updateGlobalStatistics(currentFilteredAndSortedRepos); // Estatísticas com base nos dados filtrados (total antes da paginação)
         displayTop10ActiveRepos(allFlattenedRepos); // Top 10 ainda é global, usa todos os dados
-        displayAllReposTable(dataToProcess); // Renderiza a tabela principal com os dados filtrados/ordenados
+        displayAllReposTable(reposToDisplay); // Renderiza a tabela principal APENAS com a página atual
+        updatePaginationControls(); // Atualiza os botões e info da paginação
     }
 
     // === Event Listeners ===
@@ -381,6 +422,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 icon.className = 'fas fa-sort'; // Volta para a seta neutra
             }
         });
+
+        // Reseta a paginação para a primeira página
+        currentPage = 1;
 
         applyFiltersAndDisplay(); // Re-aplica filtros e re-renderiza
     });
@@ -418,10 +462,30 @@ document.addEventListener('DOMContentLoaded', () => {
                     currentIcon.className = `fas fa-sort-${currentSortDirection === 'asc' ? 'up' : 'down'}`;
                 }
 
+                // Ao mudar a ordenação, volta para a primeira página
+                currentPage = 1;
+
                 applyFiltersAndDisplay(); // Chama a função que filtra e ordena (com a nova ordenação)
             });
         }
     });
+
+    // === Event Listeners para Paginação ADICIONADOS ===
+    prevPageBtn.addEventListener('click', () => {
+        if (currentPage > 1) {
+            currentPage--;
+            applyFiltersAndDisplay();
+        }
+    });
+
+    nextPageBtn.addEventListener('click', () => {
+        const totalPages = Math.ceil(currentFilteredAndSortedRepos.length / itemsPerPage);
+        if (currentPage < totalPages) {
+            currentPage++;
+            applyFiltersAndDisplay();
+        }
+    });
+
 
     // === Inicia o Carregamento dos Dados ===
     fetchAndProcessData();

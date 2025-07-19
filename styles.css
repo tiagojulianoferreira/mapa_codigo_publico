@@ -1,14 +1,18 @@
 /* Importar uma fonte do Google Fonts para um visual mais moderno */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300,400,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300,400,500,700&display=swap');
 
 :root {
-    --primary-color: #0056b3; /* Azul escuro */
-    --secondary-color: #007bff; /* Azul vibrante */
-    --background-color: #f4f7f6; /* Cinza claro */
+    /* Cores atualizadas para um visual mais moderno e suave */
+    --primary-color: #0d6efd; /* Azul principal mais vibrante */
+    --secondary-color: #0b5ed7; /* Tom um pouco mais escuro para hover/ativo */
+    --accent-color: #28a745; /* Cor de destaque (verde) para botões de sucesso ou ícones */
+    --background-color: #f8f9fa; /* Fundo muito claro */
     --card-background: #ffffff;
-    --text-color: #333;
-    --border-color: #e0e0e0;
-    --shadow-light: 0 4px 10px rgba(0, 0, 0, 0.05);
+    --text-color: #212529; /* Texto escuro padrão */
+    --light-text-color: #6c757d; /* Texto secundário */
+    --border-color: #dee2e6; /* Borda sutil */
+    --shadow-light: 0 0.5rem 1.2rem rgba(0, 0, 0, 0.08); /* Sombra mais difundida e suave */
+    --transition-speed: 0.3s ease;
 }
 
 body {
@@ -21,64 +25,81 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    font-weight: 400; /* Peso padrão da fonte */
 }
 
 header {
     background-color: var(--primary-color);
     color: white;
-    padding: 30px 20px;
+    padding: 40px 20px; /* Mais padding no header */
     text-align: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--shadow-light);
+    position: sticky; /* Sticky header */
+    top: 0;
+    z-index: 1000;
 }
 
 header h1 {
     margin: 0;
-    font-size: 2.5em;
+    font-size: 2.8em; /* Tamanho maior para o título */
     font-weight: 700;
+    letter-spacing: -0.5px; /* Ajuste sutil no espaçamento de letras */
 }
 
 header p {
-    font-size: 1.1em;
-    margin-top: 10px;
+    font-size: 1.2em; /* Tamanho maior para a descrição */
+    margin-top: 15px;
+    font-weight: 300; /* Mais leve para o parágrafo */
+    opacity: 0.9;
+}
+
+header i.fas {
+    margin-right: 10px;
+    font-size: 0.9em; /* Tamanho do ícone um pouco menor em relação ao texto */
 }
 
 main {
-    max-width: 1200px;
-    margin: 30px auto;
-    padding: 0 20px;
+    max-width: 1280px; /* Aumentar um pouco a largura máxima do conteúdo */
+    margin: 40px auto; /* Mais margin para um visual arejado */
+    padding: 0 25px;
     flex-grow: 1;
 }
 
 .container {
-    max-width: 1200px; /* Garante que o container dentro do main também respeite o limite */
-    margin: 0 auto; /* Centraliza o container */
+    max-width: 1280px;
+    margin: 0 auto;
 }
 
 .card {
     background-color: var(--card-background);
     border-radius: 12px;
     box-shadow: var(--shadow-light);
-    padding: 30px;
-    margin-bottom: 30px;
-    border: 1px solid var(--border-color);
+    padding: 35px; /* Mais padding dentro dos cards */
+    margin-bottom: 35px; /* Mais espaçamento entre cards */
+    border: none; /* Remover borda, a sombra é suficiente */
 }
 
 .card h2 {
     color: var(--primary-color);
     margin-top: 0;
-    margin-bottom: 25px;
-    font-size: 1.8em;
-    font-weight: 700;
+    margin-bottom: 28px; /* Mais espaço abaixo do título do card */
+    font-size: 2em; /* Tamanho maior para títulos de seção */
+    font-weight: 600;
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px; /* Mais espaço entre ícone e texto */
+}
+
+.card h2 i.fas {
+    color: var(--secondary-color); /* Ícones com a cor secundária */
+    font-size: 0.9em; /* Tamanho do ícone um pouco menor em relação ao título */
 }
 
 .filters-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 15px;
-    margin-bottom: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Min-width um pouco maior */
+    gap: 20px; /* Mais espaçamento */
+    margin-bottom: 25px;
 }
 
 .filter-group {
@@ -87,297 +108,324 @@ main {
 }
 
 .filters-grid label {
-    margin-bottom: 5px;
+    margin-bottom: 8px; /* Mais espaço abaixo do label */
     font-weight: 500;
-    color: #555;
+    color: var(--text-color);
+    font-size: 0.95em;
 }
 
 .filters-grid input[type="text"],
 .filters-grid select {
-    padding: 12px;
+    padding: 13px; /* Mais padding nos inputs */
     border: 1px solid var(--border-color);
-    border-radius: 8px;
+    border-radius: 10px; /* Cantos mais arredondados */
     font-size: 1em;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    transition: all var(--transition-speed);
     width: 100%;
     box-sizing: border-box;
+    background-color: #fefefe; /* Fundo levemente off-white */
+    color: var(--text-color);
+}
+
+.filters-grid input[type="text"]::placeholder {
+    color: var(--light-text-color); /* Placeholder mais suave */
+    opacity: 0.7;
 }
 
 .filters-grid input[type="text"]:focus,
 .filters-grid select:focus {
-    border-color: var(--secondary-color);
-    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 4px rgba(13, 110, 253, 0.25); /* Sombra de foco mais marcante */
     outline: none;
+    background-color: white;
 }
 
 .filter-actions {
     display: flex;
-    align-items: flex-end; /* Alinha o botão com a base dos inputs */
-    padding-top: 20px; /* Para alinhar o botão */
+    align-items: flex-end;
+    padding-top: 25px; /* Mais padding para alinhar o botão */
 }
 
 .btn-clear {
     background-color: #dc3545; /* Vermelho para limpar */
     color: white;
-    padding: 12px 20px;
+    padding: 13px 25px; /* Mais padding no botão */
     border: none;
-    border-radius: 8px;
+    border-radius: 10px; /* Cantos mais arredondados */
     font-size: 1em;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color var(--transition-speed), transform 0.1s ease;
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 10px; /* Mais espaço entre ícone e texto */
+    font-weight: 500;
 }
 
 .btn-clear:hover {
     background-color: #c82333;
+    transform: translateY(-2px); /* Efeito sutil ao passar o mouse */
 }
+
+.btn-clear:active {
+    transform: translateY(0);
+}
+
 
 /* Estilos para estatísticas globais */
 .stats-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 25px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px; /* Mais espaçamento */
     font-size: 1.1em;
-    font-weight: 600;
-    color: #555;
+    font-weight: 500;
+    color: var(--light-text-color);
+    text-align: center;
 }
 
 .stat-item h3 {
     margin-top: 0;
-    margin-bottom: 5px;
-    font-size: 1.2em;
-    color: #666;
+    margin-bottom: 10px;
+    font-size: 1.3em; /* Tamanho maior */
+    color: var(--primary-color);
+    font-weight: 600;
 }
 
 .stat-item p {
     margin: 0;
-    font-size: 1.8em;
+    font-size: 2.2em; /* Tamanho maior para os números */
     font-weight: 700;
-    color: var(--primary-color);
+    color: var(--secondary-color);
+    line-height: 1; /* Para evitar quebras de linha estranhas */
 }
 
-/* Estilos para a Tabela Top Repos (top-repos-section) */
-.top-repos-section table {
+/* Estilos para Tabelas em Geral (aplicado a top repos, top languages, clusters e todos os repos) */
+.table-responsive {
+    overflow-x: auto; /* Permite scroll horizontal se a tabela for muito larga */
+    -webkit-overflow-scrolling: touch; /* Melhor scroll em dispositivos iOS */
+    border-radius: 10px; /* Arredondar cantos do container da tabela */
+    border: 1px solid var(--border-color); /* Borda sutil para o container */
+}
+
+table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 20px;
+    margin-top: 0; /* Removido margin-top para que a tabela se ajuste ao card */
     font-size: 0.95em;
+    min-width: 700px; /* Garante que a tabela não fique muito estreita em telas menores */
 }
 
-.top-repos-section th,
-.top-repos-section td {
-    border: 1px solid var(--border-color);
-    padding: 12px 15px;
+th, td {
+    border: none; /* Remover bordas internas das células */
+    padding: 15px 18px; /* Mais padding para um visual mais limpo */
     text-align: left;
+    vertical-align: middle; /* Alinhar texto verticalmente ao centro */
+    white-space: normal; /* Permite quebrar linha normalmente */
+    word-wrap: break-word; /* Garante que palavras longas quebrem */
 }
 
-.top-repos-section th {
-    background-color: #f0f4f7;
+thead th {
+    background-color: #e9ecef; /* Um cinza mais claro para o cabeçalho */
     font-weight: 600;
     color: var(--text-color);
+    position: sticky; /* Sticky header para rolagem */
+    top: 0;
+    z-index: 10;
 }
 
-.top-repos-section tbody tr:nth-child(even) {
-    background-color: #f9f9f9;
+tbody tr:nth-child(even) {
+    background-color: #f8f9fa; /* Listra mais sutil para linhas pares */
 }
 
-.top-repos-section tbody tr:hover {
-    background-color: #f0f0f0;
+tbody tr:hover {
+    background-color: #e2e6ea; /* Destaque mais suave ao passar o mouse */
+    transition: background-color var(--transition-speed);
 }
 
-.top-repos-section td a {
-    color: var(--secondary-color);
+td a {
+    color: var(--primary-color);
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 500;
+    transition: color var(--transition-speed);
 }
 
-.top-repos-section td a:hover {
+td a:hover {
+    color: var(--secondary-color);
     text-decoration: underline;
 }
 
-/* Estilos para a Seção de Clusters */
-.cluster-info-section h2 {
-    text-align: center;
-    margin-bottom: 30px;
+/* --- Estilos específicos para a Tabela de Todos os Repositórios (results-section) --- */
+#allReposTable {
+    table-layout: fixed; /* Isso é crucial para o controle de largura de coluna */
 }
 
-.cluster-info-section .disclaimer {
-    text-align: center;
-    font-style: italic;
-    color: #777;
-    margin-bottom: 20px;
-    padding: 10px;
-    background-color: #e9f5ff; /* Um fundo suave para o aviso */
-    border-left: 5px solid var(--secondary-color);
-    border-radius: 5px;
+#allReposTable th:nth-child(1), /* Nome do Repositório */
+#allReposTable td:nth-child(1) {
+    width: 20%; 
 }
 
-.cluster-info-section table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-    font-size: 0.95em;
+#allReposTable th:nth-child(2), /* Instituição */
+#allReposTable td:nth-child(2) {
+    width: 10%; 
 }
 
-.cluster-info-section th,
-.cluster-info-section td {
-    border: 1px solid var(--border-color);
-    padding: 12px 15px;
-    text-align: left;
-    vertical-align: top;
+#allReposTable th:nth-child(3), /* Descrição */
+#allReposTable_td:nth-child(3) { /* Atenção: TD deve ser uma classe ou regra mais específica */
+    width: 25%; 
 }
 
-.cluster-info-section th {
-    background-color: #f0f4f7;
-    font-weight: 600;
-    color: var(--text-color);
-}
-
-.cluster-info-section tbody tr:nth-child(even) {
-    background-color: #f9f9f9;
-}
-
-.cluster-info-section tbody tr:hover {
-    background-color: #f0f0f0;
-}
-
-
-/* Estilos para a Tabela de Repositórios (results-section) */
-.results-section table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-    font-size: 0.95em;
-    /* Adicionar table-layout fixed para controle de largura de coluna */
-    table-layout: fixed; /* Isso permite que as larguras de coluna sejam definidas explicitamente ou via conteúdo, mas evita que uma coluna "empurre" as outras desnecessariamente */
-}
-
-.results-section th,
-.results-section td {
-    border: 1px solid var(--border-color);
-    /* Diminuir o padding para reduzir a largura das colunas */
-    padding: 8px 10px; /* Era 12px 15px; */
-    text-align: left;
-    vertical-align: top;
-    word-wrap: break-word; /* Para garantir que palavras longas quebrem e não estourem a célula */
-}
-
-/* Ajustar larguras de colunas específicas para a tabela de repositórios.
-   As porcentagens devem somar 100% ou um pouco menos para a largura da borda.
-   Ajuste estes valores conforme a prioridade de cada coluna. */
-.results-section th:nth-child(1), /* Nome do Repositório */
-.results-section td:nth-child(1) {
-    width: 25%; /* Mais espaço para o nome do repositório */
-}
-
-.results-section th:nth-child(2), /* Sigla Instituição */
-.results-section td:nth-child(2) {
-    width: 10%; /* Sigla pode ser menor */
-}
-
-.results-section th:nth-child(3), /* Descrição */
-.results-section td:nth-child(3) {
-    width: 30%; /* Descrição precisa de um bom espaço */
-}
-
-.results-section th:nth-child(4), /* Linguagem Principal */
-.results-section td:nth-child(4) {
-    width: 12%;
-}
-
-.results-section th:nth-child(5), /* Estrelas */
-.results-section td:nth-child(5) {
-    width: 8%;
-}
-
-.results-section th:nth-child(6), /* Licença */
-.results-section td:nth-child(6) {
-    width: 8%;
-}
-
-.results-section th:nth-child(7), /* Última Atualização */
-.results-section td:nth-child(7) {
+#allReposTable th:nth-child(4), /* Linguagem Principal */
+#allReposTable td:nth-child(4) {
     width: 10%;
 }
 
-.results-section th:nth-child(8), /* Cluster ID */
-.results-section td:nth-child(8) {
+#allReposTable th:nth-child(5), /* Estrelas */
+#allReposTable td:nth-child(5) {
+    width: 8%;
+}
+
+#allReposTable th:nth-child(6), /* Licença */
+#allReposTable td:nth-child(6) {
+    width: 10%;
+}
+
+#allReposTable th:nth-child(7), /* Última Atualização */
+#allReposTable td:nth-child(7) {
+    width: 10%;
+}
+
+#allReposTable th:nth-child(8), /* Cluster ID */
+#allReposTable td:nth-child(8) {
     width: 7%;
 }
 
 
-.results-section th {
-    background-color: #f0f4f7;
-    font-weight: 600;
-    color: var(--text-color);
-    position: relative;
-    cursor: pointer; /* Indica que o cabeçalho é clicável para ordenação */
+/* Estilos para ordenação */
+#allReposTable th {
+    cursor: pointer;
+    user-select: none; /* Impede seleção de texto ao clicar para ordenar */
+    transition: background-color var(--transition-speed);
 }
 
-.results-section th i.fas {
+#allReposTable th:hover {
+    background-color: #dbe1e6;
+}
+
+#allReposTable th i.fas {
     margin-left: 8px;
     color: #999;
-    transition: transform 0.2s ease;
+    transition: transform 0.2s ease, color var(--transition-speed);
 }
 
-/* Setas de ordenação */
-.results-section th.asc i.fas {
-    transform: rotate(0deg); /* Seta para cima */
+#allReposTable th.asc i.fas {
+    transform: rotate(0deg);
     color: var(--secondary-color);
 }
 
-.results-section th.desc i.fas {
-    transform: rotate(180deg); /* Seta para baixo */
+#allReposTable th.desc i.fas {
+    transform: rotate(180deg);
     color: var(--secondary-color);
 }
 
-.results-section tbody tr:nth-child(even) {
-    background-color: #f9f9f9;
+/* --- NOVOS ESTILOS PARA FILTROS DE COLUNA --- */
+#allReposTable thead #filterRow th {
+    padding: 8px 10px; /* Reduz o padding para os inputs */
+    background-color: #f2f2f2;
+    border-bottom: 1px solid var(--border-color); /* Uma borda sutil no fundo dos filtros */
+}
+.filter-input {
+    width: calc(100% - 10px); /* Ajusta a largura do input */
+    padding: 8px; /* Mais padding */
+    border: 1px solid var(--border-color);
+    border-radius: 8px; /* Cantos arredondados */
+    box-sizing: border-box;
+    font-size: 0.9em;
+    background-color: #ffffff;
+    transition: all var(--transition-speed);
+    color: var(--text-color);
+}
+.filter-input:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.2); /* Sombra de foco mais suave */
 }
 
-.results-section tbody tr:hover {
-    background-color: #f0f0f0;
+/* --- Estilos para a Seção de Clusters --- */
+.cluster-info-section .disclaimer {
+    text-align: center;
+    font-style: italic;
+    color: var(--light-text-color);
+    margin-bottom: 25px;
+    padding: 15px;
+    background-color: #e0f2f7; /* Um azul muito claro */
+    border-left: 5px solid var(--primary-color);
+    border-radius: 8px;
+    font-size: 0.95em;
+    line-height: 1.5;
 }
 
-.results-section td a {
-    color: var(--secondary-color);
-    text-decoration: none;
-    font-weight: 600;
+/* --- Estilos para Paginação --- */
+.pagination-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px; /* Mais espaço acima dos controles */
+    gap: 15px; /* Espaço entre os elementos de paginação */
 }
 
-.results-section td a:hover {
-    text-decoration: underline;
+.pagination-controls .btn {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 12px 20px; /* Mais padding nos botões */
+    border: none;
+    border-radius: 10px; /* Cantos mais arredondados */
+    font-size: 1em;
+    cursor: pointer;
+    transition: all var(--transition-speed);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 500;
 }
 
-/* Descrição e meta dados do repositório na tabela */
-.results-section td .repo-description {
-    font-size: 0.8em; /* Levemente menor para caber mais texto */
-    color: #777;
-    margin-top: 5px;
-    /* Adicionar estilos para truncar a descrição e evitar quebra de layout */
-    white-space: normal; /* Permite quebrar a linha */
-    max-height: 3.6em; /* Aproximadamente 3 linhas de texto com font-size 0.8em e line-height 1.6 */
-    overflow: hidden;
-    text-overflow: ellipsis; /* Adiciona reticências se o texto for cortado */
-    display: -webkit-box; /* Para multi-linha ellipsis no WebKit (Chrome, Safari) */
-    -webkit-line-clamp: 3; /* Limita a 3 linhas */
-    -webkit-box-orient: vertical;
+.pagination-controls .btn:hover:not(:disabled) {
+    background-color: var(--secondary-color);
+    transform: translateY(-2px);
 }
 
-/* Estilos para mensagens de carregamento/erro */
+.pagination-controls .btn:active {
+    transform: translateY(0);
+}
+
+.pagination-controls .btn:disabled {
+    background-color: #e9ecef; /* Cor cinza mais clara para desabilitado */
+    color: #a0a0a0;
+    cursor: not-allowed;
+    opacity: 0.8;
+    box-shadow: none;
+    transform: none;
+}
+
+.pagination-controls #pageInfo {
+    font-size: 1.2em; /* Tamanho maior para a informação da página */
+    font-weight: 500;
+    color: var(--text-color);
+    min-width: 140px; /* Garante que o texto da página não quebre muito */
+    text-align: center;
+}
+
+/* --- Mensagens --- */
 .loading-message,
 .error-message,
 .no-results-message {
     text-align: center;
-    padding: 15px;
+    padding: 20px;
     font-weight: 500;
-    color: #666;
+    color: var(--light-text-color);
+    font-size: 1.1em;
 }
 
 .error-message {
-    color: #dc3545;
+    color: #dc3545; /* Vermelho para erro */
     font-weight: 600;
 }
 
@@ -385,134 +433,119 @@ main {
     display: none;
 }
 
-/* --- NOVOS ESTILOS PARA FILTROS DE COLUNA --- */
-#allReposTable thead #filterRow th {
-    padding: 5px 10px; /* Reduz o padding para os inputs */
-    background-color: #f2f2f2;
-}
-.filter-input {
-    width: calc(100% - 10px); /* Ajusta a largura do input */
-    padding: 5px;
-    border: 1px solid var(--border-color);
-    border-radius: 4px;
-    box-sizing: border-box; /* Inclui padding e border na largura */
-    font-size: 0.9em;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
-}
-.filter-input:focus {
-    border-color: var(--secondary-color);
-    outline: none;
-    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
-}
-/* --- FIM NOVOS ESTILOS --- */
-
-/* --- NOVOS ESTILOS PARA A SEÇÃO TOP LANGUAGES --- */
-.top-languages-section {
-    margin-bottom: 30px; /* Garante espaçamento consistente entre as seções */
-}
-
-.top-languages-section h2 {
-    /* Já está definido no .card h2, mas pode ser ajustado se necessário */
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-#topLanguagesTable {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-    font-size: 0.95em;
-}
-
-#topLanguagesTable th,
-#topLanguagesTable td {
-    border: 1px solid var(--border-color);
-    padding: 12px 15px;
-    text-align: left;
-}
-
-#topLanguagesTable th {
-    background-color: #f0f4f7;
-    font-weight: 600;
-    color: var(--text-color);
-}
-
-#topLanguagesTable tbody tr:nth-child(even) {
-    background-color: #f9f9f9;
-}
-
-#topLanguagesTable tbody tr:hover {
-    background-color: #f0f0f0;
-}
-
-/* Estilo para a mensagem de "nenhuma linguagem" */
-#noTopLanguagesMessage {
-    text-align: center;
-    font-style: italic;
-    color: #666;
-    padding: 20px;
-}
-/* --- FIM NOVOS ESTILOS PARA A SEÇÃO TOP LANGUAGES --- */
-
-
 /* Estilos para o rodapé */
 footer {
     text-align: center;
-    padding: 20px;
-    margin-top: 30px;
+    padding: 30px 20px; /* Mais padding */
+    margin-top: 50px; /* Mais espaço acima do rodapé */
     background-color: var(--primary-color);
     color: white;
-    font-size: 0.9em;
+    font-size: 0.95em;
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.05);
+    font-weight: 300;
 }
 
 footer a {
     color: white;
     text-decoration: underline;
+    transition: opacity var(--transition-speed);
+}
+
+footer a:hover {
+    opacity: 0.8;
 }
 
 /* Media Queries para responsividade geral */
 @media (max-width: 992px) {
-    /* .chart-grid não existe mais no HTML, mas mantida por segurança se você a reintroduzir */
-    /* .chart-grid { 
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    } */
+    main {
+        margin: 30px auto;
+        padding: 0 15px;
+    }
+    .card {
+        padding: 25px;
+    }
+    .filters-grid {
+        gap: 15px;
+    }
+    .stats-grid {
+        gap: 20px;
+    }
 }
 
 @media (max-width: 768px) {
     header h1 {
-        font-size: 1.8em;
+        font-size: 2em;
     }
-
-    main {
+    header p {
+        font-size: 1em;
+    }
+    .card h2 {
+        font-size: 1.7em;
+        margin-bottom: 20px;
+    }
+    .main {
         margin: 20px 10px;
         padding: 0 10px;
     }
-
     .card {
         padding: 20px;
     }
-
     .filters-grid,
     .stats-grid {
         grid-template-columns: 1fr; /* Uma coluna em celulares */
     }
 
-    /* .chart-grid não existe mais no HTML, mas mantida por segurança se você a reintroduzir */
-    /* .chart-grid { 
-        grid-template-columns: 1fr;
-    } */
-
     /* Permite scroll horizontal em tabelas pequenas */
     .table-responsive {
         display: block;
         overflow-x: auto;
-        white-space: nowrap; /* Impede quebra de linha do texto da tabela */
+        white-space: nowrap; /* Impede quebra de linha inicial, mas word-wrap still applies in cells */
     }
 
-    .results-section th,
-    .results-section td {
-        padding: 8px 10px;
+    th, td {
+        padding: 10px 12px;
+        font-size: 0.9em;
+    }
+
+    /* Reduzir um pouco mais a largura das colunas em telas menores */
+    #allReposTable th:nth-child(1), #allReposTable td:nth-child(1) { width: 22%; } /* Nome */
+    #allReposTable th:nth-child(2), #allReposTable td:nth-child(2) { width: 10%; } /* Instituição */
+    #allReposTable th:nth-child(3), #allReposTable td:nth-child(3) { width: 28%; } /* Descrição */
+    #allReposTable th:nth-child(4), #allReposTable td:nth-child(4) { width: 10%; } /* Linguagem */
+    #allReposTable th:nth-child(5), #allReposTable td:nth-child(5) { width: 8%; } /* Estrelas */
+    #allReposTable th:nth-child(6), #allReposTable td:nth-child(6) { width: 10%; } /* Licença */
+    #allReposTable th:nth-child(7), #allReposTable td:nth-child(7) { width: 10%; } /* Atualização */
+    #allReposTable th:nth-child(8), #allReposTable td:nth-child(8) { width: 7%; } /* Cluster */
+
+    .pagination-controls {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 20px;
+    }
+    .pagination-controls .btn {
+        width: 100%;
+        max-width: 200px;
+        justify-content: center;
+    }
+    .pagination-controls #pageInfo {
+        margin: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5em;
+    }
+    .card h2 {
+        font-size: 1.5em;
+        flex-direction: column;
+        text-align: center;
+    }
+    .card h2 i.fas {
+        margin-bottom: 5px;
+    }
+    .btn-clear {
+        width: 100%;
+        justify-content: center;
     }
 }

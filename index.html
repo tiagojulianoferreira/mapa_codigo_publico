@@ -4,166 +4,167 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Repositórios de Instituições Federais</title>
-    <link rel="stylesheet" href="styles.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <div class="container">
-            <h1><i class="fas fa-university"></i> Repositórios de Instituições Federais no GitHub</h1>
-        </div>
+        <h1><a href=index.html> <i class="fas fa-university"></i></a>Repositórios de Código Aberto das IFs</h1>
+        <p>Explore os projetos de software livre desenvolvidos e mantidos por Instituições Federais de Ensino.</p>
     </header>
 
-    <main class="container">
-        <section class="filters-section card">
-            <h2><i class="fas fa-filter"></i> Filtros de Busca</h2>
-            <div class="filters-grid">
-                <div class="filter-group">
-                    <label for="generalSearchInput">Buscar:</label>
-                    <input type="text" id="generalSearchInput" placeholder="Instituição, repositório, descrição...">
-                </div>
-                
-                <div class="filter-group">
-                    <label for="languageFilter">Linguagem:</label>
-                    <select id="languageFilter">
-                        <option value="">Todas</option>
-                    </select>
-                </div>
+    <main>
+        <div class="container">
 
-                <div class="filter-group">
-                    <label for="licenseFilter">Licença:</label>
-                    <select id="licenseFilter">
-                        <option value="">Todas</option>
-                    </select>
+            <section id="filters-section" class="card">
+                <h2><i class="fas fa-filter"></i> Filtros Globais</h2>
+                <div class="filters-grid">
+                    <div class="filter-group">
+                        <label for="generalSearchInput">Busca Geral:</label>
+                        <input type="text" id="generalSearchInput" placeholder="Buscar por nome, descrição, instituição...">
+                    </div>
+                    <div class="filter-group">
+                        <label for="languageFilter">Linguagem Principal:</label>
+                        <select id="languageFilter">
+                            <option value="">Todas</option>
+                            </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="licenseFilter">Licença:</label>
+                        <select id="licenseFilter">
+                            <option value="">Todas</option>
+                            </select>
+                    </div>
+                    <div class="filter-actions">
+                        <button id="clearFilters" class="btn-clear"><i class="fas fa-times"></i> Limpar Filtros</button>
+                    </div>
                 </div>
-                
-                <div class="filter-group filter-actions">
-                    <button id="clearFilters" class="btn-clear"><i class="fas fa-broom"></i> Limpar Filtros</button>
-                </div>
-            </div>
-        </section>
+            </section>
 
-        <section class="global-stats-section card">
-            <h2><i class="fas fa-chart-bar"></i> Estatísticas Globais (com filtros aplicados)</h2>
-            <div class="stats-grid">
-                <div class="stat-item">
-                    <h3>Total de Repositórios</h3>
-                    <p id="totalReposGlobal">0</p>
+            <section id="stats-section" class="card">
+                <h2><i class="fas fa-chart-bar"></i> Estatísticas Globais</h2>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <h3>Total de Repositórios:</h3>
+                        <p id="totalReposGlobal">0</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>Repositórios Filtrados:</h3>
+                        <p id="filteredReposCount">0</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>Linguagem + Usada:</h3>
+                        <p id="mostUsedLanguageGlobal">N/A</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>Licença + Usada:</h3>
+                        <p id="mostUsedLicenseGlobal">N/A</p>
+                    </div>
                 </div>
-                <div class="stat-item">
-                    <h3>Linguagem Mais Usada</h3>
-                    <p id="mostUsedLanguageGlobal">N/A</p>
+            </section>
+            
+            <section id="top-languages-section" class="card">
+                <h2><i class="fas fa-code"></i> Top 5 Linguagens Mais Usadas</h2>
+                <div class="table-responsive">
+                    <table id="topLanguagesTable">
+                        <thead>
+                            <tr>
+                                <th>Posição</th>
+                                <th>Linguagem</th>
+                                <th>Repositórios</th>
+                            </tr>
+                        </thead>
+                        <tbody id="topLanguagesTbody">
+                            <tr><td colspan="3" class="loading-message">Carregando linguagens...</td></tr>
+                        </tbody>
+                    </table>
+                    <p id="noTopLanguagesMessage" class="no-results-message hidden">Nenhuma linguagem principal encontrada para exibir.</p>
                 </div>
-                <div class="stat-item">
-                    <h3>Licença Mais Usada</h3>
-                    <p id="mostUsedLicenseGlobal">N/A</p>
+            </section>
+
+            <section id="top-repos-section" class="card">
+                <h2><i class="fas fa-fire"></i> Top 10 Repositórios Mais Ativos</h2>
+                <div class="table-responsive">
+                    <table id="topReposTable">
+                        <thead>
+                            <tr>
+                                <th>Nome do Repositório</th>
+                                <th>Instituição</th>
+                                <th>Linguagem</th>
+                                <th>Estrelas</th>
+                                <th>Última Atualização</th>
+                            </tr>
+                        </thead>
+                        <tbody id="topReposTbody">
+                            <tr><td colspan="5" class="loading-message">Carregando top repositórios...</td></tr>
+                        </tbody>
+                    </table>
+                    <p id="noTopReposMessage" class="no-results-message hidden">Nenhum repositório ativo encontrado para exibir.</p>
                 </div>
-                <div class="stat-item">
-                    <h3>Repositórios Exibidos</h3>
-                    <p id="filteredReposCount">0</p>
+            </section>
+
+            <section id="cluster-info-section" class="card">
+                <h2><i class="fas fa-sitemap"></i> Descrição dos Clusters</h2>
+                <p class="disclaimer">Os clusters são grupos de repositórios semanticamente relacionados, identificados através de técnicas de processamento de linguagem natural (NLP) sobre suas descrições e nomes.</p>
+                <div class="table-responsive">
+                    <table id="clustersTable">
+                        <thead>
+                            <tr>
+                                <th>ID do Cluster</th>
+                                <th>Descrição do Cluster</th>
+                            </tr>
+                        </thead>
+                        <tbody id="clustersTbody">
+                            <tr><td colspan="2" class="loading-message">Carregando descrições dos clusters...</td></tr>
+                        </tbody>
+                    </table>
+                    <p id="noClustersMessage" class="no-results-message hidden">Nenhuma descrição de cluster encontrada.</p>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <section class="top-languages-section card">
-            <h2><i class="fas fa-code"></i> Top 10 Linguagens Mais Utilizadas (no Dataset)</h2>
-            <div class="table-responsive">
-                <table id="topLanguagesTable">
-                    <thead>
-                        <tr>
-                            <th>Posição</th>
-                            <th>Linguagem de Programação</th>
-                            <th>Número de Repositórios</th>
-                        </tr>
-                    </thead>
-                    <tbody id="topLanguagesTbody">
-                        <tr><td colspan="3" class="loading-message">Carregando linguagens...</td></tr>
-                    </tbody>
-                </table>
-            </div>
-            <p id="noTopLanguagesMessage" class="hidden">Nenhuma linguagem principal encontrada.</p>
-        </section>
+            <section id="results-section" class="card">
+                <h2><i class="fas fa-list-alt"></i> Todos os Repositórios</h2>
+                <div class="table-responsive">
+                    <table id="allReposTable">
+                        <thead>
+                            <tr id="headerRow">
+                                <th data-sort-key="Nome do Repositório">Nome do Repositório <i class="fas fa-sort"></i></th>
+                                <th data-sort-key="SiglaInstituicao">Instituição <i class="fas fa-sort"></i></th>
+                                <th data-sort-key="Descricao">Descrição <i class="fas fa-sort"></i></th>
+                                <th data-sort-key="Linguagem Principal">Linguagem <i class="fas fa-sort"></i></th>
+                                <th data-sort-key="Estrelas">Estrelas <i class="fas fa-sort"></i></th>
+                                <th data-sort-key="Licenca">Licença <i class="fas fa-sort"></i></th>
+                                <th data-sort-key="Ultima Atualizacao">Última Atualização <i class="fas fa-sort"></i></th>
+                                <th data-sort-key="Cluster_ID">Cluster <i class="fas fa-sort"></i></th>
+                            </tr>
+                            <tr id="filterRow">
+                                <th><input type="text" class="filter-input" data-filter-key="Nome do Repositório" placeholder="Filtrar Nome"></th>
+                                <th><input type="text" class="filter-input" data-filter-key="SiglaInstituicao" placeholder="Filtrar Instituição"></th>
+                                <th><input type="text" class="filter-input" data-filter-key="Descricao" placeholder="Filtrar Descrição"></th>
+                                <th><input type="text" class="filter-input" data-filter-key="Linguagem Principal" placeholder="Filtrar Linguagem"></th>
+                                <th><input type="text" class="filter-input" data-filter-key="Estrelas" placeholder="Filtrar Estrelas"></th>
+                                <th><input type="text" class="filter-input" data-filter-key="Licenca" placeholder="Filtrar Licença"></th>
+                                <th><input type="text" class="filter-input" data-filter-key="Ultima Atualizacao" placeholder="Filtrar Data"></th>
+                                <th><input type="text" class="filter-input" data-filter-key="Cluster_ID" placeholder="Filtrar Cluster"></th>
+                            </tr>
+                        </thead>
+                        <tbody id="allReposTbody">
+                            <tr><td colspan="8" class="loading-message">Carregando repositórios...</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="pagination-controls mt-4">
+                    <button id="prevPageBtn" class="btn btn-primary" disabled><i class="fas fa-arrow-left"></i> Anterior</button>
+                    <span id="pageInfo" class="mx-3">Página 1 de 1</span>
+                    <button id="nextPageBtn" class="btn btn-primary" disabled>Próximo <i class="fas fa-arrow-right"></i></button>
+                </div>
+            </section>
 
-        <section class="top-repos-section card">
-            <h2><i class="fas fa-fire"></i> Top 10 Repositórios Mais Ativos (Global)</h2>
-            <div class="table-responsive">
-                <table id="topReposTable">
-                    <thead>
-                        <tr>
-                            <th>Repositório</th>
-                            <th>Instituição</th>
-                            <th>Linguagem</th>
-                            <th>Estrelas</th>
-                            <th>Última Atualização</th>
-                        </tr>
-                    </thead>
-                    <tbody id="topReposTbody">
-                        <tr><td colspan="5" class="loading-message">Carregando Top Repositórios...</td></tr>
-                    </tbody>
-                </table>
-            </div>
-            <p id="noTopReposMessage" class="hidden">Nenhum repositório ativo encontrado.</p>
-        </section>
-
-        <section class="cluster-info-section card">
-            <h2><i class="fas fa-cubes"></i> Clusters Identificados</h2>
-            <p class="disclaimer">
-                **Aviso:** Clusterização em construção (NLP, K-Means, HDBSCAN, embeddings).
-            </p>
-            <div class="table-responsive">
-                <table id="clustersTable">
-                    <thead>
-                        <tr>
-                            <th>ID do Cluster</th>
-                            <th>Observações</th>
-                        </tr>
-                    </thead>
-                    <tbody id="clustersTbody">
-                        <tr><td colspan="2" class="loading-message">Carregando clusters...</td></tr>
-                    </tbody>
-                </table>
-            </div>
-            <p id="noClustersMessage" class="hidden">Nenhum cluster identificado.</p>
-        </section>
-
-        <section class="results-section card">
-            <h2><i class="fas fa-list-alt"></i> Todos os Repositórios</h2>
-            <div class="table-responsive">
-                <table id="allReposTable">
-                    <thead>
-                        <tr>
-                            <th data-sort-key="Nome do Repositório" data-sort-type="string">Repositório <i class="fas fa-sort"></i></th>
-                            <th data-sort-key="SiglaInstituicao" data-sort-type="string">Instituição <i class="fas fa-sort"></i></th>
-                            <th data-sort-key="Descricao" data-sort-type="string">Descrição <i class="fas fa-sort"></i></th>
-                            <th data-sort-key="Linguagem Principal" data-sort-type="string">Linguagem <i class="fas fa-sort"></i></th>
-                            <th data-sort-key="Estrelas" data-sort-type="number">Estrelas <i class="fas fa-sort"></i></th>
-                            <th data-sort-key="Licenca" data-sort-type="string">Licença <i class="fas fa-sort"></i></th>
-                            <th data-sort-key="Ultima Atualizacao" data-sort-type="date">Última Atualização <i class="fas fa-sort"></i></th>
-                            <th data-sort-key="Cluster_ID" data-sort-type="string">Cluster ID <i class="fas fa-sort"></i></th>
-                        </tr>
-                        <tr id="filterRow">
-                            <th><input type="text" class="filter-input" data-filter-key="Nome do Repositório" placeholder="Filtrar nome"></th>
-                            <th><input type="text" class="filter-input" data-filter-key="SiglaInstituicao" placeholder="Filtrar inst."></th>
-                            <th><input type="text" class="filter-input" data-filter-key="Descricao" placeholder="Filtrar desc."></th>
-                            <th><input type="text" class="filter-input" data-filter-key="Linguagem Principal" placeholder="Filtrar ling."></th>
-                            <th><input type="text" class="filter-input" data-filter-key="Estrelas" placeholder="Filtrar estrelas"></th>
-                            <th><input type="text" class="filter-input" data-filter-key="Licenca" placeholder="Filtrar lic."></th>
-                            <th><input type="text" class="filter-input" data-filter-key="Ultima Atualizacao" placeholder="Filtrar data"></th>
-                            <th><input type="text" class="filter-input" data-filter-key="Cluster_ID" placeholder="Filtrar cluster"></th>
-                        </tr>
-                    </thead>
-                    <tbody id="allReposTbody">
-                        <tr><td colspan="8" class="loading-message">Carregando todos os repositórios...</td></tr>
-                    </tbody>
-                </table>
-            </div>
-        </section>
+        </div>
     </main>
 
     <footer>
-        <div class="container">
-            <p>&copy; 2025 Mapeamento de Repositórios. Dados do <a href="https://github.com" target="_blank">GitHub</a>.</p>
-        </div>
+        <p>&copy; 2025 - Dados de Repositórios de Instituições Federais. Desenvolvido para fins demonstrativos.</p>
     </footer>
 
     <script src="scripts.js"></script>
