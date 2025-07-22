@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let allInstitutionsData = []; // Dados brutos das instituições (do JSON)
     let clusterDescriptions = []; // Descrições dos clusters (do JSON)
     let allFlattenedRepos = []; // Todos os repositórios, achatados em uma lista
-    let calculatedTopLanguages = []; // Para armazenar as top 5 linguagens calculadas
+    let calculatedTop5Languages = []; // Para armazenar as top 5 linguagens calculadas
 
     let availableLanguages = new Set();
     let availableLicenses = new Set();
@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // === Variáveis de Paginação ADICIONADAS ===
     let currentPage = 1;
-    const itemsPerPage = 50; // Defina quantos itens você quer por página
+    const itemsPerPage = 50;
     let currentFilteredAndSortedRepos = []; // Armazena os repositórios após filtros e ordenação, antes da paginação
 
 
@@ -92,7 +92,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     // Coleta linguagens disponíveis para o filtro
                     if (repo['Linguagem Principal'] && repo['Linguagem Principal'] !== 'N/A' && repo['Linguagem Principal'] !== 'null') {
                         availableLanguages.add(repo['Linguagem Principal']);
-                        // Conta a linguagem para o ranking top 
+                        // Conta a linguagem para o ranking top 5
                         const lang = repo['Linguagem Principal'];
                         tempLanguageCounts[lang] = (tempLanguageCounts[lang] || 0) + 1;
                     }
@@ -103,20 +103,20 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
             });
 
-            // Calcula as top linguagens com base na contagem
-            calculatedTopLanguages = Object.entries(tempLanguageCounts)
+            // Calcula as top 5 linguagens com base na contagem
+            calculatedTop5Languages = Object.entries(tempLanguageCounts)
                 .map(([language, count]) => ({ language, count }))
                 .sort((a, b) => b.count - a.count) // Ordena em ordem decrescente de contagem
-                .slice(0, 10); // Pega apenas as 5 primeiras
+                .slice(0, 5); // Pega apenas as 5 primeiras
 
             populateFilter(languageFilter, Array.from(availableLanguages).sort());
             populateFilter(licenseFilter, Array.from(availableLicenses).sort());
             
             populateClustersTable(); // Popula a tabela de clusters
-            displayTopLanguagesTable(calculatedTopLanguages); // Passa os dados calculados
+            displayTop5LanguagesTable(calculatedTop5Languages); // Passa os dados calculados
 
             // Após carregar os dados, aplica filtros e exibe a primeira página
-            applyFiltersAndDisplay(); 
+            applyFiltersAndDisplay(true); // Chamada inicial reseta a página para 1
 
         } catch (error) {
             console.error("Erro ao carregar ou processar os dados:", error);
@@ -162,7 +162,7 @@ document.addEventListener('DOMContentLoaded', () => {
         mostUsedLicenseGlobal.textContent = getMostCommon(allLicenses);
     }
 
-    function displayTopLanguagesTable(data) {
+    function displayTop5LanguagesTable(data) {
         topLanguagesTbody.innerHTML = ''; // Limpa o conteúdo atual da tabela
         noTopLanguagesMessage.classList.add('hidden'); // Oculta a mensagem de "nenhuma linguagem"
 
@@ -272,8 +272,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     // === Lógica Unificada de Filtragem e Ordenação ===
-    function applyFiltersAndDisplay() {
+    function applyFiltersAndDisplay(resetPage = false) { // Adicionado parâmetro resetPage
         let dataToProcess = [...allFlattenedRepos]; // Começa com uma cópia dos dados originais
+
+        if (resetPage) { // Se resetPage for true, volta para a primeira página
+            currentPage = 1;
+        }
 
         // --- 1. Aplicar Filtros Globais (Busca Geral, Linguagem, Licença) ---
         const generalSearchTerm = generalSearchInput.value.toLowerCase().trim();
@@ -368,14 +372,13 @@ document.addEventListener('DOMContentLoaded', () => {
         // === NOVO: Salva os dados filtrados e ordenados antes da paginação ===
         currentFilteredAndSortedRepos = dataToProcess;
 
-        // === NOVO: Resetar a página para 1 se os filtros ou a ordenação mudarem ===
-        // Isso evita que o usuário fique em uma página que não existe mais após filtrar
-        const totalPagesAfterFilter = Math.ceil(currentFilteredAndSortedRepos.length / itemsPerPage);
-        if (currentPage > totalPagesAfterFilter && totalPagesAfterFilter > 0) {
-            currentPage = totalPagesAfterFilter;
-        } else if (totalPagesAfterFilter === 0) {
-            currentPage = 1; // Se não houver resultados, volta para a página 1
-        }
+        // === REMOVIDO: Antigo reset de página condicional. Agora o reset é feito via parâmetro 'resetPage'.
+        // const totalPagesAfterFilter = Math.ceil(currentFilteredAndSortedRepos.length / itemsPerPage);
+        // if (currentPage > totalPagesAfterFilter && totalPagesAfterFilter > 0) {
+        //     currentPage = totalPagesAfterFilter;
+        // } else if (totalPagesAfterFilter === 0) {
+        //     currentPage = 1; // Se não houver resultados, volta para a página 1
+        // }
         
         // --- 4. Aplicar Paginação ---
         const startIndex = (currentPage - 1) * itemsPerPage;
@@ -390,13 +393,13 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // === Event Listeners ===
-    generalSearchInput.addEventListener('input', applyFiltersAndDisplay);
-    languageFilter.addEventListener('change', applyFiltersAndDisplay);
-    licenseFilter.addEventListener('change', applyFiltersAndDisplay);
+    generalSearchInput.addEventListener('input', () => applyFiltersAndDisplay(true)); // Passa true para resetar a página
+    languageFilter.addEventListener('change', () => applyFiltersAndDisplay(true)); // Passa true para resetar a página
+    licenseFilter.addEventListener('change', () => applyFiltersAndDisplay(true)); // Passa true para resetar a página
     
     // Event listeners para os novos inputs de filtro por coluna
     allReposFilterInputs.forEach(input => {
-        input.addEventListener('input', applyFiltersAndDisplay);
+        input.addEventListener('input', () => applyFiltersAndDisplay(true)); // Passa true para resetar a página
     });
 
     clearFiltersBtn.addEventListener('click', () => {
@@ -424,9 +427,9 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         // Reseta a paginação para a primeira página
-        currentPage = 1;
+        currentPage = 1; // Já está sendo feito explicitamente aqui, mas a chamada abaixo também fará
 
-        applyFiltersAndDisplay(); // Re-aplica filtros e re-renderiza
+        applyFiltersAndDisplay(true); // Re-aplica filtros e re-renderiza, reseta a página
     });
 
     // Event listeners para ordenação dos cabeçalhos da tabela principal
@@ -462,10 +465,10 @@ document.addEventListener('DOMContentLoaded', () => {
                     currentIcon.className = `fas fa-sort-${currentSortDirection === 'asc' ? 'up' : 'down'}`;
                 }
 
-                // Ao mudar a ordenação, volta para a primeira página
-                currentPage = 1;
+                // Ao mudar a ordenação, reseta para a primeira página
+                // currentPage = 1; // Isso será tratado pelo applyFiltersAndDisplay(true)
 
-                applyFiltersAndDisplay(); // Chama a função que filtra e ordena (com a nova ordenação)
+                applyFiltersAndDisplay(true); // Chama a função que filtra e ordena, reseta a página
             });
         }
     });
@@ -474,7 +477,7 @@ document.addEventListener('DOMContentLoaded', () => {
     prevPageBtn.addEventListener('click', () => {
         if (currentPage > 1) {
             currentPage--;
-            applyFiltersAndDisplay();
+            applyFiltersAndDisplay(false); // NÃO reseta a página ao navegar
         }
     });
 
@@ -482,7 +485,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const totalPages = Math.ceil(currentFilteredAndSortedRepos.length / itemsPerPage);
         if (currentPage < totalPages) {
             currentPage++;
-            applyFiltersAndDisplay();
+            applyFiltersAndDisplay(false); // NÃO reseta a página ao navegar
         }
     });
 
