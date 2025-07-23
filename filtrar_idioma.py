@@ -11,7 +11,7 @@ custom_title_stopwords = [
     'BlooketPanel', 'IFRExtractor-RS', 'xxx','CA378-AOIS_USB3-IFB','IFB-FAIR-data-training',
     'ifb-staff','Guide to excellent variety of Electronics Appliances','vapoursynth-colorbars-scripts',
     'wiki-is-mostly-fake-radom-words-word-,genrationr-','XPS9570-Firmware-IFR','UEFI-Variable-Editer',
-    'IFRS 17','BlooketPanel','baidu','UEFI','ifrextractor-rs'
+    'IFRS 17','BlooketPanel','baidu','UEFI','ifrextractor-rs','wiki-is-mostly-fake-radom-words-word-genrationr-'
 ]
 
 def filter_repos_by_description_language(input_file, output_file):
