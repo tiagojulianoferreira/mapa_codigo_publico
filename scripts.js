@@ -107,7 +107,7 @@ document.addEventListener('DOMContentLoaded', () => {
             calculatedTop5Languages = Object.entries(tempLanguageCounts)
                 .map(([language, count]) => ({ language, count }))
                 .sort((a, b) => b.count - a.count) // Ordena em ordem decrescente de contagem
-                .slice(0, 5); // Pega apenas as 5 primeiras
+                .slice(0, 10); // Pega apenas as 5 primeiras
 
             populateFilter(languageFilter, Array.from(availableLanguages).sort());
             populateFilter(licenseFilter, Array.from(availableLicenses).sort());

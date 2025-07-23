@@ -4,3 +4,4 @@ langdetect
 scikit-learn
 nltk
 dotenv
+python-dotenv
