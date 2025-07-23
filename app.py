@@ -24,7 +24,7 @@ HEADERS = {
     'Accept': 'application/vnd.github.v3+json'
 }
 
-# --- 2. Funções Auxiliares (mantidas as mesmas, mas com uma pequena alteração em get_repo_details) ---
+# --- 2. Funções Auxiliares (mantidas as mesmas) ---
 
 def get_github_repos(query, per_page=100):
     url = f"https://api.github.com/search/repositories?q={query}&sort=stars&order=desc&per_page={per_page}"
@@ -63,12 +63,13 @@ def load_institutions_data(file_path):
         print(f"Erro: Arquivo não encontrado em {file_path}")
         return pd.DataFrame()
 
-# --- 3. Nova Função para Processamento e Geração de JSON ---
+# --- 3. Função para Processamento e Geração de JSON (alterada para não adicionar duplicatas intra-instituição) ---
 
 def generate_institutions_repos_json(institutions_df, search_column):
     """
     Processa o DataFrame de instituições, busca repositórios e organiza os dados
-    no formato JSON desejado.
+    no formato JSON desejado. A função agora garante que não haja duplicatas
+    de repositórios DENTRO da lista de repositórios de uma mesma instituição.
     """
     json_output_data = []
 
@@ -90,23 +91,29 @@ def generate_institutions_repos_json(institutions_df, search_column):
 
         if not repos:
             print(f"Nenhum repositório encontrado para {institution_acronym} ou erro na busca.")
-            # Mesmo sem repositórios, a instituição é adicionada com uma lista vazia de repositórios
             json_output_data.append(institution_data)
-            time.sleep(1) # Ainda atrasa para respeitar limites de taxa
+            time.sleep(1)
             continue
+
+        repositorios_unicos_para_instituicao = {} # Usar um dict para desduplicação (chave: (nome, link), valor: repo_details)
 
         for repo in repos:
             repo_details = get_repo_details(repo)
-            institution_data['Repositorios'].append(repo_details)
+            chave_repo = (repo_details['Nome do Repositório'], repo_details['Link de Acesso'])
+            # Adiciona ou substitui (se for uma atualização, o que não é o caso aqui)
+            # Garante que cada combinação (Nome, Link) seja única para esta instituição
+            repositorios_unicos_para_instituicao[chave_repo] = repo_details
+        
+        # Converte de volta para lista
+        institution_data['Repositorios'] = list(repositorios_unicos_para_instituicao.values())
         
         json_output_data.append(institution_data)
         
-        # Adiciona um pequeno atraso para respeitar os limites de taxa da API do GitHub
         time.sleep(1)
 
     return json_output_data
 
-# --- 4. Execução Principal ---
+# --- 4. Execução Principal (com desduplicação final) ---
 
 if __name__ == "__main__":
     # Carregue o CSV de Institutos
@@ -128,10 +135,53 @@ if __name__ == "__main__":
         universidades_json = generate_institutions_repos_json(universidades_df, 'Sigla')
         all_institutions_json_data.extend(universidades_json)
     
-    # Salvar o JSON consolidado em um único arquivo
-    output_json_filename = 'repositorios_federais.json'
-    with open(output_json_filename, 'w', encoding='utf-8') as f:
-        json.dump(all_institutions_json_data, f, ensure_ascii=False, indent=2)
+    # --- NOVA ETAPA DE DESDUPLICAÇÃO FINAL ---
+    # Esta etapa irá garantir que se o mesmo repositório aparecer em diferentes instituições,
+    # ele só seja adicionado ao JSON final uma vez.
     
-    print(f"\nDados consolidados salvos em '{output_json_filename}'")
+    final_json_output_data = {
+        "institutions_data": []
+    }
+    
+    # Um conjunto para rastrear (Sigla da Instituição, Nome do Repositório, Link de Acesso)
+    # se o objetivo é ter um repositório único por Instituição + Repositório
+    # OU
+    # Um conjunto para rastrear (Nome do Repositório, Link de Acesso)
+    # se o objetivo é ter cada repositório único em TODO o arquivo final,
+    # independente da instituição.
+
+    # Vou assumir a segunda opção, que um repositório com o mesmo nome e link
+    # só deve aparecer uma vez em todo o arquivo JSON final.
+    
+    seen_repos_global = set()
+    
+    for institution_data in all_institutions_json_data:
+        current_institution_repos = []
+        for repo in institution_data.get('Repositorios', []):
+            repo_key = (repo.get('Nome do Repositório'), repo.get('Link de Acesso'))
+            if repo_key not in seen_repos_global:
+                current_institution_repos.append(repo)
+                seen_repos_global.add(repo_key)
+        
+        # Adiciona a instituição apenas se ela tiver repositórios únicos a serem incluídos
+        if current_institution_repos:
+            # Criar uma nova entrada de instituição para evitar referências indesejadas
+            # e adicionar apenas os repositórios únicos.
+            new_institution_entry = {
+                'Sigla': institution_data['Sigla'],
+                'Nome Completo': institution_data['Nome Completo'],
+                'URL Oficial': institution_data['URL Oficial'],
+                'Repositorios': current_institution_repos
+            }
+            final_json_output_data['institutions_data'].append(new_institution_entry)
+        # Se uma instituição não tiver nenhum repo único (todos já foram vistos), ela não será adicionada.
+        # Se você quiser que a instituição seja adicionada mesmo com lista de repositórios vazia,
+        # ajuste a lógica.
+
+    # Salvar o JSON consolidado em um único arquivo
+    output_json_filename = 'repositorios_federais_desduplicados.json' # Novo nome para o arquivo de saída
+    with open(output_json_filename, 'w', encoding='utf-8') as f:
+        json.dump(final_json_output_data, f, ensure_ascii=False, indent=2)
+    
+    print(f"\nDados consolidados e desduplicados salvos em '{output_json_filename}'")
     print("\nProcesso concluído.")
