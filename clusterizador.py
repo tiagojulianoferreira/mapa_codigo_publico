@@ -45,7 +45,7 @@ def preprocess_text(text):
 def cluster_and_visualize_repositories(input_file, output_file, num_clusters=15):
     try:
         with open(input_file, 'r', encoding='utf-8') as f:
-            data = json.load(f) # 'data' aqui é a lista de instituições
+            full_data = json.load(f) # Carrega o dicionário completo
     except FileNotFoundError:
         print(f"Erro: O arquivo '{input_file}' não foi encontrado.")
         return
@@ -53,10 +53,18 @@ def cluster_and_visualize_repositories(input_file, output_file, num_clusters=15)
         print(f"Erro: O arquivo '{input_file}' não é um JSON válido.")
         return
 
+    # AQUI ESTÁ A CORREÇÃO: Acesse a lista de instituições corretamente
+    institutions_data_list = full_data.get('institutions_data', [])
+    if not institutions_data_list:
+        print(f"Aviso: Não foram encontradas informações de instituições na chave 'institutions_data' em '{input_file}'.")
+        return
+
     all_repos_list = []
     
-    for institution in data:
-        for repo in institution['Repositorios']:
+    # Itere sobre a lista de dicionários de instituições
+    for institution in institutions_data_list: # <-- LINHA CORRIGIDA
+        # Use .get() para acessar 'Repositorios' com segurança
+        for repo in institution.get('Repositorios', []):
             combined_text = f"{repo.get('Nome do Repositório', '')} {repo.get('Descricao', '')}"
             processed_text = preprocess_text(combined_text)
             
@@ -66,7 +74,7 @@ def cluster_and_visualize_repositories(input_file, output_file, num_clusters=15)
                 'Linguagem Principal': repo.get('Linguagem Principal', 'N/A'),
                 'Estrelas': repo.get('Estrelas', 0),
                 'Link de Acesso': repo.get('Link de Acesso', '#'),
-                'Instituicao': institution['Sigla'],
+                'Instituicao': institution.get('Sigla', 'N/A'), # Use .get() para 'Sigla' também
                 'processed_text': processed_text,
                 'original_repo_obj': repo # Manter referência para atualizar depois
             })
@@ -81,12 +89,20 @@ def cluster_and_visualize_repositories(input_file, output_file, num_clusters=15)
     vectorizer = TfidfVectorizer(min_df=2, max_df=0.85, ngram_range=(1,3))
     X = vectorizer.fit_transform(texts)
 
+    # Verifica se há clusters suficientes para o número de repositórios
+    if X.shape[0] < num_clusters:
+        print(f"Aviso: O número de repositórios ({X.shape[0]}) é menor que o número de clusters desejado ({num_clusters}). Ajustando num_clusters para {X.shape[0]}.")
+        num_clusters = X.shape[0]
+        if num_clusters == 0:
+            print("Nenhum repositório para clusterizar após o pré-processamento.")
+            return
+
     kmeans = KMeans(n_clusters=num_clusters, random_state=42, n_init='auto')
     cluster_labels = kmeans.fit_predict(X)
     df['Cluster_ID'] = cluster_labels
 
     # Atualiza o 'original_repo_obj' com o Cluster_ID
-    # Isso modifica diretamente a estrutura 'data'
+    # Isso modifica diretamente a estrutura 'data' (que é a lista de instituições original)
     for i, row in df.iterrows():
         row['original_repo_obj']['Cluster_ID'] = int(row['Cluster_ID'])
 
@@ -102,13 +118,9 @@ def cluster_and_visualize_repositories(input_file, output_file, num_clusters=15)
         print(description_text) # Ainda imprime para saída no console
         generated_cluster_descriptions.append({"id": i, "description": description_text})
     
-    # --- As linhas de geração de gráficos Plotly foram removidas, pois a UI agora usa uma tabela ---
-    # Se você ainda precisar dos gráficos gerados separadamente, reintroduza o código Plotly aqui.
-
-
     # --- FINAL: Salvar os dados atualizados em um novo arquivo JSON (NOVO FORMATO) ---
     final_output_data = {
-        "institutions_data": data, # 'data' já foi atualizada com os Cluster_IDs nos repositórios
+        "institutions_data": full_data.get('institutions_data', []), # 'full_data' já foi atualizada com os Cluster_IDs nos repositórios
         "cluster_descriptions": generated_cluster_descriptions # A nova lista de descrições
     }
 
@@ -128,6 +140,5 @@ output_json_file = 'repositorios_federais_com_clusters_visualizado.json'
 N_CLUSTERS = 15 # Ajuste conforme sua análise
 
 # Chama a função para clusterizar e visualizar
-# O parâmetro 'output_charts_dir' foi removido da chamada, pois os gráficos não são mais gerados
 cluster_and_visualize_repositories(input_json_file, output_json_file, 
                                    num_clusters=N_CLUSTERS)
