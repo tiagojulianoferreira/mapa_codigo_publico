@@ -4,161 +4,206 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Repositórios de Instituições Federais</title>
+    <!-- Inclui o Font Awesome para ícones -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Links para o arquivo CSS personalizado e para o Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="static/styles.css">
 </head>
-<body>
-    <header>
-        <h1><a href=index.html> <i class="fas fa-university"></i></a>Repositórios de Código Aberto das IFs</h1>
-        <p>Explore os projetos de software livre desenvolvidos e mantidos nas Instituições Federais de Ensino.</p>
+<body class="bg-gray-100 flex flex-col min-h-screen font-sans">
+    <header class="bg-white text-center p-6 shadow-md">
+        <h1 class="text-4xl font-bold text-gray-800">
+            <a href="index.html" class="text-blue-600 hover:text-blue-800 transition duration-300">
+                <i class="fas fa-university mr-2"></i>
+            </a>
+            Repositórios de Código Aberto das IFs
+        </h1>
+        <p class="text-lg text-gray-600 mt-2">Explore os projetos de software livre desenvolvidos e mantidos nas Instituições Federais de Ensino.</p>
     </header>
 
-    <main>
-        <div class="container">
-            <!-- Estatísticas Globais -->
-            <section id="global-stats-section" class="card">
-                <h2><i class="fas fa-chart-bar"></i> Estatísticas Globais</h2>
-                <div class="stats-grid">
-                    <div class="stat-item">
-                        <h3>Total de Repositórios</h3>
-                        <p id="totalReposGlobal">Carregando...</p>
+    <main class="flex-grow container mx-auto p-4 md:p-8">
+        <div class="grid gap-8">
+            <!-- Seção de Estatísticas Globais -->
+            <section id="global-stats-section" class="card bg-white p-6 rounded-xl shadow-lg">
+                <h2 class="text-2xl font-semibold text-gray-800 mb-4">
+                    <i class="fas fa-chart-bar text-blue-600 mr-2"></i>
+                    Estatísticas Globais
+                </h2>
+                <div class="stats-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="stat-item bg-gray-50 p-4 rounded-lg shadow-sm text-center">
+                        <h3 class="text-gray-500 font-medium">Total de Repositórios</h3>
+                        <p id="totalReposGlobal" class="text-3xl font-bold text-gray-900 mt-1">Carregando...</p>
                     </div>
-                    <div class="stat-item">
-                        <h3>Linguagem Mais Usada</h3>
-                        <p id="mostUsedLanguageGlobal">Carregando...</p>
+                    <div class="stat-item bg-gray-50 p-4 rounded-lg shadow-sm text-center">
+                        <h3 class="text-gray-500 font-medium">Linguagem Mais Usada</h3>
+                        <p id="mostUsedLanguageGlobal" class="text-2xl font-bold text-gray-900 mt-1">Carregando...</p>
                     </div>
-                    <div class="stat-item">
-                        <h3>Licença Mais Usada</h3>
-                        <!-- A mudança está aqui: um div para conter ambos os elementos de licença -->
-                        <div class="flex flex-col">
-                            <p id="mostUsedLicenseGlobal" class="text-xl font-bold">Carregando...</p>
+                    <div class="stat-item bg-gray-50 p-4 rounded-lg shadow-sm text-center">
+                        <h3 class="text-gray-500 font-medium">Licença Mais Usada</h3>
+                        <div class="flex flex-col items-center justify-center">
+                            <p id="mostUsedLicenseGlobal" class="text-2xl font-bold text-gray-900 mt-1">Carregando...</p>
                             <span id="naLicenseCount" class="text-sm text-gray-500 mt-1"></span>
                         </div>
                     </div>
                 </div>
-            </section>
-
-            <section id="filters-section" class="card">
-                <h2><i class="fas fa-filter"></i> Filtros Globais</h2>
-                <div class="filters-grid">
-                    <div class="filter-group">
-                        <label for="generalSearchInput">Busca Geral:</label>
-                        <input type="text" id="generalSearchInput" placeholder="Buscar por nome, descrição, instituição...">
-                    </div>
-                    <div class="filter-group">
-                        <label for="languageFilter">Linguagem Principal:</label>
-                        <select id="languageFilter">
-                            <option value="">Todas</option>
-                            </select>
-                    </div>
-                    <div class="filter-group">
-                        <label for="licenseFilter">Licença:</label>
-                        <select id="licenseFilter">
-                            <option value="">Todas</option>
-                        </select>
-                    </div>
-                    <div class="filter-group">
-                        <button id="clearFilters" class="btn-clear"><i class="fas fa-eraser"></i> Limpar Filtros</button>
-                    </div>
+                <!-- Barra de pesquisa global -->
+                <div class="mt-6">
+                    <label for="generalSearchInput" class="block text-gray-700 font-medium mb-2">Pesquisa Rápida</label>
+                    <input type="text" id="generalSearchInput" placeholder="Buscar em nome, descrição ou instituição..." class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
                 </div>
             </section>
 
-            <section id="top-languages-section" class="card">
-                <h2><i class="fas fa-code"></i> Top 10 Linguagens</h2>
-                <table class="data-table">
-                    <thead>
-                        <tr>
-                            <th>Linguagem</th>
-                            <th>Repositórios</th>
-                            <th>% do Total</th>
-                        </tr>
-                    </thead>
-                    <tbody id="topLanguagesTbody">
-                        <tr><td colspan="3" class="loading-message">Carregando linguagens...</td></tr>
-                    </tbody>
-                </table>
-            </section>
+            <!-- Seção de Filtros Rápidos e Top Listas -->
+            <section class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                <!-- Filtros Rápidos -->
+                <div class="card bg-white p-6 rounded-xl shadow-lg lg:col-span-1">
+                    <h2 class="text-2xl font-semibold text-gray-800 mb-4">
+                        <i class="fas fa-filter text-blue-600 mr-2"></i>
+                        Filtros Rápidos
+                    </h2>
+                    <div class="space-y-4">
+                        <div>
+                            <label for="languageFilter" class="block text-gray-700 font-medium mb-2">Filtrar por Linguagem</label>
+                            <select id="languageFilter" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                <option value="">Todas</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="licenseFilter" class="block text-gray-700 font-medium mb-2">Filtrar por Licença</label>
+                            <select id="licenseFilter" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                <option value="">Todas</option>
+                            </select>
+                        </div>
+                        <button id="clearFilters" class="btn bg-red-600 text-white hover:bg-red-800 w-full py-2 px-4 rounded-lg shadow-sm transition duration-300">
+                            <i class="fas fa-times-circle mr-2"></i> Limpar Filtros
+                        </button>
+                    </div>
+                </div>
 
-            <section id="top-repos-section" class="card">
-                <h2><i class="fas fa-star"></i> Top 10 Repositórios (por Estrelas)</h2>
-                <table class="data-table">
-                    <thead>
-                        <tr>
-                            <th>IF</th>
-                            <th>Repositório</th>
-                            <th><i class="fas fa-star"></i></th>
-                            <th>Linguagem</th>
-                            <th>Última Atualização</th>
-                        </tr>
-                    </thead>
-                    <tbody id="topReposTbody">
-                        <tr><td colspan="5" class="loading-message">Carregando repositórios...</td></tr>
-                    </tbody>
-                </table>
-            </section>
-
-            <section id="clusters-section" class="card">
-                <h2><i class="fas fa-cube"></i> Clusters</h2>
-                <p class="mb-4 text-gray-600">Grupos de repositórios com base em palavras-chave e tópicos.</p>
-                <table class="data-table">
-                    <thead>
-                        <tr>
-                            <th>ID</th>
-                            <th>Descrição do Cluster</th>
-                        </tr>
-                    </thead>
-                    <tbody id="clustersTbody">
-                        <tr><td colspan="2" class="loading-message">Carregando clusters...</td></tr>
-                    </tbody>
-                </table>
-            </section>
-
-            <section id="all-repos-section" class="card">
-                <h2><i class="fas fa-list-ul"></i> Todos os Repositórios (<span id="filteredReposCount">...</span>)</h2>
-                <p class="text-sm text-gray-500 mb-2">Clique nos cabeçalhos para ordenar. Use os campos abaixo para filtrar por coluna.</p>
-                <div class="table-container">
-                    <table class="data-table" id="allReposTable">
+                <!-- Top 5 Linguagens -->
+                <div class="card bg-white p-6 rounded-xl shadow-lg lg:col-span-1">
+                    <h2 class="text-2xl font-semibold text-gray-800 mb-4">
+                        <i class="fas fa-code text-blue-600 mr-2"></i>
+                        Top 10 Linguagens
+                    </h2>
+                    <table class="w-full text-left">
                         <thead>
-                            <tr>
-                                <th data-sort-key="SiglaInstituicao">IF <i class="fas fa-sort sort-icon"></i></th>
-                                <th data-sort-key="Nome do Repositório">Repositório <i class="fas fa-sort sort-icon"></i></th>
-                                <th data-sort-key="Linguagem Principal">Linguagem <i class="fas fa-sort sort-icon"></i></th>
-                                <th data-sort-key="Estrelas">Estrelas <i class="fas fa-sort sort-icon"></i></th>
-                                <th data-sort-key="Ultima Atualizacao">Atualização <i class="fas fa-sort sort-icon"></i></th>
-                                <th data-sort-key="Licenca">Licença <i class="fas fa-sort sort-icon"></i></th>
-                                <th data-sort-key="Descricao">Descrição <i class="fas fa-sort sort-icon"></i></th>
-                                <th data-sort-key="Cluster_ID">Cluster <i class="fas fa-sort sort-icon"></i></th>
-                                <th>Link</th>
-                            </tr>
-                            <tr id="filterRow">
-                                <th><input type="text" class="filter-input" data-filter-key="SiglaInstituicao" placeholder="Filtrar IF"></th>
-                                <th><input type="text" class="filter-input" data-filter-key="Nome do Repositório" placeholder="Filtrar Nome"></th>
-                                <th><input type="text" class="filter-input" data-filter-key="Linguagem Principal" placeholder="Filtrar Linguagem"></th>
-                                <th><input type="text" class="filter-input" data-filter-key="Estrelas" placeholder="Filtrar Estrelas"></th>
-                                <th><input type="text" class="filter-input" data-filter-key="Licenca" placeholder="Filtrar Licença"></th>
-                                <th><input type="text" class="filter-input" data-filter-key="Ultima Atualizacao" placeholder="Filtrar Data"></th>
-                                <th><input type="text" class="filter-input" data-filter-key="Cluster_ID" placeholder="Filtrar Cluster"></th>
+                            <tr class="text-gray-500 text-sm border-b-2 border-gray-200">
+                                <th class="py-2 px-4">Linguagem</th>
+                                <th class="py-2 px-4">Repositórios</th>
                             </tr>
                         </thead>
-                        <tbody id="allReposTbody">
-                            <tr><td colspan="9" class="loading-message">Carregando repositórios...</td></tr>
+                        <tbody id="topLanguagesTbody" class="divide-y divide-gray-200">
+                            <!-- Conteúdo gerado pelo JS -->
                         </tbody>
                     </table>
                 </div>
-                <div class="pagination-controls mt-4 flex items-center justify-center">
-                    <button id="prevPageBtn" class="btn btn-primary" disabled><i class="fas fa-arrow-left"></i> Anterior</button>
-                    <span id="pageInfo" class="mx-3 text-gray-700">Página 1 de 1</span>
-                    <button id="nextPageBtn" class="btn btn-primary" disabled>Próximo <i class="fas fa-arrow-right"></i></button>
+
+                <!-- Top 5 Repositórios -->
+                <div class="card bg-white p-6 rounded-xl shadow-lg lg:col-span-1">
+                    <h2 class="text-2xl font-semibold text-gray-800 mb-4">
+                        <i class="fas fa-star text-yellow-400 mr-2"></i>
+                        Top 10 Repositórios
+                    </h2>
+                    <table class="w-full text-left">
+                        <thead>
+                            <tr class="text-gray-500 text-sm border-b-2 border-gray-200">
+                                <th class="py-2 px-4">Repositório</th>
+                                <th class="py-2 px-4">Instituição</th>
+                                <th class="py-2 px-4">Estrelas</th>
+                            </tr>
+                        </thead>
+                        <tbody id="topReposTbody" class="divide-y divide-gray-200">
+                            <!-- Conteúdo gerado pelo JS -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+            
+            <!-- Seção de Descrições dos Clusters -->
+            <section id="clusters-section" class="card bg-white p-6 rounded-xl shadow-lg">
+                <h2 class="text-2xl font-semibold text-gray-800 mb-4">
+                    <i class="fas fa-braille text-blue-600 mr-2"></i>
+                    Descrições dos Clusters
+                </h2>
+                <div class="overflow-x-auto">
+                    <table class="min-w-full divide-y divide-gray-200 border border-gray-200 rounded-lg">
+                        <thead class="bg-gray-50">
+                            <tr>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">ID</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Descrição</th>
+                            </tr>
+                        </thead>
+                        <tbody id="clustersTbody" class="bg-white divide-y divide-gray-200">
+                            <!-- Conteúdo gerado pelo JS -->
+                            <tr><td colspan="2" class="p-4 text-center text-gray-500">Carregando clusters...</td></tr>
+                        </tbody>
+                    </table>
                 </div>
             </section>
 
+
+            <!-- Seção de Tabela de Repositórios -->
+            <section id="all-repos-section" class="card bg-white p-6 rounded-xl shadow-lg">
+                <div class="flex justify-between items-center mb-4">
+                    <h2 class="text-2xl font-semibold text-gray-800">
+                        <i class="fas fa-table text-blue-600 mr-2"></i>
+                        Todos os Repositórios
+                    </h2>
+                    <span class="text-gray-500"><strong id="filteredReposCount">0</strong> repositórios exibidos</span>
+                </div>
+                <div class="overflow-x-auto">
+                    <table id="allReposTable" class="min-w-full divide-y divide-gray-200 border border-gray-200 rounded-lg">
+                        <thead class="bg-gray-50">
+                            <!-- Linha para ordenação -->
+                            <tr class="text-gray-500 text-sm">
+                                <th class="px-6 py-3 text-left uppercase tracking-wider cursor-pointer" data-sort-key="Instituicao">Instituição <i class="fas fa-sort sort-icon ml-1"></i></th>
+                                <th class="px-6 py-3 text-left uppercase tracking-wider cursor-pointer" data-sort-key="Nome do Repositório">Nome do Repositório <i class="fas fa-sort sort-icon ml-1"></i></th>
+                                <th class="px-6 py-3 text-left uppercase tracking-wider cursor-pointer" data-sort-key="Linguagem Principal">Linguagem <i class="fas fa-sort sort-icon ml-1"></i></th>
+                                <th class="px-6 py-3 text-left uppercase tracking-wider cursor-pointer" data-sort-key="Estrelas">Estrelas <i class="fas fa-sort-down sort-icon ml-1"></i></th>
+                                <th class="px-6 py-3 text-left uppercase tracking-wider cursor-pointer" data-sort-key="Licenca">Licença <i class="fas fa-sort sort-icon ml-1"></i></th>
+                                <th class="px-6 py-3 text-left uppercase tracking-wider cursor-pointer" data-sort-key="Ultima Atualizacao">Última Atualização <i class="fas fa-sort sort-icon ml-1"></i></th>
+                                <th class="px-6 py-3 text-left uppercase tracking-wider cursor-pointer" data-sort-key="Descricao">Descrição <i class="fas fa-sort sort-icon ml-1"></i></th>
+                                <th class="px-6 py-3 text-left uppercase tracking-wider cursor-pointer" data-sort-key="Cluster_ID">Cluster <i class="fas fa-sort sort-icon ml-1"></i></th>
+                                <th class="px-6 py-3 text-center uppercase tracking-wider">Link</th>
+                            </tr>
+                            <!-- Linha para filtros individuais -->
+                            <tr id="filterRow" class="bg-white">
+                                <th><input type="text" class="filter-input w-full px-2 py-1 text-sm rounded-md" data-filter-key="Instituicao" placeholder="Filtrar"></th>
+                                <th><input type="text" class="filter-input w-full px-2 py-1 text-sm rounded-md" data-filter-key="Nome do Repositório" placeholder="Filtrar"></th>
+                                <th><input type="text" class="filter-input w-full px-2 py-1 text-sm rounded-md" data-filter-key="Linguagem Principal" placeholder="Filtrar"></th>
+                                <th><input type="text" class="filter-input w-full px-2 py-1 text-sm rounded-md" data-filter-key="Estrelas" placeholder="Filtrar"></th>
+                                <th><input type="text" class="filter-input w-full px-2 py-1 text-sm rounded-md" data-filter-key="Licenca" placeholder="Filtrar"></th>
+                                <th><input type="text" class="filter-input w-full px-2 py-1 text-sm rounded-md" data-filter-key="Ultima Atualizacao" placeholder="Filtrar"></th>
+                                <th><input type="text" class="filter-input w-full px-2 py-1 text-sm rounded-md" data-filter-key="Descricao" placeholder="Filtrar"></th>
+                                <th><input type="text" class="filter-input w-full px-2 py-1 text-sm rounded-md" data-filter-key="Cluster_ID" placeholder="Filtrar"></th>
+                                <th></th> <!-- Coluna de link sem filtro -->
+                            </tr>
+                        </thead>
+                        <tbody id="allReposTbody" class="bg-white divide-y divide-gray-200">
+                            <tr><td colspan="9" class="p-4 text-center text-gray-500 loading-message">Carregando repositórios...</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- Controles de Paginação -->
+                <div class="pagination-controls flex items-center justify-center mt-4 space-x-4">
+                    <button id="prevPageBtn" class="btn bg-blue-600 text-white hover:bg-blue-800 transition duration-300 py-2 px-4 rounded-lg shadow-sm" disabled>
+                        <i class="fas fa-arrow-left mr-2"></i> Anterior
+                    </button>
+                    <span id="pageInfo" class="text-gray-700 font-medium">Página 1 de 1</span>
+                    <button id="nextPageBtn" class="btn bg-blue-600 text-white hover:bg-blue-800 transition duration-300 py-2 px-4 rounded-lg shadow-sm" disabled>
+                        Próximo <i class="fas fa-arrow-right ml-2"></i>
+                    </button>
+                </div>
+            </section>
         </div>
     </main>
 
-    <footer>
+    <footer class="bg-gray-800 text-white text-center p-4 mt-8">
         <p>&copy; 2025 - Dados de Repositórios de Instituições Federais. Desenvolvido para fins demonstrativos.</p>
     </footer>
 
+    <!-- Links para os arquivos JavaScript -->
     <script src="static/scripts.js"></script>
 </body>
 </html>

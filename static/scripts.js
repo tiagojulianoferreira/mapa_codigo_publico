@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const totalReposGlobal = document.getElementById('totalReposGlobal');
     const mostUsedLanguageGlobal = document.getElementById('mostUsedLanguageGlobal');
     const mostUsedLicenseGlobal = document.getElementById('mostUsedLicenseGlobal');
-    const naLicenseCountSpan = document.getElementById('naLicenseCount'); // Novo elemento
+    const naLicenseCountSpan = document.getElementById('naLicenseCount');
 
     // Elementos para Top Linguagens
     const topLanguagesTbody = document.getElementById('topLanguagesTbody');
@@ -23,358 +23,357 @@ document.addEventListener('DOMContentLoaded', () => {
     const allReposFilterInputs = document.querySelectorAll('#filterRow .filter-input');
     const filteredReposCount = document.getElementById('filteredReposCount');
 
-    // Elementos para Tabela de Clusters
+    // Elementos para Tabela de Clusters (assumindo que o HTML tem esta seção)
     const clustersTbody = document.getElementById('clustersTbody');
 
-    // Elementos de Paginação
+    // Elementos para Paginação
     const prevPageBtn = document.getElementById('prevPageBtn');
     const nextPageBtn = document.getElementById('nextPageBtn');
     const pageInfoSpan = document.getElementById('pageInfo');
 
-    // === Variáveis de Dados ===
-    let allInstitutionsData = [];
-    let clusterDescriptions = [];
-    let allFlattenedRepos = [];
+    // === Variáveis de Estado ===
+    let allRepos = [];
+    let allInstitutions = [];
     let currentFilteredAndSortedRepos = [];
-    let calculatedTop10Languages = [];
-    let calculatedTop10Repos = [];
-
-    // Variáveis de estado
+    let currentSortColumn = 'Estrelas'; // Coluna de ordenação padrão
+    let currentSortDirection = 'desc'; // Direção de ordenação padrão
     let currentPage = 1;
-    const itemsPerPage = 50;
-    let currentSortColumn = null;
-    let currentSortDirection = 'asc';
+    const itemsPerPage = 20;
+    
+    // Variáveis para clusters
+    let clusters = [];
+    let clusterDescriptions = {};
 
-    // --- Lógica de Carregamento de Dados ---
+
+    // === FUNÇÕES DE PROCESSAMENTO E RENDERIZAÇÃO ===
+
+    /**
+     * Busca os dados do arquivo JSON, processa e inicia a aplicação.
+     */
     async function fetchAndProcessData() {
         try {
-            const response = await fetch('repositorios_filtrados.json');
-            if (!response.ok) {
-                // Atualiza todas as mensagens de erro se o arquivo não puder ser carregado
-                allReposTbody.innerHTML = `<tr><td colspan="9" class="error-message">Erro ao carregar os dados: Arquivo 'repositorios_federais_com_clusters_visualizado.json' não encontrado ou inacessível.</td></tr>`;
-                topReposTbody.innerHTML = `<tr><td colspan="5" class="error-message">Erro ao carregar top repositórios.</td></tr>`;
-                clustersTbody.innerHTML = `<tr><td colspan="2" class="error-message">Erro ao carregar clusters.</td></tr>`;
-                topLanguagesTbody.innerHTML = `<tr><td colspan="3" class="error-message">Erro ao carregar top linguagens.</td></tr>`;
-                throw new Error(`Erro ao carregar o JSON: ${response.statusText} (Status: ${response.status})`);
-            }
-            const jsonData = await response.json();
-
-            allInstitutionsData = jsonData.institutions_data || [];
-            clusterDescriptions = jsonData.cluster_descriptions || [];
-
-            const tempLanguageCounts = {};
-            const availableLanguages = new Set();
-            const availableLicenses = new Set();
+            // Acessa o arquivo JSON diretamente no repositório local
+            const response = await fetch('./repositorios_federais_filtrado_idioma.json');
+            const data = await response.json();
             
-            // Achata os dados para ter uma lista única de repositórios
-            allFlattenedRepos = allInstitutionsData.flatMap(institution => {
-                return institution.Repositorios.map(repo => {
-                    const fullRepo = {
-                        ...repo,
-                        'Instituicao': institution['Nome Completo'],
-                        'SiglaInstituicao': institution.Sigla,
-                    };
-                    // Garante que Cluster_ID e outros campos existem
-                    fullRepo['Cluster_ID'] = fullRepo['Cluster_ID'] || 'N/A';
-                    fullRepo['Linguagem Principal'] = fullRepo['Linguagem Principal'] || 'N/A';
-                    fullRepo.Licenca = fullRepo.Licenca || 'N/A';
-                    fullRepo.Descricao = fullRepo.Descricao || 'Sem descrição';
+            if (data && data.institutions_data) {
+                // Limpa o array de repositórios antes de preencher
+                allRepos = [];
+                allInstitutions = [];
 
-                    // Coleta dados para filtros e estatísticas
-                    if (fullRepo['Linguagem Principal'] !== 'N/A') {
-                        availableLanguages.add(fullRepo['Linguagem Principal']);
-                        tempLanguageCounts[fullRepo['Linguagem Principal']] = (tempLanguageCounts[fullRepo['Linguagem Principal']] || 0) + 1;
-                    }
-                    if (fullRepo.Licenca) { // Licenças nulas ou vazias já são tratadas como 'N/A'
-                        availableLicenses.add(fullRepo.Licenca);
-                    }
-                    return fullRepo;
+                // Itera sobre as instituições para extrair os repositórios
+                data.institutions_data.forEach(institution => {
+                    const institutionName = institution['Nome Completo'];
+                    const institutionSigla = institution['Sigla'];
+                    allInstitutions.push(institutionName);
+
+                    // Adiciona a sigla e o nome da instituição a cada repositório
+                    // para facilitar a filtragem e a exibição
+                    institution.Repositorios.forEach(repo => {
+                        repo.Instituicao = institutionSigla;
+                        repo.InstituicaoNomeCompleto = institutionName;
+                        allRepos.push(repo);
+                    });
                 });
-            });
+                
+                // Se houver dados de cluster no JSON, armazena-os
+                if (data.cluster_descriptions) {
+                    clusters = data.cluster_descriptions;
+                    clusterDescriptions = clusters.reduce((acc, curr) => {
+                        acc[curr.id] = curr.description;
+                        return acc;
+                    }, {});
+                }
 
-            // Calcula as top 10 linguagens
-            calculatedTop10Languages = Object.entries(tempLanguageCounts)
-                .map(([language, count]) => ({ language, count }))
-                .sort((a, b) => b.count - a.count)
-                .slice(0, 10);
+                // Inicia o processamento e exibição
+                populateFilters();
+                updateGlobalStats();
+                updateTopLists();
+                applyFiltersAndDisplay(true); // Inicializa a tabela principal
+                
+                console.log(`Dados carregados: ${allRepos.length} repositórios encontrados.`);
 
-            // Calcula os top 10 repositórios por estrelas
-            calculatedTop10Repos = [...allFlattenedRepos]
-                .sort((a, b) => (b.Estrelas || 0) - (a.Estrelas || 0))
-                .slice(0, 10);
-
-            // Popula os filtros e as tabelas adicionais
-            populateFilter(languageFilter, Array.from(availableLanguages).sort());
-            
-            // Filtra as licenças disponíveis para não incluir 'N/A' no dropdown
-            const filteredLicensesForDropdown = Array.from(availableLicenses).filter(lic => lic !== 'N/A').sort();
-            populateFilter(licenseFilter, filteredLicensesForDropdown);
-
-            populateClustersTable();
-            displayTopReposTable(calculatedTop10Repos);
-            displayTopLanguagesTable(calculatedTop10Languages);
-            updateGlobalStats();
-
-            // Aplica filtros e exibe a tabela principal
-            applyFiltersAndDisplay();
+            } else {
+                displayLoadingMessage('Nenhum dado de repositório encontrado.');
+            }
 
         } catch (error) {
-            console.error("Erro ao carregar ou processar os dados:", error);
+            console.error('Erro ao buscar ou processar os dados:', error);
+            displayLoadingMessage('Erro ao carregar os dados. Verifique o console para mais detalhes.');
         }
     }
 
-    // --- Funções Auxiliares de Display e Lógica ---
+    /**
+     * Preenche os menus suspensos e os campos de filtro da tabela.
+     */
+    function populateFilters() {
+        // Popula o filtro de linguagens
+        const languages = [...new Set(allRepos.map(repo => repo['Linguagem Principal']))].filter(Boolean).sort();
+        languageFilter.innerHTML = '<option value="">Todas</option>' + languages.map(lang => `<option value="${lang}">${lang}</option>`).join('');
 
-    function populateFilter(selectElement, optionsArray) {
-        selectElement.innerHTML = '<option value="">Todas</option>';
-        optionsArray.forEach(optionText => {
-            const option = document.createElement('option');
-            option.value = optionText;
-            option.textContent = optionText;
-            selectElement.appendChild(option);
-        });
+        // Popula o filtro de licenças
+        const licenses = [...new Set(allRepos.map(repo => repo['Licenca']))].filter(Boolean).sort();
+        licenseFilter.innerHTML = '<option value="">Todas</option>' + licenses.map(lic => `<option value="${lic}">${lic}</option>`).join('');
     }
 
-    function populateClustersTable() {
-        clustersTbody.innerHTML = '';
-        if (clusterDescriptions.length === 0) {
-            clustersTbody.innerHTML = `<tr><td colspan="2" class="no-data-message">Nenhum cluster encontrado.</td></tr>`;
-            return;
-        }
-        clusterDescriptions.forEach(cluster => {
-            const row = document.createElement('tr');
-            row.innerHTML = `
-                <td>${cluster.id}</td>
-                <td>${cluster.description}</td>
-            `;
-            clustersTbody.appendChild(row);
-        });
-    }
-
-    function displayTopReposTable(repos) {
-        topReposTbody.innerHTML = '';
-        if (repos.length === 0) {
-            topReposTbody.innerHTML = `<tr><td colspan="5" class="no-data-message">Nenhum repositório top encontrado.</td></tr>`;
-            return;
-        }
-        repos.forEach(repo => {
-            const row = document.createElement('tr');
-            row.innerHTML = `
-                <td>${repo.SiglaInstituicao}</td>
-                <td><a href="${repo['Link de Acesso']}" target="_blank">${repo['Nome do Repositório']}</a></td>
-                <td>${repo.Estrelas}</td>
-                <td><span class="badge">${repo['Linguagem Principal']}</span></td>
-                <td>${new Date(repo['Ultima Atualizacao']).toLocaleDateString('pt-BR')}</td>
-            `;
-            topReposTbody.appendChild(row);
-        });
-    }
-
-    function displayTopLanguagesTable(languages) {
-        topLanguagesTbody.innerHTML = '';
-        if (languages.length === 0) {
-            topLanguagesTbody.innerHTML = `<tr><td colspan="3" class="no-data-message">Nenhuma linguagem encontrada.</td></tr>`;
-            return;
-        }
-        const totalRepos = allFlattenedRepos.length;
-        languages.forEach(lang => {
-            const percentage = ((lang.count / totalRepos) * 100).toFixed(2);
-            const row = document.createElement('tr');
-            row.innerHTML = `
-                <td>${lang.language}</td>
-                <td>${lang.count}</td>
-                <td>${percentage}%</td>
-            `;
-            topLanguagesTbody.appendChild(row);
-        });
-    }
-
+    /**
+     * Atualiza os painéis de estatísticas globais.
+     */
     function updateGlobalStats() {
-        totalReposGlobal.textContent = allFlattenedRepos.length;
-        
-        const mostUsedLanguage = calculatedTop10Languages.length > 0 ? calculatedTop10Languages[0].language : 'N/A';
-        mostUsedLanguageGlobal.textContent = mostUsedLanguage;
-        
+        // Total de Repositórios
+        totalReposGlobal.textContent = allRepos.length;
+
+        // Linguagem Mais Usada
+        const languageCounts = {};
+        allRepos.forEach(repo => {
+            const lang = repo['Linguagem Principal'];
+            if (lang) {
+                languageCounts[lang] = (languageCounts[lang] || 0) + 1;
+            }
+        });
+        const mostUsedLanguage = Object.keys(languageCounts).reduce((a, b) => languageCounts[a] > languageCounts[b] ? a : b, null);
+        mostUsedLanguageGlobal.textContent = mostUsedLanguage || 'N/A';
+
+        // Licença Mais Usada
         const licenseCounts = {};
-        allFlattenedRepos.forEach(repo => {
-            const lic = repo.Licenca || 'N/A';
-            licenseCounts[lic] = (licenseCounts[lic] || 0) + 1;
+        let naCount = 0;
+        allRepos.forEach(repo => {
+            const license = repo['Licenca'];
+            if (license) {
+                if (license.toUpperCase() === 'N/A') {
+                    naCount++;
+                } else {
+                    licenseCounts[license] = (licenseCounts[license] || 0) + 1;
+                }
+            }
         });
-
-        // --- INÍCIO DA ALTERAÇÃO ---
-        const naCount = licenseCounts['N/A'] || 0; // Obtém a contagem de N/A
+        const mostUsedLicense = Object.keys(licenseCounts).reduce((a, b) => (licenseCounts[a] > licenseCounts[b] ? a : b), null);
+        mostUsedLicenseGlobal.textContent = mostUsedLicense || 'N/A';
+        naLicenseCountSpan.textContent = `(${naCount} sem licença)`;
         
-        const filteredLicenses = Object.entries(licenseCounts).filter(([lic]) => lic !== 'N/A');
-        
-        const mostUsedLicense = filteredLicenses.length > 0
-            ? filteredLicenses.sort(([, a], [, b]) => b - a)[0][0]
-            : 'Não Informado';
-        
-        mostUsedLicenseGlobal.textContent = mostUsedLicense;
-        
-        // Exibe a contagem de N/A somente se houver algum
-        if (naCount > 0) {
-            naLicenseCountSpan.textContent = `(${naCount} sem licença registrada)`;
-        } else {
-            naLicenseCountSpan.textContent = '';
+        // Renderiza as descrições dos clusters se existirem
+        if (clustersTbody && clusters.length > 0) {
+            clustersTbody.innerHTML = clusters.map(cluster => `
+                <tr>
+                    <td>${cluster.id}</td>
+                    <td>${cluster.description}</td>
+                </tr>
+            `).join('');
         }
-        // --- FIM DA ALTERAÇÃO ---
     }
 
-    function applyFilters() {
-        let tempRepos = [...allFlattenedRepos];
-        const generalSearchTerm = generalSearchInput.value.toLowerCase().trim();
-        const language = languageFilter.value;
-        const license = licenseFilter.value;
+    /**
+     * Atualiza as listas de "Top Repositórios" e "Top Linguagens".
+     */
+    function updateTopLists() {
+        // Top 5 Linguagens
+        const languageCounts = {};
+        allRepos.forEach(repo => {
+            const lang = repo['Linguagem Principal'];
+            if (lang) {
+                languageCounts[lang] = (languageCounts[lang] || 0) + 1;
+            }
+        });
+        const sortedLanguages = Object.entries(languageCounts)
+            .sort(([, countA], [, countB]) => countB - countA)
+            .slice(0, 10);
+        topLanguagesTbody.innerHTML = sortedLanguages.map(([lang, count]) => `
+            <tr>
+                <td>${lang}</td>
+                <td>${count}</td>
+            </tr>
+        `).join('');
 
-        if (generalSearchTerm) {
-            tempRepos = tempRepos.filter(repo => 
+        // Top 5 Repositórios por Estrelas
+        const sortedRepos = [...allRepos].sort((a, b) => b.Estrelas - a.Estrelas).slice(0, 10);
+        topReposTbody.innerHTML = sortedRepos.map(repo => `
+            <tr>
+                <td><a href="${repo['Link de Acesso']}" target="_blank" class="repo-link">${repo['Nome do Repositório']}</a></td>
+                <td>${repo.Instituicao}</td>
+                <td><i class="fas fa-star text-yellow-400"></i> ${repo.Estrelas}</td>
+            </tr>
+        `).join('');
+    }
+
+    /**
+     * Aplica todos os filtros e ordenações e exibe os resultados na tabela.
+     * @param {boolean} resetPage - Define se a página deve ser resetada para a primeira.
+     */
+    function applyFiltersAndDisplay(resetPage = false) {
+        // 1. Filtra os repositórios
+        let filteredRepos = allRepos.filter(repo => {
+            const generalSearchTerm = generalSearchInput.value.toLowerCase();
+            const languageFilterValue = languageFilter.value;
+            const licenseFilterValue = licenseFilter.value;
+
+            // Filtros da tabela
+            const filterNome = document.querySelector('[data-filter-key="Nome do Repositório"]').value.toLowerCase();
+            const filterInstituicao = document.querySelector('[data-filter-key="Instituicao"]').value.toLowerCase();
+            const filterDescricao = document.querySelector('[data-filter-key="Descricao"]').value.toLowerCase();
+            const filterLinguagem = document.querySelector('[data-filter-key="Linguagem Principal"]').value.toLowerCase();
+            const filterEstrelas = document.querySelector('[data-filter-key="Estrelas"]').value.toLowerCase();
+            const filterLicenca = document.querySelector('[data-filter-key="Licenca"]').value.toLowerCase();
+            const filterData = document.querySelector('[data-filter-key="Ultima Atualizacao"]').value.toLowerCase();
+            const filterCluster = document.querySelector('[data-filter-key="Cluster_ID"]').value.toLowerCase();
+
+
+            const matchesGeneralSearch = !generalSearchTerm ||
                 (repo['Nome do Repositório'] && repo['Nome do Repositório'].toLowerCase().includes(generalSearchTerm)) ||
-                (repo.Descricao && repo.Descricao.toLowerCase().includes(generalSearchTerm)) ||
-                (repo.SiglaInstituicao && repo.SiglaInstituicao.toLowerCase().includes(generalSearchTerm)) ||
-                (repo.Instituicao && repo.Instituicao.toLowerCase().includes(generalSearchTerm))
-            );
-        }
+                (repo['Descricao'] && repo['Descricao'].toLowerCase().includes(generalSearchTerm)) ||
+                (repo['InstituicaoNomeCompleto'] && repo['InstituicaoNomeCompleto'].toLowerCase().includes(generalSearchTerm)) ||
+                (repo['Instituicao'] && repo['Instituicao'].toLowerCase().includes(generalSearchTerm));
 
-        if (language) {
-            tempRepos = tempRepos.filter(repo => repo['Linguagem Principal'] === language);
-        }
+            const matchesLanguage = !languageFilterValue || repo['Linguagem Principal'] === languageFilterValue;
+            const matchesLicense = !licenseFilterValue || repo['Licenca'] === licenseFilterValue;
 
-        if (license) {
-            tempRepos = tempRepos.filter(repo => repo.Licenca === license);
-        }
+            const matchesFilterNome = !filterNome || (repo['Nome do Repositório'] && repo['Nome do Repositório'].toLowerCase().includes(filterNome));
+            const matchesFilterInstituicao = !filterInstituicao || (repo['Instituicao'] && repo['Instituicao'].toLowerCase().includes(filterInstituicao));
+            const matchesFilterDescricao = !filterDescricao || (repo['Descricao'] && repo['Descricao'].toLowerCase().includes(filterDescricao));
+            const matchesFilterLinguagem = !filterLinguagem || (repo['Linguagem Principal'] && repo['Linguagem Principal'].toLowerCase().includes(filterLinguagem));
+            const matchesFilterEstrelas = !filterEstrelas || (repo['Estrelas'] !== undefined && String(repo['Estrelas']).includes(filterEstrelas));
+            const matchesFilterLicenca = !filterLicenca || (repo['Licenca'] && repo['Licenca'].toLowerCase().includes(filterLicenca));
+            const matchesFilterData = !filterData || (repo['Ultima Atualizacao'] && repo['Ultima Atualizacao'].toLowerCase().includes(filterData));
+            const matchesFilterCluster = !filterCluster || (repo['Cluster_ID'] !== undefined && String(repo['Cluster_ID']).includes(filterCluster));
 
-        allReposFilterInputs.forEach(input => {
-            const key = input.dataset.filterKey;
-            const value = input.value.toLowerCase().trim();
-            if (value) {
-                tempRepos = tempRepos.filter(repo => {
-                    const repoValue = repo[key] ? String(repo[key]).toLowerCase() : '';
-                    return repoValue.includes(value);
-                });
-            }
+
+            return matchesGeneralSearch && matchesLanguage && matchesLicense &&
+                   matchesFilterNome && matchesFilterInstituicao && matchesFilterDescricao &&
+                   matchesFilterLinguagem && matchesFilterEstrelas && matchesFilterLicenca &&
+                   matchesFilterData && matchesFilterCluster;
         });
 
-        return tempRepos;
-    }
+        // 2. Ordena os repositórios
+        filteredRepos.sort((a, b) => {
+            const valA = a[currentSortColumn] !== null ? a[currentSortColumn] : (currentSortDirection === 'asc' ? '' : 'zzzz');
+            const valB = b[currentSortColumn] !== null ? b[currentSortColumn] : (currentSortDirection === 'asc' ? '' : 'zzzz');
 
-    function sortRepos(repos) {
-        if (!currentSortColumn) {
-            return repos;
+            if (valA < valB) return currentSortDirection === 'asc' ? -1 : 1;
+            if (valA > valB) return currentSortDirection === 'asc' ? 1 : -1;
+            return 0;
+        });
+
+        currentFilteredAndSortedRepos = filteredRepos;
+
+        // 3. Atualiza a contagem de repositórios filtrados
+        if (filteredReposCount) {
+            filteredReposCount.textContent = filteredRepos.length;
         }
 
-        return repos.sort((a, b) => {
-            let valA = a[currentSortColumn];
-            let valB = b[currentSortColumn];
+        // Reseta a página se a filtragem/ordenação mudou
+        if (resetPage) {
+            currentPage = 1;
+        }
 
-            valA = valA === null || valA === undefined ? (currentSortDirection === 'asc' ? '' : 'zzzzz') : valA;
-            valB = valB === null || valB === undefined ? (currentSortDirection === 'asc' ? '' : 'zzzzz') : valB;
-
-            if (typeof valA === 'number' && typeof valB === 'number') {
-                return currentSortDirection === 'asc' ? valA - valB : valB - valA;
-            }
-
-            if (typeof valA === 'string' && typeof valB === 'string') {
-                return currentSortDirection === 'asc' ? valA.localeCompare(valB) : valB.localeCompare(valA);
-            }
-
-            const dateA = new Date(valA);
-            const dateB = new Date(valB);
-            if (!isNaN(dateA) && !isNaN(dateB)) {
-                return currentSortDirection === 'asc' ? dateA.getTime() - dateB.getTime() : dateB.getTime() - dateA.getTime();
-            }
-
-            return currentSortDirection === 'asc' ? String(valA).localeCompare(String(valB)) : String(valB).localeCompare(String(a));
-        });
+        renderAllRepos();
     }
 
-    function displayAllReposTable(repos) {
+    /**
+     * Renderiza a tabela de repositórios para a página atual.
+     */
+    function renderAllRepos() {
         allReposTbody.innerHTML = '';
-        if (repos.length === 0) {
-            allReposTbody.innerHTML = `<tr><td colspan="9" class="no-data-message">Nenhum repositório encontrado com os filtros aplicados.</td></tr>`;
-            updatePaginationControls(0, 0, 0);
-            filteredReposCount.textContent = 0;
+        if (currentFilteredAndSortedRepos.length === 0) {
+            allReposTbody.innerHTML = '<tr><td colspan="9" class="p-4 text-center text-gray-500">Nenhum repositório encontrado.</td></tr>';
+            pageInfoSpan.textContent = 'Página 0 de 0';
+            prevPageBtn.disabled = true;
+            nextPageBtn.disabled = true;
             return;
         }
 
-        const start = (currentPage - 1) * itemsPerPage;
-        const end = start + itemsPerPage;
-        const paginatedItems = repos.slice(start, end);
+        const startIndex = (currentPage - 1) * itemsPerPage;
+        const endIndex = startIndex + itemsPerPage;
+        const paginatedRepos = currentFilteredAndSortedRepos.slice(startIndex, endIndex);
 
-        paginatedItems.forEach(repo => {
-            const row = document.createElement('tr');
-            row.innerHTML = `
-                <td>${repo.SiglaInstituicao}</td>
-                <td><a href="${repo['Link de Acesso']}" target="_blank" class="repo-link">${repo['Nome do Repositório']}</a></td>
-                <td><span class="badge">${repo['Linguagem Principal']}</span></td>
-                <td>${repo.Estrelas || '0'}</td>
-                <td>${repo.Licenca || 'N/A'}</td>
-                <td>${new Date(repo['Ultima Atualizacao']).toLocaleDateString('pt-BR')}</td>
-                <td>${repo.Descricao}</td>
-                <td>${repo['Cluster_ID']}</td>
-                <td><a href="${repo['Link de Acesso']}" target="_blank" title="Acessar Repositório"><i class="fas fa-external-link-alt"></i></a></td>
+        const totalPages = Math.ceil(currentFilteredAndSortedRepos.length / itemsPerPage);
+
+        paginatedRepos.forEach(repo => {
+            const tr = document.createElement('tr');
+            tr.className = 'hover:bg-gray-50 transition duration-150';
+
+            // Formata a data para um formato mais legível
+            const formattedDate = repo['Ultima Atualizacao'] ? new Date(repo['Ultima Atualizacao']).toLocaleDateString('pt-BR') : 'N/A';
+
+            // Garante que a descrição não seja nula
+            const descricao = repo['Descricao'] || 'Sem descrição';
+
+            // Trunca a descrição para exibição na tabela
+            const truncatedDesc = descricao.length > 100 ? descricao.substring(0, 97) + '...' : descricao;
+            
+            // Acesso seguro ao Cluster_ID
+            const clusterId = repo['Cluster_ID'] !== undefined ? repo['Cluster_ID'] : 'N/A';
+
+            tr.innerHTML = `
+                <td class="p-4 border-b text-sm text-gray-900">${repo['Instituicao']}</td>
+                <td class="p-4 border-b text-sm text-gray-900">${repo['Nome do Repositório']}</td>
+                <td class="p-4 border-b text-sm text-gray-700">${repo['Linguagem Principal'] || 'N/A'}</td>
+                <td class="p-4 border-b text-sm text-gray-700"><i class="fas fa-star text-yellow-400"></i> ${repo['Estrelas']}</td>
+                <td class="p-4 border-b text-sm text-gray-700">${repo['Licenca'] || 'N/A'}</td>
+                <td class="p-4 border-b text-sm text-gray-700">${formattedDate}</td>
+                <td class="p-4 border-b text-sm text-gray-700 truncate-text" title="${descricao}">${truncatedDesc}</td>
+                <td class="p-4 border-b text-sm text-gray-700">${clusterId}</td>
+                <td class="p-4 border-b text-center text-sm">
+                    <a href="${repo['Link de Acesso']}" target="_blank" class="text-blue-600 hover:text-blue-800 transition-colors">
+                        <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </td>
             `;
-            allReposTbody.appendChild(row);
+            allReposTbody.appendChild(tr);
         });
 
-        filteredReposCount.textContent = repos.length;
-        updatePaginationControls(repos.length, currentPage, itemsPerPage);
+        // Atualiza a paginação
+        pageInfoSpan.textContent = `Página ${currentPage} de ${totalPages}`;
+        prevPageBtn.disabled = currentPage === 1;
+        nextPageBtn.disabled = currentPage === totalPages;
     }
 
-    function updatePaginationControls(totalItems, page, limit) {
-        const totalPages = Math.ceil(totalItems / limit);
-        pageInfoSpan.textContent = `Página ${page} de ${totalPages}`;
-        prevPageBtn.disabled = page === 1;
-        nextPageBtn.disabled = page >= totalPages || totalPages === 0;
+    /**
+     * Exibe uma mensagem de carregamento ou de erro na tabela principal.
+     * @param {string} message - A mensagem a ser exibida.
+     */
+    function displayLoadingMessage(message) {
+        allReposTbody.innerHTML = `<tr><td colspan="9" class="p-4 text-center text-gray-500 loading-message">${message}</td></tr>`;
     }
 
-    function applyFiltersAndDisplay() {
-        currentFilteredAndSortedRepos = applyFilters();
-        const sortedRepos = sortRepos(currentFilteredAndSortedRepos);
-        displayAllReposTable(sortedRepos);
-    }
+    // === EVENT LISTENERS ===
 
-    // --- Listeners de Eventos ---
-    generalSearchInput.addEventListener("input", () => {
-        currentPage = 1;
-        applyFiltersAndDisplay();
-    });
-    languageFilter.addEventListener("change", () => {
-        currentPage = 1;
-        applyFiltersAndDisplay();
-    });
-    licenseFilter.addEventListener("change", () => {
-        currentPage = 1;
-        applyFiltersAndDisplay();
+    // Eventos de filtro global
+    generalSearchInput.addEventListener('input', () => applyFiltersAndDisplay(true));
+    languageFilter.addEventListener('change', () => applyFiltersAndDisplay(true));
+    licenseFilter.addEventListener('change', () => applyFiltersAndDisplay(true));
+    
+    // Evento para limpar filtros
+    clearFiltersBtn.addEventListener('click', () => {
+        generalSearchInput.value = '';
+        languageFilter.value = '';
+        licenseFilter.value = '';
+        allReposFilterInputs.forEach(input => input.value = '');
+
+        // Reseta a ordenação para o padrão
+        allReposTableHeaders.forEach(th => th.classList.remove('asc', 'desc'));
+        const defaultHeader = document.querySelector('[data-sort-key="Estrelas"]');
+        if (defaultHeader) {
+            defaultHeader.classList.add('desc');
+            const icon = defaultHeader.querySelector('.sort-icon');
+            if (icon) icon.className = 'fas fa-sort-down sort-icon';
+        }
+
+        currentSortColumn = 'Estrelas';
+        currentSortDirection = 'desc';
+
+        applyFiltersAndDisplay(true);
     });
 
+    // Eventos de filtro e ordenação da tabela
     allReposFilterInputs.forEach(input => {
-        input.addEventListener("input", () => {
-            currentPage = 1;
-            applyFiltersAndDisplay();
-        });
-    });
-
-    clearFiltersBtn.addEventListener("click", () => {
-        generalSearchInput.value = "";
-        languageFilter.value = "";
-        licenseFilter.value = "";
-        allReposFilterInputs.forEach(input => input.value = "");
-        currentSortColumn = null;
-        currentSortDirection = 'asc';
-        allReposTableHeaders.forEach(th => {
-            th.classList.remove("asc", "desc");
-            const icon = th.querySelector(".sort-icon");
-            if (icon) icon.className = "fas fa-sort sort-icon";
-        });
-        currentPage = 1;
-        applyFiltersAndDisplay();
+        input.addEventListener('input', () => applyFiltersAndDisplay(true));
     });
 
     allReposTableHeaders.forEach(header => {
-        header.addEventListener("click", () => {
-            const column = header.dataset.sortKey;
-            
+        header.addEventListener('click', () => {
+            const column = header.getAttribute('data-sort-key');
+            if (!column) return;
+
+            // Remove a classe de ordenação e reseta o ícone de todos os outros cabeçalhos
             allReposTableHeaders.forEach(th => {
                 if (th !== header) {
                     th.classList.remove("asc", "desc");
@@ -403,6 +402,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // Event listeners para paginação
     prevPageBtn.addEventListener("click", () => {
         if (currentPage > 1) {
             currentPage--;
