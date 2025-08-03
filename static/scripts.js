@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const totalReposGlobal = document.getElementById('totalReposGlobal');
     const mostUsedLanguageGlobal = document.getElementById('mostUsedLanguageGlobal');
     const mostUsedLicenseGlobal = document.getElementById('mostUsedLicenseGlobal');
+    const naLicenseCountSpan = document.getElementById('naLicenseCount'); // Novo elemento
 
     // Elementos para Top Linguagens
     const topLanguagesTbody = document.getElementById('topLanguagesTbody');
@@ -20,6 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const allReposTbody = document.getElementById('allReposTbody');
     const allReposTableHeaders = document.querySelectorAll('#allReposTable thead tr:first-child th[data-sort-key]');
     const allReposFilterInputs = document.querySelectorAll('#filterRow .filter-input');
+    const filteredReposCount = document.getElementById('filteredReposCount');
 
     // Elementos para Tabela de Clusters
     const clustersTbody = document.getElementById('clustersTbody');
@@ -33,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let allInstitutionsData = [];
     let clusterDescriptions = [];
     let allFlattenedRepos = [];
-    let currentFilteredAndSortedRepos = []; // Repositórios após filtros e ordenação
+    let currentFilteredAndSortedRepos = [];
     let calculatedTop10Languages = [];
     let calculatedTop10Repos = [];
 
@@ -46,8 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- Lógica de Carregamento de Dados ---
     async function fetchAndProcessData() {
         try {
-            // const response = await fetch('repositorios_federais_com_clusters_visualizado.json');
-            const response = await fetch('repositorios_federais_filtrado_idioma.json');
+            const response = await fetch('repositorios_federais_com_clusters_visualizado.json');
             if (!response.ok) {
                 // Atualiza todas as mensagens de erro se o arquivo não puder ser carregado
                 allReposTbody.innerHTML = `<tr><td colspan="9" class="error-message">Erro ao carregar os dados: Arquivo 'repositorios_federais_com_clusters_visualizado.json' não encontrado ou inacessível.</td></tr>`;
@@ -84,7 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         availableLanguages.add(fullRepo['Linguagem Principal']);
                         tempLanguageCounts[fullRepo['Linguagem Principal']] = (tempLanguageCounts[fullRepo['Linguagem Principal']] || 0) + 1;
                     }
-                    if (fullRepo.Licenca !== 'N/A') {
+                    if (fullRepo.Licenca) { // Licenças nulas ou vazias já são tratadas como 'N/A'
                         availableLicenses.add(fullRepo.Licenca);
                     }
                     return fullRepo;
@@ -104,7 +105,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Popula os filtros e as tabelas adicionais
             populateFilter(languageFilter, Array.from(availableLanguages).sort());
-            populateFilter(licenseFilter, Array.from(availableLicenses).sort());
+            
+            // Filtra as licenças disponíveis para não incluir 'N/A' no dropdown
+            const filteredLicensesForDropdown = Array.from(availableLicenses).filter(lic => lic !== 'N/A').sort();
+            populateFilter(licenseFilter, filteredLicensesForDropdown);
+
             populateClustersTable();
             displayTopReposTable(calculatedTop10Repos);
             displayTopLanguagesTable(calculatedTop10Languages);
@@ -195,8 +200,25 @@ document.addEventListener('DOMContentLoaded', () => {
             const lic = repo.Licenca || 'N/A';
             licenseCounts[lic] = (licenseCounts[lic] || 0) + 1;
         });
-        const mostUsedLicense = Object.entries(licenseCounts).sort(([, a], [, b]) => b - a)[0];
-        mostUsedLicenseGlobal.textContent = mostUsedLicense ? mostUsedLicense[0] : 'N/A';
+
+        // --- INÍCIO DA ALTERAÇÃO ---
+        const naCount = licenseCounts['N/A'] || 0; // Obtém a contagem de N/A
+        
+        const filteredLicenses = Object.entries(licenseCounts).filter(([lic]) => lic !== 'N/A');
+        
+        const mostUsedLicense = filteredLicenses.length > 0
+            ? filteredLicenses.sort(([, a], [, b]) => b - a)[0][0]
+            : 'Não Informado';
+        
+        mostUsedLicenseGlobal.textContent = mostUsedLicense;
+        
+        // Exibe a contagem de N/A somente se houver algum
+        if (naCount > 0) {
+            naLicenseCountSpan.textContent = `(e ${naCount} sem licença)`;
+        } else {
+            naLicenseCountSpan.textContent = '';
+        }
+        // --- FIM DA ALTERAÇÃO ---
     }
 
     function applyFilters() {
@@ -262,7 +284,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 return currentSortDirection === 'asc' ? dateA.getTime() - dateB.getTime() : dateB.getTime() - dateA.getTime();
             }
 
-            return currentSortDirection === 'asc' ? String(valA).localeCompare(String(valB)) : String(valB).localeCompare(String(valA));
+            return currentSortDirection === 'asc' ? String(valA).localeCompare(String(valB)) : String(valB).localeCompare(String(a));
         });
     }
 
@@ -271,6 +293,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (repos.length === 0) {
             allReposTbody.innerHTML = `<tr><td colspan="9" class="no-data-message">Nenhum repositório encontrado com os filtros aplicados.</td></tr>`;
             updatePaginationControls(0, 0, 0);
+            filteredReposCount.textContent = 0;
             return;
         }
 
@@ -285,8 +308,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 <td><a href="${repo['Link de Acesso']}" target="_blank" class="repo-link">${repo['Nome do Repositório']}</a></td>
                 <td><span class="badge">${repo['Linguagem Principal']}</span></td>
                 <td>${repo.Estrelas || '0'}</td>
-                <td>${new Date(repo['Ultima Atualizacao']).toLocaleDateString('pt-BR')}</td>
                 <td>${repo.Licenca || 'N/A'}</td>
+                <td>${new Date(repo['Ultima Atualizacao']).toLocaleDateString('pt-BR')}</td>
                 <td>${repo.Descricao}</td>
                 <td>${repo['Cluster_ID']}</td>
                 <td><a href="${repo['Link de Acesso']}" target="_blank" title="Acessar Repositório"><i class="fas fa-external-link-alt"></i></a></td>
@@ -294,6 +317,7 @@ document.addEventListener('DOMContentLoaded', () => {
             allReposTbody.appendChild(row);
         });
 
+        filteredReposCount.textContent = repos.length;
         updatePaginationControls(repos.length, currentPage, itemsPerPage);
     }
 
@@ -308,7 +332,6 @@ document.addEventListener('DOMContentLoaded', () => {
         currentFilteredAndSortedRepos = applyFilters();
         const sortedRepos = sortRepos(currentFilteredAndSortedRepos);
         displayAllReposTable(sortedRepos);
-        updatePaginationControls(currentFilteredAndSortedRepos.length, currentPage, itemsPerPage);
     }
 
     // --- Listeners de Eventos ---
@@ -376,16 +399,14 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             currentPage = 1; // Reseta para a primeira página ao mudar a ordenação
-            const sortedRepos = sortRepos(currentFilteredAndSortedRepos);
-            displayAllReposTable(sortedRepos);
+            applyFiltersAndDisplay();
         });
     });
 
     prevPageBtn.addEventListener("click", () => {
         if (currentPage > 1) {
             currentPage--;
-            const sortedRepos = sortRepos(currentFilteredAndSortedRepos);
-            displayAllReposTable(sortedRepos);
+            applyFiltersAndDisplay();
         }
     });
 
@@ -393,8 +414,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const totalPages = Math.ceil(currentFilteredAndSortedRepos.length / itemsPerPage);
         if (currentPage < totalPages) {
             currentPage++;
-            const sortedRepos = sortRepos(currentFilteredAndSortedRepos);
-            displayAllReposTable(sortedRepos);
+            applyFiltersAndDisplay();
         }
     });
 
