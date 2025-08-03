@@ -72,7 +72,7 @@ if __name__ == "__main__":
     
     # Lista de idiomas aceitos: 'pt' para Português, 'en' para Inglês.
     # Você pode personalizar esta lista conforme a necessidade.
-    ACCEPTED_LANGUAGES = ['pt', 'en']
+    ACCEPTED_LANGUAGES = ['pt']
 
     try:
         with open(input_json_file, 'r', encoding='utf-8') as f:
