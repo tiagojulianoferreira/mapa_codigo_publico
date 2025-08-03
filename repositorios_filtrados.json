@@ -46228,17 +46228,6 @@
           "Dados Organizacao": null
         },
         {
-          "Nome do Repositório": "uspto-trademark",
-          "Descricao": "How to file a USPTO trademark without an attorney for $225",
-          "Linguagem Principal": null,
-          "Estrelas": 69,
-          "Licenca": "N/A",
-          "Ultima Atualizacao": "2025-03-28T00:10:46Z",
-          "Link de Acesso": "https://github.com/tidwall/uspto-trademark",
-          "Organizacao": false,
-          "Dados Organizacao": null
-        },
-        {
           "Nome do Repositório": "rusp",
           "Descricao": "The Rust USP toolkit",
           "Linguagem Principal": "Rust",

@@ -1,3 +1,4 @@
+#!/bin/bash
 source .venv/bin/activate
 #python github_busca_ampla.py
 sleep 2
