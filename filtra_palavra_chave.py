@@ -105,7 +105,7 @@ def filtrar_repositorios_por_palavras_chave(
 if __name__ == "__main__":
     # Nomes dos arquivos de entrada e saída
     # O arquivo de repositórios a ser filtrado
-    input_repos_file = 'repositorios_federais_com_clusters_visualizado.json'
+    input_repos_file = 'repositorios_federais_desduplicados.json'
     # O arquivo de palavras-chave gerado pelo script anterior
     input_keywords_file = 'palavras_chave_instituicoes_v2.json'
     # O arquivo onde o resultado será salvo
