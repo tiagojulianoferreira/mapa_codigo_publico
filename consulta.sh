@@ -1,13 +1,15 @@
 #!/bin/bash
-source .venv/bin/activate
-#python github_busca_ampla.py
+
+# Define o caminho para o interpretador python do ambiente virtual
+PYTHON_VENV="./.venv/bin/python"
+
+# Use a variável para chamar os scripts
 sleep 2
-python filtra_palavras_chave.py
+$PYTHON_VENV filtra_palavras_chave.py
 sleep 2
-python filtrar_idiomas.py
-sleep 2 
-#python clusterizador.py
-#sleep 2
+$PYTHON_VENV filtrar_idiomas.py
+sleep 2
+
 git add .
 git commit -m "Atualização automática do mapa de código público"
 git push origin main
