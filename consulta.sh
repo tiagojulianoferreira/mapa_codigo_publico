@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Define o caminho completo para o interpretador Python do seu ambiente virtual
-PYTHON_VENV="./.venv/bin/python"
+PYTHON_VENV="/usr/bin/python3"  # Altere para o caminho correto do seu Python virtual
 
 # Usa o caminho direto para o interpretador Python
 $PYTHON_VENV filtra_palavras_chave.py
