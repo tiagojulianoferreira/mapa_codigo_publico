@@ -18876,36 +18876,9 @@
       "Nome Completo": "Instituto Federal do Rio Grande do Sul",
       "URL Oficial": "https://ifrs.edu.br",
       "Repositorios": [
-        {
-          "Nome do Repositório": "eloquent-ifrs",
-          "Descricao": "Eloquent Double Entry Accounting with a focus on IFRS Compliant Reporting",
-          "Linguagem Principal": "PHP",
-          "Estrelas": 350,
-          "Licenca": "MIT",
-          "Ultima Atualizacao": "2025-07-03T07:30:41Z",
-          "Link de Acesso": "https://github.com/ekmungai/eloquent-ifrs",
-          "Cluster_ID": 4
-        },
-        {
-          "Nome do Repositório": "python-accounting",
-          "Descricao": "Python Double Entry Accounting with a focus on IFRS Compliant Reporting",
-          "Linguagem Principal": "Python",
-          "Estrelas": 136,
-          "Licenca": "MIT",
-          "Ultima Atualizacao": "2025-07-11T12:40:31Z",
-          "Link de Acesso": "https://github.com/ekmungai/python-accounting",
-          "Cluster_ID": 4
-        },
-        {
-          "Nome do Repositório": "covid19-age-stratified-ifr",
-          "Descricao": "Calculates the age-stratified infection fatality ratio (IFR) of COVID-19",
-          "Linguagem Principal": "Python",
-          "Estrelas": 108,
-          "Licenca": "N/A",
-          "Ultima Atualizacao": "2024-11-22T10:33:37Z",
-          "Link de Acesso": "https://github.com/mbevand/covid19-age-stratified-ifr",
-          "Cluster_ID": 4
-        },
+        
+       
+       
         {
           "Nome do Repositório": "aviationCharts",
           "Descricao": "Prepare Aeronav charts (sectional, IFR low/high, WAC, TAC, heli etc) for use as a seamless mosaic of mbtiles",
@@ -18916,16 +18889,7 @@
           "Link de Acesso": "https://github.com/jlmcgraw/aviationCharts",
           "Cluster_ID": 4
         },
-        {
-          "Nome do Repositório": "abacus",
-          "Descricao": "A small yet valid double-entry accounting system in Python and command line.",
-          "Linguagem Principal": "Python",
-          "Estrelas": 63,
-          "Licenca": "GPL-3.0",
-          "Ultima Atualizacao": "2025-07-21T19:47:45Z",
-          "Link de Acesso": "https://github.com/epogrebnyak/abacus",
-          "Cluster_ID": 4
-        },
+       
         {
           "Nome do Repositório": "XBRL",
           "Descricao": "Classes that implement the XBRL 2.1, XDT, Formulas, Generics, XFI and other XBRL specifications",
