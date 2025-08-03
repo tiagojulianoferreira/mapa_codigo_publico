@@ -88,7 +88,7 @@ def filter_repos_by_description_language(input_file, output_file):
 
             try:
                 lang = detect(description)
-                if lang == 'pt' or lang == 'en':
+                if lang == 'pt': # or lang == 'en':
                     new_repos.append(repo)
                     total_repos_kept += 1
             except LangDetectException:

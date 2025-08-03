@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- Lógica de Carregamento de Dados ---
     async function fetchAndProcessData() {
         try {
-            const response = await fetch('repositorios_federais_com_clusters_visualizado.json');
+            const response = await fetch('repositorios_federais_filtrado_idioma.json');
             if (!response.ok) {
                 // Atualiza todas as mensagens de erro se o arquivo não puder ser carregado
                 allReposTbody.innerHTML = `<tr><td colspan="9" class="error-message">Erro ao carregar os dados: Arquivo 'repositorios_federais_com_clusters_visualizado.json' não encontrado ou inacessível.</td></tr>`;
