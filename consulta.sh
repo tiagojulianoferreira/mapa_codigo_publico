@@ -1,4 +1,4 @@
-python app.py
+python github_busca_ampla.py
 sleep 2
 python filtrar_idiomas.py
 sleep 2 
