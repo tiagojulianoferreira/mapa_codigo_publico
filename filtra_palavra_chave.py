@@ -1,5 +1,39 @@
 import json
 from typing import Dict, List, Any
+import os
+
+def criar_arquivo_stopwords_se_nao_existir(file_path: str):
+    """
+    Cria um arquivo de stopwords padrão se ele não existir,
+    com uma lista de palavras para começar.
+    """
+    if not os.path.exists(file_path):
+        default_stopwords = [
+            'toad_-3-blooket', 'ifrs 9', 'l10n_tw_standard_ifrss', '.config',
+            'Best-Electronics-Appliances-for-Home-and-Kitchen---My-Home-Product-Guide',
+            'BlooketPanel', 'xxx', 'IFRS 17', 'baidu', 'UEFI', 'linux', 'windows', 'mac'
+        ]
+        with open(file_path, 'w', encoding='utf-8') as f:
+            for word in default_stopwords:
+                f.write(f"{word}\n")
+        print(f"Arquivo de stopwords '{file_path}' criado com sucesso.")
+
+def carregar_stopwords(file_path: str) -> List[str]:
+    """
+    Carrega as palavras-chave de um arquivo de texto, uma por linha.
+    """
+    criar_arquivo_stopwords_se_nao_existir(file_path)
+    try:
+        with open(file_path, 'r', encoding='utf-8') as f:
+            # Lê cada linha, remove espaços em branco no início e fim e filtra linhas vazias
+            stopwords = [line.strip() for line in f if line.strip()]
+        return stopwords
+    except FileNotFoundError:
+        print(f"Erro: O arquivo '{file_path}' não foi encontrado.")
+        return []
+    except IOError as e:
+        print(f"Erro ao ler o arquivo '{file_path}': {e}")
+        return []
 
 def carregar_palavras_chave_instituicoes(file_path: str) -> Dict[str, List[str]]:
     """
@@ -15,7 +49,6 @@ def carregar_palavras_chave_instituicoes(file_path: str) -> Dict[str, List[str]]
             sigla = institution.get('Sigla')
             keywords = institution.get('Palavras_Chave', [])
             if sigla and keywords:
-                # Usa a sigla como chave para buscar as palavras-chave associadas
                 keywords_map[sigla] = keywords
         return keywords_map
     except FileNotFoundError:
@@ -28,18 +61,25 @@ def carregar_palavras_chave_instituicoes(file_path: str) -> Dict[str, List[str]]
 def filtrar_repositorios_por_palavras_chave(
     repos_data_file: str,
     keywords_file: str,
+    stopwords_file: str,
     output_file: str
 ) -> None:
     """
     Filtra os repositórios de um arquivo JSON usando as palavras-chave
-    dinamicamente carregadas de outro arquivo JSON.
+    dinamicamente carregadas de outro arquivo JSON e removendo stopwords
+    de um arquivo de texto.
     """
-    # Carrega as palavras-chave
+    # Carrega as palavras-chave das instituições
     keywords_by_institution = carregar_palavras_chave_instituicoes(keywords_file)
     if not keywords_by_institution:
         print("Palavras-chave não foram carregadas. Processo de filtragem abortado.")
         return
 
+    # Carrega a lista de stopwords do arquivo de texto
+    custom_stopwords = carregar_stopwords(stopwords_file)
+    if not custom_stopwords:
+        print(f"Aviso: Não foi possível carregar as stopwords do arquivo '{stopwords_file}'. A filtragem por stopwords não será aplicada.")
+        
     # Carrega os dados dos repositórios
     try:
         with open(repos_data_file, 'r', encoding='utf-8') as f:
@@ -54,17 +94,15 @@ def filtrar_repositorios_por_palavras_chave(
     filtered_institutions = []
     total_repos_kept = 0
     total_repos_processed = 0
+    stopwords_lower = [sw.lower() for sw in custom_stopwords]
 
-    print(f"\nIniciando filtragem de repositórios usando palavras-chave de '{keywords_file}'...")
+    print(f"\nIniciando filtragem de repositórios usando palavras-chave de '{keywords_file}' e removendo stopwords de '{stopwords_file}'...")
     
     for institution in repos_data.get('institutions_data', []):
         sigla = institution.get('Sigla')
         
-        # Pega a lista de palavras-chave para esta instituição
         institution_keywords = keywords_by_institution.get(sigla, [])
         if not institution_keywords:
-            # Se não houver palavras-chave para a instituição, não filtramos seus repositórios
-            # ou podemos optar por ignorá-la. Aqui, vamos ignorar.
             continue
             
         new_repos = []
@@ -73,11 +111,13 @@ def filtrar_repositorios_por_palavras_chave(
             repo_name = str(repo.get('Nome do Repositório', '')).lower()
             repo_desc = str(repo.get('Descricao', '')).lower()
             
-            # Converte as palavras-chave para minúsculas
             keywords_lower = [k.lower() for k in institution_keywords]
             
-            # Verifica se o nome ou a descrição do repositório contém alguma palavra-chave
-            if any(keyword in repo_name or keyword in repo_desc for keyword in keywords_lower):
+            contains_keyword = any(keyword in repo_name or keyword in repo_desc for keyword in keywords_lower)
+            
+            contains_stopwords = any(sw in repo_name or sw in repo_desc for sw in stopwords_lower)
+            
+            if contains_keyword and not contains_stopwords:
                 new_repos.append(repo)
                 total_repos_kept += 1
         
@@ -86,10 +126,8 @@ def filtrar_repositorios_por_palavras_chave(
             filtered_institution['Repositorios'] = new_repos
             filtered_institutions.append(filtered_institution)
 
-    # Cria a nova estrutura JSON com os dados filtrados.
     output_json_structure = {
         "institutions_data": filtered_institutions,
-        # Mantém as descrições dos clusters se existirem no arquivo original
         "cluster_descriptions": repos_data.get('cluster_descriptions', [])
     }
     
@@ -103,12 +141,9 @@ def filtrar_repositorios_por_palavras_chave(
 
 
 if __name__ == "__main__":
-    # Nomes dos arquivos de entrada e saída
-    # O arquivo de repositórios a ser filtrado
     input_repos_file = 'repositorios_federais_desduplicados.json'
-    # O arquivo de palavras-chave gerado pelo script anterior
     input_keywords_file = 'palavras_chave_instituicoes_v2.json'
-    # O arquivo onde o resultado será salvo
-    output_filtered_file = 'repositorios_federais_filtrados_dinamico.json'
+    input_stopwords_file = 'stopwords.txt'
+    output_filtered_file = 'repositorios_filtrados.json'
 
-    filtrar_repositorios_por_palavras_chave(input_repos_file, input_keywords_file, output_filtered_file)
+    filtrar_repositorios_por_palavras_chave(input_repos_file, input_keywords_file, input_stopwords_file, output_filtered_file)

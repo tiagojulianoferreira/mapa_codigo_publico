@@ -161,7 +161,7 @@ if __name__ == "__main__":
                 "Repositorios": novos_repos
             })
 
-    with open("repositorios_federais_desduplicados.json", "w", encoding="utf-8") as f:
+    with open("repositorios_github.json", "w", encoding="utf-8") as f:
         json.dump(saida, f, ensure_ascii=False, indent=2)
 
     print("\n✅ Arquivo 'repositorios_federais_desduplicados.json' gerado com sucesso!")
