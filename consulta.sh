@@ -1,7 +1,7 @@
 source .venv/bin/activate
 #python github_busca_ampla.py
 sleep 2
-python3 filtrar_palavras_chave.py
+python3 filtra_palavras_chave.py
 sleep 2
 python3 filtrar_idiomas.py
 sleep 2 
