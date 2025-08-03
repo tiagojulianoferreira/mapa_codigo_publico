@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # O caminho completo para o diretório do projeto
-PROJETO_DIR="/home/tiago/Documentos/projetos/mapa_codigo_publico/"
+PROJETO_DIR="./"
 
 # Ativa o ambiente virtual
 source "$PROJETO_DIR/.venv/bin/activate"
