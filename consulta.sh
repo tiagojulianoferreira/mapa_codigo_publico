@@ -1,7 +1,7 @@
 #!/bin/bash
 #python github_busca_ampla.py
 sleep 2
-/usr/bin/python filtra_palavras_chave.py
+python filtra_palavras_chave.py
 sleep 2
 python filtrar_idiomas.py
 sleep 2 
