@@ -1,91 +1,86 @@
 import json
-from typing import Dict, Any
+from typing import Dict, List, Any
 
-# Lista de palavras-chave a serem ignoradas nos títulos e descrições dos repositórios.
-# Esta lista pode ser expandida conforme a necessidade.
-CUSTOM_STOPWORDS = [
-    'toad_-3-blooket', 'ifrs 9', 'l10n_tw_standard_ifrss', '.config', 'FBA port to iOS',
-    'Best-Electronics-Appliances-for-Home-and-Kitchen---My-Home-Product-Guide', 'IFB-unix',
-    'BlooketPanel', 'IFRExtractor-RS', 'xxx', 'CA378-AOIS_USB3-IFB', 'IFB-FAIR-data-training',
-    'ifb-staff', 'Guide to excellent variety of Electronics Appliances', 'vapoursynth-colorbars-scripts',
-    'wiki-is-mostly-fake-radom-words-word-,genrationr-', 'XPS9570-Firmware-IFR', 'UEFI-Variable-Editer',
-    'IFRS 17', 'BlooketPanel', 'baidu', 'UEFI', 'ifrextractor-rs', 'wiki-is-mostly-fake-radom-words-word-genrationr-',
-    'Bella'
-]
-
-def filter_repos_with_multiple_criteria(input_data: Dict[str, Any]) -> Dict[str, Any]:
+def carregar_palavras_chave_instituicoes(file_path: str) -> Dict[str, List[str]]:
     """
-    Filtra repositórios de um objeto JSON, aplicando múltiplos critérios de filtragem:
-    1. A descrição deve ter no máximo 500 caracteres.
-    2. O nome e a descrição não devem conter palavras-chave da lista de stopwords.
-    3. O nome, descrição ou organização devem conter a sigla ou nome da instituição.
-
-    Args:
-        input_data (Dict[str, Any]): O dicionário JSON de entrada com a estrutura 'institutions_data'.
-
-    Returns:
-        Dict[str, Any]: Um novo dicionário JSON com os repositórios filtrados.
+    Carrega as palavras-chave das instituições de um arquivo JSON
+    e as organiza em um dicionário para busca rápida.
     """
-    if 'institutions_data' not in input_data:
-        print("Erro: A chave 'institutions_data' não foi encontrada no JSON de entrada.")
+    try:
+        with open(file_path, 'r', encoding='utf-8') as f:
+            data = json.load(f)
+        
+        keywords_map = {}
+        for institution in data.get('institutions_keywords', []):
+            sigla = institution.get('Sigla')
+            keywords = institution.get('Palavras_Chave', [])
+            if sigla and keywords:
+                # Usa a sigla como chave para buscar as palavras-chave associadas
+                keywords_map[sigla] = keywords
+        return keywords_map
+    except FileNotFoundError:
+        print(f"Erro: O arquivo '{file_path}' não foi encontrado.")
+        return {}
+    except json.JSONDecodeError:
+        print(f"Erro: O arquivo '{file_path}' não é um JSON válido.")
         return {}
 
-    # 1. Coletar todas as palavras-chave (siglas e nomes completos) das instituições.
-    institution_keywords = set()
-    for institution in input_data['institutions_data']:
-        sigla = institution.get('Sigla')
-        nome_completo = institution.get('Nome Completo')
-        if sigla:
-            institution_keywords.add(sigla.lower())
-        if nome_completo:
-            for word in nome_completo.lower().split():
-                if len(word) > 2:
-                    institution_keywords.add(word)
+def filtrar_repositorios_por_palavras_chave(
+    repos_data_file: str,
+    keywords_file: str,
+    output_file: str
+) -> None:
+    """
+    Filtra os repositórios de um arquivo JSON usando as palavras-chave
+    dinamicamente carregadas de outro arquivo JSON.
+    """
+    # Carrega as palavras-chave
+    keywords_by_institution = carregar_palavras_chave_instituicoes(keywords_file)
+    if not keywords_by_institution:
+        print("Palavras-chave não foram carregadas. Processo de filtragem abortado.")
+        return
 
-    print(f"Palavras-chave de filtragem geradas: {institution_keywords}")
+    # Carrega os dados dos repositórios
+    try:
+        with open(repos_data_file, 'r', encoding='utf-8') as f:
+            repos_data = json.load(f)
+    except FileNotFoundError:
+        print(f"Erro: O arquivo de repositórios '{repos_data_file}' não foi encontrado.")
+        return
+    except json.JSONDecodeError:
+        print(f"Erro: O arquivo de repositórios '{repos_data_file}' não é um JSON válido.")
+        return
 
     filtered_institutions = []
-    total_repos_processed = 0
     total_repos_kept = 0
+    total_repos_processed = 0
+
+    print(f"\nIniciando filtragem de repositórios usando palavras-chave de '{keywords_file}'...")
     
-    for institution in input_data['institutions_data']:
+    for institution in repos_data.get('institutions_data', []):
+        sigla = institution.get('Sigla')
+        
+        # Pega a lista de palavras-chave para esta instituição
+        institution_keywords = keywords_by_institution.get(sigla, [])
+        if not institution_keywords:
+            # Se não houver palavras-chave para a instituição, não filtramos seus repositórios
+            # ou podemos optar por ignorá-la. Aqui, vamos ignorar.
+            continue
+            
         new_repos = []
         for repo in institution.get('Repositorios', []):
             total_repos_processed += 1
+            repo_name = str(repo.get('Nome do Repositório', '')).lower()
+            repo_desc = str(repo.get('Descricao', '')).lower()
             
-            # Garante que os valores não são None antes de chamar .lower()
-            repo_name = (repo.get('Nome do Repositório') or '').lower()
-            description = (repo.get('Descricao') or '')
+            # Converte as palavras-chave para minúsculas
+            keywords_lower = [k.lower() for k in institution_keywords]
             
-            org_data = repo.get('Dados Organizacao', {})
-            org_login = (org_data.get('login') or '').lower() if org_data else ''
-
-            # CRITÉRIO 1: A descrição deve ter no máximo 500 caracteres.
-            if len(description) > 500:
-                continue
-
-            description_lower = description.lower()
-            
-            # CRITÉRIO 2: O nome ou a descrição não podem conter stopwords.
-            has_stopword = False
-            for word in CUSTOM_STOPWORDS:
-                if word in repo_name or word in description_lower:
-                    has_stopword = True
-                    break
-            if has_stopword:
-                continue
-
-            # CRITÉRIO 3: O repositório deve conter a palavra-chave da instituição.
-            is_valid_repo = False
-            for keyword in institution_keywords:
-                if keyword in repo_name or keyword in description_lower or keyword in org_login:
-                    is_valid_repo = True
-                    break
-            
-            if is_valid_repo:
+            # Verifica se o nome ou a descrição do repositório contém alguma palavra-chave
+            if any(keyword in repo_name or keyword in repo_desc for keyword in keywords_lower):
                 new_repos.append(repo)
                 total_repos_kept += 1
-
+        
         if new_repos:
             filtered_institution = institution.copy()
             filtered_institution['Repositorios'] = new_repos
@@ -94,31 +89,26 @@ def filter_repos_with_multiple_criteria(input_data: Dict[str, Any]) -> Dict[str,
     # Cria a nova estrutura JSON com os dados filtrados.
     output_json_structure = {
         "institutions_data": filtered_institutions,
-        "cluster_descriptions": input_data.get('cluster_descriptions', []) 
+        # Mantém as descrições dos clusters se existirem no arquivo original
+        "cluster_descriptions": repos_data.get('cluster_descriptions', [])
     }
+    
+    try:
+        with open(output_file, "w", encoding="utf-8") as f:
+            json.dump(output_json_structure, f, indent=2, ensure_ascii=False)
+        print(f"\nProcessamento concluído. {total_repos_kept} de {total_repos_processed} repositórios mantidos.")
+        print(f"O novo arquivo JSON foi salvo como '{output_file}'.")
+    except IOError as e:
+        print(f"Erro ao escrever o arquivo '{output_file}': {e}")
 
-    print(f"Processamento concluído. {total_repos_kept} de {total_repos_processed} repositórios mantidos.")
-    return output_json_structure
-
-
-# --- Exemplo de Uso ---
 
 if __name__ == "__main__":
-    # O arquivo de entrada é o 'repositorios_federais_com_clusters_visualizado.json'
-    input_file = "repositorios_federais_desduplicados.json"
-    output_file = "repositorios_federais_filtrados_multiplos_criterios.json"
+    # Nomes dos arquivos de entrada e saída
+    # O arquivo de repositórios a ser filtrado
+    input_repos_file = 'repositorios_federais_com_clusters_visualizado.json'
+    # O arquivo de palavras-chave gerado pelo script anterior
+    input_keywords_file = 'palavras_chave_instituicoes_v2.json'
+    # O arquivo onde o resultado será salvo
+    output_filtered_file = 'repositorios_federais_filtrados_dinamico.json'
 
-    try:
-        with open(input_file, "r", encoding="utf-8") as f:
-            data = json.load(f)
-
-        filtered_data = filter_repos_with_multiple_criteria(data)
-
-        if filtered_data:
-            with open(output_file, "w", encoding="utf-8") as f:
-                json.dump(filtered_data, f, indent=2, ensure_ascii=False)
-            print(f"O novo arquivo JSON foi salvo como '{output_file}'")
-    except FileNotFoundError:
-        print(f"Erro: O arquivo '{input_file}' não foi encontrado.")
-    except json.JSONDecodeError:
-        print(f"Erro ao decodificar JSON: O arquivo '{input_file}' pode estar corrompido.")
+    filtrar_repositorios_por_palavras_chave(input_repos_file, input_keywords_file, output_filtered_file)
