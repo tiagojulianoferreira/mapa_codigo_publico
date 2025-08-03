@@ -18109,17 +18109,6 @@
           "Dados Organizacao": null
         },
         {
-          "Nome do Repositório": "Revit-IFCExporter",
-          "Descricao": "This is the Revit IFC exporter project based on the Autodesk IFC Tool.",
-          "Linguagem Principal": "C#",
-          "Estrelas": 4,
-          "Licenca": "NOASSERTION",
-          "Ultima Atualizacao": "2024-12-29T10:42:11Z",
-          "Link de Acesso": "https://github.com/varolomer/Revit-IFCExporter",
-          "Organizacao": false,
-          "Dados Organizacao": null
-        },
-        {
           "Nome do Repositório": "python_can_miss",
           "Descricao": "Inteligência Computacional 2017.2 IFCE",
           "Linguagem Principal": "Python",
@@ -39542,17 +39531,6 @@
           "Dados Organizacao": null
         },
         {
-          "Nome do Repositório": "Herbie",
-          "Descricao": "Download numerical weather prediction datasets (HRRR, RAP, GFS, IFS, etc.) from NOMADS, NODD partners (Amazon, Google, Microsoft), ECMWF open data, and the University of Utah Pando Archive System. ",
-          "Linguagem Principal": "Python",
-          "Estrelas": 630,
-          "Licenca": "MIT",
-          "Ultima Atualizacao": "2025-08-02T01:25:28Z",
-          "Link de Acesso": "https://github.com/blaylockbk/Herbie",
-          "Organizacao": false,
-          "Dados Organizacao": null
-        },
-        {
           "Nome do Repositório": "IfSharp",
           "Descricao": "F# for Jupyter Notebooks",
           "Linguagem Principal": "Jupyter Notebook",
@@ -42364,118 +42342,6 @@
           "Dados Organizacao": null
         },
         {
-          "Nome do Repositório": "web-ifc-viewer",
-          "Descricao": "Graphics engine and toolkit for client applications.",
-          "Linguagem Principal": "JavaScript",
-          "Estrelas": 977,
-          "Licenca": "MIT",
-          "Ultima Atualizacao": "2025-07-19T14:49:34Z",
-          "Link de Acesso": "https://github.com/ThatOpen/web-ifc-viewer",
-          "Organizacao": true,
-          "Dados Organizacao": {
-            "login": "ThatOpen",
-            "url": "https://github.com/ThatOpen",
-            "tipo": "Organization"
-          }
-        },
-        {
-          "Nome do Repositório": "xeokit-sdk",
-          "Descricao": "3D BIM IFC Viewer SDK for AEC engineering applications. Open Source JavaScript Toolkit based on pure WebGL for top performance, real-world coordinates and full double precision",
-          "Linguagem Principal": "JavaScript",
-          "Estrelas": 811,
-          "Licenca": "AGPL-3.0",
-          "Ultima Atualizacao": "2025-08-01T12:10:12Z",
-          "Link de Acesso": "https://github.com/xeokit/xeokit-sdk",
-          "Organizacao": true,
-          "Dados Organizacao": {
-            "login": "xeokit",
-            "url": "https://github.com/xeokit",
-            "tipo": "Organization"
-          }
-        },
-        {
-          "Nome do Repositório": "engine_web-ifc",
-          "Descricao": "Reading and writing IFC files with Javascript, at native speeds.",
-          "Linguagem Principal": "TypeScript",
-          "Estrelas": 767,
-          "Licenca": "MPL-2.0",
-          "Ultima Atualizacao": "2025-08-01T06:57:30Z",
-          "Link de Acesso": "https://github.com/ThatOpen/engine_web-ifc",
-          "Organizacao": true,
-          "Dados Organizacao": {
-            "login": "ThatOpen",
-            "url": "https://github.com/ThatOpen",
-            "tipo": "Organization"
-          }
-        },
-        {
-          "Nome do Repositório": "ifcplusplus",
-          "Descricao": "IfcPlusPlus is an open source C++ class model, as well as a reader and writer for IFC files in STEP format. Features: Easy and efficient memory management using smart pointers. Parallel reader for very fast parsing on multi-core CPU's. Additionally, there's a simple IFC viewer application, using Qt and OpenSceneGraph. It can be used as starting point for all kinds of applications around the open building model standard IFC.",
-          "Linguagem Principal": "C++",
-          "Estrelas": 624,
-          "Licenca": "MIT",
-          "Ultima Atualizacao": "2025-07-17T11:13:27Z",
-          "Link de Acesso": "https://github.com/ifcquery/ifcplusplus",
-          "Organizacao": false,
-          "Dados Organizacao": null
-        },
-        {
-          "Nome do Repositório": "ifconfig.io",
-          "Descricao": null,
-          "Linguagem Principal": "HTML",
-          "Estrelas": 588,
-          "Licenca": "MIT",
-          "Ultima Atualizacao": "2025-07-26T21:38:37Z",
-          "Link de Acesso": "https://github.com/georgyo/ifconfig.io",
-          "Organizacao": false,
-          "Dados Organizacao": null
-        },
-        {
-          "Nome do Repositório": "web-ifc-three",
-          "Descricao": "The official IFC Loader for Three.js.",
-          "Linguagem Principal": "JavaScript",
-          "Estrelas": 555,
-          "Licenca": "MIT",
-          "Ultima Atualizacao": "2025-07-15T11:06:11Z",
-          "Link de Acesso": "https://github.com/ThatOpen/web-ifc-three",
-          "Organizacao": true,
-          "Dados Organizacao": {
-            "login": "ThatOpen",
-            "url": "https://github.com/ThatOpen",
-            "tipo": "Organization"
-          }
-        },
-        {
-          "Nome do Repositório": "revit-ifc",
-          "Descricao": "IFC for Revit and Navisworks (2019+)",
-          "Linguagem Principal": "C#",
-          "Estrelas": 549,
-          "Licenca": "N/A",
-          "Ultima Atualizacao": "2025-08-02T18:41:43Z",
-          "Link de Acesso": "https://github.com/Autodesk/revit-ifc",
-          "Organizacao": true,
-          "Dados Organizacao": {
-            "login": "Autodesk",
-            "url": "https://github.com/Autodesk",
-            "tipo": "Organization"
-          }
-        },
-        {
-          "Nome do Repositório": "XbimEssentials",
-          "Descricao": "A .NET library to work with data in the IFC format. This is the core component of the Xbim Toolkit",
-          "Linguagem Principal": "C#",
-          "Estrelas": 533,
-          "Licenca": "NOASSERTION",
-          "Ultima Atualizacao": "2025-07-21T07:59:38Z",
-          "Link de Acesso": "https://github.com/xBimTeam/XbimEssentials",
-          "Organizacao": true,
-          "Dados Organizacao": {
-            "login": "xBimTeam",
-            "url": "https://github.com/xBimTeam",
-            "tipo": "Organization"
-          }
-        },
-        {
           "Nome do Repositório": "xeokit-bim-viewer",
           "Descricao": "Built with xeokit SDK. IFC, BIM and Point Cloud 3D Viewer as a package. Enables AEC & GIS applications with double precision global coordinates.",
           "Linguagem Principal": "JavaScript",
@@ -43089,17 +42955,6 @@
           "Dados Organizacao": null
         },
         {
-          "Nome do Repositório": "cad2data-Revit-IFC-DWG-DGN-pipeline-with-conversion-validation-qto",
-          "Descricao": "This n8n workflow enables automated conversion of CAD files (such as `.rvt`, `.ifc`, `.dwg`) using command-line converters on a local Windows machine",
-          "Linguagem Principal": "Jupyter Notebook",
-          "Estrelas": 56,
-          "Licenca": "MIT",
-          "Ultima Atualizacao": "2025-08-02T11:30:33Z",
-          "Link de Acesso": "https://github.com/datadrivenconstruction/cad2data-Revit-IFC-DWG-DGN-pipeline-with-conversion-validation-qto",
-          "Organizacao": false,
-          "Dados Organizacao": null
-        },
-        {
           "Nome do Repositório": "Data-Conversion-Manual-for-3D-City-Model",
           "Descricao": "3D都市モデル（CityGML形式）からFBX/OBJ/Datasmith/IFC形式へ変換のためのFME Desktopのワークスペース",
           "Linguagem Principal": null,
@@ -43412,21 +43267,6 @@
           "Link de Acesso": "https://github.com/ENG-Mazri/cli-ifcjs",
           "Organizacao": false,
           "Dados Organizacao": null
-        },
-        {
-          "Nome do Repositório": "xeokit-metadata",
-          "Descricao": "A multi-platform command line tool for extracting the structural hierarchy of the building elements within an IFC into the metadata format of the xeokit-sdk.",
-          "Linguagem Principal": "C#",
-          "Estrelas": 32,
-          "Licenca": "Apache-2.0",
-          "Ultima Atualizacao": "2025-02-12T15:16:42Z",
-          "Link de Acesso": "https://github.com/bimspot/xeokit-metadata",
-          "Organizacao": true,
-          "Dados Organizacao": {
-            "login": "bimspot",
-            "url": "https://github.com/bimspot",
-            "tipo": "Organization"
-          }
         },
         {
           "Nome do Repositório": "master_project",
@@ -46309,54 +46149,6 @@
       "URL Oficial": "https://www.usp.br",
       "Repositorios": [
         {
-          "Nome do Repositório": "ICMC-USP",
-          "Descricao": "\"If You're Going Through Hell, Keep Going\" - Winston Churchill :turtle: :squirrel:",
-          "Linguagem Principal": "C",
-          "Estrelas": 916,
-          "Licenca": "N/A",
-          "Ultima Atualizacao": "2025-07-29T22:04:16Z",
-          "Link de Acesso": "https://github.com/ropalma/ICMC-USP",
-          "Organizacao": false,
-          "Dados Organizacao": null
-        },
-        {
-          "Nome do Repositório": "Home-Assistant-Mail-And-Packages",
-          "Descricao": "Home Assistant integration providing day of package counts and USPS informed delivery images.",
-          "Linguagem Principal": "Python",
-          "Estrelas": 728,
-          "Licenca": "MIT",
-          "Ultima Atualizacao": "2025-08-01T03:35:51Z",
-          "Link de Acesso": "https://github.com/moralmunky/Home-Assistant-Mail-And-Packages",
-          "Organizacao": false,
-          "Dados Organizacao": null
-        },
-        {
-          "Nome do Repositório": "zint",
-          "Descricao": "A barcode encoding library supporting over 50 symbologies including Code 128, Data Matrix, USPS OneCode, EAN-128, UPC/EAN, ITF, QR Code, Code 16k, PDF417, MicroPDF417, LOGMARS, Maxicode, GS1 DataBar, Aztec, Composite Symbols and more.",
-          "Linguagem Principal": "C",
-          "Estrelas": 626,
-          "Licenca": "NOASSERTION",
-          "Ultima Atualizacao": "2025-07-29T12:32:01Z",
-          "Link de Acesso": "https://github.com/zint/zint",
-          "Organizacao": true,
-          "Dados Organizacao": {
-            "login": "zint",
-            "url": "https://github.com/zint",
-            "tipo": "Organization"
-          }
-        },
-        {
-          "Nome do Repositório": "long-context-attention",
-          "Descricao": "USP: Unified (a.k.a. Hybrid, 2D) Sequence Parallel Attention for Long Context Transformers Model Training and Inference",
-          "Linguagem Principal": "Python",
-          "Estrelas": 537,
-          "Licenca": "Apache-2.0",
-          "Ultima Atualizacao": "2025-07-31T06:24:47Z",
-          "Link de Acesso": "https://github.com/feifeibear/long-context-attention",
-          "Organizacao": false,
-          "Dados Organizacao": null
-        },
-        {
           "Nome do Repositório": "uSpeech",
           "Descricao": "Speech recognition toolkit for the arduino",
           "Linguagem Principal": "C++",
@@ -49020,28 +48812,6 @@
       "Nome Completo": "Universidade de Brasília",
       "URL Oficial": "https://www.unb.br",
       "Repositorios": [
-        {
-          "Nome do Repositório": "Holy-Unblocker",
-          "Descricao": "Holy Unblocker LTS is a web proxy service that helps you access websites that may be blocked by your network or policy extensions all within your browser with no download or setup. It does this securely and with additional privacy features. Browse Tor/Onion sites in any browser, hide browsing activity and bypass filters. (Star if you fork it!!!)",
-          "Linguagem Principal": "JavaScript",
-          "Estrelas": 884,
-          "Licenca": "AGPL-3.0",
-          "Ultima Atualizacao": "2025-08-03T10:32:17Z",
-          "Link de Acesso": "https://github.com/QuiteAFancyEmerald/Holy-Unblocker",
-          "Organizacao": false,
-          "Dados Organizacao": null
-        },
-        {
-          "Nome do Repositório": "Thunderbolt3Unblocker",
-          "Descricao": "Enable unsupported Thunderbolt 3 peripherals on macOS",
-          "Linguagem Principal": "C",
-          "Estrelas": 665,
-          "Licenca": "NOASSERTION",
-          "Ultima Atualizacao": "2025-07-18T00:47:13Z",
-          "Link de Acesso": "https://github.com/rgov/Thunderbolt3Unblocker",
-          "Organizacao": false,
-          "Dados Organizacao": null
-        },
         {
           "Nome do Repositório": "node-unblocker",
           "Descricao": "Web proxy for evading internet censorship, and general-purpose Node.js library for proxying and rewriting remote webpages",
@@ -99382,17 +99152,6 @@
           "Dados Organizacao": null
         },
         {
-          "Nome do Repositório": "modelo_para_dissertacoes_LaTeX",
-          "Descricao": "Modelo desenvolvido a partir de um antigo pacote utilizado no ICMC-USP. O modelo PPGCCUFSJ foi adaptado a fim de ser usado no contexto do Programa de Pós-Graduação em Ciência da Computação da Universidade Federal de São João del Rei (UFSJ).",
-          "Linguagem Principal": "TeX",
-          "Estrelas": 0,
-          "Licenca": "N/A",
-          "Ultima Atualizacao": "2019-07-16T18:12:34Z",
-          "Link de Acesso": "https://github.com/macro-mancer/modelo_para_dissertacoes_LaTeX",
-          "Organizacao": false,
-          "Dados Organizacao": null
-        },
-        {
           "Nome do Repositório": "Sevidor_cliente",
           "Descricao": "Neste trabalho iremos implementar uma transmissão unidirecional utilizando comuni- cação do tipo requisição resposta sobre o pro- tocolo TCP, baseado no código em C para a disciplina Redes do curso de Ciência da Com- putação da Universidade Federal de São João del Rei.",
           "Linguagem Principal": "C",
@@ -104736,17 +104495,6 @@
             "url": "https://github.com/Comp-UFSCar",
             "tipo": "Organization"
           }
-        },
-        {
-          "Nome do Repositório": "Minicurso_Scraping_e_Analise_Exploratoria",
-          "Descricao": "Esse repositório contém os arquivos do minicurso de aquisição com web scrapping e análise exploratória de dados que foi ministrado por mim e um colega da Big Data na semana de integração da engenharia elétrica da Escola de Engenharia de São Carlos da Universidade de São Paulo (EESC-USP) em parceira com a Universidade Federal de São Carlos (Ufscar) e na semana da computação do Instituto de Ciências Matemáticas e Computacionais da Universidade de São Paulo (ICMC-USP). ",
-          "Linguagem Principal": "Jupyter Notebook",
-          "Estrelas": 2,
-          "Licenca": "MIT",
-          "Ultima Atualizacao": "2019-11-12T20:42:47Z",
-          "Link de Acesso": "https://github.com/mateuspedrino/Minicurso_Scraping_e_Analise_Exploratoria",
-          "Organizacao": false,
-          "Dados Organizacao": null
         },
         {
           "Nome do Repositório": "epic-ufscar",
@@ -116236,21 +115984,6 @@
       "Nome Completo": "Universidade Federal de Rondônia",
       "URL Oficial": "https://www.unir.br",
       "Repositorios": [
-        {
-          "Nome do Repositório": "unirest-nodejs",
-          "Descricao": "Unirest in Node.js: Simplified, lightweight HTTP client library.",
-          "Linguagem Principal": "JavaScript",
-          "Estrelas": 956,
-          "Licenca": "MIT",
-          "Ultima Atualizacao": "2025-06-19T19:37:25Z",
-          "Link de Acesso": "https://github.com/Kong/unirest-nodejs",
-          "Organizacao": true,
-          "Dados Organizacao": {
-            "login": "Kong",
-            "url": "https://github.com/Kong",
-            "tipo": "Organization"
-          }
-        },
         {
           "Nome do Repositório": "unirest-python",
           "Descricao": "Unirest in Python: Simplified, lightweight HTTP client library.",
@@ -128056,21 +127789,6 @@
       "URL Oficial": "https://www.unila.edu.br",
       "Repositorios": [
         {
-          "Nome do Repositório": "unilang",
-          "Descricao": null,
-          "Linguagem Principal": "C++",
-          "Estrelas": 578,
-          "Licenca": "NOASSERTION",
-          "Ultima Atualizacao": "2025-07-16T12:29:35Z",
-          "Link de Acesso": "https://github.com/linuxdeepin/unilang",
-          "Organizacao": true,
-          "Dados Organizacao": {
-            "login": "linuxdeepin",
-            "url": "https://github.com/linuxdeepin",
-            "tipo": "Organization"
-          }
-        },
-        {
           "Nome do Repositório": "unila.github.io",
           "Descricao": "Open science hub website for Universitas Lampung (Unila)",
           "Linguagem Principal": "CSS",
@@ -128097,28 +127815,6 @@
           "Dados Organizacao": null
         },
         {
-          "Nome do Repositório": "UniLang",
-          "Descricao": "Translate text from one language to another using Google Translate",
-          "Linguagem Principal": "C#",
-          "Estrelas": 37,
-          "Licenca": "MIT",
-          "Ultima Atualizacao": "2023-12-03T14:59:11Z",
-          "Link de Acesso": "https://github.com/adrenak/UniLang",
-          "Organizacao": false,
-          "Dados Organizacao": null
-        },
-        {
-          "Nome do Repositório": "unilang",
-          "Descricao": "A universal programming language",
-          "Linguagem Principal": "Fancy",
-          "Estrelas": 34,
-          "Licenca": "MIT",
-          "Ultima Atualizacao": "2025-01-22T13:27:38Z",
-          "Link de Acesso": "https://github.com/luxe/unilang",
-          "Organizacao": false,
-          "Dados Organizacao": null
-        },
-        {
           "Nome do Repositório": "UniLand",
           "Descricao": "A highly modular and diverse Telegram Bot for universities and institutions written in python. This is the effort of a group of eight CS students at AUT as the final project for Software Engineering Course (1380044).",
           "Linguagem Principal": "Python",
@@ -128137,28 +127833,6 @@
           "Licenca": "N/A",
           "Ultima Atualizacao": "2025-06-25T21:01:15Z",
           "Link de Acesso": "https://github.com/trevorhastie/uniLasso",
-          "Organizacao": false,
-          "Dados Organizacao": null
-        },
-        {
-          "Nome do Repositório": "UniLanguage",
-          "Descricao": "Homology reduced UniProt, train-/valid-/testsets for language modeling",
-          "Linguagem Principal": "Python",
-          "Estrelas": 17,
-          "Licenca": "N/A",
-          "Ultima Atualizacao": "2025-06-23T18:45:45Z",
-          "Link de Acesso": "https://github.com/alrojo/UniLanguage",
-          "Organizacao": false,
-          "Dados Organizacao": null
-        },
-        {
-          "Nome do Repositório": "unilangforum",
-          "Descricao": "UniLang Language Community - Forum",
-          "Linguagem Principal": "PHP",
-          "Estrelas": 8,
-          "Licenca": "N/A",
-          "Ultima Atualizacao": "2024-04-25T22:10:09Z",
-          "Link de Acesso": "https://github.com/proycon/unilangforum",
           "Organizacao": false,
           "Dados Organizacao": null
         },
@@ -128209,21 +127883,6 @@
           "Link de Acesso": "https://github.com/TheWillyy/UNILAGWiFi",
           "Organizacao": false,
           "Dados Organizacao": null
-        },
-        {
-          "Nome do Repositório": "unilangs",
-          "Descricao": "A library for [en/de]coding language codes between \"standards\".",
-          "Linguagem Principal": "Python",
-          "Estrelas": 5,
-          "Licenca": "MIT",
-          "Ultima Atualizacao": "2021-12-15T17:13:19Z",
-          "Link de Acesso": "https://github.com/pculture/unilangs",
-          "Organizacao": true,
-          "Dados Organizacao": {
-            "login": "pculture",
-            "url": "https://github.com/pculture",
-            "tipo": "Organization"
-          }
         },
         {
           "Nome do Repositório": "minicourse_UNILA",
@@ -128314,17 +127973,6 @@
           "Licenca": "N/A",
           "Ultima Atualizacao": "2024-01-30T18:10:27Z",
           "Link de Acesso": "https://github.com/Kimberlynn01/project_unila",
-          "Organizacao": false,
-          "Dados Organizacao": null
-        },
-        {
-          "Nome do Repositório": "unilang",
-          "Descricao": "A Rust crate for combining abstract programming concepts and generating working code in many different programming languages.",
-          "Linguagem Principal": "Rust",
-          "Estrelas": 3,
-          "Licenca": "MIT",
-          "Ultima Atualizacao": "2025-05-04T16:13:51Z",
-          "Link de Acesso": "https://github.com/sno2/unilang",
           "Organizacao": false,
           "Dados Organizacao": null
         },
@@ -128465,17 +128113,6 @@
           "Dados Organizacao": null
         },
         {
-          "Nome do Repositório": "Unilang-Lexer",
-          "Descricao": "stb-style header only library for Unilang programming language",
-          "Linguagem Principal": "C",
-          "Estrelas": 2,
-          "Licenca": "N/A",
-          "Ultima Atualizacao": "2024-08-02T13:06:29Z",
-          "Link de Acesso": "https://github.com/Paul-Passeron/Unilang-Lexer",
-          "Organizacao": false,
-          "Dados Organizacao": null
-        },
-        {
           "Nome do Repositório": "UniLauncher",
           "Descricao": "Launcher for pinned documents on Windows Task Panel (Wndows, C++, MSVS)",
           "Linguagem Principal": "C++",
@@ -128608,17 +128245,6 @@
           "Licenca": "N/A",
           "Ultima Atualizacao": "2020-05-24T05:54:19Z",
           "Link de Acesso": "https://github.com/BlackVick/UnilagMBA",
-          "Organizacao": false,
-          "Dados Organizacao": null
-        },
-        {
-          "Nome do Repositório": "UnilangLLVM",
-          "Descricao": "Unilang compiler written in C using the LLVM C API.",
-          "Linguagem Principal": "C",
-          "Estrelas": 1,
-          "Licenca": "N/A",
-          "Ultima Atualizacao": "2025-04-16T22:25:17Z",
-          "Link de Acesso": "https://github.com/Paul-Passeron/UnilangLLVM",
           "Organizacao": false,
           "Dados Organizacao": null
         },
@@ -128766,17 +128392,6 @@
           "Licenca": "N/A",
           "Ultima Atualizacao": "2023-02-23T13:48:51Z",
           "Link de Acesso": "https://github.com/88shell88/Unilan",
-          "Organizacao": false,
-          "Dados Organizacao": null
-        },
-        {
-          "Nome do Repositório": "unilang",
-          "Descricao": "Trusty old interprocess communication system which aspires to eventually be a MAS",
-          "Linguagem Principal": "Emacs Lisp",
-          "Estrelas": 1,
-          "Licenca": "NOASSERTION",
-          "Ultima Atualizacao": "2025-07-21T19:18:06Z",
-          "Link de Acesso": "https://github.com/aindilis/unilang",
           "Organizacao": false,
           "Dados Organizacao": null
         },
