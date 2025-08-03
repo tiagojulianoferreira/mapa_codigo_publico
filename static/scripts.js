@@ -214,7 +214,7 @@ document.addEventListener('DOMContentLoaded', () => {
         
         // Exibe a contagem de N/A somente se houver algum
         if (naCount > 0) {
-            naLicenseCountSpan.textContent = `(e ${naCount} sem licença)`;
+            naLicenseCountSpan.textContent = `(${naCount} sem licença registrada)`;
         } else {
             naLicenseCountSpan.textContent = '';
         }

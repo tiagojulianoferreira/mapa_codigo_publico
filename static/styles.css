@@ -1,0 +1,346 @@
+/* Importar uma fonte do Google Fonts para um visual mais moderno */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300,400,500,700&display=swap');
+
+:root {
+    /* Cores atualizadas para um visual mais moderno e suave */
+    --primary-color: #0d6efd; /* Azul principal mais vibrante */
+    --secondary-color: #0b5ed7; /* Tom um pouco mais escuro para hover/ativo */
+    --accent-color: #28a745; /* Cor de destaque (verde) para botões de sucesso ou ícones */
+    --background-color: #f8f9fa; /* Fundo muito claro */
+    --card-background: #ffffff;
+    --text-color: #212529; /* Texto escuro padrão */
+    --light-text-color: #6c757d; /* Texto secundário */
+    --border-color: #dee2e6; /* Borda sutil */
+    --shadow-light: 0 0.5rem 1.2rem rgba(0, 0, 0, 0.08); /* Sombra mais difundida e suave */
+    --transition-speed: 0.3s ease;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* --- Layout Principal --- */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    background-color: var(--card-background);
+    color: var(--text-color);
+    padding: 20px 0;
+    text-align: center;
+    border-bottom: 1px solid var(--border-color);
+    box-shadow: var(--shadow-light);
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-weight: 700;
+    font-size: 2.5rem;
+    margin: 0 0 5px 0;
+}
+
+header h1 a {
+    text-decoration: none;
+    color: inherit;
+    transition: color var(--transition-speed);
+}
+
+header h1 a:hover {
+    color: var(--primary-color);
+}
+
+header p {
+    color: var(--light-text-color);
+    font-weight: 300;
+    font-size: 1.1rem;
+}
+
+main {
+    flex-grow: 1;
+    padding-bottom: 40px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+    background-color: var(--card-background);
+    color: var(--light-text-color);
+    border-top: 1px solid var(--border-color);
+    font-size: 0.9rem;
+}
+
+/* --- Componentes de Cartão (Cards) --- */
+.card {
+    background-color: var(--card-background);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: var(--shadow-light);
+    margin-bottom: 25px;
+    border: 1px solid var(--border-color);
+}
+
+.card h2 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--primary-color);
+}
+
+/* --- Grids de Estatísticas e Filtros --- */
+.stats-grid, .filters-grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.stat-item {
+    padding: 15px;
+    background-color: var(--background-color);
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+.stat-item h3 {
+    font-size: 1rem;
+    font-weight: 400;
+    margin-top: 0;
+    margin-bottom: 5px;
+    color: var(--light-text-color);
+}
+
+.stat-item p {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0;
+    color: var(--primary-color);
+}
+
+.filter-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+input[type="text"], select {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    transition: all var(--transition-speed);
+}
+
+input[type="text"]:focus, select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.25);
+    outline: none;
+}
+
+.btn-clear {
+    width: 100%;
+    padding: 10px 12px;
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color var(--transition-speed);
+    margin-top: 24px; /* Para alinhar com os outros filtros */
+}
+
+.btn-clear:hover {
+    background-color: #c82333;
+}
+
+/* --- Estilos de Tabela --- */
+.table-container {
+    width: 100%;
+    overflow-x: auto; /* Adiciona scroll horizontal se a tabela for maior que a tela */
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    border-radius: 8px;
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 700px; /* Garante que a tabela não fique muito pequena */
+}
+
+.data-table thead {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-weight: 500;
+    border-bottom: 2px solid var(--border-color);
+    position: sticky;
+    top: 0;
+}
+
+.data-table th, .data-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: top;
+}
+
+.data-table th {
+    cursor: pointer;
+    transition: background-color var(--transition-speed);
+    white-space: nowrap;
+}
+
+.data-table th:hover {
+    background-color: #e9ecef;
+}
+
+.data-table tbody tr:hover {
+    background-color: #f1f3f5;
+}
+
+/* Estilos de ordenação */
+.data-table th.asc .sort-icon {
+    transform: rotate(0deg);
+}
+
+.data-table th.desc .sort-icon {
+    transform: rotate(180deg);
+}
+
+.data-table .sort-icon {
+    margin-left: 5px;
+    transition: transform var(--transition-speed);
+}
+
+.data-table th.asc .fa-sort-up,
+.data-table th.desc .fa-sort-down {
+  display: inline-block;
+}
+
+.data-table th:not(.asc):not(.desc) .fa-sort-up,
+.data-table th:not(.asc):not(.desc) .fa-sort-down {
+  display: none;
+}
+
+.data-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.data-table .loading-message, .data-table .no-data-message {
+    text-align: center;
+    color: var(--light-text-color);
+    padding: 20px;
+}
+
+/* Estilos para badges de linguagem */
+.badge {
+    background-color: #e9ecef;
+    color: var(--text-color);
+    padding: 4px 8px;
+    border-radius: 5px;
+    font-size: 0.8em;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+/* Estilos de paginação */
+.pagination-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    gap: 15px;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color var(--transition-speed);
+}
+
+.btn-primary:hover:not(:disabled) {
+    background-color: var(--secondary-color);
+}
+
+.btn-primary:disabled {
+    background-color: #adb5bd;
+    cursor: not-allowed;
+}
+
+/* --- Ajustes para a Tabela de Repositórios --- */
+#allReposTable {
+    table-layout: fixed; /* Garante que as larguras de coluna sejam respeitadas */
+}
+
+#allReposTable thead th,
+#allReposTable tbody td {
+    white-space: nowrap; /* Impede a quebra de linha */
+    overflow: hidden; /* Oculta o texto que excede a largura */
+    text-overflow: ellipsis; /* Adiciona "..." no final do texto cortado */
+    max-width: 0; /* Essencial para o ellipsis funcionar */
+}
+
+/* Ajuste de larguras para as colunas */
+#allReposTable th:nth-child(1), #allReposTable td:nth-child(1) { width: 8%; } /* IF */
+#allReposTable th:nth-child(2), #allReposTable td:nth-child(2) { width: 20%; } /* Repositório */
+#allReposTable th:nth-child(3), #allReposTable td:nth-child(3) { width: 12%; } /* Linguagem */
+#allReposTable th:nth-child(4), #allReposTable td:nth-child(4) { width: 8%; } /* Estrelas */
+#allReposTable th:nth-child(5), #allReposTable td:nth-child(5) { width: 8%; } /* Licença */
+#allReposTable th:nth-child(6), #allReposTable td:nth-child(6) { width: 10%; } /* Atualização */
+#allReposTable th:nth-child(7), #allReposTable td:nth-child(7) { width: 26%; } /* Descrição */
+#allReposTable th:nth-child(8), #allReposTable td:nth-child(8) { width: 5%; } /* Cluster */
+#allReposTable th:nth-child(9), #allReposTable td:nth-child(9) { width: 3%; text-align: center; } /* Link */
+
+
+/* Estilo específico para o input de filtro de cluster, já que a coluna é estreita */
+#allReposTable #filterRow th:nth-child(8) input {
+    width: 50px;
+}
+
+/* Quebra de linha para a descrição, permitindo exibir mais conteúdo */
+#allReposTable td:nth-child(7) {
+    white-space: normal;
+    overflow: visible;
+    text-overflow: clip;
+}
+
+/* --- Responsividade --- */
+@media (max-width: 992px) {
+    header h1 {
+        font-size: 2rem;
+    }
+    header p {
+        font-size: 1rem;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+    .data-table th, .data-table td {
+        padding: 10px;
+    }
+
+    /* Ajuste para grids em telas menores */
+    .stats-grid, .filters-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
