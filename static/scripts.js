@@ -17,6 +17,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // Elementos para Top Repositórios
     const topReposTbody = document.getElementById('topReposTbody');
 
+    // Novo elemento para Top Licenças
+    const topLicensesTbody = document.getElementById('topLicensesTbody');
+
     // Elementos para Tabela de Todos os Repositórios
     const allReposTbody = document.getElementById('allReposTbody');
     const allReposTableHeaders = document.querySelectorAll('#allReposTable thead tr:first-child th[data-sort-key]');
@@ -89,6 +92,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 populateFilters();
                 updateGlobalStats();
                 updateTopLists();
+                updateTopLicenses();
                 applyFiltersAndDisplay(true); // Inicializa a tabela principal
                 
                 console.log(`Dados carregados: ${allRepos.length} repositórios encontrados.`);
@@ -155,8 +159,8 @@ document.addEventListener('DOMContentLoaded', () => {
         if (clustersTbody && clusters.length > 0) {
             clustersTbody.innerHTML = clusters.map(cluster => `
                 <tr>
-                    <td>${cluster.id}</td>
-                    <td>${cluster.description}</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">${cluster.id}</td>
+                    <td class="px-6 py-4 text-sm text-gray-700">${cluster.description}</td>
                 </tr>
             `).join('');
         }
@@ -166,7 +170,7 @@ document.addEventListener('DOMContentLoaded', () => {
      * Atualiza as listas de "Top Repositórios" e "Top Linguagens".
      */
     function updateTopLists() {
-        // Top 5 Linguagens
+        // Top 10 Linguagens
         const languageCounts = {};
         allRepos.forEach(repo => {
             const lang = repo['Linguagem Principal'];
@@ -179,18 +183,40 @@ document.addEventListener('DOMContentLoaded', () => {
             .slice(0, 10);
         topLanguagesTbody.innerHTML = sortedLanguages.map(([lang, count]) => `
             <tr>
-                <td>${lang}</td>
-                <td>${count}</td>
+                <td class="px-4 py-2">${lang}</td>
+                <td class="px-4 py-2">${count}</td>
             </tr>
         `).join('');
 
-        // Top 5 Repositórios por Estrelas
+        // Top 10 Repositórios por Estrelas
         const sortedRepos = [...allRepos].sort((a, b) => b.Estrelas - a.Estrelas).slice(0, 10);
         topReposTbody.innerHTML = sortedRepos.map(repo => `
             <tr>
-                <td><a href="${repo['Link de Acesso']}" target="_blank" class="repo-link">${repo['Nome do Repositório']}</a></td>
-                <td>${repo.Instituicao}</td>
-                <td><i class="fas fa-star text-yellow-400"></i> ${repo.Estrelas}</td>
+                <td class="px-4 py-2"><a href="${repo['Link de Acesso']}" target="_blank" class="repo-link">${repo['Nome do Repositório']}</a></td>
+                <td class="px-4 py-2">${repo.Instituicao}</td>
+                <td class="px-4 py-2"><i class="fas fa-star text-yellow-400"></i> ${repo.Estrelas}</td>
+            </tr>
+        `).join('');
+    }
+
+    /**
+     * Atualiza a lista de "Top 10 Licenças".
+     */
+    function updateTopLicenses() {
+        const licenseCounts = {};
+        allRepos.forEach(repo => {
+            const license = repo['Licenca'];
+            if (license) {
+                licenseCounts[license] = (licenseCounts[license] || 0) + 1;
+            }
+        });
+        const sortedLicenses = Object.entries(licenseCounts)
+            .sort(([, countA], [, countB]) => countB - countA)
+            .slice(0, 10);
+        topLicensesTbody.innerHTML = sortedLicenses.map(([license, count]) => `
+            <tr>
+                <td class="px-4 py-2">${license}</td>
+                <td class="px-4 py-2">${count}</td>
             </tr>
         `).join('');
     }
