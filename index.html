@@ -179,8 +179,8 @@
                     <h3 class="text-2xl font-semibold text-gray-800 mb-4">Principais Descobertas da Análise de Dados</h3>
         
                     <ul class="list-disc list-inside space-y-2 text-gray-700">
-                        <li>O conjunto de dados foi pré-processado com sucesso para clusterização, tratando valores ausentes, escalando características numéricas ('Estrelas', 'Ano Atualizacao') e codificando características categóricas ('Linguagem Principal', 'Organizacao') usando one-hot encoding. Os dados processados foram representados como um DataFrame esparso.</li>
-                        <li>A clusterização K-Means com <strong>4 clusters</strong> foi aplicada aos dados pré-processados. Os rótulos dos clusters foram adicionados com sucesso ao DataFrame original.</li>
+                        <li>O conjunto de dados foi pré-processado para clusterização, tratando valores ausentes, escalando características numéricas ('Estrelas', 'Ano Atualizacao') e codificando características categóricas ('Linguagem Principal', 'Organizacao') usando one-hot encoding. Os dados processados foram representados como um DataFrame esparso.</li>
+                        <li>A clusterização K-Means com <strong>4 clusters</strong> foi aplicada aos dados pré-processados. Os rótulos dos clusters foram adicionados ao DataFrame original.</li>
                         <li>A qualidade dos clusters foi avaliada usando o Silhouette Score (<strong>0.3035</strong>) e o Davies-Bouldin Index (<strong>0.8797</strong>). Essas métricas indicaram uma melhor separação e definição dos clusters em comparação com a configuração de 5 clusters.</li>
                         
                         <li>O PCA foi utilizado para reduzir a dimensionalidade dos dados para 2 componentes, e um gráfico de dispersão visualizou os clusters nesse espaço reduzido, mostrando alguma separação visual entre os grupos, embora com alguma sobreposição entre os clusters majoritários (0 e 1).</li>
