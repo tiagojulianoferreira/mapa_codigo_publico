@@ -20,6 +20,12 @@ document.addEventListener('DOMContentLoaded', () => {
     // Novo elemento para Top Licenças
     const topLicensesTbody = document.getElementById('topLicensesTbody');
 
+    // Elementos para Estatísticas Filtradas (NOVO)
+    const totalFilteredRepos = document.getElementById('totalFilteredRepos');
+    const mostUsedFilteredLanguage = document.getElementById('mostUsedFilteredLanguage');
+    const mostUsedFilteredLicense = document.getElementById('mostUsedFilteredLicense');
+
+
     // Elementos para Tabela de Todos os Repositórios
     const allReposTbody = document.getElementById('allReposTbody');
     const allReposTableHeaders = document.querySelectorAll('#allReposTable thead tr:first-child th[data-sort-key]');
@@ -165,6 +171,39 @@ document.addEventListener('DOMContentLoaded', () => {
             `).join('');
         }
     }
+    
+    /**
+     * Atualiza os painéis de estatísticas filtradas (NOVO).
+     */
+    function updateFilteredStats() {
+        const filteredRepos = currentFilteredAndSortedRepos;
+
+        // Total Filtrado
+        totalFilteredRepos.textContent = filteredRepos.length;
+
+        // Linguagem Mais Usada (filtrada)
+        const languageCounts = {};
+        filteredRepos.forEach(repo => {
+            const lang = repo['Linguagem Principal'];
+            if (lang) {
+                languageCounts[lang] = (languageCounts[lang] || 0) + 1;
+            }
+        });
+        const mostUsedFilteredLang = Object.keys(languageCounts).reduce((a, b) => languageCounts[a] > languageCounts[b] ? a : b, null);
+        mostUsedFilteredLanguage.textContent = mostUsedFilteredLang || 'N/A';
+
+        // Licença Mais Usada (filtrada, exceto 'N/A')
+        const licenseCounts = {};
+        filteredRepos.forEach(repo => {
+            const license = repo['Licenca'];
+            if (license && license.toUpperCase() !== 'N/A') {
+                licenseCounts[license] = (licenseCounts[license] || 0) + 1;
+            }
+        });
+        const mostUsedFilteredLic = Object.keys(licenseCounts).reduce((a, b) => licenseCounts[a] > licenseCounts[b] ? a : b, null);
+        mostUsedFilteredLicense.textContent = mostUsedFilteredLic || 'N/A';
+    }
+
 
     /**
      * Atualiza as listas de "Top Repositórios" e "Top Linguagens".
@@ -279,8 +318,11 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         currentFilteredAndSortedRepos = filteredRepos;
+        
+        // 3. Atualiza as estatísticas filtradas (NOVO)
+        updateFilteredStats();
 
-        // 3. Atualiza a contagem de repositórios filtrados
+        // 4. Atualiza a contagem de repositórios filtrados
         if (filteredReposCount) {
             filteredReposCount.textContent = filteredRepos.length;
         }

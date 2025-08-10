@@ -102,8 +102,17 @@
             <section id="clusters-section" class="card bg-white p-6 rounded-xl shadow-lg">
                 <h2 class="text-2xl font-semibold text-gray-800 mb-4">
                     <i class="fas fa-braille text-blue-600 mr-2"></i>
-                    Descrições dos Clusters
+                    Principais Clusters Identificados (popularidade e atividade)
                 </h2>
+                <div class="p-4 bg-blue-50 rounded-lg shadow-sm mb-6">
+                    
+                    <ul class="list-disc list-inside space-y-1 text-gray-700">
+                        <li><strong>Cluster 0:</strong> Repositórios mais antigos e com poucas estrelas, de usuários pessoais.</li>
+                        <li><strong>Cluster 1:</strong> Repositórios recentes e com poucas estrelas, de usuários pessoais.</li>
+                        <li><strong>Cluster 2:</strong> Repositórios populares de Organizações e Pessoas.</li>
+                        <li><strong>Cluster 3:</strong> Repositórios Altamente Populares (Outliers).</li>
+                    </ul>
+                </div>
                 <div class="flex flex-wrap lg:flex-nowrap gap-6 mb-6">
                     <div class="w-full lg:w-1/2">
                         <h3 class="text-xl font-semibold text-gray-700 mb-2">Visualização de Clusters (PCA)</h3>
@@ -173,14 +182,7 @@
                         <li>O conjunto de dados foi pré-processado com sucesso para clusterização, tratando valores ausentes, escalando características numéricas ('Estrelas', 'Ano Atualizacao') e codificando características categóricas ('Linguagem Principal', 'Organizacao') usando one-hot encoding. Os dados processados foram representados como um DataFrame esparso.</li>
                         <li>A clusterização K-Means com <strong>4 clusters</strong> foi aplicada aos dados pré-processados. Os rótulos dos clusters foram adicionados com sucesso ao DataFrame original.</li>
                         <li>A qualidade dos clusters foi avaliada usando o Silhouette Score (<strong>0.3035</strong>) e o Davies-Bouldin Index (<strong>0.8797</strong>). Essas métricas indicaram uma melhor separação e definição dos clusters em comparação com a configuração de 5 clusters.</li>
-                        <li><strong>Quatro clusters distintos</strong> foram identificados e caracterizados:
-                            <ul class="list-disc list-inside ml-5 mt-1 space-y-1">
-                                <li>Cluster 0: Repositórios mais antigos e com poucas estrelas, de usuários pessoais.</li>
-                                <li>Cluster 1: Repositórios recentes e com poucas estrelas, de usuários pessoais.</li>
-                                <li>Cluster 2: Repositórios populares de Organizações e Pessoas.</li>
-                                <li>Cluster 3: Repositórios Altamente Populares (Outliers).</li>
-                            </ul>
-                        </li>
+                        
                         <li>O PCA foi utilizado para reduzir a dimensionalidade dos dados para 2 componentes, e um gráfico de dispersão visualizou os clusters nesse espaço reduzido, mostrando alguma separação visual entre os grupos, embora com alguma sobreposição entre os clusters majoritários (0 e 1).</li>
                         <li>A visualização utilizando t-SNE mostrou como os clusters se relacionam em um espaço de menor dimensão. Esta visualização destacou:
                             <ul class="list-disc list-inside ml-5 mt-1 space-y-1">
@@ -238,6 +240,28 @@
                     </div>
                 </div>
             </section>
+            
+            <section id="filtered-stats-section" class="card bg-white p-6 rounded-xl shadow-lg mt-8">
+                <h2 class="text-2xl font-semibold text-gray-800 mb-4">
+                    <i class="fas fa-chart-line text-green-600 mr-2"></i>
+                    Estatísticas de Resultados Filtrados
+                </h2>
+                <div class="stats-grid grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="stat-item bg-green-50 p-4 rounded-lg shadow-sm text-center">
+                        <h3 class="text-green-800 font-medium">Total Filtrado</h3>
+                        <p id="totalFilteredRepos" class="text-3xl font-bold text-green-900 mt-1">...</p>
+                    </div>
+                    <div class="stat-item bg-green-50 p-4 rounded-lg shadow-sm text-center">
+                        <h3 class="text-green-800 font-medium">Linguagem Mais Usada</h3>
+                        <p id="mostUsedFilteredLanguage" class="text-2xl font-bold text-green-900 mt-1">...</p>
+                    </div>
+                    <div class="stat-item bg-green-50 p-4 rounded-lg shadow-sm text-center">
+                        <h3 class="text-green-800 font-medium">Licença Mais Usada</h3>
+                        <p id="mostUsedFilteredLicense" class="text-2xl font-bold text-green-900 mt-1">...</p>
+                    </div>
+                </div>
+            </section>
+
 
             <section id="all-repos-section" class="card bg-white p-6 rounded-xl shadow-lg">
                 <div class="flex justify-between items-center mb-4">
