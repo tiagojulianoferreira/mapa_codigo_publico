@@ -70429,21 +70429,6 @@
       "URL Oficial": "https://www.uem.br",
       "Repositorios": [
         {
-          "Nome do Repositório": "openuem-console",
-          "Descricao": "Repository containing the OpenUEM web user interface used to manage endpoints and agents",
-          "Linguagem Principal": "Go",
-          "Estrelas": 35,
-          "Licenca": "Apache-2.0",
-          "Ultima Atualizacao": "2025-07-31T08:26:47Z",
-          "Link de Acesso": "https://github.com/open-uem/openuem-console",
-          "Organizacao": true,
-          "Dados Organizacao": {
-            "login": "open-uem",
-            "url": "https://github.com/open-uem",
-            "tipo": "Organization"
-          }
-        },
-        {
           "Nome do Repositório": "AulasUEMG",
           "Descricao": "Material usado nas aulas da UEMG, a partir de 2018-2",
           "Linguagem Principal": null,
@@ -81469,170 +81454,6 @@
           "Dados Organizacao": null
         },
         {
-          "Nome do Repositório": "uFrame",
-          "Descricao": null,
-          "Linguagem Principal": "C#",
-          "Estrelas": 83,
-          "Licenca": "N/A",
-          "Ultima Atualizacao": "2024-11-06T20:43:55Z",
-          "Link de Acesso": "https://github.com/micahosborne/uFrame",
-          "Organizacao": false,
-          "Dados Organizacao": null
-        },
-        {
-          "Nome do Repositório": "uFrame.ECS",
-          "Descricao": "uFrame ECS Framework",
-          "Linguagem Principal": "C#",
-          "Estrelas": 50,
-          "Licenca": "N/A",
-          "Ultima Atualizacao": "2022-01-14T09:59:52Z",
-          "Link de Acesso": "https://github.com/uFrame/uFrame.ECS",
-          "Organizacao": true,
-          "Dados Organizacao": {
-            "login": "uFrame",
-            "url": "https://github.com/uFrame",
-            "tipo": "Organization"
-          }
-        },
-        {
-          "Nome do Repositório": "uFrame.MVVM",
-          "Descricao": "uFrame MVVM Framework",
-          "Linguagem Principal": "C#",
-          "Estrelas": 41,
-          "Licenca": "N/A",
-          "Ultima Atualizacao": "2024-06-30T10:53:03Z",
-          "Link de Acesso": "https://github.com/uFrame/uFrame.MVVM",
-          "Organizacao": true,
-          "Dados Organizacao": {
-            "login": "uFrame",
-            "url": "https://github.com/uFrame",
-            "tipo": "Organization"
-          }
-        },
-        {
-          "Nome do Repositório": "uFrame.ECS",
-          "Descricao": "Entity Component System For Unity3D",
-          "Linguagem Principal": "C#",
-          "Estrelas": 17,
-          "Licenca": "N/A",
-          "Ultima Atualizacao": "2023-03-04T17:03:00Z",
-          "Link de Acesso": "https://github.com/InvertGames/uFrame.ECS",
-          "Organizacao": true,
-          "Dados Organizacao": {
-            "login": "InvertGames",
-            "url": "https://github.com/InvertGames",
-            "tipo": "Organization"
-          }
-        },
-        {
-          "Nome do Repositório": "uFrame",
-          "Descricao": "an experimental approach to make floating windows in unity based on Unity UI",
-          "Linguagem Principal": "C#",
-          "Estrelas": 15,
-          "Licenca": "MIT",
-          "Ultima Atualizacao": "2025-03-31T14:08:04Z",
-          "Link de Acesso": "https://github.com/cemuka/uFrame",
-          "Organizacao": false,
-          "Dados Organizacao": null
-        },
-        {
-          "Nome do Repositório": "UFrameIT",
-          "Descricao": "The current Unity-based implementation of the FrameIT approach",
-          "Linguagem Principal": "HTML",
-          "Estrelas": 12,
-          "Licenca": "GPL-3.0",
-          "Ultima Atualizacao": "2025-03-24T15:35:56Z",
-          "Link de Acesso": "https://github.com/UFrameIT/UFrameIT",
-          "Organizacao": true,
-          "Dados Organizacao": {
-            "login": "UFrameIT",
-            "url": "https://github.com/UFrameIT",
-            "tipo": "Organization"
-          }
-        },
-        {
-          "Nome do Repositório": "uframe-nodecanvas",
-          "Descricao": "Allows uFrame variables to co-exist with nodeCanvas variables",
-          "Linguagem Principal": "C#",
-          "Estrelas": 9,
-          "Licenca": "N/A",
-          "Ultima Atualizacao": "2019-12-01T08:13:58Z",
-          "Link de Acesso": "https://github.com/grofit/uframe-nodecanvas",
-          "Organizacao": false,
-          "Dados Organizacao": null
-        },
-        {
-          "Nome do Repositório": "uFrame.Editor",
-          "Descricao": null,
-          "Linguagem Principal": "C#",
-          "Estrelas": 5,
-          "Licenca": "N/A",
-          "Ultima Atualizacao": "2020-12-01T13:29:11Z",
-          "Link de Acesso": "https://github.com/InvertGames/uFrame.Editor",
-          "Organizacao": true,
-          "Dados Organizacao": {
-            "login": "InvertGames",
-            "url": "https://github.com/InvertGames",
-            "tipo": "Organization"
-          }
-        },
-        {
-          "Nome do Repositório": "uFrame.ECS.Editor",
-          "Descricao": null,
-          "Linguagem Principal": "C#",
-          "Estrelas": 4,
-          "Licenca": "N/A",
-          "Ultima Atualizacao": "2016-11-26T15:56:02Z",
-          "Link de Acesso": "https://github.com/InvertGames/uFrame.ECS.Editor",
-          "Organizacao": true,
-          "Dados Organizacao": {
-            "login": "InvertGames",
-            "url": "https://github.com/InvertGames",
-            "tipo": "Organization"
-          }
-        },
-        {
-          "Nome do Repositório": "uFrameECSDemo",
-          "Descricao": null,
-          "Linguagem Principal": "C#",
-          "Estrelas": 4,
-          "Licenca": "N/A",
-          "Ultima Atualizacao": "2019-04-24T11:54:21Z",
-          "Link de Acesso": "https://github.com/InvertGames/uFrameECSDemo",
-          "Organizacao": true,
-          "Dados Organizacao": {
-            "login": "InvertGames",
-            "url": "https://github.com/InvertGames",
-            "tipo": "Organization"
-          }
-        },
-        {
-          "Nome do Repositório": "uFrame-Porter",
-          "Descricao": "A tiny tool for porting from uFrame 1.6 (no longer support) to new version of uFrame",
-          "Linguagem Principal": "C#",
-          "Estrelas": 4,
-          "Licenca": "N/A",
-          "Ultima Atualizacao": "2019-02-14T00:41:53Z",
-          "Link de Acesso": "https://github.com/phamtanlong/uFrame-Porter",
-          "Organizacao": false,
-          "Dados Organizacao": null
-        },
-        {
-          "Nome do Repositório": "uFrameMVVM",
-          "Descricao": "uFrame MVVM Graphs",
-          "Linguagem Principal": "C#",
-          "Estrelas": 3,
-          "Licenca": "N/A",
-          "Ultima Atualizacao": "2019-02-04T22:18:58Z",
-          "Link de Acesso": "https://github.com/InvertGames/uFrameMVVM",
-          "Organizacao": true,
-          "Dados Organizacao": {
-            "login": "InvertGames",
-            "url": "https://github.com/InvertGames",
-            "tipo": "Organization"
-          }
-        },
-        {
           "Nome do Repositório": "elixir-phoenix",
           "Descricao": "Repositório do mini-curso de Elixir e Phoenix, oferecido pelo Laboratório de Computação Aplicada da UFRA. :rocket:",
           "Linguagem Principal": "Elixir",
@@ -81662,17 +81483,6 @@
           "Licenca": "Apache-2.0",
           "Ultima Atualizacao": "2021-09-29T00:08:09Z",
           "Link de Acesso": "https://github.com/natanaelricard0/MiniCursoPython2020",
-          "Organizacao": false,
-          "Dados Organizacao": null
-        },
-        {
-          "Nome do Repositório": "uFrame.MVVM.NodeCanvasPlugin",
-          "Descricao": "A plugin for uFrame which will automatically generate NC actions for get/set/check/execute ViewModel properties/commands.",
-          "Linguagem Principal": "C#",
-          "Estrelas": 2,
-          "Licenca": "N/A",
-          "Ultima Atualizacao": "2017-05-03T01:17:58Z",
-          "Link de Acesso": "https://github.com/grofit/uFrame.MVVM.NodeCanvasPlugin",
           "Organizacao": false,
           "Dados Organizacao": null
         },
@@ -81721,17 +81531,6 @@
           "Dados Organizacao": null
         },
         {
-          "Nome do Repositório": "UFrame",
-          "Descricao": "UFrame for Android (homepage: https://play.google.com/store/apps/details?id=vnd.blueararat.UFrame)",
-          "Linguagem Principal": "Java",
-          "Estrelas": 1,
-          "Licenca": "N/A",
-          "Ultima Atualizacao": "2019-11-22T06:08:20Z",
-          "Link de Acesso": "https://github.com/prrt714/UFrame",
-          "Organizacao": false,
-          "Dados Organizacao": null
-        },
-        {
           "Nome do Repositório": "ufra-analise-solos-argila",
           "Descricao": "Este projeto consiste em uma análise de solos conduzida no R, apresentada como trabalho de conclusão de módulo à Especialização em Geoprocessamento, Levantamento e Interpretação de Solos da UFRA.",
           "Linguagem Principal": "HTML",
@@ -81772,17 +81571,6 @@
           "Licenca": "N/A",
           "Ultima Atualizacao": "2024-11-19T19:09:18Z",
           "Link de Acesso": "https://github.com/walaceelias/UFRA",
-          "Organizacao": false,
-          "Dados Organizacao": null
-        },
-        {
-          "Nome do Repositório": "UFrame16",
-          "Descricao": "The Book of uFrame - Tutorial",
-          "Linguagem Principal": "C#",
-          "Estrelas": 0,
-          "Licenca": "N/A",
-          "Ultima Atualizacao": "2015-08-03T15:42:08Z",
-          "Link de Acesso": "https://github.com/wang-yichun/UFrame16",
           "Organizacao": false,
           "Dados Organizacao": null
         },
