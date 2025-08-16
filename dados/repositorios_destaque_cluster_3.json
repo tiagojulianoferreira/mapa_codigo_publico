@@ -1,0 +1,589 @@
+{
+    "data_analise": "2025-08-16 16:26:22",
+    "repositorios_destaque_cluster_3": [
+        {
+            "Nome do Repositório": "awesome-ufma",
+            "Descricao": "Uma lista de provas das disciplinas ministradas na Universidade Federal do Maranhão.",
+            "Estrelas": 146,
+            "Linguagem Principal": "Python",
+            "Organizacao": false,
+            "Link de Acesso": "https://github.com/elheremes/awesome-ufma"
+        },
+        {
+            "Nome do Repositório": "Materias-UFFS",
+            "Descricao": "Todo conteúdo do Curso, você encontra aqui  🍩 👾(COLINHA 😂)",
+            "Estrelas": 95,
+            "Linguagem Principal": "C",
+            "Organizacao": false,
+            "Link de Acesso": "https://github.com/rafinhadufluxo/Materias-UFFS"
+        },
+        {
+            "Nome do Repositório": "django-drf-tutorial",
+            "Descricao": "O mais famoso tutorial de Django com DRF do IFC. Amado por uns, odiado por outros, respeitado por todos.",
+            "Estrelas": 85,
+            "Linguagem Principal": "Python",
+            "Organizacao": false,
+            "Link de Acesso": "https://github.com/marrcandre/django-drf-tutorial"
+        },
+        {
+            "Nome do Repositório": "benchmark-ordenacao",
+            "Descricao": "Benchmark simples para algoritmos de ordenação. Envolve conteúdo da disciplina EDA-2 da UnB/FGA",
+            "Estrelas": 81,
+            "Linguagem Principal": "C",
+            "Organizacao": false,
+            "Link de Acesso": "https://github.com/bcribas/benchmark-ordenacao"
+        },
+        {
+            "Nome do Repositório": "ConsertandoHorariosSIGAA",
+            "Descricao": "Traduz informações de horários das turmas no SIGAA (novo sistema da UnB), em formato pouco entendível, por dias e horas escritas por extenso.",
+            "Estrelas": 74,
+            "Linguagem Principal": "JavaScript",
+            "Organizacao": false,
+            "Link de Acesso": "https://github.com/luthierycosta/ConsertandoHorariosSIGAA"
+        },
+        {
+            "Nome do Repositório": "modelo-tcc-ufrn",
+            "Descricao": "Modelo de TCC da UFRN para o curso de Engenharia de Computação (adaptável para outros cursos).",
+            "Estrelas": 67,
+            "Linguagem Principal": "TeX",
+            "Organizacao": false,
+            "Link de Acesso": "https://github.com/gisliany/modelo-tcc-ufrn"
+        },
+        {
+            "Nome do Repositório": "ufabc-next-web",
+            "Descricao": "📈 Plataforma web para auxiliar na graduação dos alunos da UFABC com informações sobre a performance, processo de matrículas e os discentes da universidade",
+            "Estrelas": 64,
+            "Linguagem Principal": "TypeScript",
+            "Organizacao": true,
+            "Link de Acesso": "https://github.com/ufabc-next/ufabc-next-web"
+        },
+        {
+            "Nome do Repositório": "Aprendizado-por-Reforco",
+            "Descricao": "Repositório de Aprendizado por Reforço desenvolvido pelo Turing USP",
+            "Estrelas": 62,
+            "Linguagem Principal": "Jupyter Notebook",
+            "Organizacao": true,
+            "Link de Acesso": "https://github.com/turing-usp/Aprendizado-por-Reforco"
+        },
+        {
+            "Nome do Repositório": "open_scada_dms",
+            "Descricao": "This is an open source project for a basic ems/dms scada system. It contains a HMI with vector graphics taylored towards power-scada, and supports an IEC60870-5-104 based IFS. The backend is powered by mongodb for persistence, influxdb for historic data, and redis for the real-time database",
+            "Estrelas": 60,
+            "Linguagem Principal": "JavaScript",
+            "Organizacao": false,
+            "Link de Acesso": "https://github.com/robidev/open_scada_dms"
+        },
+        {
+            "Nome do Repositório": "wikilab-ufabc",
+            "Descricao": "Um laboratório experimental baseado no wikihouse",
+            "Estrelas": 60,
+            "Linguagem Principal": "Python",
+            "Organizacao": true,
+            "Link de Acesso": "https://github.com/uncreatednet/wikilab-ufabc"
+        },
+        {
+            "Nome do Repositório": "Introduction-GNN",
+            "Descricao": "Esse repositorio é para o curso de difusão ofericido pelo ICMC/USP Introdução às redes neurais em grafos e suas aplicações em tarefas de aprendizado de máquina.",
+            "Estrelas": 57,
+            "Linguagem Principal": "Jupyter Notebook",
+            "Organizacao": false,
+            "Link de Acesso": "https://github.com/GoloMarcos/Introduction-GNN"
+        },
+        {
+            "Nome do Repositório": "MateriaisDidaticos",
+            "Descricao": "Materiais didáticos utilizados nos cursos do Bacharelado em Ciência da Computação da UFABC",
+            "Estrelas": 51,
+            "Linguagem Principal": "TeX",
+            "Organizacao": true,
+            "Link de Acesso": "https://github.com/ufabc-bcc/MateriaisDidaticos"
+        },
+        {
+            "Nome do Repositório": "PatinhoFeio",
+            "Descricao": "Repositório contendo documentação técnica sobre o Patinho Feio, um computador pioneiro brasileiro desenvolvido na Escola Politécnica da USP em 1971 e inaugurado em 1972.",
+            "Estrelas": 44,
+            "Linguagem Principal": "Assembly",
+            "Organizacao": true,
+            "Link de Acesso": "https://github.com/ArqueologiaDigital/PatinhoFeio"
+        },
+        {
+            "Nome do Repositório": "pds2-ufmg",
+            "Descricao": "Programação e Desenvolvimento de Software 2",
+            "Estrelas": 44,
+            "Linguagem Principal": "C++",
+            "Organizacao": false,
+            "Link de Acesso": "https://github.com/flaviovdf/pds2-ufmg"
+        },
+        {
+            "Nome do Repositório": "SnakeIA",
+            "Descricao": "Esboço de uma IA para jogar Snake (Projeto da disciplina Inteligência Computacional - UFU)",
+            "Estrelas": 43,
+            "Linguagem Principal": "Python",
+            "Organizacao": false,
+            "Link de Acesso": "https://github.com/filhoweuler/SnakeIA"
+        },
+        {
+            "Nome do Repositório": "pgcomp-ufba-latex",
+            "Descricao": "PGCOMP is Programa de Pós-graduação em Ciência da Computação da Universidade Federal da Bahia, Brasil. ",
+            "Estrelas": 42,
+            "Linguagem Principal": "TeX",
+            "Organizacao": true,
+            "Link de Acesso": "https://github.com/PGCOMP-UFBA/pgcomp-ufba-latex"
+        },
+        {
+            "Nome do Repositório": "cc.uffs.edu.br",
+            "Descricao": "Site oficial do curso de Ciência da Computação da Universidade Federal da Fronteira Sul, Chapecó/SC.",
+            "Estrelas": 41,
+            "Linguagem Principal": "HTML",
+            "Organizacao": true,
+            "Link de Acesso": "https://github.com/ccuffs/cc.uffs.edu.br"
+        },
+        {
+            "Nome do Repositório": "sigaa-horarios-extension",
+            "Descricao": "Uma extensão de navegador que traduz automaticamente os códigos de horário das turmas do SIGAA da UFBA para um formato mais legível e compreensível.",
+            "Estrelas": 40,
+            "Linguagem Principal": "JavaScript",
+            "Organizacao": false,
+            "Link de Acesso": "https://github.com/ernestosrf/sigaa-horarios-extension"
+        },
+        {
+            "Nome do Repositório": "edi",
+            "Descricao": "Este repositório conterá as notas de aula para a disciplina Algoritmos e Estruturas de Dados I, ofertada pelo Departamento de Engenharia de Computação e Automação (UFRN).",
+            "Estrelas": 40,
+            "Linguagem Principal": "C++",
+            "Organizacao": false,
+            "Link de Acesso": "https://github.com/eduardolfalcao/edi"
+        },
+        {
+            "Nome do Repositório": "caronae-backend",
+            "Descricao": "[Projeto descontinuado] Backend do Caronaê, app open-source de caronas usado por mais de 15 mil alunos da UFRJ",
+            "Estrelas": 39,
+            "Linguagem Principal": "PHP",
+            "Organizacao": true,
+            "Link de Acesso": "https://github.com/caronae/caronae-backend"
+        },
+        {
+            "Nome do Repositório": "ifcb-analysis",
+            "Descricao": "custom resolver",
+            "Estrelas": 38,
+            "Linguagem Principal": "MATLAB",
+            "Organizacao": false,
+            "Link de Acesso": "https://github.com/hsosik/ifcb-analysis"
+        },
+        {
+            "Nome do Repositório": "comp",
+            "Descricao": "Disciplina de Compiladores (INF01147) - INF/UFRGS",
+            "Estrelas": 38,
+            "Linguagem Principal": "TeX",
+            "Organizacao": false,
+            "Link de Acesso": "https://github.com/schnorr/comp"
+        },
+        {
+            "Nome do Repositório": "egressos",
+            "Descricao": "Repositórios dos egressos do IFPB",
+            "Estrelas": 37,
+            "Linguagem Principal": "JavaScript",
+            "Organizacao": true,
+            "Link de Acesso": "https://github.com/ifpb/egressos"
+        },
+        {
+            "Nome do Repositório": "guia-de-sobrevivencia-mestrado-e-doutorado-ic-uff-br",
+            "Descricao": "Dicas sobre como sobreviver ao mestreado e/ou doutorado no IC/UFF",
+            "Estrelas": 36,
+            "Linguagem Principal": null,
+            "Organizacao": false,
+            "Link de Acesso": "https://github.com/anselmobattisti/guia-de-sobrevivencia-mestrado-e-doutorado-ic-uff-br"
+        },
+        {
+            "Nome do Repositório": "fund_prog",
+            "Descricao": "Repositório dedicado aos trabalhos desenvolvidos na matéria de Fundamentos de Programação, presidida pelos Professores Doutores Bogdan Tomoyuki Nassu,  Leyza Baldo Dorini e Daniel Fernando Pigatto, na Universidade Tecnológica Federal do Paraná (UTFPR).",
+            "Estrelas": 36,
+            "Linguagem Principal": "C",
+            "Organizacao": false,
+            "Link de Acesso": "https://github.com/ana-molinos/fund_prog"
+        },
+        {
+            "Nome do Repositório": "petR",
+            "Descricao": "Aulas e Material do Workshop de R com o PET da Faculdade de Economia da UFF",
+            "Estrelas": 35,
+            "Linguagem Principal": "HTML",
+            "Organizacao": false,
+            "Link de Acesso": "https://github.com/pedrocava/petR"
+        },
+        {
+            "Nome do Repositório": "CursoEngenhariaSoftware",
+            "Descricao": "Curso de Engenharia de Software (Bacharelado em Ciência da Computação, DCC/UFMG)",
+            "Estrelas": 35,
+            "Linguagem Principal": null,
+            "Organizacao": true,
+            "Link de Acesso": "https://github.com/aserg-ufmg/CursoEngenhariaSoftware"
+        },
+        {
+            "Nome do Repositório": "plataforma-sabia",
+            "Descricao": "🐦 A Plataforma de Tecnologias do Semi-Árido Brasileiro 🌴",
+            "Estrelas": 35,
+            "Linguagem Principal": "JavaScript",
+            "Organizacao": true,
+            "Link de Acesso": "https://github.com/ufersa/plataforma-sabia"
+        },
+        {
+            "Nome do Repositório": "docker-guide",
+            "Descricao": ":whale2: Repositório da Oficina de Docker para a  IV Semana de Informática do CERES/UFRN ",
+            "Estrelas": 34,
+            "Linguagem Principal": "HTML",
+            "Organizacao": false,
+            "Link de Acesso": "https://github.com/victorhundo/docker-guide"
+        },
+        {
+            "Nome do Repositório": "geopy_minicurso",
+            "Descricao": "Minicurso de Python aplicado à Geologia para a XXX Semana Acadêmica da UFRRJ",
+            "Estrelas": 34,
+            "Linguagem Principal": "Jupyter Notebook",
+            "Organizacao": false,
+            "Link de Acesso": "https://github.com/rodreras/geopy_minicurso"
+        },
+        {
+            "Nome do Repositório": "awesome-ifma",
+            "Descricao": "Uma lista de provas das disciplinas ministradas no IFMA - Monte Castelo.",
+            "Estrelas": 34,
+            "Linguagem Principal": null,
+            "Organizacao": false,
+            "Link de Acesso": "https://github.com/EliasRLima/awesome-ifma"
+        },
+        {
+            "Nome do Repositório": "INF029",
+            "Descricao": "Material da disciplina INF029 - Laboratório de Programação (IFBA)",
+            "Estrelas": 34,
+            "Linguagem Principal": "C",
+            "Organizacao": false,
+            "Link de Acesso": "https://github.com/renatoln/INF029"
+        },
+        {
+            "Nome do Repositório": "Arvore-de-Habilidades",
+            "Descricao": "Repositório dedicado a armazenar notebooks feitos para o treinamento interno do Grupo Turing da Universidade de São Paulo e para a Árvore de Habilidades do mesmo grupo.",
+            "Estrelas": 34,
+            "Linguagem Principal": "Jupyter Notebook",
+            "Organizacao": true,
+            "Link de Acesso": "https://github.com/turing-usp/Arvore-de-Habilidades"
+        },
+        {
+            "Nome do Repositório": "suap-api-php",
+            "Descricao": "📚 Wrapper PHP para acesso a API do SUAP (Sistema Unificado de Administração Publica) do IFRN.",
+            "Estrelas": 33,
+            "Linguagem Principal": "PHP",
+            "Organizacao": false,
+            "Link de Acesso": "https://github.com/ivmelo/suap-api-php"
+        },
+        {
+            "Nome do Repositório": "UFTeX",
+            "Descricao": "Classe em LaTeX para a escrita de trabalhos acadêmicos do curso de Ciência da Computação, CUP / UFT.",
+            "Estrelas": 33,
+            "Linguagem Principal": "TeX",
+            "Organizacao": false,
+            "Link de Acesso": "https://github.com/almeidatiago/UFTeX"
+        },
+        {
+            "Nome do Repositório": "sigaa_ufc_android",
+            "Descricao": "Aplicativo do Sigaa, RU e Pergamum da Universidade Federal do Ceará. Implementado usando APIs do Android Jetpack e Material Components",
+            "Estrelas": 33,
+            "Linguagem Principal": "Kotlin",
+            "Organizacao": false,
+            "Link de Acesso": "https://github.com/rodrigmatrix/sigaa_ufc_android"
+        },
+        {
+            "Nome do Repositório": "horarios-ufcg",
+            "Descricao": "Visualização dos horários das disciplinas do curso de Ciência da Computação da UFCG",
+            "Estrelas": 33,
+            "Linguagem Principal": "Vue",
+            "Organizacao": true,
+            "Link de Acesso": "https://github.com/Guardians-DSC/horarios-ufcg"
+        },
+        {
+            "Nome do Repositório": "odufrn-downloader",
+            "Descricao": "Pacote para baixar os dados do portal de dados abertos da UFRN",
+            "Estrelas": 32,
+            "Linguagem Principal": "Python",
+            "Organizacao": true,
+            "Link de Acesso": "https://github.com/odufrn/odufrn-downloader"
+        },
+        {
+            "Nome do Repositório": "mlclass",
+            "Descricao": "Disciplina de Aprendizagem de Máquina dos cursos de Ciência da Computação e Engenharia da Computação IC/UFAL",
+            "Estrelas": 30,
+            "Linguagem Principal": "Python",
+            "Organizacao": false,
+            "Link de Acesso": "https://github.com/aydanomachado/mlclass"
+        },
+        {
+            "Nome do Repositório": "if688.github.io",
+            "Descricao": "Site da disciplina IF688 - Teoria e Implementação de Linguagens Computacionais, Ciência da Computação, CIn-UFPE",
+            "Estrelas": 30,
+            "Linguagem Principal": "Java",
+            "Organizacao": true,
+            "Link de Acesso": "https://github.com/if688/if688.github.io"
+        },
+        {
+            "Nome do Repositório": "projects",
+            "Descricao": "Projetos do IFPB",
+            "Estrelas": 28,
+            "Linguagem Principal": "Astro",
+            "Organizacao": true,
+            "Link de Acesso": "https://github.com/ifpb/projects"
+        },
+        {
+            "Nome do Repositório": "aquario",
+            "Descricao": "Núcleo de informações do Centro de Informática (CI) da UFPB",
+            "Estrelas": 28,
+            "Linguagem Principal": "TypeScript",
+            "Organizacao": false,
+            "Link de Acesso": "https://github.com/ralfferreira/aquario"
+        },
+        {
+            "Nome do Repositório": "open-source-ufabc",
+            "Descricao": ":octocat: Lista de projetos open-source mantidos pela comunidade da UFABC",
+            "Estrelas": 27,
+            "Linguagem Principal": null,
+            "Organizacao": true,
+            "Link de Acesso": "https://github.com/ufabc-students-bcc/open-source-ufabc"
+        },
+        {
+            "Nome do Repositório": "abntex-ifpi",
+            "Descricao": "Modificações ao abnTeX para o IFPI",
+            "Estrelas": 27,
+            "Linguagem Principal": "TeX",
+            "Organizacao": false,
+            "Link de Acesso": "https://github.com/g0dkar/abntex-ifpi"
+        },
+        {
+            "Nome do Repositório": "comunidade",
+            "Descricao": "👥⠀Somos uma comunidade de pessoas desenvolvedoras da Universidade Federal Rural de Pernambuco",
+            "Estrelas": 27,
+            "Linguagem Principal": null,
+            "Organizacao": true,
+            "Link de Acesso": "https://github.com/ufrpe-devs/comunidade"
+        },
+        {
+            "Nome do Repositório": "uffstex",
+            "Descricao": "Classe de trabalhos acadêmicos da Universidade Federal da Fronteira Sul baseada em abnTeX2",
+            "Estrelas": 27,
+            "Linguagem Principal": "TeX",
+            "Organizacao": true,
+            "Link de Acesso": "https://github.com/ccuffs/uffstex"
+        },
+        {
+            "Nome do Repositório": "abntex2-DCOMP-UFS",
+            "Descricao": "  Classe que adapta o pacote abntex2 para as normas do Departamento de Computação da UFS",
+            "Estrelas": 27,
+            "Linguagem Principal": "TeX",
+            "Organizacao": true,
+            "Link de Acesso": "https://github.com/DCOMP-UFS/abntex2-DCOMP-UFS"
+        },
+        {
+            "Nome do Repositório": "MBA-BIA-USP",
+            "Descricao": "Repositório de notebooks Python",
+            "Estrelas": 26,
+            "Linguagem Principal": "Jupyter Notebook",
+            "Organizacao": false,
+            "Link de Acesso": "https://github.com/daniel-usp/MBA-BIA-USP"
+        },
+        {
+            "Nome do Repositório": "uspb",
+            "Descricao": "A deno app,uspb = Url Shorter + Paste Bin",
+            "Estrelas": 26,
+            "Linguagem Principal": "TypeScript",
+            "Organizacao": false,
+            "Link de Acesso": "https://github.com/jneeee/uspb"
+        },
+        {
+            "Nome do Repositório": "horarios-ufcg-api",
+            "Descricao": "Api dos horários das disciplinas do curso de Ciência da Computação da UFCG",
+            "Estrelas": 26,
+            "Linguagem Principal": "JavaScript",
+            "Organizacao": true,
+            "Link de Acesso": "https://github.com/Guardians-DSC/horarios-ufcg-api"
+        },
+        {
+            "Nome do Repositório": "GEMP-UFPA",
+            "Descricao": "Grupo de estudos para programação competitiva, visando principalmente a OBI e a Maratona de Programação",
+            "Estrelas": 26,
+            "Linguagem Principal": null,
+            "Organizacao": true,
+            "Link de Acesso": "https://github.com/redpres-pa/GEMP-UFPA"
+        },
+        {
+            "Nome do Repositório": "utfprct-tex",
+            "Descricao": "O UTFPRCT-TEX é um template LaTeX não oficial para trabalhos acadêmicos (teses, dissertações, trabalhos de conclusão...) da Universidade Tecnológica Federal do Paraná (UTFPR) - Curitiba",
+            "Estrelas": 26,
+            "Linguagem Principal": "TeX",
+            "Organizacao": false,
+            "Link de Acesso": "https://github.com/wmeira/utfprct-tex"
+        },
+        {
+            "Nome do Repositório": "aulas_floss",
+            "Descricao": "Repositório das aulas da disciplina de Desenvolvimento de Software de Código Aberto/Livre do CIn-UFPE",
+            "Estrelas": 25,
+            "Linguagem Principal": "TeX",
+            "Organizacao": false,
+            "Link de Acesso": "https://github.com/fernandocastor/aulas_floss"
+        },
+        {
+            "Nome do Repositório": "ufsc-thesis-latex",
+            "Descricao": "Padrão para o formato de teses na UFSC, utilizando o pacote abntex2 como base.",
+            "Estrelas": 25,
+            "Linguagem Principal": "TeX",
+            "Organizacao": false,
+            "Link de Acesso": "https://github.com/mateusduboli/ufsc-thesis-latex"
+        },
+        {
+            "Nome do Repositório": "IA-FIC2021",
+            "Descricao": "Material para o curso FIC do IFSP Piracicaba",
+            "Estrelas": 24,
+            "Linguagem Principal": "Jupyter Notebook",
+            "Organizacao": false,
+            "Link de Acesso": "https://github.com/Atzingen/IA-FIC2021"
+        },
+        {
+            "Nome do Repositório": "tese-ft",
+            "Descricao": "Template para trabalhos de conclusão de curso, dissertações e teses da Faculdade de Tecnologia da UNICAMP",
+            "Estrelas": 24,
+            "Linguagem Principal": "TeX",
+            "Organizacao": false,
+            "Link de Acesso": "https://github.com/gradvohl/tese-ft"
+        },
+        {
+            "Nome do Repositório": "ufmg",
+            "Descricao": "Site feito para exibir rotas e horários de linhas internas de ônibus da UFMG",
+            "Estrelas": 24,
+            "Linguagem Principal": "JavaScript",
+            "Organizacao": true,
+            "Link de Acesso": "https://github.com/internorotas/ufmg"
+        },
+        {
+            "Nome do Repositório": "UniRideAndroid",
+            "Descricao": "Carpool Android app for University students",
+            "Estrelas": 24,
+            "Linguagem Principal": "Java",
+            "Organizacao": true,
+            "Link de Acesso": "https://github.com/195-uniride/UniRideAndroid"
+        },
+        {
+            "Nome do Repositório": "banco-de-provas",
+            "Descricao": "Banco de Provas da UNICAMP",
+            "Estrelas": 24,
+            "Linguagem Principal": "C",
+            "Organizacao": true,
+            "Link de Acesso": "https://github.com/unicampers/banco-de-provas"
+        },
+        {
+            "Nome do Repositório": "Unioeste-LinguagensDeMontagem",
+            "Descricao": "Material da disciplina de Linguagens de Montagem disponível para os alunos de Bacharelado em Ciência da Computação - Unioeste - Cascavel.",
+            "Estrelas": 23,
+            "Linguagem Principal": "Assembly",
+            "Organizacao": false,
+            "Link de Acesso": "https://github.com/bellorini/Unioeste-LinguagensDeMontagem"
+        },
+        {
+            "Nome do Repositório": "IntroducaoaInferenciaEstatistica",
+            "Descricao": "Materiais da disciplina SME0221 Introdução à Inferência Estatística oferecido no ICMC USP",
+            "Estrelas": 23,
+            "Linguagem Principal": "Jupyter Notebook",
+            "Organizacao": false,
+            "Link de Acesso": "https://github.com/cibelerusso/IntroducaoaInferenciaEstatistica"
+        },
+        {
+            "Nome do Repositório": "UFCase",
+            "Descricao": "UFCase: Ultimate Windows Components Explorer",
+            "Estrelas": 23,
+            "Linguagem Principal": "C++",
+            "Organizacao": false,
+            "Link de Acesso": "https://github.com/seven-mile/UFCase"
+        },
+        {
+            "Nome do Repositório": "ideias",
+            "Descricao": "Repositório com ideias para projetos que podem impactar o curso de Ciência da Computação, a UFFS e a comunidade externa.",
+            "Estrelas": 23,
+            "Linguagem Principal": null,
+            "Organizacao": true,
+            "Link de Acesso": "https://github.com/ccuffs/ideias"
+        },
+        {
+            "Nome do Repositório": "sire",
+            "Descricao": "Sistema de Reserva de Salas e Equipamentos (SiRe) do Instituto de Ciências Exatas e Aplicadas (ICEA) Campus João Monlevade da Universidade Federal de Ouro Preto (UFOP)",
+            "Estrelas": 23,
+            "Linguagem Principal": "HTML",
+            "Organizacao": false,
+            "Link de Acesso": "https://github.com/jpmoura/sire"
+        },
+        {
+            "Nome do Repositório": "ufc",
+            "Descricao": "🎓 Ciência da Computação - Universidade Federal do Ceará.",
+            "Estrelas": 22,
+            "Linguagem Principal": "C",
+            "Organizacao": false,
+            "Link de Acesso": "https://github.com/DanielBrito/ufc"
+        },
+        {
+            "Nome do Repositório": "curso_radar_UNIFEI_INPE_2024",
+            "Descricao": "Códigos e dados da parte prática do curso de radar com Python ministrado pela UNIFEI e INPE em 2024",
+            "Estrelas": 22,
+            "Linguagem Principal": "Jupyter Notebook",
+            "Organizacao": false,
+            "Link de Acesso": "https://github.com/evmpython/curso_radar_UNIFEI_INPE_2024"
+        },
+        {
+            "Nome do Repositório": "DataScience",
+            "Descricao": ":book: Repositório criado para controle e versionamento do projeto \"Popularização do data Science em pesquisas de engenharia utilizando python\"  (IFSP)",
+            "Estrelas": 21,
+            "Linguagem Principal": "Jupyter Notebook",
+            "Organizacao": false,
+            "Link de Acesso": "https://github.com/VictorPoldauf/DataScience"
+        },
+        {
+            "Nome do Repositório": "app-cc",
+            "Descricao": "Aplicativo móvel para uso de alunos, professores e técnicos do curso de Ciência da Computação da UFFS",
+            "Estrelas": 20,
+            "Linguagem Principal": "Dart",
+            "Organizacao": true,
+            "Link de Acesso": "https://github.com/ccuffs/app-cc"
+        },
+        {
+            "Nome do Repositório": "elc117-2024b",
+            "Descricao": "ELC117 - Paradigmas de Programação - UFSM - 2024b",
+            "Estrelas": 20,
+            "Linguagem Principal": "Java",
+            "Organizacao": false,
+            "Link de Acesso": "https://github.com/AndreaInfUFSM/elc117-2024b"
+        },
+        {
+            "Nome do Repositório": "DSW1",
+            "Descricao": "Neste repositório encontram-se os materiais didáticos da disciplina Desenvolvimento de Software para Web 1 (UFSCar), incluindo notas de aula e exemplos de código. ",
+            "Estrelas": 20,
+            "Linguagem Principal": "Java",
+            "Organizacao": false,
+            "Link de Acesso": "https://github.com/delanobeder/DSW1"
+        },
+        {
+            "Nome do Repositório": "AulasUEMG",
+            "Descricao": "Material usado nas aulas da UEMG, a partir de 2018-2",
+            "Estrelas": 20,
+            "Linguagem Principal": null,
+            "Organizacao": false,
+            "Link de Acesso": "https://github.com/baciotti/AulasUEMG"
+        },
+        {
+            "Nome do Repositório": "compiladores-livro",
+            "Descricao": "Livro da disciplina de Introdução a Compiladores - UFPB",
+            "Estrelas": 19,
+            "Linguagem Principal": "Ruby",
+            "Organizacao": true,
+            "Link de Acesso": "https://github.com/ufpb-computacao/compiladores-livro"
+        },
+        {
+            "Nome do Repositório": "horario",
+            "Descricao": "Mostrador de horários e organização de salas de aula do curso de Ciência da Computação da UFFS, Chapecó/SC.",
+            "Estrelas": 19,
+            "Linguagem Principal": "JavaScript",
+            "Organizacao": true,
+            "Link de Acesso": "https://github.com/ccuffs/horario"
+        }
+    ]
+}
