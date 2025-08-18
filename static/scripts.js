@@ -4,18 +4,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const generalSearchInput = document.getElementById('generalSearchInput');
     const languageFilter = document.getElementById('languageFilter');
     const licenseFilter = document.getElementById('licenseFilter');
-    const clearFiltersBtn = document.getElementById('clearFilters');
+    const clearFiltersBtn = document.getElementById('clearFiltersBtn');
     
     // Estatísticas Globais
     const totalReposGlobal = document.getElementById('totalReposGlobal');
     const mostUsedLanguageGlobal = document.getElementById('mostUsedLanguageGlobal');
     const mostUsedLicenseGlobal = document.getElementById('mostUsedLicenseGlobal');
     const naLicenseCountSpan = document.getElementById('naLicenseCount');
-
-    // Estatísticas Filtradas
-    const totalFilteredRepos = document.getElementById('totalFilteredRepos');
-    const mostUsedFilteredLanguage = document.getElementById('mostUsedFilteredLanguage');
-    const mostUsedFilteredLicense = document.getElementById('mostUsedFilteredLicense');
 
     // Listas Top
     const topLanguagesTbody = document.getElementById('topLanguagesTbody');
@@ -26,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Tabela Principal
     const allReposTbody = document.getElementById('allReposTbody');
     const allReposTableHeaders = document.querySelectorAll('#allReposTable thead th[data-sort-key]');
-    const filteredReposCount = document.getElementById('filteredReposCount');
+    const filteredReposCount = document.querySelector('#repos-table-section #filteredReposCount');
 
     // Paginação
     const prevPageBtn = document.getElementById('prevPageBtn');
@@ -50,6 +45,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // === Funções Utilitárias ===
 
+    /**
+     * Conta a ocorrência de valores em um array de objetos.
+     * @param {Array} data - O array de dados.
+     * @param {string} key - A chave do objeto a ser contada.
+     * @returns {Object} Um objeto com a contagem de cada valor.
+     */
     function countOccurrences(data, key) {
         const counts = {};
         data.forEach(item => {
@@ -61,6 +62,11 @@ document.addEventListener('DOMContentLoaded', () => {
         return counts;
     }
 
+    /**
+     * Encontra a chave com o maior valor em um objeto de contagem.
+     * @param {Object} counts - O objeto de contagem.
+     * @returns {string|null} A chave mais comum, ou null se o objeto estiver vazio.
+     */
     function getMostCommon(counts) {
         const keys = Object.keys(counts);
         if (keys.length === 0) return null;
@@ -70,8 +76,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // === Funções de Processamento e Renderização de Dados ===
 
+    /**
+     * Busca, processa e inicia a renderização dos dados da aplicação.
+     */
     async function fetchAndProcessData() {
         try {
+            // Busca os dois arquivos JSON em paralelo para otimizar o carregamento
             const [responseMain, responseHighlighted] = await Promise.all([
                 fetch('./repositorios_federais_filtrado_idioma.json'),
                 fetch('./dados/repositorios_destaque_cluster_3.json')
@@ -80,6 +90,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const dataHighlighted = await responseHighlighted.json();
 
             if (dataMain && dataMain.institutions_data) {
+                // Processa os dados principais
                 allRepos = [];
                 dataMain.institutions_data.forEach(institution => {
                     institution.Repositorios.forEach(repo => {
@@ -103,10 +114,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 updateTopLists();
                 updateTopLicenses();
                 applyFiltersAndDisplay(true);
+            
             }
 
-            if (dataHighlighted && dataHighlighted.repositorios) {
-                renderHighlightedClusterRepos(dataHighlighted.repositorios);
+            if (dataHighlighted && dataHighlighted.repositorios_destaque_cluster_3) {
+                renderHighlightedClusterRepos(dataHighlighted.repositorios_destaque_cluster_3);
             }
             
             console.log(`Dados carregados: ${allRepos.length} repositórios encontrados.`);
@@ -115,6 +127,9 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    /**
+     * Preenche os menus suspensos de filtros.
+     */
     function populateFilters() {
         const languages = [...new Set(allRepos.map(repo => repo['Linguagem Principal']))].filter(Boolean).sort();
         if (languageFilter) {
@@ -127,6 +142,9 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    /**
+     * Atualiza as estatísticas globais da página.
+     */
     function updateGlobalStats() {
         if (totalReposGlobal) totalReposGlobal.textContent = allRepos.length;
 
@@ -149,16 +167,9 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    function updateFilteredStats(filteredRepos) {
-        if (totalFilteredRepos) totalFilteredRepos.textContent = filteredRepos.length;
-
-        const languageCounts = countOccurrences(filteredRepos, 'Linguagem Principal');
-        if (mostUsedFilteredLanguage) mostUsedFilteredLanguage.textContent = getMostCommon(languageCounts) || 'N/A';
-
-        const licenseCounts = countOccurrences(filteredRepos, 'Licenca');
-        if (mostUsedFilteredLicense) mostUsedFilteredLicense.textContent = getMostCommon(licenseCounts) || 'N/A';
-    }
-
+    /**
+     * Atualiza as listas de top 10 repositórios e linguagens.
+     */
     function updateTopLists() {
         const topRepos = [...allRepos].sort((a, b) => b.Estrelas - a.Estrelas).slice(0, 10);
         if (topReposTbody) {
@@ -183,6 +194,9 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    /**
+     * Atualiza a lista das 10 licenças mais usadas.
+     */
     function updateTopLicenses() {
         const licenseCounts = countOccurrences(allRepos.filter(repo => repo.Licenca && repo.Licenca.toUpperCase() !== 'N/A'), 'Licenca');
         const sortedLicenses = Object.entries(licenseCounts).sort(([, a], [, b]) => b - a).slice(0, 10);
@@ -196,6 +210,10 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    /**
+     * Filtra, ordena e renderiza os repositórios na tabela principal.
+     * @param {boolean} resetPagination - Indica se a paginação deve ser resetada.
+     */
     function applyFiltersAndDisplay(resetPagination = false) {
         const generalSearchQuery = generalSearchInput.value.toLowerCase();
         const selectedLanguage = languageFilter.value;
@@ -220,14 +238,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
         currentFilteredAndSortedRepos = filteredRepos;
         if(filteredReposCount) filteredReposCount.textContent = currentFilteredAndSortedRepos.length;
-
-        // Atualizar estatísticas filtradas
-        updateFilteredStats(filteredRepos);
-
+        
         if (resetPagination) currentPage = 1;
         renderTablePage();
     }
 
+    /**
+     * Renderiza a página atual da tabela principal.
+     */
     function renderTablePage() {
         const startIndex = (currentPage - 1) * itemsPerPage;
         const endIndex = startIndex + itemsPerPage;
@@ -259,24 +277,31 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    /**
+     * Renderiza a tabela do Cluster de Destaque com os dados do JSON específico.
+     * @param {Array} repositorios - O array de repositórios do JSON de destaque.
+     */
     function renderHighlightedClusterRepos(repositorios) {
-        if (cluster3Tbody) {
-            cluster3Tbody.innerHTML = repositorios.map(repo => `
-                <tr class="hover:bg-gray-100 transition-colors duration-150">
-                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                        <a href="${repo['Link de Acesso']}" target="_blank" class="text-blue-500 hover:underline">${repo['Nome do Repositório']}</a>
-                    </td>
-                    <td class="px-6 py-4 text-sm text-gray-500 max-w-xs truncate">${repo.descricao}</td>
-                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">${repo.estrelas}</td>
-                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">${repo.linguagem || 'N/A'}</td>
-                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">${repo.tipo}</td>
-                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                        <a href="${repo['Link de Acesso']}" target="_blank" class="text-blue-500 hover:underline">Link</a>
-                    </td>
-                </tr>
-            `).join('');
-        }
+    if (cluster3Tbody) {
+        const top10 = repositorios.slice(0, 10); // limita a 10
+        cluster3Tbody.innerHTML = top10.map(repo => `
+            <tr class="hover:bg-gray-100 transition-colors duration-150">
+                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                    <a href="${repo['Link de Acesso']}" target="_blank" class="text-blue-500 hover:underline">
+                        ${repo['Nome do Repositório']}
+                    </a>
+                </td>
+                <td class="px-6 py-4 text-sm text-gray-500 max-w-xs truncate">${repo.Descricao || ''}</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">${repo.Estrelas || 0}</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">${repo['Linguagem Principal'] || 'N/A'}</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">${repo.Organizacao ? 'Sim' : 'Não'}</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                    <a href="${repo['Link de Acesso']}" target="_blank" class="text-blue-500 hover:underline">Link</a>
+                </td>
+            </tr>
+        `).join('');
     }
+}
 
 
     // === Listeners de Eventos ===
@@ -332,5 +357,50 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // === Inicialização da Aplicação ===
     fetchAndProcessData();
 });
+/**
+ * Atualiza as estatísticas dos resultados filtrados.
+ * @param {Array} filteredRepos - Os repositórios filtrados.
+ */
+function updateFilteredStats(filteredRepos) {
+    const totalFilteredRepos = document.getElementById('totalFilteredRepos');
+    const mostUsedFilteredLanguage = document.getElementById('mostUsedFilteredLanguage');
+    const mostUsedFilteredLicense = document.getElementById('mostUsedFilteredLicense');
+    let naFilteredLicenseCountSpan = document.getElementById('naFilteredLicenseCount');
+
+    // Cria span dinamicamente se não existir
+    if (!naFilteredLicenseCountSpan && mostUsedFilteredLicense) {
+        const parent = mostUsedFilteredLicense.parentElement;
+        if (parent) {
+            naFilteredLicenseCountSpan = document.createElement('span');
+            naFilteredLicenseCountSpan.id = 'naFilteredLicenseCount';
+            naFilteredLicenseCountSpan.className = 'text-sm text-gray-500 italic mt-1 block';
+            parent.appendChild(naFilteredLicenseCountSpan);
+        }
+    }
+
+    if (totalFilteredRepos) totalFilteredRepos.textContent = filteredRepos.length;
+
+    // Linguagem mais usada
+    const languageCounts = countOccurrences(filteredRepos, 'Linguagem Principal');
+    if (mostUsedFilteredLanguage) {
+        mostUsedFilteredLanguage.textContent = getMostCommon(languageCounts) || 'N/A';
+    }
+
+    // Licença mais usada (ignora N/A)
+    const licenseCounts = countOccurrences(filteredRepos, 'Licenca');
+    const filteredLicenseCounts = Object.fromEntries(
+        Object.entries(licenseCounts).filter(([key]) => key && key.toUpperCase() !== 'N/A')
+    );
+    if (mostUsedFilteredLicense) {
+        mostUsedFilteredLicense.textContent = getMostCommon(filteredLicenseCounts) || 'N/A';
+    }
+
+    // Contagem de sem licença
+    const naCount = filteredRepos.filter(repo => !repo.Licenca || repo.Licenca.toUpperCase() === 'N/A').length;
+    if (naFilteredLicenseCountSpan) {
+        naFilteredLicenseCountSpan.textContent = `(${naCount} sem licença)`;
+    }
+}
