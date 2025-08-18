@@ -164,7 +164,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (topReposTbody) {
             topReposTbody.innerHTML = topRepos.map(repo => `
                 <tr>
-                    <td class="py-2 px-4"><a href="${repo.Link}" target="_blank" class="text-blue-500 hover:underline">${repo['Nome do Repositório']}</a></td>
+                    <td class="py-2 px-4"><a href="${repo['Link de Acesso']}" target="_blank" class="text-blue-500 hover:underline">${repo['Nome do Repositório']}</a></td>
                     <td class="py-2 px-4">${repo.Instituicao}</td>
                     <td class="py-2 px-4">${repo.Estrelas}</td>
                 </tr>
@@ -245,7 +245,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <td class="px-6 py-4 text-sm text-gray-500 max-w-xs truncate">${repo.Descricao}</td>
                     <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">${repo.Cluster_ID}</td>
                     <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                        <a href="${repo.Link}" target="_blank" class="text-blue-500 hover:underline">Link</a>
+                        <a href="${repo['Link de Acesso']}" target="_blank" class="text-blue-500 hover:underline">Link</a>
                     </td>
                 </tr>
             `).join('');
@@ -264,14 +264,14 @@ document.addEventListener('DOMContentLoaded', () => {
             cluster3Tbody.innerHTML = repositorios.map(repo => `
                 <tr class="hover:bg-gray-100 transition-colors duration-150">
                     <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                        <a href="${repo.link}" target="_blank" class="text-blue-500 hover:underline">${repo['Nome do Repositório']}</a>
+                        <a href="${repo['Link de Acesso']}" target="_blank" class="text-blue-500 hover:underline">${repo['Nome do Repositório']}</a>
                     </td>
                     <td class="px-6 py-4 text-sm text-gray-500 max-w-xs truncate">${repo.descricao}</td>
                     <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">${repo.estrelas}</td>
                     <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">${repo.linguagem || 'N/A'}</td>
                     <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">${repo.tipo}</td>
                     <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                        <a href="${repo.link}" target="_blank" class="text-blue-500 hover:underline">Link</a>
+                        <a href="${repo['Link de Acesso']}" target="_blank" class="text-blue-500 hover:underline">Link</a>
                     </td>
                 </tr>
             `).join('');
