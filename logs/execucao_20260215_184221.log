@@ -1,0 +1,166 @@
+2026-02-15 18:42:23,968 - INFO - ======================================================================
+2026-02-15 18:42:23,968 - INFO - 🚀 INICIANDO BUSCA INTELIGENTE COM FEEDBACK LOOP
+2026-02-15 18:42:23,968 - INFO - ======================================================================
+2026-02-15 18:42:23,977 - INFO - 
+📚 Processando Institutos Federais...
+2026-02-15 18:42:23,978 - INFO - 
+============================================================
+2026-02-15 18:42:23,978 - INFO - 🏛️  Processando IFBA - Instituto Federal da Bahia
+2026-02-15 18:42:23,978 - INFO - ============================================================
+2026-02-15 18:42:23,978 - INFO - 
+🔄 Iteração 1/3 para IFBA
+2026-02-15 18:42:23,978 - INFO -   🔎 Testando: "ifba"
+2026-02-15 18:42:39,039 - INFO -      ✅ 500 resultados (eficiência: 0.30)
+2026-02-15 18:42:40,040 - INFO -   🔎 Testando: "instituto federal"
+2026-02-15 18:42:57,426 - INFO -      ✅ 500 resultados (eficiência: 0.30)
+2026-02-15 18:43:00,429 - INFO - 
+🔄 Iteração 2/3 para IFBA
+2026-02-15 18:43:00,430 - INFO -   ⚠️ Sem novas queries para testar
+2026-02-15 18:43:00,431 - INFO - 
+📊 Métricas finais para IFBA:
+2026-02-15 18:43:00,432 - INFO -    Total de queries testadas: 2
+2026-02-15 18:43:00,432 - INFO -    Queries com sucesso: 0
+2026-02-15 18:43:00,832 - INFO - ✅ IFBA: 991 repositórios
+2026-02-15 18:43:00,833 - INFO -    Palavras-chave: trabalho, instituto, desenvolvido, sistema, projeto, federal, curso, ifba, para, sistemas
+2026-02-15 18:43:03,833 - INFO - 
+============================================================
+2026-02-15 18:43:03,833 - INFO - 🏛️  Processando IFB - Instituto Federal de Brasília
+2026-02-15 18:43:03,833 - INFO - ============================================================
+2026-02-15 18:43:03,833 - INFO - 
+🔄 Iteração 1/3 para IFB
+2026-02-15 18:43:03,833 - INFO -   🔎 Testando: "ifb"
+2026-02-15 18:43:20,431 - INFO -      ✅ 500 resultados (eficiência: 0.30)
+2026-02-15 18:43:21,433 - INFO -   🔎 Testando: "instituto federal"
+2026-02-15 18:43:38,247 - INFO -      ✅ 500 resultados (eficiência: 0.30)
+2026-02-15 18:43:41,249 - INFO - 
+🔄 Iteração 2/3 para IFB
+2026-02-15 18:43:41,251 - INFO -   ⚠️ Sem novas queries para testar
+2026-02-15 18:43:41,253 - INFO - 
+📊 Métricas finais para IFB:
+2026-02-15 18:43:41,253 - INFO -    Total de queries testadas: 2
+2026-02-15 18:43:41,254 - INFO -    Queries com sucesso: 0
+2026-02-15 18:43:41,678 - INFO - ✅ IFB: 992 repositórios
+2026-02-15 18:43:41,679 - INFO -    Palavras-chave: trabalho, instituto, firmware, projeto, federal, curso, ifba, para, sistemas, ifb
+2026-02-15 18:43:44,683 - INFO - 
+============================================================
+2026-02-15 18:43:44,683 - INFO - 🏛️  Processando IFES - Instituto Federal do Espírito Santo
+2026-02-15 18:43:44,683 - INFO - ============================================================
+2026-02-15 18:43:44,683 - INFO - 
+🔄 Iteração 1/3 para IFES
+2026-02-15 18:43:44,684 - INFO -   🔎 Testando: "instituto federal"
+2026-02-15 18:44:02,810 - INFO -      ✅ 500 resultados (eficiência: 0.30)
+2026-02-15 18:44:03,811 - INFO -   🔎 Testando: "ifes"
+2026-02-15 18:44:23,944 - INFO -      ✅ 500 resultados (eficiência: 0.30)
+2026-02-15 18:44:26,947 - INFO - 
+🔄 Iteração 2/3 para IFES
+2026-02-15 18:44:26,947 - INFO -   ⚠️ Sem novas queries para testar
+2026-02-15 18:44:26,948 - INFO - 
+📊 Métricas finais para IFES:
+2026-02-15 18:44:26,948 - INFO -    Total de queries testadas: 2
+2026-02-15 18:44:26,948 - INFO -    Queries com sucesso: 0
+2026-02-15 18:44:27,171 - INFO - ✅ IFES: 994 repositórios
+2026-02-15 18:44:27,172 - INFO -    Palavras-chave: trabalho, instituto, ifes, projeto, federal, baidu, curso, para, sistemas, tecnologia
+2026-02-15 18:44:30,175 - INFO - 
+============================================================
+2026-02-15 18:44:30,175 - INFO - 🏛️  Processando IFRN - Instituto Federal do Rio Grande do Norte
+2026-02-15 18:44:30,175 - INFO - ============================================================
+2026-02-15 18:44:30,175 - INFO - 
+🔄 Iteração 1/3 para IFRN
+2026-02-15 18:44:30,175 - INFO -   🔎 Testando: "instituto federal"
+2026-02-15 18:44:48,081 - INFO -      ✅ 500 resultados (eficiência: 0.30)
+2026-02-15 18:44:49,082 - INFO -   🔎 Testando: "ifrn"
+2026-02-15 18:45:03,960 - INFO -      ✅ 500 resultados (eficiência: 0.30)
+2026-02-15 18:45:06,963 - INFO - 
+🔄 Iteração 2/3 para IFRN
+2026-02-15 18:45:06,964 - INFO -   ⚠️ Sem novas queries para testar
+2026-02-15 18:45:06,966 - INFO - 
+📊 Métricas finais para IFRN:
+2026-02-15 18:45:06,968 - INFO -    Total de queries testadas: 2
+2026-02-15 18:45:06,968 - INFO -    Queries com sucesso: 0
+2026-02-15 18:45:07,100 - INFO - ✅ IFRN: 999 repositórios
+2026-02-15 18:45:07,100 - INFO -    Palavras-chave: trabalho, instituto, desenvolvido, sistema, ifrn, projeto, federal, curso, para, sistemas
+2026-02-15 18:45:10,105 - INFO - 
+============================================================
+2026-02-15 18:45:10,105 - INFO - 🏛️  Processando IFRR - Instituto Federal de Roraima
+2026-02-15 18:45:10,105 - INFO - ============================================================
+2026-02-15 18:45:10,105 - INFO - 
+🔄 Iteração 1/3 para IFRR
+2026-02-15 18:45:10,105 - INFO -   🔎 Testando: "instituto federal"
+2026-02-15 18:45:26,350 - INFO -      ✅ 500 resultados (eficiência: 0.30)
+2026-02-15 18:45:27,351 - INFO -   🔎 Testando: "ifrr"
+2026-02-15 18:45:28,975 - INFO -      ✅ 41 resultados (eficiência: 0.12)
+2026-02-15 18:45:31,980 - INFO - 
+🔄 Iteração 2/3 para IFRR
+2026-02-15 18:45:31,980 - INFO -   ⚠️ Sem novas queries para testar
+2026-02-15 18:45:31,981 - INFO - 
+📊 Métricas finais para IFRR:
+2026-02-15 18:45:31,981 - INFO -    Total de queries testadas: 2
+2026-02-15 18:45:31,981 - INFO -    Queries com sucesso: 0
+2026-02-15 18:45:32,099 - INFO - ✅ IFRR: 540 repositórios
+2026-02-15 18:45:32,102 - INFO -    Palavras-chave: trabalho, instituto, desenvolvido, sistema, desenvolvimento, projeto, federal, curso, para, sistemas
+2026-02-15 18:45:35,105 - INFO - 
+============================================================
+2026-02-15 18:45:35,105 - INFO - 🏛️  Processando IFMG - Instituto Federal de Minas Gerais
+2026-02-15 18:45:35,105 - INFO - ============================================================
+2026-02-15 18:45:35,105 - INFO - 
+🔄 Iteração 1/3 para IFMG
+2026-02-15 18:45:35,106 - INFO -   🔎 Testando: "instituto federal"
+2026-02-15 18:45:49,522 - INFO -      ✅ 500 resultados (eficiência: 0.30)
+2026-02-15 18:45:50,524 - INFO -   🔎 Testando: "ifmg"
+2026-02-15 18:46:08,257 - INFO -      ✅ 500 resultados (eficiência: 0.30)
+2026-02-15 18:46:11,261 - INFO - 
+🔄 Iteração 2/3 para IFMG
+2026-02-15 18:46:11,261 - INFO -   ⚠️ Sem novas queries para testar
+2026-02-15 18:46:11,263 - INFO - 
+📊 Métricas finais para IFMG:
+2026-02-15 18:46:11,265 - INFO -    Total de queries testadas: 2
+2026-02-15 18:46:11,265 - INFO -    Queries com sucesso: 0
+2026-02-15 18:46:11,482 - INFO - ✅ IFMG: 976 repositórios
+2026-02-15 18:46:11,482 - INFO -    Palavras-chave: trabalho, instituto, ifmg, sistema, site, projeto, federal, curso, para, sistemas
+2026-02-15 18:46:14,486 - INFO - 
+============================================================
+2026-02-15 18:46:14,486 - INFO - 🏛️  Processando IFSUL - Instituto Federal Sul-rio-grandense
+2026-02-15 18:46:14,486 - INFO - ============================================================
+2026-02-15 18:46:14,487 - INFO - 
+🔄 Iteração 1/3 para IFSUL
+2026-02-15 18:46:14,487 - INFO -   🔎 Testando: "instituto federal"
+2026-02-15 18:46:29,587 - INFO -      ✅ 500 resultados (eficiência: 0.30)
+2026-02-15 18:46:30,588 - INFO -   🔎 Testando: "ifsul"
+2026-02-15 18:46:46,653 - INFO -      ✅ 500 resultados (eficiência: 0.30)
+2026-02-15 18:46:49,657 - INFO - 
+🔄 Iteração 2/3 para IFSUL
+2026-02-15 18:46:49,657 - INFO -   ⚠️ Sem novas queries para testar
+2026-02-15 18:46:49,658 - INFO - 
+📊 Métricas finais para IFSUL:
+2026-02-15 18:46:49,658 - INFO -    Total de queries testadas: 2
+2026-02-15 18:46:49,658 - INFO -    Queries com sucesso: 0
+2026-02-15 18:46:49,786 - INFO - ✅ IFSUL: 995 repositórios
+2026-02-15 18:46:49,787 - INFO -    Palavras-chave: trabalho, instituto, sistema, projeto, federal, curso, ifsul, para, sistemas, tecnologia
+2026-02-15 18:46:52,789 - INFO - 
+============================================================
+2026-02-15 18:46:52,789 - INFO - 🏛️  Processando IFRJ - Instituto Federal do Rio de Janeiro
+2026-02-15 18:46:52,789 - INFO - ============================================================
+2026-02-15 18:46:52,789 - INFO - 
+🔄 Iteração 1/3 para IFRJ
+2026-02-15 18:46:52,790 - INFO -   🔎 Testando: "ifrj"
+2026-02-15 18:47:04,640 - INFO -      ✅ 302 resultados (eficiência: 0.30)
+2026-02-15 18:47:05,641 - INFO -   🔎 Testando: "instituto federal"
+2026-02-15 18:47:19,838 - INFO -      ✅ 500 resultados (eficiência: 0.30)
+2026-02-15 18:47:22,842 - INFO - 
+🔄 Iteração 2/3 para IFRJ
+2026-02-15 18:47:22,842 - INFO -   ⚠️ Sem novas queries para testar
+2026-02-15 18:47:22,842 - INFO - 
+📊 Métricas finais para IFRJ:
+2026-02-15 18:47:22,843 - INFO -    Total de queries testadas: 2
+2026-02-15 18:47:22,843 - INFO -    Queries com sucesso: 0
+2026-02-15 18:47:22,952 - INFO - ✅ IFRJ: 801 repositórios
+2026-02-15 18:47:22,954 - INFO -    Palavras-chave: trabalho, instituto, desenvolvido, sistema, projeto, ifrj, federal, curso, paulo, para
+2026-02-15 18:47:25,969 - INFO - 
+============================================================
+2026-02-15 18:47:25,969 - INFO - 🏛️  Processando IFAL - Instituto Federal de Alagoas
+2026-02-15 18:47:25,969 - INFO - ============================================================
+2026-02-15 18:47:25,969 - INFO - 
+🔄 Iteração 1/3 para IFAL
+2026-02-15 18:47:25,970 - INFO -   🔎 Testando: "instituto federal"
+2026-02-15 18:47:40,374 - INFO -      ✅ 500 resultados (eficiência: 0.30)
+2026-02-15 18:47:41,375 - INFO -   🔎 Testando: "ifal"

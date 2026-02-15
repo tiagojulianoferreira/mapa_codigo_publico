@@ -33,6 +33,7 @@ class BuscaInteligenteGitHub:
         self.headers = HEADERS
         self.cache_queries = {}  # Cache para evitar buscas repetidas
         self.metricas_queries = defaultdict(lambda: {"sucessos": 0, "falhas": 0, "total_repos": 0})
+        self.timestamp_consulta = datetime.now().isoformat()
         
         # Download NLTK resources
         try:
@@ -43,7 +44,7 @@ class BuscaInteligenteGitHub:
         
         self.stopwords_pt = set(stopwords.words('portuguese'))
         self.stopwords_en = set(stopwords.words('english'))
-        
+    
     # ==================================================
     # 1. ANÁLISE DE RELEVÂNCIA DAS PALAVRAS-CHAVE
     # ==================================================
@@ -51,11 +52,19 @@ class BuscaInteligenteGitHub:
     def calcular_relevancia_palavras(self, repositorios: List[Dict]) -> Dict[str, float]:
         """
         Calcula a relevância de cada palavra-chave usando TF-IDF
+        VERSÃO CORRIGIDA - Trata campos None
         """
         # Prepara os textos para análise
         textos = []
         for repo in repositorios:
-            texto = f"{repo.get('Nome do Repositório', '')} {repo.get('Descricao', '')}"
+            # Tratamento seguro para campos None
+            nome = repo.get('Nome do Repositório', '')
+            nome_str = str(nome) if nome is not None else ""
+            
+            desc = repo.get('Descricao', '')
+            desc_str = str(desc) if desc is not None else ""
+            
+            texto = f"{nome_str} {desc_str}"
             textos.append(texto.lower())
         
         if not textos:
@@ -88,6 +97,7 @@ class BuscaInteligenteGitHub:
     def extrair_palavras_chave_inteligentes(self, repositorios: List[Dict], top_n: int = 20) -> List[str]:
         """
         Extrai palavras-chave inteligentes usando múltiplas estratégias
+        VERSÃO CORRIGIDA - Trata campos None
         """
         # Estratégia 1: TF-IDF
         relevancia_tfidf = self.calcular_relevancia_palavras(repositorios)
@@ -95,18 +105,26 @@ class BuscaInteligenteGitHub:
         # Estratégia 2: Frequência simples
         contador = Counter()
         for repo in repositorios:
-            nome = repo.get('Nome do Repositório', '').lower()
-            desc = repo.get('Descricao', '').lower()
+            # Tratamento seguro para nome
+            nome = repo.get('Nome do Repositório')
+            nome_str = str(nome).lower() if nome is not None else ""
+            
+            # Tratamento seguro para descrição
+            desc = repo.get('Descricao')
+            desc_str = str(desc).lower() if desc is not None else ""
             
             # Extrai palavras significativas
-            palavras = re.findall(r'\b[a-z]{4,}\b', f"{nome} {desc}")
+            palavras = re.findall(r'\b[a-z]{4,}\b', f"{nome_str} {desc_str}")
             contador.update(palavras)
         
         # Estratégia 3: Tecnologias (Topics)
         tecnologias = Counter()
         for repo in repositorios:
-            for topic in repo.get('Topics', []):
-                tecnologias[topic.lower()] += 1
+            topics = repo.get('Topics', [])
+            if topics and isinstance(topics, list):
+                for topic in topics:
+                    if topic and isinstance(topic, str):
+                        tecnologias[topic.lower()] += 1
         
         # Combina as estratégias com pesos
         palavras_com_peso = defaultdict(float)
@@ -117,11 +135,13 @@ class BuscaInteligenteGitHub:
         
         # Peso 0.3 para frequência
         for palavra, freq in contador.most_common(30):
-            palavras_com_peso[palavra] += (freq / len(repositorios)) * 0.3
+            if len(repositorios) > 0:
+                palavras_com_peso[palavra] += (freq / len(repositorios)) * 0.3
         
         # Peso 0.2 para tecnologias
         for palavra, freq in tecnologias.most_common(20):
-            palavras_com_peso[palavra] += (freq / len(repositorios)) * 0.2
+            if len(repositorios) > 0:
+                palavras_com_peso[palavra] += (freq / len(repositorios)) * 0.2
         
         # Ordena por peso e retorna as top N
         palavras_ordenadas = sorted(palavras_com_peso.items(), key=lambda x: x[1], reverse=True)
@@ -129,34 +149,41 @@ class BuscaInteligenteGitHub:
         return [p for p, _ in palavras_ordenadas[:top_n]]
     
     # ==================================================
-    # 2. OTIMIZAÇÃO DE QUERES BASEADA EM MÉTRICAS
+    # 2. OTIMIZAÇÃO DE QUERIES BASEADA EM MÉTRICAS
     # ==================================================
     
     def calcular_eficiencia_query(self, query: str, resultados: List[Dict]) -> float:
         """
         Calcula a eficiência de uma query baseado nos resultados
+        VERSÃO CORRIGIDA - Trata campos None
         """
         if not resultados:
             return 0.0
         
-        # Critérios de eficiência
         total_resultados = len(resultados)
-        
-        # Verifica quantos resultados são realmente relevantes
         relevantes = 0
-        for repo in resultados[:10]:  # Amostra dos primeiros 10
-            desc = repo.get('description', '').lower()
-            name = repo.get('name', '').lower()
+        
+        for repo in resultados[:10]:
+            # Tratamento seguro para description (pode ser None)
+            desc = repo.get('description')
+            if desc is None:
+                desc_lower = ""
+            else:
+                desc_lower = str(desc).lower()
+            
+            # Tratamento seguro para name (pode ser None)
+            name = repo.get('name')
+            if name is None:
+                name_lower = ""
+            else:
+                name_lower = str(name).lower()
             
             # Verifica se o repositório menciona termos da query
             termos_query = query.lower().split()
-            if any(termo in desc or termo in name for termo in termos_query):
+            if any(termo in desc_lower or termo in name_lower for termo in termos_query):
                 relevantes += 1
         
-        # Taxa de relevância (0-1)
-        taxa_relevancia = relevantes / min(10, len(resultados))
-        
-        # Pontuação final (combina quantidade e relevância)
+        taxa_relevancia = relevantes / min(10, len(resultados)) if resultados else 0
         pontuacao = (min(total_resultados, 100) / 100) * 0.3 + taxa_relevancia * 0.7
         
         return pontuacao
@@ -361,6 +388,7 @@ class BuscaInteligenteGitHub:
         for idx, row in df.iterrows():
             sigla = row["Sigla"]
             nome = row["Nome Completo"]
+            url = row["URL Oficial"]
             campus = row.get("Campus", None)
             
             logger.info(f"\n{'='*60}")
@@ -393,7 +421,7 @@ class BuscaInteligenteGitHub:
             resultado_final["institutions_data"].append({
                 "Sigla": sigla,
                 "Nome Completo": nome,
-                "URL Oficial": row["URL Oficial"],
+                "URL Oficial": url,
                 "Repositorios": repos_detalhados
             })
             
@@ -401,35 +429,81 @@ class BuscaInteligenteGitHub:
             if idx < len(df) - 1:
                 time.sleep(3)
         
-        # Salva palavras-chave geradas
-        with open("palavras_chave_inteligentes.json", "w", encoding="utf-8") as f:
-            json.dump({"institutions_keywords": [
-                {"Sigla": k, "Palavras_Chave": v} for k, v in todas_keywords.items()
-            ]}, f, indent=2, ensure_ascii=False)
+        # Salva palavras-chave geradas com timestamp
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        
+        with open(f"palavras_chave_inteligentes_{timestamp}.json", "w", encoding="utf-8") as f:
+            json.dump({
+                "timestamp_consulta": self.timestamp_consulta,
+                "institutions_keywords": [
+                    {"Sigla": k, "Palavras_Chave": v} for k, v in todas_keywords.items()
+                ]
+            }, f, indent=2, ensure_ascii=False)
         
         return resultado_final
     
     def extrair_detalhes_repo(self, repo: Dict) -> Dict:
         """
         Extrai detalhes do repositório no formato esperado
+        VERSÃO CORRIGIDA - Trata campos None
         """
         owner = repo.get('owner', {})
-        is_org = owner.get('type') == 'Organization'
+        is_org = owner.get('type') == 'Organization' if owner else False
         
-        license_name = repo.get('license', {}).get('spdx_id', 'N/A') if repo.get('license') else 'N/A'
+        # Tratamento seguro para licença
+        license_info = repo.get('license')
+        if license_info and isinstance(license_info, dict):
+            license_name = license_info.get('spdx_id', 'N/A')
+        else:
+            license_name = 'N/A'
+        
+        # Tratamento seguro para description
+        description = repo.get('description')
+        if description is None:
+            description = 'N/A'
+        
+        # Tratamento seguro para name
+        name = repo.get('name')
+        if name is None:
+            name = 'N/A'
+        
+        # Tratamento seguro para language
+        language = repo.get('language')
+        if language is None:
+            language = 'N/A'
+        
+        # Tratamento seguro para updated_at
+        updated_at = repo.get('updated_at')
+        if updated_at is None:
+            updated_at = 'N/A'
+        
+        # Tratamento seguro para html_url
+        html_url = repo.get('html_url')
+        if html_url is None:
+            html_url = 'N/A'
+        
+        # Tratamento seguro para created_at
+        created_at = repo.get('created_at')
+        if created_at is None:
+            created_at = 'N/A'
+        
+        # Tratamento seguro para topics
+        topics = repo.get('topics', [])
+        if not isinstance(topics, list):
+            topics = []
         
         return {
-            'Nome do Repositório': repo.get('name', 'N/A'),
-            'Descricao': repo.get('description', 'N/A'),
-            'Linguagem Principal': repo.get('language', 'N/A'),
+            'Nome do Repositório': name,
+            'Descricao': description,
+            'Linguagem Principal': language,
             'Estrelas': repo.get('stargazers_count', 0),
             'Licenca': license_name,
-            'Ultima Atualizacao': repo.get('updated_at', 'N/A'),
-            'Link de Acesso': repo.get('html_url', 'N/A'),
+            'Ultima Atualizacao': updated_at,
+            'Link de Acesso': html_url,
             'Organizacao': is_org,
             'Forks': repo.get('forks_count', 0),
-            'Topics': repo.get('topics', []),
-            'Data_Criacao': repo.get('created_at', 'N/A')
+            'Topics': topics,
+            'Data_Criacao': created_at
         }
 
 # ==================================================
@@ -441,10 +515,20 @@ def main():
     logger.info("🚀 INICIANDO BUSCA INTELIGENTE COM FEEDBACK LOOP")
     logger.info("=" * 70)
     
+    timestamp_geral = datetime.now()
+    timestamp_str = timestamp_geral.strftime("%Y%m%d_%H%M%S")
+    
     # Carrega dados
     try:
         df_if = pd.read_csv("dados/institutos_federais.csv")
         df_uf = pd.read_csv("dados/universidades_federais.csv")
+        
+        # Tenta carregar CEFET se existir
+        try:
+            df_cefet = pd.read_csv("dados/cefet.csv")
+        except:
+            df_cefet = pd.DataFrame()
+            
     except Exception as e:
         logger.error(f"Erro ao carregar dados: {e}")
         return
@@ -465,13 +549,15 @@ def main():
         resultado_uf = buscador.processar_instituicoes_com_inteligencia(df_uf)
         todos_dados.extend(resultado_uf["institutions_data"])
     
-    # Salva resultado final
-    saida = {"institutions_data": todos_dados}
+    if not df_cefet.empty:
+        logger.info("\n📚 Processando CEFETs...")
+        resultado_cefet = buscador.processar_instituicoes_com_inteligencia(df_cefet)
+        todos_dados.extend(resultado_cefet["institutions_data"])
     
     # Desduplicação global
     logger.info("\n🔄 Realizando desduplicação global...")
     seen = set()
-    for inst in saida["institutions_data"]:
+    for inst in todos_dados:
         novos_repos = []
         for repo in inst["Repositorios"]:
             chave = (repo["Nome do Repositório"], repo["Link de Acesso"])
@@ -480,19 +566,40 @@ def main():
                 seen.add(chave)
         inst["Repositorios"] = novos_repos
     
-    # Salva arquivo final
-    with open("repositorios_federais_inteligente.json", "w", encoding="utf-8") as f:
+    # Cria estrutura final com timestamp e metadados
+    saida = {
+        "metadata": {
+            "timestamp_consulta": timestamp_geral.isoformat(),
+            "data_consulta": timestamp_geral.strftime("%Y-%m-%d"),
+            "hora_consulta": timestamp_geral.strftime("%H:%M:%S"),
+            "versao_script": "2.0.0",
+            "total_instituicoes": len(todos_dados),
+            "total_repositorios": sum(len(inst["Repositorios"]) for inst in todos_dados)
+        },
+        "institutions_data": todos_dados
+    }
+    
+    # Salva arquivo principal para o frontend (SEM METADADOS - compatível)
+    with open("repositorios_federais_filtrado_idioma.json", "w", encoding="utf-8") as f:
+        json.dump({"institutions_data": todos_dados}, f, indent=2, ensure_ascii=False)
+    
+    # Salva arquivo com timestamp para série histórica (COM METADADOS)
+    arquivo_historico = f"repositorios_federais_{timestamp_str}.json"
+    with open(arquivo_historico, "w", encoding="utf-8") as f:
         json.dump(saida, f, indent=2, ensure_ascii=False)
     
     # Estatísticas finais
-    total_repos = sum(len(inst["Repositorios"]) for inst in saida["institutions_data"])
+    total_repos = sum(len(inst["Repositorios"]) for inst in todos_dados)
+    total_inst = len(todos_dados)
+    
     logger.info("\n" + "=" * 70)
     logger.info("✅ PROCESSO CONCLUÍDO!")
     logger.info("=" * 70)
-    logger.info(f"📁 Arquivo: repositorios_federais_inteligente.json")
-    logger.info(f"📊 Total de instituições: {len(saida['institutions_data'])}")
+    logger.info(f"📁 Arquivo para frontend: repositorios_federais_filtrado_idioma.json")
+    logger.info(f"📁 Arquivo para série histórica: {arquivo_historico}")
+    logger.info(f"📊 Total de instituições: {total_inst}")
     logger.info(f"📊 Total de repositórios únicos: {total_repos}")
-    logger.info(f"📊 Palavras-chave: palavras_chave_inteligentes.json")
+    logger.info(f"📊 Palavras-chave: palavras_chave_inteligentes_{timestamp_str}.json")
     logger.info("=" * 70)
 
 if __name__ == "__main__":
