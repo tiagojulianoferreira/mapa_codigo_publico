@@ -227,3 +227,5 @@ Xbim.IDS.Validator
 emapic
 chaos-master
 ifs-passcode-solver
+hydrogen
+paco

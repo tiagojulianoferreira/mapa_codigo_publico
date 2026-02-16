@@ -10210,6 +10210,19 @@
           "Data_Criacao": "2023-10-27T21:19:15Z"
         },
         {
+          "Nome do Repositório": "IFB299",
+          "Descricao": "Code I made for 299",
+          "Linguagem Principal": "HTML",
+          "Estrelas": 0,
+          "Licenca": "N/A",
+          "Ultima Atualizacao": "2015-09-02T09:52:20Z",
+          "Link de Acesso": "https://github.com/Khayd2/IFB299",
+          "Organizacao": false,
+          "Forks": 0,
+          "Topics": [],
+          "Data_Criacao": "2015-09-02T09:37:15Z"
+        },
+        {
           "Nome do Repositório": "phonegap_app",
           "Descricao": "Aplicação para phonegap IFB",
           "Linguagem Principal": "N/A",
@@ -77583,6 +77596,19 @@
           "Data_Criacao": "2024-09-16T21:03:18Z"
         },
         {
+          "Nome do Repositório": "sistemas_embarcados",
+          "Descricao": "Material de estudo da disciplina de Sistemas Embarcado - Engenharia da Computação 2024/1 - IFMT",
+          "Linguagem Principal": "Python",
+          "Estrelas": 0,
+          "Licenca": "N/A",
+          "Ultima Atualizacao": "2024-09-13T21:58:47Z",
+          "Link de Acesso": "https://github.com/samuelbianch/sistemas_embarcados",
+          "Organizacao": false,
+          "Forks": 0,
+          "Topics": [],
+          "Data_Criacao": "2024-02-09T23:40:52Z"
+        },
+        {
           "Nome do Repositório": "drum-app",
           "Descricao": "\"Projeto de Bateria musical feito em sala de aula\", IFMT , 07 de Fevereiro de 2025",
           "Linguagem Principal": "HTML",
@@ -83073,6 +83099,25 @@
       "URL Oficial": "https://ifs.edu.br",
       "Repositorios": [
         {
+          "Nome do Repositório": "open_scada_dms",
+          "Descricao": "This is an open source project for a basic ems/dms scada system. It contains a HMI with vector graphics taylored towards power-scada, and supports an IEC60870-5-104 based IFS. The backend is powered by mongodb for persistence, influxdb for historic data, and redis for the real-time database",
+          "Linguagem Principal": "JavaScript",
+          "Estrelas": 64,
+          "Licenca": "Apache-2.0",
+          "Ultima Atualizacao": "2026-02-06T10:33:14Z",
+          "Link de Acesso": "https://github.com/robidev/open_scada_dms",
+          "Organizacao": false,
+          "Forks": 10,
+          "Topics": [
+            "dms",
+            "gis",
+            "iec60870",
+            "iec60870-5-104",
+            "scada"
+          ],
+          "Data_Criacao": "2021-12-18T23:02:21Z"
+        },
+        {
           "Nome do Repositório": "RandomLogos.jl",
           "Descricao": "Random logo generator inspired by SVD IFS",
           "Linguagem Principal": "Julia",
@@ -83089,6 +83134,19 @@
             "julialang"
           ],
           "Data_Criacao": "2023-06-07T00:31:04Z"
+        },
+        {
+          "Nome do Repositório": "chaos-master",
+          "Descricao": "WebGPU based IFS Flame Generator for Artists & Explorers",
+          "Linguagem Principal": "TypeScript",
+          "Estrelas": 9,
+          "Licenca": "AGPL-3.0",
+          "Ultima Atualizacao": "2025-12-03T18:06:14Z",
+          "Link de Acesso": "https://github.com/chaos-matters/chaos-master",
+          "Organizacao": true,
+          "Forks": 3,
+          "Topics": [],
+          "Data_Criacao": "2025-03-26T20:01:05Z"
         },
         {
           "Nome do Repositório": "ifs-java-rest-api-academico",
@@ -83197,6 +83255,19 @@
             "tcc"
           ],
           "Data_Criacao": "2025-04-15T04:53:04Z"
+        },
+        {
+          "Nome do Repositório": "ifs-passcode-solver",
+          "Descricao": "N/A",
+          "Linguagem Principal": "TypeScript",
+          "Estrelas": 3,
+          "Licenca": "AGPL-3.0",
+          "Ultima Atualizacao": "2020-09-15T01:13:16Z",
+          "Link de Acesso": "https://github.com/zhyupe/ifs-passcode-solver",
+          "Organizacao": false,
+          "Forks": 0,
+          "Topics": [],
+          "Data_Criacao": "2020-09-12T12:55:25Z"
         },
         {
           "Nome do Repositório": "Mapa_do_Site_IFSUDESTEMG-Barbcena",
@@ -86221,6 +86292,19 @@
           "Data_Criacao": "2022-06-22T14:14:55Z"
         },
         {
+          "Nome do Repositório": "ifcb-analysis",
+          "Descricao": "custom resolver",
+          "Linguagem Principal": "MATLAB",
+          "Estrelas": 37,
+          "Licenca": "NOASSERTION",
+          "Ultima Atualizacao": "2025-12-02T16:23:50Z",
+          "Link de Acesso": "https://github.com/hsosik/ifcb-analysis",
+          "Organizacao": false,
+          "Forks": 18,
+          "Topics": [],
+          "Data_Criacao": "2015-09-22T20:18:53Z"
+        },
+        {
           "Nome do Repositório": "BIM-Modeling",
           "Descricao": "Modelagem 3D e ferramentas de software BIM para arquitetura",
           "Linguagem Principal": "C#",
@@ -86251,6 +86335,23 @@
             "tekla"
           ],
           "Data_Criacao": "2020-05-10T13:06:05Z"
+        },
+        {
+          "Nome do Repositório": "compas_ifc",
+          "Descricao": "COMPAS package for working with IFC files",
+          "Linguagem Principal": "Python",
+          "Estrelas": 18,
+          "Licenca": "MIT",
+          "Ultima Atualizacao": "2026-01-29T16:49:19Z",
+          "Link de Acesso": "https://github.com/compas-dev/compas_ifc",
+          "Organizacao": true,
+          "Forks": 5,
+          "Topics": [
+            "bim",
+            "ifc",
+            "interoperability"
+          ],
+          "Data_Criacao": "2022-05-31T06:52:44Z"
         },
         {
           "Nome do Repositório": "dotbim-ifc",
@@ -86314,6 +86415,25 @@
             "webllm"
           ],
           "Data_Criacao": "2025-11-02T22:49:35Z"
+        },
+        {
+          "Nome do Repositório": "Xbim.IDS.Validator",
+          "Descricao": "Library to validate IFC and COBie models using IDS1.0 and xbim Toolkit",
+          "Linguagem Principal": "C#",
+          "Estrelas": 14,
+          "Licenca": "AGPL-3.0",
+          "Ultima Atualizacao": "2026-02-13T18:01:39Z",
+          "Link de Acesso": "https://github.com/xBimTeam/Xbim.IDS.Validator",
+          "Organizacao": true,
+          "Forks": 6,
+          "Topics": [
+            "bim",
+            "buildingsmart",
+            "ids",
+            "ifc",
+            "qa"
+          ],
+          "Data_Criacao": "2022-11-21T17:41:48Z"
         },
         {
           "Nome do Repositório": "Ifc-to-excel",
@@ -92631,6 +92751,32 @@
           "Forks": 0,
           "Topics": [],
           "Data_Criacao": "2019-12-16T03:05:30Z"
+        },
+        {
+          "Nome do Repositório": "UCS-SAM-2025-1-CCP-PDM",
+          "Descricao": "Repositório dos programas desenvolvidos em sala de aula na disciplina de Programação de Dispositivos Moveis do Curso de Ciência da Computação (5º semestre) da Universidade Cruzeiro do Sul – Campus Santo Amaro, durante o 1º semestre de 2025.",
+          "Linguagem Principal": "N/A",
+          "Estrelas": 0,
+          "Licenca": "MIT",
+          "Ultima Atualizacao": "2025-04-23T13:46:50Z",
+          "Link de Acesso": "https://github.com/vheltai/UCS-SAM-2025-1-CCP-PDM",
+          "Organizacao": false,
+          "Forks": 0,
+          "Topics": [],
+          "Data_Criacao": "2025-04-23T13:40:09Z"
+        },
+        {
+          "Nome do Repositório": "UCS-SAM-2025-1-ADS-PC",
+          "Descricao": "Repositório dos programas desenvolvidos em sala de aula na disciplina de Programação de Computadores do Curso de Análise e Desenvolvimento de Sistemas (1º e 4º semestre) da Universidade Cruzeiro do Sul – Campus Santo Amaro, durante o 1º semestre de 2025.",
+          "Linguagem Principal": "Python",
+          "Estrelas": 0,
+          "Licenca": "MIT",
+          "Ultima Atualizacao": "2025-04-23T13:42:50Z",
+          "Link de Acesso": "https://github.com/vheltai/UCS-SAM-2025-1-ADS-PC",
+          "Organizacao": false,
+          "Forks": 0,
+          "Topics": [],
+          "Data_Criacao": "2025-03-20T14:04:20Z"
         },
         {
           "Nome do Repositório": "MusicStoreProject",
@@ -114515,6 +114661,19 @@
           "Data_Criacao": "2025-10-11T19:26:21Z"
         },
         {
+          "Nome do Repositório": "Minicurso_Scraping_e_Analise_Exploratoria",
+          "Descricao": "Esse repositório contém os arquivos do minicurso de aquisição com web scrapping e análise exploratória de dados que foi ministrado por mim e um colega da Big Data na semana de integração da engenharia elétrica da Escola de Engenharia de São Carlos da Universidade de São Paulo (EESC-USP) em parceira com a Universidade Federal de São Carlos (Ufscar) e na semana da computação do Instituto de Ciências Matemáticas e Computacionais da Universidade de São Paulo (ICMC-USP). ",
+          "Linguagem Principal": "Jupyter Notebook",
+          "Estrelas": 2,
+          "Licenca": "MIT",
+          "Ultima Atualizacao": "2019-11-12T20:42:47Z",
+          "Link de Acesso": "https://github.com/mateuspedrino/Minicurso_Scraping_e_Analise_Exploratoria",
+          "Organizacao": false,
+          "Forks": 1,
+          "Topics": [],
+          "Data_Criacao": "2019-10-02T19:43:17Z"
+        },
+        {
           "Nome do Repositório": "barbearia-backend",
           "Descricao": "Códigos referentes ao projeto de avaliação para a disciplina de Engenharia de Software da Universidade Federal do Agreste de Pernambuco (UFAPE).",
           "Linguagem Principal": "Java",
@@ -120661,6 +120820,19 @@
           "Data_Criacao": "2016-06-20T02:19:10Z"
         },
         {
+          "Nome do Repositório": "Repositorio-de-Provas-TI-UCS",
+          "Descricao": "Este é um repositório de provas, avaliações, e outros trabalhos dos cursos de computação da Universidade de Caxias do Sul",
+          "Linguagem Principal": "N/A",
+          "Estrelas": 31,
+          "Licenca": "N/A",
+          "Ultima Atualizacao": "2025-12-04T18:50:16Z",
+          "Link de Acesso": "https://github.com/dacomp-ucs/Repositorio-de-Provas-TI-UCS",
+          "Organizacao": false,
+          "Forks": 3,
+          "Topics": [],
+          "Data_Criacao": "2025-04-28T23:43:11Z"
+        },
+        {
           "Nome do Repositório": "cic0004_apc_engcomp",
           "Descricao": "Códigos-fontes desenvolvidos durante a disciplina \"CIC0004 - Algoritmos e Programação de Computadores\" do Departamento de Ciência da Computação da Universidade de Brasília.",
           "Linguagem Principal": "C",
@@ -120715,6 +120887,19 @@
           "Forks": 1,
           "Topics": [],
           "Data_Criacao": "2021-09-27T13:02:32Z"
+        },
+        {
+          "Nome do Repositório": "paco_ua_extension",
+          "Descricao": "Adiciona funcionalidade ao Paco da Universidade de Aveiro",
+          "Linguagem Principal": "JavaScript",
+          "Estrelas": 21,
+          "Licenca": "N/A",
+          "Ultima Atualizacao": "2024-02-15T14:15:03Z",
+          "Link de Acesso": "https://github.com/DCruzDev/paco_ua_extension",
+          "Organizacao": false,
+          "Forks": 3,
+          "Topics": [],
+          "Data_Criacao": "2019-04-23T20:42:04Z"
         },
         {
           "Nome do Repositório": "Fac",
@@ -120909,6 +121094,19 @@
           "Data_Criacao": "2021-08-05T16:51:48Z"
         },
         {
+          "Nome do Repositório": "Repositorio-de-Provas-Computacao-UCS",
+          "Descricao": "Este é um repositório de provas, avaliações, e outros trabalhos dos cursos de computação da Universidade de Caxias do Sul",
+          "Linguagem Principal": "N/A",
+          "Estrelas": 12,
+          "Licenca": "N/A",
+          "Ultima Atualizacao": "2025-10-28T00:23:30Z",
+          "Link de Acesso": "https://github.com/Marcellofabrizio/Repositorio-de-Provas-Computacao-UCS",
+          "Organizacao": false,
+          "Forks": 2,
+          "Topics": [],
+          "Data_Criacao": "2022-10-26T12:06:43Z"
+        },
+        {
           "Nome do Repositório": "Nubank",
           "Descricao": "Repositório contendo a documentação e artefatos gerados durante a disciplina de Requisitos de Software, ministrada no curso de Engenharia de Software da Universidade de Brasília.",
           "Linguagem Principal": "HTML",
@@ -120961,6 +121159,28 @@
           "Forks": 8,
           "Topics": [],
           "Data_Criacao": "2022-01-21T17:07:37Z"
+        },
+        {
+          "Nome do Repositório": "paco-ua-api",
+          "Descricao": "API for PACO (Portal Académico Online - Universidade de Aveiro)",
+          "Linguagem Principal": "JavaScript",
+          "Estrelas": 10,
+          "Licenca": "MIT",
+          "Ultima Atualizacao": "2023-08-28T13:17:19Z",
+          "Link de Acesso": "https://github.com/digas99/paco-ua-api",
+          "Organizacao": false,
+          "Forks": 0,
+          "Topics": [
+            "api",
+            "aveiro",
+            "expressjs",
+            "paco",
+            "paco-ua",
+            "puppeteer",
+            "ua",
+            "universidade-de-aveiro"
+          ],
+          "Data_Criacao": "2022-08-14T08:11:42Z"
         },
         {
           "Nome do Repositório": "FeriasBot_USP",
@@ -123749,6 +123969,19 @@
           "Data_Criacao": "2024-02-23T11:47:30Z"
         },
         {
+          "Nome do Repositório": "Analise-de-Sentimentos-UCS",
+          "Descricao": "Projeto de monografia Universidade de Caxias do Sul",
+          "Linguagem Principal": "TeX",
+          "Estrelas": 1,
+          "Licenca": "N/A",
+          "Ultima Atualizacao": "2019-03-31T14:41:15Z",
+          "Link de Acesso": "https://github.com/AlissonRTeles/Analise-de-Sentimentos-UCS",
+          "Organizacao": false,
+          "Forks": 0,
+          "Topics": [],
+          "Data_Criacao": "2018-05-26T21:07:32Z"
+        },
+        {
           "Nome do Repositório": "S-DES",
           "Descricao": "Trabalho 1 de Segurança Computacional Universidade de Brasília.",
           "Linguagem Principal": "C++",
@@ -125380,6 +125613,19 @@
           "Data_Criacao": "2015-08-24T23:51:22Z"
         },
         {
+          "Nome do Repositório": "RumbleJungle",
+          "Descricao": "Projeto da disciplina de Sistemas Distribuidos da Universidade de Caxias do Sul (www.ucs.br). Utilizando Python e sockets.",
+          "Linguagem Principal": "Python",
+          "Estrelas": 1,
+          "Licenca": "N/A",
+          "Ultima Atualizacao": "2013-10-15T23:23:18Z",
+          "Link de Acesso": "https://github.com/LucasFaiska/RumbleJungle",
+          "Organizacao": false,
+          "Forks": 0,
+          "Topics": [],
+          "Data_Criacao": "2011-05-16T01:49:26Z"
+        },
+        {
           "Nome do Repositório": "PARI_Trabalho_2",
           "Descricao": "Trabalho 2 da unidade curricular de Projeto em Automação e Robótica Industrial, Mestrado Integrado em Engenharia Mecânica, Universidade de Aveiro",
           "Linguagem Principal": "Python",
@@ -126617,6 +126863,19 @@
           "Data_Criacao": "2025-06-14T14:25:53Z"
         },
         {
+          "Nome do Repositório": "uspto-trademark",
+          "Descricao": "How to file a USPTO trademark without an attorney for $225",
+          "Linguagem Principal": "N/A",
+          "Estrelas": 68,
+          "Licenca": "N/A",
+          "Ultima Atualizacao": "2025-09-16T13:15:40Z",
+          "Link de Acesso": "https://github.com/tidwall/uspto-trademark",
+          "Organizacao": false,
+          "Forks": 4,
+          "Topics": [],
+          "Data_Criacao": "2018-05-07T18:27:42Z"
+        },
+        {
           "Nome do Repositório": "Aprendizado-por-Reforco",
           "Descricao": "Repositório de Aprendizado por Reforço desenvolvido pelo Turing USP",
           "Linguagem Principal": "Jupyter Notebook",
@@ -126682,6 +126941,25 @@
           "Forks": 8,
           "Topics": [],
           "Data_Criacao": "2022-06-22T22:04:53Z"
+        },
+        {
+          "Nome do Repositório": "uspb",
+          "Descricao": "A deno app,uspb = Url Shorter + Paste Bin",
+          "Linguagem Principal": "TypeScript",
+          "Estrelas": 26,
+          "Licenca": "N/A",
+          "Ultima Atualizacao": "2025-04-09T12:33:05Z",
+          "Link de Acesso": "https://github.com/jneeee/uspb",
+          "Organizacao": false,
+          "Forks": 5,
+          "Topics": [
+            "deno",
+            "fresh",
+            "picocss",
+            "turso",
+            "typescript"
+          ],
+          "Data_Criacao": "2023-06-20T14:07:24Z"
         },
         {
           "Nome do Repositório": "bandejao-bot",
@@ -127407,6 +127685,19 @@
           "Data_Criacao": "2015-08-03T22:43:08Z"
         },
         {
+          "Nome do Repositório": "icmc-quali",
+          "Descricao": "Projeto de Qualificação ICMC-USP",
+          "Linguagem Principal": "TeX",
+          "Estrelas": 5,
+          "Licenca": "BSD-3-Clause",
+          "Ultima Atualizacao": "2025-10-19T02:14:13Z",
+          "Link de Acesso": "https://github.com/falvojr-phd/icmc-quali",
+          "Organizacao": true,
+          "Forks": 0,
+          "Topics": [],
+          "Data_Criacao": "2020-12-16T01:26:06Z"
+        },
+        {
           "Nome do Repositório": "Bixo",
           "Descricao": "Projeto do Bixo, um mascote para o prédio da Engenharia Elétrica e Computação da Poli-USP desenvolvido pelo grupo aMuDi",
           "Linguagem Principal": "Python",
@@ -127528,6 +127819,19 @@
           "Forks": 1,
           "Topics": [],
           "Data_Criacao": "2020-10-04T12:25:53Z"
+        },
+        {
+          "Nome do Repositório": "LabICC1",
+          "Descricao": "Neste repositório teremos os materiais de aula (slides e códigos de exemplo) relativos à disciplina de laboratório de introdução à ciência de computação I, conforme ela é ministrada no ICMC-USP.",
+          "Linguagem Principal": "C",
+          "Estrelas": 5,
+          "Licenca": "MIT",
+          "Ultima Atualizacao": "2024-09-25T04:22:58Z",
+          "Link de Acesso": "https://github.com/LeonardoTPereira/LabICC1",
+          "Organizacao": false,
+          "Forks": 0,
+          "Topics": [],
+          "Data_Criacao": "2020-08-26T02:50:13Z"
         },
         {
           "Nome do Repositório": "Coletor",
@@ -127846,6 +128150,19 @@
             "sentinel"
           ],
           "Data_Criacao": "2023-09-26T15:05:30Z"
+        },
+        {
+          "Nome do Repositório": "Defesas-ICMC-USP",
+          "Descricao": "Trabalho da disciplina SSC0961 - Desenvolvimento Web e Mobile",
+          "Linguagem Principal": "Vue",
+          "Estrelas": 3,
+          "Licenca": "MIT",
+          "Ultima Atualizacao": "2023-06-01T05:17:33Z",
+          "Link de Acesso": "https://github.com/joelcoelho29/Defesas-ICMC-USP",
+          "Organizacao": false,
+          "Forks": 2,
+          "Topics": [],
+          "Data_Criacao": "2023-05-15T22:12:08Z"
         },
         {
           "Nome do Repositório": "poli-usp-pro-data-mining",
@@ -131649,6 +131966,19 @@
       "URL Oficial": "https://www.unb.br",
       "Repositorios": [
         {
+          "Nome do Repositório": "Sistemas_Embarcados",
+          "Descricao": "Repositório da disciplina Sistemas Operacionais Embarcados, do curso de Engenharia Eletrônica da UnB, campus Gama. | Repository for the discipline Embedded Operational Systems, from the Electronic Engineering course at the University of Brasilia, Gama campus.",
+          "Linguagem Principal": "C",
+          "Estrelas": 89,
+          "Licenca": "N/A",
+          "Ultima Atualizacao": "2026-02-11T00:49:36Z",
+          "Link de Acesso": "https://github.com/DiogoCaetanoGarcia/Sistemas_Embarcados",
+          "Organizacao": false,
+          "Forks": 98,
+          "Topics": [],
+          "Data_Criacao": "2017-03-08T02:04:52Z"
+        },
+        {
           "Nome do Repositório": "benchmark-ordenacao",
           "Descricao": "Benchmark simples para algoritmos de ordenação. Envolve conteúdo da disciplina EDA-2 da UnB/FGA",
           "Linguagem Principal": "C",
@@ -131763,6 +132093,19 @@
           "Data_Criacao": "2022-01-21T15:13:30Z"
         },
         {
+          "Nome do Repositório": "unbound-app",
+          "Descricao": "A no-nonsense photo manager for Mac",
+          "Linguagem Principal": "Objective-C",
+          "Estrelas": 34,
+          "Licenca": "BSD-2-Clause",
+          "Ultima Atualizacao": "2025-11-30T09:56:55Z",
+          "Link de Acesso": "https://github.com/s3cur3/unbound-app",
+          "Organizacao": false,
+          "Forks": 8,
+          "Topics": [],
+          "Data_Criacao": "2021-08-15T12:16:38Z"
+        },
+        {
           "Nome do Repositório": "unbuggy.me",
           "Descricao": "API para mostrar a solução de todos os erros existentes na programação, para que você possa adicionar a URL da API + a mensagem de erro para que ele leve para um link com a solução. Para ser adicionado na hora do DEGUB!",
           "Linguagem Principal": "N/A",
@@ -131839,6 +132182,21 @@
           "Forks": 3,
           "Topics": [],
           "Data_Criacao": "2016-11-25T20:16:47Z"
+        },
+        {
+          "Nome do Repositório": "os-kea-unbound",
+          "Descricao": "Kea DHCP to Unbound DNS dynamic registration",
+          "Linguagem Principal": "Shell",
+          "Estrelas": 13,
+          "Licenca": "BSD-2-Clause",
+          "Ultima Atualizacao": "2026-02-12T20:29:48Z",
+          "Link de Acesso": "https://github.com/JameZUK/os-kea-unbound",
+          "Organizacao": false,
+          "Forks": 1,
+          "Topics": [
+            "opnsense"
+          ],
+          "Data_Criacao": "2026-01-17T15:49:17Z"
         },
         {
           "Nome do Repositório": "Estrutura-de-dados-UnB",
@@ -132047,6 +132405,19 @@
           "Forks": 13,
           "Topics": [],
           "Data_Criacao": "2019-04-27T20:24:27Z"
+        },
+        {
+          "Nome do Repositório": "UFCase",
+          "Descricao": "UFCase: Ultimate Windows Components Explorer",
+          "Linguagem Principal": "C++",
+          "Estrelas": 23,
+          "Licenca": "MIT",
+          "Ultima Atualizacao": "2026-01-09T23:50:04Z",
+          "Link de Acesso": "https://github.com/seven-mile/UFCase",
+          "Organizacao": false,
+          "Forks": 2,
+          "Topics": [],
+          "Data_Criacao": "2021-08-28T18:22:13Z"
         },
         {
           "Nome do Repositório": "ccufcqx",
@@ -218793,6 +219164,19 @@
           "Data_Criacao": "2025-12-07T23:50:02Z"
         },
         {
+          "Nome do Repositório": "ucs_unifesp",
+          "Descricao": "Atividades das UCs Cursadas Unifesp",
+          "Linguagem Principal": "PHP",
+          "Estrelas": 0,
+          "Licenca": "N/A",
+          "Ultima Atualizacao": "2022-05-29T13:29:44Z",
+          "Link de Acesso": "https://github.com/alvaro-cardoso/ucs_unifesp",
+          "Organizacao": false,
+          "Forks": 0,
+          "Topics": [],
+          "Data_Criacao": "2020-08-01T02:57:08Z"
+        },
+        {
           "Nome do Repositório": "PaletasUnifesp",
           "Descricao": "Palhetas de cores com as cores oficiais da Universidade Federal de São Paulo (UNIFESP) em formato GPL para serem usadas no GIMP, Inkscape e outros programas",
           "Linguagem Principal": "N/A",
@@ -219300,6 +219684,19 @@
           "Forks": 0,
           "Topics": [],
           "Data_Criacao": "2025-09-11T20:33:58Z"
+        },
+        {
+          "Nome do Repositório": "Sistemas_Embarcados-Unifesp",
+          "Descricao": "N/A",
+          "Linguagem Principal": "C",
+          "Estrelas": 0,
+          "Licenca": "N/A",
+          "Ultima Atualizacao": "2021-10-23T21:56:04Z",
+          "Link de Acesso": "https://github.com/Gabriel-Mugge/Sistemas_Embarcados-Unifesp",
+          "Organizacao": false,
+          "Forks": 0,
+          "Topics": [],
+          "Data_Criacao": "2021-10-23T21:35:56Z"
         },
         {
           "Nome do Repositório": "TrabalhoUNIFESP_C",
@@ -226890,6 +227287,19 @@
           "Data_Criacao": "2022-02-23T22:09:41Z"
         },
         {
+          "Nome do Repositório": "hydrogen",
+          "Descricao": "🪂 Landing page for Centro de Estudantes de Engenharia Informática da Universidade do Minho (CeSIUM)",
+          "Linguagem Principal": "TypeScript",
+          "Estrelas": 13,
+          "Licenca": "MIT",
+          "Ultima Atualizacao": "2026-02-09T08:14:08Z",
+          "Link de Acesso": "https://github.com/cesium/hydrogen",
+          "Organizacao": true,
+          "Forks": 0,
+          "Topics": [],
+          "Data_Criacao": "2023-06-08T15:04:13Z"
+        },
+        {
           "Nome do Repositório": "DPUM",
           "Descricao": "Desafios de Programação da Universidade do Minho",
           "Linguagem Principal": "C",
@@ -229247,6 +229657,19 @@
           "Data_Criacao": "2025-08-28T18:17:03Z"
         },
         {
+          "Nome do Repositório": "Universidade-do-Minho",
+          "Descricao": "Repositórios das UCs frequentadas na Universidade do Minho",
+          "Linguagem Principal": "Java",
+          "Estrelas": 0,
+          "Licenca": "N/A",
+          "Ultima Atualizacao": "2019-03-25T22:34:42Z",
+          "Link de Acesso": "https://github.com/luislimaUM/Universidade-do-Minho",
+          "Organizacao": false,
+          "Forks": 0,
+          "Topics": [],
+          "Data_Criacao": "2018-12-02T00:01:31Z"
+        },
+        {
           "Nome do Repositório": "universidade-do-codigoo",
           "Descricao": "N/A",
           "Linguagem Principal": "N/A",
@@ -231295,6 +231718,19 @@
           "Forks": 0,
           "Topics": [],
           "Data_Criacao": "2024-09-08T21:44:48Z"
+        },
+        {
+          "Nome do Repositório": "Trabalho-AA-SIC-2023-2024",
+          "Descricao": "Repositório do trabalho prático no âmbito das UCs de Arquiteturas Aplicacionais (AA) e Sistemas Interativos Confiáveis (SIC) - Perfil de Engenharia de Aplicações -  Mestrado em Engenharia Informática (MEI/MIEI) - Universidade do Minho (UMinho)",
+          "Linguagem Principal": "Vue",
+          "Estrelas": 0,
+          "Licenca": "MIT",
+          "Ultima Atualizacao": "2024-06-28T10:05:55Z",
+          "Link de Acesso": "https://github.com/orlandopalmeira/Trabalho-AA-SIC-2023-2024",
+          "Organizacao": false,
+          "Forks": 2,
+          "Topics": [],
+          "Data_Criacao": "2024-01-31T14:11:48Z"
         },
         {
           "Nome do Repositório": "trabalho_topicos_avancados",
@@ -245799,6 +246235,19 @@
           "Data_Criacao": "2025-09-11T05:06:22Z"
         },
         {
+          "Nome do Repositório": "modelo_para_dissertacoes_LaTeX",
+          "Descricao": "Modelo desenvolvido a partir de um antigo pacote utilizado no ICMC-USP. O modelo PPGCCUFSJ foi adaptado a fim de ser usado no contexto do Programa de Pós-Graduação em Ciência da Computação da Universidade Federal de São João del Rei (UFSJ).",
+          "Linguagem Principal": "TeX",
+          "Estrelas": 0,
+          "Licenca": "N/A",
+          "Ultima Atualizacao": "2019-07-16T18:12:34Z",
+          "Link de Acesso": "https://github.com/macro-mancer/modelo_para_dissertacoes_LaTeX",
+          "Organizacao": false,
+          "Forks": 0,
+          "Topics": [],
+          "Data_Criacao": "2019-07-10T13:14:35Z"
+        },
+        {
           "Nome do Repositório": "NEXUS---Conectando-estudantes-a-oportunidades",
           "Descricao": "O Nexus é uma plataforma gratuita que conecta estudantes a projetos de extensão universitária. O site reúne iniciativas de diferentes áreas em universidades como UNIFEI, UFLA, UFOP, UFMG, UFSJ e UFTM, com informações claras e contato direto. Inclui um teste vocacional que indica os projetos mais alinhados ao perfil do aluno.",
           "Linguagem Principal": "HTML",
@@ -260010,6 +260459,52 @@
       "URL Oficial": "https://www.uem.br",
       "Repositorios": [
         {
+          "Nome do Repositório": "uEmu",
+          "Descricao": "Tiny cute emulator plugin for IDA based on unicorn.",
+          "Linguagem Principal": "Python",
+          "Estrelas": 1226,
+          "Licenca": "N/A",
+          "Ultima Atualizacao": "2026-02-14T21:39:54Z",
+          "Link de Acesso": "https://github.com/alexhude/uEmu",
+          "Organizacao": false,
+          "Forks": 182,
+          "Topics": [],
+          "Data_Criacao": "2017-08-08T10:37:23Z"
+        },
+        {
+          "Nome do Repositório": "uEmu",
+          "Descricao": "A Universal MCU Firmware Emulator for Dynamic Analysis without Any Hardware Dependence.",
+          "Linguagem Principal": "Python",
+          "Estrelas": 145,
+          "Licenca": "NOASSERTION",
+          "Ultima Atualizacao": "2026-02-09T07:02:51Z",
+          "Link de Acesso": "https://github.com/MCUSec/uEmu",
+          "Organizacao": true,
+          "Forks": 25,
+          "Topics": [],
+          "Data_Criacao": "2021-02-01T02:34:36Z"
+        },
+        {
+          "Nome do Repositório": "openuem-console",
+          "Descricao": "Repository containing the OpenUEM web user interface used to manage endpoints and agents",
+          "Linguagem Principal": "Go",
+          "Estrelas": 66,
+          "Licenca": "Apache-2.0",
+          "Ultima Atualizacao": "2026-02-15T16:34:57Z",
+          "Link de Acesso": "https://github.com/open-uem/openuem-console",
+          "Organizacao": true,
+          "Forks": 9,
+          "Topics": [
+            "assets",
+            "emm",
+            "inventory",
+            "mdm",
+            "rmm",
+            "uem"
+          ],
+          "Data_Criacao": "2025-01-05T09:17:30Z"
+        },
+        {
           "Nome do Repositório": "AulasUEMG",
           "Descricao": "Material usado nas aulas da UEMG, a partir de 2018-2",
           "Linguagem Principal": "N/A",
@@ -270816,6 +271311,22 @@
           "Data_Criacao": "2024-08-05T12:51:56Z"
         },
         {
+          "Nome do Repositório": "emapic",
+          "Descricao": "Open source repository with the source code of the geolocated surveys engine Emapic, developed by the laboratory CartoLAB of the Universidade da Coruña.",
+          "Linguagem Principal": "JavaScript",
+          "Estrelas": 14,
+          "Licenca": "AGPL-3.0",
+          "Ultima Atualizacao": "2025-11-13T15:06:19Z",
+          "Link de Acesso": "https://github.com/Emapic/emapic",
+          "Organizacao": true,
+          "Forks": 0,
+          "Topics": [
+            "geolocation",
+            "surveys"
+          ],
+          "Data_Criacao": "2016-07-13T12:35:34Z"
+        },
+        {
           "Nome do Repositório": "congresso-unama",
           "Descricao": "Aplicativo desenvolvido com Flutter para exibir a programação dos congressos da Universidade da Amazônia - UNAMA",
           "Linguagem Principal": "Dart",
@@ -271624,6 +272135,19 @@
           "Data_Criacao": "2025-08-20T17:48:02Z"
         },
         {
+          "Nome do Repositório": "Galeria-de-Discos-Online",
+          "Descricao": "Galeria de Discos Online - Trabalho desenvolvido em aula pela universidade da UCS - Caxias do Sul",
+          "Linguagem Principal": "HTML",
+          "Estrelas": 0,
+          "Licenca": "N/A",
+          "Ultima Atualizacao": "2024-12-10T01:26:11Z",
+          "Link de Acesso": "https://github.com/GabrielSantosSmylle/Galeria-de-Discos-Online",
+          "Organizacao": false,
+          "Forks": 0,
+          "Topics": [],
+          "Data_Criacao": "2024-12-10T01:02:47Z"
+        },
+        {
           "Nome do Repositório": "StarSudoku",
           "Descricao": "Trabalho de Grupo da unidade curricular Interação Humana com o Computador da Universidade da Beira Interior.",
           "Linguagem Principal": "Java",
@@ -271678,6 +272202,19 @@
             "scss"
           ],
           "Data_Criacao": "2021-08-23T01:46:27Z"
+        },
+        {
+          "Nome do Repositório": "ucsc-go",
+          "Descricao": "Repositório para o curso GO Programming for Everyone: Part 1 by Universidade da Califórnia, Santa Cruz no Coursera",
+          "Linguagem Principal": "Go",
+          "Estrelas": 0,
+          "Licenca": "N/A",
+          "Ultima Atualizacao": "2024-03-13T03:13:02Z",
+          "Link de Acesso": "https://github.com/taraujo310/ucsc-go",
+          "Organizacao": false,
+          "Forks": 0,
+          "Topics": [],
+          "Data_Criacao": "2024-03-13T03:12:36Z"
         },
         {
           "Nome do Repositório": "EspacoMaker_Label",
@@ -272630,6 +273167,71 @@
       "URL Oficial": "https://www.unir.br",
       "Repositorios": [
         {
+          "Nome do Repositório": "brazilian-rails",
+          "Descricao": "Brazilian Rails é um conjunto de gems para serem usadas com Ruby e com o Ruby on Rails e tem como objetivo unir alguns recursos úteis para os desenvolvedores brasileiros.",
+          "Linguagem Principal": "Ruby",
+          "Estrelas": 359,
+          "Licenca": "N/A",
+          "Ultima Atualizacao": "2026-01-24T00:04:26Z",
+          "Link de Acesso": "https://github.com/tapajos/brazilian-rails",
+          "Organizacao": false,
+          "Forks": 99,
+          "Topics": [],
+          "Data_Criacao": "2008-04-20T23:20:20Z"
+        },
+        {
+          "Nome do Repositório": "dcmp",
+          "Descricao": "{\"categories\":[{\"name\":\"Movies\",\"videos\":[{\"description\":\"La Radio-Télévision nationale congolaise est créée en 1945. Elle prend le nom de « Office zaïrois de radiodiffusion et de télévision (OZRT) » à l'époque du Zaïre de 1971 à 1997, elle était d'ailleurs la seule agence zaïroise à diffuser sur les ondes hertziennes depuis la loi de 1972. Elle a pris son nom actuel le 17 mai 1997, à la suite de l'arrivée au pouvoir d'AFDL, le parti de Laurent-Désiré Kabila.\",\"sources\":[\"http://178.33.237.146/rtnc1.m3u8\"],\"subtitle\":\"By Radio Télévision Nationale Congolaise\",\"thumb\":\"https://od.lk/s/M18yNDU0Njk2MjZf/RTNC.jpegg\",\"title\":\"RTNC\"},{\"description\":\"Tele Congo est une chaine nationale du congo brazza en diffusant des emissions, informations, sports,  theatres, musique et autres....\",\"sources\":[\"https://stream.mmsiptv.com/droid/rtnc/playlist.m3u8\"],\"subtitle\":\"By Channel\",\"thumb\":\"https://od.lk/s/M18yNTkxODYwMjFf/telecongo.jpg\",\"title\":\"TELE CONGO TV / BRAZZAVILLE\"},{\"description\":\"Bein Sports 1 est une chaine televisee sportives\",\"sources\":[\"https://stream.mmsiptv.com/droid/bein1/playlist.m3u8\"],\"subtitle\":\"By Channel\",\"thumb\":\"https://od.lk/s/M18yNTkxODU4MzBf/beinone.png\",\"title\":\"BEIN SPORT 1 / SPORTS\"},{\"description\":\"Bein Sport 2 est une chaine televisee sportives\",\"sources\":[\"https://stream.mmsiptv.com/droid/bein2/playlist.m3u8\"],\"subtitle\":\"By Channel\",\"thumb\":\"https://od.lk/s/M18yNTkxODU4MThf/beintwo.png\",\"title\":\"BEIN SPORT 2  / SPORTS\"},{\"description\":\"Bein Sport 3 est une chaine televisee sportives\",\"sources\":[\"https://stream.mmsiptv.com/droid/bein3/playlist.m3u8\"],\"subtitle\":\"By Channel\",\"thumb\":\"https://od.lk/s/M18yNTkxODU4MDZf/beintree.png\",\"title\":\"BEIN SPORTS 3 / SPORTS\"},{\"description\":\"La Radio-Télévision nationale congolaise est créée en 1945. Elle prend le nom de « Office zaïrois de radiodiffusion et de télévision (OZRT) » à l'époque du Zaïre de 1971 à 1997, elle était d'ailleurs la seule agence zaïroise à diffuser sur les ondes hertziennes depuis la loi de 1972. Elle a pris son nom actuel le 17 mai 1997, à la suite de l'arrivée au pouvoir d'AFDL, le parti de Laurent-Désiré Kabila.\",\"sources\":[\"https://stream.mmsiptv.com/droid/rtnc/playlist.m3u8\"],\"subtitle\":\"By Radio Télévision Nationale Congolaise\",\"https://od.lk/s/M18yNDU0Nzc4NDZf/rtnc3.png\",\"title\":\"RTNC 1 / RDC (lien2)\"},{\"description\":\"Canal Plus Sports 1 est une chaine televisee sportives\",\"sources\":[\"https://stream.mmsiptv.com/droid/cpsport/playlist.m3u8\"],\"subtitle\":\"By Channel\",\"thumb\":\"https://od.lk/s/M18yNTkxODczMzhf/canalsport.png\",\"title\":\"CANAL +  1 / SPORTS\"},{\"description\":\"Canal Plus Sports 2 est une chaine televisee sportives.\",\"sources\":[\"https://stream.mmsiptv.com/droid/cplus/playlist.m3u8\"],\"subtitle\":\"By Channel\",\"thumb\":\"https://od.lk/s/M18yNTkxODczMzlf/canalsporttwoo.jpg\",\"title\":\"CANAL +  2 / SPORTS\"},{\"description\":\"RMC 1 est une chaine televisee sportuive\",\"sources\":[\"https://stream.mmsiptv.com/droid/rmc1/playlist.m3u8\"],\"subtitle\":\"By Channel\",\"thumb\":\"https://od.lk/s/M18yNTkxODc2MjBf/rmcone.png\",\"title\":\"RMC 1 / SPORTS\"},{\"description\":\"RMC 2 est une chaine televisee sportuive\",\"sources\":[\"https://stream.mmsiptv.com/droid/rmc2/playlist.m3u8\"],\"subtitle\":\"By Channel\",\"thumb\":\"https://od.lk/s/M18yNTkxODc2MzVf/rmctwo.png\",\"title\":\"RMC 2 / SPORTS\"},{\"description\":\"RMC 3 est une chaine televisee sportuive\",\"sources\":[\"https://stream.mmsiptv.com/droid/rmc3/playlist.m3u8\"],\"subtitle\":\"By Channel\",\"thumb\":\"https://od.lk/s/M18yNTkxODc2NDVf/rmctree.png\",\"title\":\"RMC 3 / SPORTS\"},{\"description\":\"RMC 4 est une chaine televisee sportuive\",\"sources\":[\"https://stream.mmsiptv.com/droid/rmc4/playlist.m3u8\"],\"subtitle\":\"By Channel\",\"thumb\":\"https://od.lk/s/M18yNTkxODc2NTFf/rmcfour.png\",\"title\":\"RMC 4 / SPORTS\"},{\"description\":\"EuroSports 1 est une chaine televisee sportives\",\"sources\":[\"https://stream.mmsiptv.com/droid/eurosport2/playlist.m3u\"],\"subtitle\":\"By Channel\",\"thumb\":\"https://od.lk/s/M18yNTkxODgxOTlf/eurone.png\",\"title\":\"EUROSPORTS 1 / SPORTS\"},{\"description\":\"EuroSports 2 est une chaine televisee sportives\",\"sources\":[\"https://stream.mmsiptv.com/droid/eurosport1/playlist.m3u8\"],\"subtitle\":\"By Channel\",\"thumb\":\"https://od.lk/s/M18yNTkxODgxNTdf/eurotwo.jpg\",\"title\":\"EUROSPORTS 2 / SPORTS\"},{\"description\":\"EuroSports 3 est une chaine televisee sportives\",\"sources\":[\"http://stream.tvtap.live:8081/live/eurosport1.stream/playlist.m3u8\"],\"subtitle\":\"By Channel\",\"thumb\":\"https://od.lk/s/M18yNTkxODgxODJf/eurotree.jpg\",\"title\":\"EUROSPORTS 3 / SPORTS\"},{\"description\":\"EuroSports 4 est une chaine televisee sportives\",\"sources\":[\"http://stream.tvtap.live:8081/live/es-eurosport2.stream/playlist.m3u8\"],\"subtitle\":\"By Channel\",\"https://od.lk/s/M18yNTkxODgxMzJf/eurofour.png\",\"title\":\"EUROSPORTS 4 / SPORTS\"},{\"description\":\"L'Equipe est une chaine televisee sportives emettant en France\",\"sources\":[\"https://stream.mmsiptv.com/droid/equipe/playlist.m3u8\"],\"subtitle\":\"By Channel\",\"thumb\":\"https://od.lk/s/M18yNTkxODg0ODhf/equipe.png\",\"title\":\"L'EQUIPE TV / SPORTS\"},{\"description\":\"Sky Sport est une chaine televisee sportives\",\"sources\":[\"http://stream.tvtap.live:8081/live/skysports-premier-league.stream/playlist.m3u8\"],\"subtitle\":\"By Channel\",\"thumb\":\"https://od.lk/s/M18yNTkxODg2MjNf/skysport.jpg\",\"title\":\"SKY SPORTS / SPORTS\"},{\"description\":\"Azam Sports 1 Tanzanie est l'une des chaines privées que l'on retrouve en tanzanie, possédant des émissions Sportives variées\",\"sources\":[\"https://1446000130.rsc.cdn77.org/1446000130/index.m3u8\"],\"subtitle\":\"By Channel\",\"thumb\":\"https://od.lk/s/M18yNDg1NzQwMjJf/azam.jpg\",\"title\":\"AZAM SPORTS / TANZANIA\"},{\"description\":\"ADSPORTS 1 est une chaine televisee sportives emettant a Dubai\",\"sources\":[\"http://admdn1.cdn.mangomolo.com/adsports1/smil:adsports1.stream.smil/playlist.m3u8\"],\"subtitle\":\"By Channel\",\"thumb\":\"https://od.lk/s/M18yNTkxODg4OTlf/adone.jpg\",\"title\":\"ADSPORTS 1 / SPORTS\"},{\"description\":\"ADSPORTS 2 est une chaine televisee sportives emettant a Dubai\",\"sources\":[\"http://admdn5.cdn.mangomolo.com/adsports2/smil:adsports2.stream.smil/playlist.m3u8\"],\"subtitle\":\"By Channel\",\"thumb\":\"https://od.lk/s/M18yNTkxODg5MjFf/adtwo.jpg\",\"title\":\"ADSPORTS 2 / SPORTS\"},{\"description\":\"ADSPORTS 3 est une chaine televisee sportives emettant a Dubai\",\"sources\":[\"http://admdn3.cdn.mangomolo.com/adsports3/smil:adsports3.stream.smil/playlist.m3u8\"],\"subtitle\":\"By Channel\",\"thumb\":\"https://od.lk/s/M18yNTkxODg5NTBf/adtree.jpg\",\"title\":\"ADSPORTS 3 / SPORTS\"},{\"description\":\"MAV TV est une chaine televisee sportives emettant a Dubai\",\"sources\":[\"https://mavtv-mavtvglobal-1-gb.samsung.wurl.com/manifest/playlist.m3u8\"],\"subtitle\":\"By Channel\",\"thumb\":\"https://od.lk/s/M18yNTkxODkzNTZf/mavtv.png\",\"title\":\"MAV TV / SPORTS\"},{\"description\":\"NollyWood TV est une chaine televisee qui diffuse que des film et series  Africains surtout beaucoup plus nigerians\",\"sources\":[\"https://stream.mmsiptv.com/droid/nollywoodfr/playlist.m3u8\"],\"subtitle\":\"By Channel\",\"thumb\":\"https://od.lk/s/M18yNTkxODk3MDhf/nollywood.jpg\",\"title\":\"NOLLYWOOD TV / NOVELAS\"},{\"description\":\"AfricaWood TV est une chaine televisee qui diffuse que des film et series  Africains surtout beaucoup plus nigerians\",\"sources\":[\"https://stream.mmsiptv.com/droid/africawood/playlist.m3u8\"],\"subtitle\":\"By Channel\",\"thumb\":\"https://od.lk/s/M18yNDg1Nzc2ODJf/vision4.jpg\",\"title\":\"AFRICAWOOD TV / NOVELAS\"},{\"description\":\"NOVELAS  TV 1 est une chaine televisee qui diffuse que des series mexicaines, bresiliens, phillipinesn et autres....\",\"sources\":[\"https://stream.mmsiptv.com/droid/novelas/playlist.m3u8\"],\"subtitle\":\"By Channel\",\"thumb\":\"https://od.lk/s/M18yNTkxOTAwMDFf/novelasone.jpg\",\"title\":\"NOVELAS TV 1 / SERIE\"},{\"description\":\"RTI 2 est une chaine televisee ivoiriens qui diffuse que des informations, musiques, series mexicaines, bresiliens, phillipinesn et autres....\",\"sources\":[\"https://stream.mmsiptv.com/droid/rti2/playlist.m3u8\"],\"subtitle\":\"By Channel\",\"thumb\":\"https://od.lk/s/M18yNTkxODU4NDdf/rtid.jpg\",\"title\":\"RTI 2 / COTE D'IVOIRE\"},{\"description\":\"NOVELAS TV est la chaine qui diffuset des Series Mexicaines, Philipiennes et Bresiliennes....\",\"sources\":[\"https://stormcast-telenovelatv-1-fr.samsung.wurl.com/manifest/playlist.m3u8\"],\"subtitle\":\"By Channel\",\"thumb\":\"https://od.lk/s/M18yNTQyMjA4MDVf/novelastv.jpg\",\"title\":\"NOVELAS TV{\"description\":\"NW INFOS est la chaine du togo en diffusant des Informations Emissions et autres....\",\"sources\":[\"https://hls.newworldtv.com/nw-info/video/live_1024x576.m3u8\"],\"subtitle\":\"By Channel\",\"thumb\":\"https://od.lk/s/M18yNTQyMjY0NzNf/nwInfos.jpg\",\"title\":\"NW INFOS TV / TOGO\"},{\"description\":\"NW Muzik est la chaine du togo en diffusant des musiques Africaine et autres....\",\"sources\":[\"https://hls.newworldtv.com/nw-muzik/video/live_1024x576.m3u8\"],\"subtitle\":\"By Channel\",\"thumb\":\"https://od.lk/s/M18yNTQyMjY0NTZf/nwMuzik.webp\",\"title\":\"NW MUZIK TV / TOGO\"},{\"description\":\"Al Hadath est la chaine du Lybie en diffusant des Emissions ainsi que des infos, musique et autres....\",\"sources\":[\"https://master.starmena-cloud.com/hls/hd.m3u8\"],\"subtitle\":\"By Channel\",\"thumb\":\"https://od.lk/s/M18yNTQyMjcxNDBf/alhad.png\",\"title\":\"AL HADATH TV / LYBIE\"},{\"description\":\"Vox Of Africa est la chaine des americains qui emette a Brazzaville en diffusant des informations et autres....\",\"sources\":[\"https://voa-lh.akamaihd.net/i/voa_mpls_tvmc3_3@320295/master.m3u8\"],\"subtitle\":\"By Channel\",\"thumb\":\"https://od.lk/s/M18yNTQyMjY1NDFf/VOX_AFRICA.jpg\",\"title\":\"VOX OF AFRICA TV\"},{\"description\":\"Resurrection TV est l'une des chaines privées Chretienne que l'on retrouve dans la ville d'ACCRA, possédant des émissions variées\",\"sources\":[\"http://rtmp.ottdemo.rrsat.com/rrsatrtv1/rrsatrtvmulti.smil/chunklist.m3u8\"],\"subtitle\":\"By Channel\",\"thumb\":\"https://od.lk/s/M18yNDg1NzczODRf/mychannel.jpg\",\"title\":\"RESURRECTION TV / GHANA\"},{\"description\":\"CDIRECT TV est la chaîne une chaîne généraliste présente une vitrine positive du Congo, conçoit des programmes inédits et innovants qui s'adressent aux congolais résidents, la diaspora congolaise, ainsi qu'à l'ensemble des africains francophones à travers le monde entier. Sa ligne éditoriale est axée sur les deux Congo décomplexé, un Congo qui va de l'avant et gagne !.\",\"sources\":[\"http://cms-streamaniak.top/Cdirect/CDIRECT/index.m3u8\"],\"subtitle\":\"By Channel\",\"thumb\":\"https://cdirect.tv/assets/img/logo-cdirect.ico\",\"title\":\"CDIRECT TV / Kinshasa-Brazzaville\"},{\"description\":\"DBM TV ou digital black Music est une Chaîne TV à thématique musicale, DBM a pour vocation de révéler et promouvoir la musique Afro Urbaine, qu’elle soit d’Afrique ou d’ailleurs info@dbm-tv.com. .\",\"sources\":[\"https://dbmtv.vedge.infomaniak.com/livecast/smil:dbmtv.smil/manifest.m3u8\"],\"subtitle\":\"By Channel\",\"thumb\":\"https://www.dbm-tv.fr/wp-content/uploads/2017/12/logo-dbm.png\",\"title\":\"DBM TV / Music \"},{\"description\":\"La LUMIÈRE, ministère Chrétien pour annoncer l’évangile de Jésus Christ partout dans le monde, toucher changer et sauver des vies par la puissance de la parole de DIEU avec des enseignements prédications adorations louanges partages de prières, d’exhortations et de témoignages\",\"sources\":[\"https://video1.getstreamhosting.com:1936/8248/8248/playlist.m3u8\"],\"subtitle\":\"By Channel\",\"thumb\":\"https://cdn.shortpixel.ai/client/q_glossy,ret_img,w_124,h_124/https://telepack.net/wp-content/uploads/2020/05/lumiere-tv.png\",\"title\":\"La Lumiere TV / Gospel\"},{\"description\":\"La Télévision Togolaise (TVT) est le nom de l'unique chaîne de télévision publique togolaise, Crée depuis 1979.\",\"sources\":[\"http://54.38.92.12/tvt.m3u8\"],\"subtitle\":\"By Google\",\"thumb\":\"https://amp.live-tv-channels.org/pt-data/uploads/logo/tg-tv.jpg\",\"title\":\"Télévision Togolais\"},{\"description\":\"CRTV est un service de radio et de télévision contrôlé par le gouvernement au Cameroun. Cela a commencé sous le nom de Cameroon Television (CTV) et a ensuite fusionné avec le service de radio pour devenir CRTV. Il couvre l'ensemble des dix régions du Cameroun, ce qui en fait le diffuseur indomptable parmi plusieurs chaînes de télévision privées du pays. Sa couverture des événements est généralement considérée comme pro-gouvernementale. Les programmes de la CRTV comprennent des documentaires, des magazines, des analyses d'actualités et des séries importées d'Asie et du Brésil..\",\"sources\":[\"http://178.33.237.146/crtv.m3u8\"],\"subtitle\":\"By Channel\",\"thumb\":\"http://www.cameroonconcordnews.com/wp-content/uploads/2018/03/CRTV-new.jpg\",\"title\":\"Cameroune Radio Télévision\"},{\"description\":\"Impact TV c'est une premiere Chaine televisee chretienne diffusant au Burkina-Fasso sur satelite innauguree le 07/03/2008 par Marie Sophie.\",\"sources\":[\"https://edge10.vedge.infomaniak.com/livecast/impacttele/chunklist_w973675047.m3u8\"],\"subtitle\":\"By Channel\",\"thumb\":\"https://i1.wp.com/www.livetvliveradio.com/wp-content/uploads/2017/07/impact-tv.jpg?fit=259%2C194\",\"title\":\"Impact TV / Burkina Fasso\"},{\"description\":\"Kigali Channel 2 ( Là pour vous) est une chaine televisee Rwandaise emmetant a Kigali. KC2 se diversite par sa diffusion des emitions exceptionnelle ainsi que des films nouveautes et plein d'autres.\",\"sources\":[\"https://5c46fa289c89f.streamlock.net/kc2/kc2/chunklist.m3u8\"],\"subtitle\":\"By Channel\",\"thumb\":\"https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQfQjI8jUhMPReWg0MOdw1xpAAXMP7YAuZKBg&usqp=CAU\",\"title\":\"KC2 TV / Rwanda\"},{\"description\":\"Equinox est une chaîne de télévision basée au Cameroun. Peu de temps après son lancement, il est devenu l'un des critiques les plus virulents du régime de Paul Biya. La station était connue pour avoir diffusé des images en direct d'une manifestation politique contre le changement constitutionnel au Cameroun qui favorisait le maintien au pouvoir du président Biya après 2011, alors qu'il lui était interdit par la Constitution de se présenter à nouveau. La télévision appartient au magnat des affaires de la région ouest du Cameroun, Severin Tchounke, qui possède également un quotidien critique, La Nouvelle Expression.\",\"sources\":[\"http://178.33.237.146/equinoxetv.m3u8\"],\"subtitle\":\"By Channel\",\"thumb\":\"https://camer-press.com/wp-content/uploads/2020/04/Equinoxe-Tv.jpg\",\"title\":\"Equinoxetv\"},{\"description\":\"Rwanda Télévision (RTV) est la premiere chaîne public du Rwanda qui fournit des informations et des divertissements quotidiens au public rwandais en trois langues: anglais, français et kinyarwanda géré par l'industrie de la télévision rwandaise , mais ce derniere est composée de 12 chaînes de télévision dont 84% télévisions sont détenues par des privés (10 sur 12) tandis que 8% appartiennent respectivement à des organisations publiques et religieuses. L'Agence nationale de radiodiffusion rwandaise.\",\"sources\":[\"https://5c46fa289c89f.streamlock.net/rtv/rtv/playlist.m3u8\"],\"subtitle\":\"By Channel\",\"thumb\":\"https://maps.prodafrica.com/wp-content/uploads/2020/03/10191_RBA_002.png\",\"title\":\"RTV\"},{\"description\":\"IBN TV est un radiodiffuseur islamique de télévision et de radio qui transmet IBN TV et Radio Maarifa de Dar es Salaam et Tanga respectivement. Il a été crée sous la direction de la Fondation Al Itrah et a été diffusé officiellement depuis Mars 2003. IBN TV est un média privé qui a commencé après la libéralisation de l’industrie des médias en Tanzanie. IBN TV est la première chaîne islamique en Tanzanie. Il couvre presque toute la région de Dar es Salaam, Tanga, Arusha et Mwanza. IBN TV diffuse en quatre langues différentes, à savoir l’anglais, le swahili, le gujarati et l’ourdou.\",\"sources\":[\"http://138.68.138.119:8080/low/5a8993709ea19/index.m3u8\"],\"subtitle\":\"By Channel\",\"thumb\":\"http://www.alitrah.co.tz/wp-content/uploads/sites/3/2015/10/ibntvafrica.png\",\"title\":\"IBN TV\"},{\"description\":\"RTB est une chaîne de télévision publique générale dirigée par l’Établissement public d’État. Son siège social est situé dans la capitale du Burkina Faso, à Ouagadougou. Il est diffusé en direct à la télévision terrestre et sur Internet. Cette chaîne africaine diffuse des nouvelles télévisées en Français. Mais en général, les flashs de nouvelles sont dans la langue nationale comme Lobiri, Bwamu, Gulmancéma ainsi que Bissa. RTB offre un programme avec de nombreux magazines sur le sport, l’économie, la culture, la santé et la jeunesse.\",\"sources\":[\"https://edge8.vedge.infomaniak.com/livecast/ik:rtbtvlive1/manifest.m3u8\"],\"subtitle\":\"By Channel\",\"thumb\":\"https://upload.wikimedia.org/wikipedia/en/c/c0/RTB_Sukmaindera.png\",\"title\":\"Radio Television Burkina Fasso\"},{\"description\":\"Eri-TV est une chaîne de télévision érythréenne appartenant à l'État. Basée dans la capitale du pays, Asmara, elle diffuse 24 heures sur 24. La station propose des bulletins d'information 24 heures sur 24, des émissions-débats et des programmes culturels et éducatifs. Eri-TV a une large base d'audience en dehors de l'Érythrée, que la chaîne publique reconnaît et utilise pour communiquer avec les Érythréens vivant à l'étranger. Le réseau compte environ 1 à 2 millions de téléspectateurs par semaine. Eri-TV reconnaît la culture minoritaire érythréenne et a largement adopté un partage de temps égal entre chacune des langues parlées du pays.\",\"sources\":[\"http://217.182.137.206/eri.m3u8\"],\"subtitle\":\"By Channel\",\"thumb\":\"https://eri.tv/images/eri-tv-live.png\",\"title\":\"ERITRIE TV\"},{\"description\":\"Créée au Sénégal par le GROUPE D-MEDIA, SENTV, 1ère Chaîne Urbaine au Sénégal, consacre sa programmation au traitement de l'actualité nationale et internationale et à la culture urbaine sénégalaise et africaine en générale. Elle émet sur hertzien depuis 2009 et est désormais disponible sur satellite via le bouquet Canal + Afrique et les bouquets IPTV à l'international. Une chaîne généraliste et orientée urbaine, constituant ainsi une offre originale et unique au Sénégal. Une part importante de ses programmes est constituée par des rendez-vous d’actualité sur une rythmique quotidienne et des émissions phares orientées Société et Divertissement.\",\"sources\":[\"http://46.105.114.82/tfm_senegal.m3u8\"],\"subtitle\":\"By Channel\",\"thumb\":\"https://www.xalat.info/wp-content/uploads/2019/02/maxresdefault-2.jpg\",\"title\":\"SENEGAL TV\"},{\"description\":\"RTB diffuse des emissions ainsi que les Sports, Musique, Culture et Films d'Action.\",\"sources\":[\"http://46.105.114.82/rtb1.m3u8\"],\"subtitle\":\"By Channel\",\"thumb\":\"https://live-tv-channels.org/pt-data/uploads/logo/bf-rtb-tv-8682.jpg\",\"title\":\"RTB\"},{\"description\":\"LEEEKO est un ensemble de médias web radio et tv, créé le 1er Decembre 2016 par Serges OLUBI, passionné de musiques. LEEEKO diffuse une diversité des musique telsque: Rhumba, Zouk, Ndombolo, Rnb, Classic, Jazz et autres à travers l'Afrique.\",\"sources\":[\"http://livetvsteam.com:1935/leeeko/leeeko/chunklist.m3u8\"],\"subtitle\":\"By Channel\",\"thumb\":\"https://is2-ssl.mzstatic.com/image/thumb/Purple113/v4/c9/76/95/c9769524-8604-49ac-108e-efca1d025a99/source/512x512bb.jpg\",\"title\":\"LEEKO MUSIQUE TV\"},{\"description\":\"La Radio Télévision Guinéenne (RTG), l’un des premiers organes de presse public du pays, est absente dans plusieurs villes de l’intérieur du pays. Et ce après 42 ans depuis sa création. Par endroits, les signaux de la RTG sont totalement absents depuis plusieurs années. Par contre, dans certaines préfectures, malgré la réception des signaux, faute d’énergie, les populations sont privées des émissions de la RTG, a-t-on constaté.\",\"sources\":[\"http://178.33.237.146/rtg.m3u8\"],\"subtitle\":\"By Blender Channel\",\"thumb\":\"http://maliactu.info/wp-content/uploads/2019/08/rtg-radio-television-guineenne.png\",\"title\":\"Radio Television Guinéenne \"},{\"description\":\"MTA Africa 1 (anciennement MTA Africa) est la quatrième chaîne de télévision par satellite du réseau MTA International. Il a été lancé début août 2016, diffusant spécifiquement pour les téléspectateurs africains, à travers l'Afrique et l'Europe. La chaîne a été créée sous les auspices de Mirza Masroor Ahmad, le chef spirituel de la communauté musulmane Ahmadiyya. MTA Africa est géré et financé volontairement par les Ahmadis.\",\"sources\":[\"https://ooyalahd2-f.akamaihd.net/i/mtaengaudio_delivery@138280/index_3000_av-p.m3u8\"],\"subtitle\":\"By Blender Channel\",\"thumb\":\"https://pbs.twimg.com/profile_images/950498775893774338/XKhzDO2.jpg\",\"title\":\"MTA AFRICA\"},{\"description\":\"L’Office de Radiodiffusion et Télévision du Bénin (ORTB) est le service public de l’audiovisuel du Bénin. C’est un établissement public à caractères social, culturel et scientifique doté de la personnalité morale et de l’autonomie financière. ORTB, pas sans vous !/ Tél: +229 21 30 00 48/ Whatsapp: +229 69 70 55 55/ Email: contact@ortb.bj\",\"sources\":[\"http://51.77.223.83/ortb.m3u8\"],\"subtitle\":\"By Channel\",\"thumb\":\"https://www.lavoixduconsommateur.org/images/services/1533219563.jpg\",\"title\":\"ORTB / Bénin\"},{\"description\":\"Dream Channel est une chaine télévisée ematant au cameroune qui diffuse de la musique de toutes tendances.\",\"sources\":[\"http://connectiktv.ddns.net:5000/dreamchannel/dreamchannel/chunklist.m3u8\"],\"subtitle\":\"By Channel\",\"thumb\":\"https://connectik.tv/wp-content/uploads/2019/06/c1b45634-2f8c-47e7-8849-e6d7ea620465-300x169.jpg\",\"title\":\"DREAM CHANNEL TV / Cameroune\"},{\"description\":\"Canal Algérie est la deuxième chaîne de télévision nationale grand public algérienne. La chaîne fait partie du groupe EPTV qui comprend également TV1, TV3, TV4, TV5, TV6 et TV7. C'est une chaîne francophone. La chaîne diffuse ses programmes 24h / 24 et 7j / 7 via différentes plateformes et partout dans le monde.\",\"sources\":[\"http://46.105.114.82/canal_algerie.m3u8\"],\"subtitle\":\"By Channel\",\"thumb\":\"https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Logo_Canal_Algerie.svg/800px-Logo_Canal_Algerie.svg.png\",\"title\":\"Canal Algerie\"},{\"description\":\"Radio Télévision Sénegalaise est une station de radio diffusée sur le réseau de Radiodiffusion Télévision Sénégalaise (RTS1 HD) de Dakar, au Sénégal, fournissant des informations, des sports, des débats, des émissions en direct et des informations sur la culture ainsi que la musique.\",\"sources\":[\"http://46.105.114.82/rts1.m3u8\"],\"subtitle\":\"By Channel\",\"thumb\":\"https://lh3.googleusercontent.com/VZyPxURRRo-C0lEWHggT8C-dDJvFNFTVxKrn1yKUNROoT85XnOl9VcmM5HFzyRDwvgs\",\"title\":\"Radio Télévision Sénegalaise 1 HD\"},{\"description\":\"Kalsan est une chaîne de télévision Somalienne dont le siège est à Londres. Elle a commencé à diffuser en 2013. La chaîne est axée sur les Somaliens. La programmation est principalement axée sur les actualités et les divertissements.\",\"sources\":[\"http://cdn.mediavisionuae.com:1935/live/kalsantv.stream/chunklist.m3u8\"],\"subtitle\":\"By Channel\",\"thumb\":\"https://xogdoonnews.net/wp-content/uploads/2017/11/kalsan-tv.jpg\",\"title\":\"KALSAN TV / Somalie\"},{\"description\":\"One Africa Television est une chaine de television namibien crée en 2003 et couvrant à l'origine uniquement Windhoek, Rehoboth et Okahandja, One Africa Television a connu une croissance significative, avec son signal diffusé via 29 émetteurs analogiques à travers la Namibie. En 2013, One Africa Television a rejoint l'ère numérique, et la chaîne est depuis disponible sur le réseau de télévision numérique terrestre de la Namibian Broadcasting Corporation (Channel 301) ainsi que sur la plateforme DStv Namibia de MultiChoice (Channel 284) ainsi que sur le réseau numérique terrestre GoTV de MultiChoice. Président du groupe d'Africa Television, Paul van Schalkwyk, a été tué dans un accident d'avion le 10 mars 2014.\",\"sources\":[\"https://za-tv2a-wowza-origin02.akamaized.net/oneafrica/smil:oneafrica/playlist.m3u8\"],\"subtitle\":\"By Channel\",\"thumb\":\"https://neweralive.na/uploads/2016/11/Untitled-1.jpg\",\"title\":\"ONE AFRICA TV / Namibia\"},{\"description\":\"VISION4 TV est une chaine television panafricanisme Camerounais crée en 2008. qui diffuse des Émissions hauts de gamme telsque : Afro Café, Matinale infos, le journal d'afrique, tour d'horizon, journal de 12, women's story, The 6h00 pm news, Let's talk, Meeting point le grand live, le grand journal de 20h, santé spirituelle, sport time, Arrêt majeur, Au cœur du mystère, parole d'artistes, Femme attitude, Panafritude, Rendez-vous santé, afro zik, Club d'élites, Plateau du Jaguar, Dimanche bonheur, face aux dinosaures. Vision 4 Le Groupe Anecdote Vision 4 TV, Satelite FM, Africa Express Siège social : Yaoundé - Cameroun (Nsam) Secrétariat PDG : Tel : +237 242 71 88 13 / Fax : +237 222 31 67 81 Service de l'information : Tel : +237 242 71 87 68 Yaoundé Centre B.P 25070 Cameroun\",\"sources\":[\"http://cdnamd-hls-globecast.akamaized.net/live/ramdisk/vision4/hls_video/index.m3u8\"],\"subtitle\":\"By Channel\",\"thumb\":\"https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Vision_4.jpg/600px-Vision_4.jpg\",\"title\":\"VISION 4\"},{\"description\":\"Nago TV is a Haitian television channel 100% devoted to music videos(Compass, Rap Creole, Racine).\",\"sources\":[\"http://haititivi.com:8088/haititv/tele6NY/index.m3u8\"],\"subtitle\":\"By Channel\",\"thumb\":\"https://lh3.googleusercontent.com/GdAVtX7AU8834RaKoUC4c3itv2A_R1k8XATBf26G_IgQKnvxEtAew0cJOr_kWOpWkpY\",\"title\":\"NAGO TV / Haiti\"},{\"description\":\"Lagos Television has been a trail blazer right from inception. Apart from being the first TV station outside the NTA family, the station took the Nigerian TV industry by storm in the early 80s with the introduction of a 60-hour non stop weekend from 7pm on Fridays till 7am on Mondays. The then Lagos weekend Television was the first marathon TV station in Africa. It’s unprecedented public approval transformed TV viewership especially within the Lagos precinct and brought a change in the call sign LTV/LWT.\",\"sources\":[\"http://185.105.4.193:1935/ltv/myStream/playlist.m3u8\"],\"subtitle\":\"By Channel\",\"thumb\":\"https://www.lagostelevision.com/wp-content/uploads/2015/10/logo.png\",\"title\":\"Lagos Television\"},{\"description\":\"Emmanuel TV is the television station of The Synagogue, Church Of All Nations, broadcasting 24/7 around the globe via satellite and on the internet. The purpose of Emmanuel TV is to preach the Good News to all mankind. That is what we are born for, living for and what we shall die for. Emmanuel TV is committed to changing lives, changing nations and changing the whole world through the Gospel of our Lord Jesus Christ. Jesus Christ is the inspiration behind Emmanuel TV; as such, God’s purpose is our purpose.\",\"sources\":[\"https://api.new.livestream.com/accounts/23202872/events/7200883/live.m3u8\"],\"subtitle\":\"By Channel\",\"thumb\":\"https://scoan-website-emmanueltv.netdna-ssl.com/wp-content/blogs.dir/12/files/2016/09/emmanuel_tv_icon.png\",\"title\":\"Emmanuel TV\"},{\"description\":\"Addis TV is a City Channel based in Addis Ababa, Ethiopia, which broadcasts News and Programs 24/7.\",\"sources\":[\"https://rrsatrtmp.tulix.tv/addis1/addis1multi.smil/playlist.m3u8\"],\"subtitle\":\"By Channel\",\"thumb\":\"https://et.heytv.org/wp-content/uploads/2019/04/Addis-webtvonlive-com.jpg\",\"title\":\"Addis TV / Ethiopia\"},{\"description\":\"Resurrection TV is a Christian based station aimed at uplifting your soul with an unadulterated word of God. it ensures a distinction between sin and righteousness.\",\"sources\":[\"http://rtmp.ottdemo.rrsat.com/rrsatrtv1/rrsatrtvmulti.smil/chunklist.m3u8\"],\"subtitle\":\"By Channel\",\"thumb\":\"https://i.pinimg.com/564x/9e/f5/ae/9ef5aeb5c1ddd05a20d27faaf5d9b931.jpg\",\"title\":\"Résurrection TV/ Ghana\"},{\"description\":\"CTV frique est une television camerounaise basee a yaounde.\",\"sources\":[\"http://connectiktv.ddns.me:8080/ctv-africa/index.m3u8\"],\"subtitle\":\"By Channel\",\"thumb\":\"http://connectik.tv/wp-content/uploads/2020/01/CTV-1-300x212.jpeg\",\"title\":\"CTV AFRICA\"},{\"description\":\"BEL TV est une station de télévision haïtienne qui diffuse sur le web via diverses plateformes et par câble. Notre vision est de créer une télévision standard dont la qualité du programme est aussi instructive que divertissante. À cote de cette vision, BEL TV s’est fixé pour mission de promouvoir la Culture haïtienne, à savoir le Cinéma, la musique, la littérature et bien plus encore, ce à travers la Caraïbe et le monde entier. BEL TV c’est une toute autre façon de faire la télé.\",\"sources\":[\"http://connectiktv.ddns.me:8080/afriqueplustv/index.m3u8\"],\"subtitle\":\"By Channel\",\"thumb\":\"http://connectik.tv/wp-content/uploads/2019/07/NEW-LOGO0047_00000_00000-300x169.png\",\"title\":\"AFRICA PLUS TV \"},{\"description\":\"1 ok.\",\"sources\":[\"http://connectiktv.ddns.me:8080/mygospel/index.m3u8\"],\"subtitle\":\"By Channel\",\"thumb\":\"http://connectik.tv/wp-content/uploads/2020/05/mygospel-300x140.png\",\"title\":\"MY GOSPEL TV\"},{\"description\":\"2 ok.\",\"sources\":[\"http://connectiktv.ddns.me:8080/media-prime/index.m3u8\"],\"subtitle\":\"By Channel\",\"thumb\":\"http://connectik.tv/wp-content/uploads/2020/05/myprime15-300x140.png\",\"title\":\"MEDIA PRIME TV\"},{\"description\":\"3 ok.\",\"sources\":[\"http://connectiktv.ddns.me:8080/mymusic/index.m3u8\"],\"subtitle\":\"By Channel\",\"thumb\":\"http://connectik.tv/wp-content/uploads/2020/05/mymusic1.png\",\"title\":\"MY MUSIC TV \"},{\"description\":\"4 ok.\",\"sources\":[\"http://connectiktv.ddns.me:8080/mymovie-en/index.m3u8\"],\"subtitle\":\"By Channel\",\"thumb\":\"http://connectik.tv/wp-content/uploads/2020/05/myenglish-300x140.png\",\"title\":\"MY MOVIE TV / English\"},{\"description\":\"5 ok.\",\"sources\":[\"http://connectiktv.ddns.me:8080/mymovie-fr/index.m3u8\"],\"subtitle\":\"By Channel\",\"thumb\":\"http://connectik.tv/wp-content/uploads/2020/05/myfresh-300x140.png\",\"title\":\"MY MOVIE TV / Francais\"},{\"description\":\"6 ok\",\"sources\":[\"http://connectiktv.ddns.me:8080/bikutsitv/index.m3u8\"],\"subtitle\":\"By Channel\",\"thumb\":\"http://connectik.tv/wp-content/uploads/2019/09/bikutsi-300x63.jpeg\",\"title\":\"BIKUTSI TV\"},{\"description\":\"7 ok.\",\"sources\":[\"http://connectiktv.ddns.me:8080/cam10tv/index.m3u8\"],\"subtitle\":\"By Channel\",\"thumb\":\"http://connectik.tv/wp-content/uploads/2020/07/CAM10-REVUE.jpg\",\"title\":\"CAM 10 TV / Cameroune\"},{\"description\":\"8 ok.\",\"sources\":[\"http://connectiktv.ddns.me:8080/leadergospel/index.m3u8\"],\"subtitle\":\"By Channel\",\"thumb\":\"http://connectik.tv/wp-content/uploads/2020/05/leader-cable.jpg\",\"title\":\"LEADER GOSPEL TV / Religion\"},{\"description\":\"9 ok.\",\"sources\":[\"http://connectiktv.ddns.me:8080/vstv/index.m3u8\"],\"subtitle\":\"By Channel\",\"thumb\":\"http://connectik.tv/wp-content/uploads/2020/05/VS-TV-300x168.jpg\",\"title\":\"VS tv\"},{\"description\":\"10 0k.\",\"sources\":[\"http://connectiktv.ddns.me:8080/mytv/index.m3u8\"],\"subtitle\":\"By Channel\",\"thumb\":\"http://connectik.tv/wp-content/uploads/2019/04/mytv-channel-hd-300x169.jpg\",\"title\":\"MY TV CHANNEL\"},{\"description\":\"Radio Tele Puissance est une chaine chrétienne qui diffuse en direct des programmes chrétien avec des vidéos et des films Gospel de premier ordre, des documentaires. radio Tele Puissance est une station très divertissante..\",\"sources\":[\"https://video1.getstreamhosting.com:1936/8560/8560/chunklist.m3u8\"],\"subtitle\":\"By Channel\",\"thumb\":\"https://radioendirect.net/assets/images/radio/item/119251.jpg\",\"title\":\"Radio Tele Puissance\"},{\"description\":\"Christ live est une chaine télévision de divertissement chrétienne disponible sur le satellite.\",\"sources\":[\"https://raw.githubusercontent.com/exodiver/IPTV/master/M3U8/Token/Cliv.m3u8\"],\"subtitle\":\"By Channel\",\"thumb\":\"http://www.centraltv.fr/wp-content/uploads/christ-tv_logo.jpg\",\"title\":\"CHRIST TV / Religion\"},{\"description\":\"QTV Gambia is the First Private Television Station\",\"sources\":[\"https://player.qtv.gm/hls/live.stream.m3u8\"],\"subtitle\":\"By Channel\",\"thumb\":\"https://standard.gm/wp-content/uploads/2020/08/QTV-696x495.jpg\",\"title\":\"QTV / Gambia\"},{\"description\":\"TVM International, or TVM Internacional, is the international channel of Mozambique's national TV broadcaster, Televisão de Moçambique (TVM), broadcasting for 24 hours per day. The channel will showcase local programming featuring Mozambican culture, tourism and sports.\",\"sources\":[\"http://196.28.226.121:1935/live/smil:Channel2.smil/chunklist_b714000_slpor.m3u8\"],\"subtitle\":\"By Channel\",\"thumb\":\"https://clubofmozambique.com/wp-content/uploads/2020/03/tvmint.rm.jpg\",\"title\":\"TVM Internacional\"},{\"description\":\"K24 TV est une chaine de télévision généraliste Kényane fondée en 2007 basé à Longonot Place, P. O. Box 49640 Kijabe St Tél : +254 20 2124801. K24 TV diffuse sur la télévision terrestre et en streaming sur Dailymotion et sur son site internet..\",\"sources\":[\"https://raw.githubusercontent.com/exodiver/IPTV/master/M3U8/Token/K24.m3u8\"],\"subtitle\":\"By Channel\",\"thumb\":\"http://www.centraltv.fr/wp-content/uploads/k24-tv_logo.jpg\",\"title\":\"K24 TV / Kenya\"},{\"description\":\"Afrobeat tv is a division of kaycee records .Kaycee Records is an independent record label established in the United Kingdom, and Nigeria Owned by Kennedy Kesidi Richard from Oguta in Imo State Nigeria .Afro beat tv is the new musical innovation to promote African art and and as a platform to promote and create awareness for up coming African artist all around the globe\",\"sources\":[\"http://connectiktv.ddns.net:8080/afrobit/index.m3u8\"],\"subtitle\":\"By Channel\",\"thumb\":\"http://connectik.tv/wp-content/uploads/2019/05/AFROBIT-png-300x168.png\",\"title\":\"AFROBITS / Music\"},{\"description\":\"Dunamis International Gospel Centre (DIGC) Jos Central is a powerfully anointed church, where God's Presence and power are saving, healing and restoring human destinies and dignities! Located in Alheri, Jos, Plateau State with HQT in Abuja Nigeria. Dunamis (Doo'na-mis) is the Greek word that means POWER.\",\"sources\":[\"https://christianworld.ashttp9.visionip.tv/live/visiontvuk-religion-dunamistv-SD/chunklist.m3u8\"],\"subtitle\":\"By Channel\",\"thumb\":\"https://live-tv-channels.org/pt-data/uploads/logo/ng-dunamis-tv-2163-300x225.jpg\",\"title\":\"DUNAMIS TV / Religion\"},{\"description\":\"France tv sport, c’est d’abord l’actualité de TOUS les sports. De l’analyse en temps réel, du live ou encore des replays vidéo sont disponibles à tout moment. Enrichissez votre expérience et plongez au cœur de l'actualité du sport.\",\"sources\":[\"https://streamserv.mytvchain.com/sportenfrance/SP1564435593_720p/playlist.m3u8\"],\"subtitle\":\"By Channel\",\"thumb\":\"https://liberador.net/media/images/FranceTv_Sport.max-640x640.jpg\",\"title\":\"SPORTS FRANCE TV\"},{\"description\":\"Darut Tarbiyah La télévision en direct du Réseau islamique de Trinité-et-Tobago Chaîne de télévision religieuse / Darut Tarbiyah Le Réseau islamique (T.I.N.) est une chaîne de télévision câblée locale de Trinité-et-Tobago diffusant des programmes islamiques. La station est transportée sur le canal 96 ou 116 sur le système de câble Flow Trinidad. DARUT TARBIYAH - LE RÉSEAU ISLAMIQUE. Darut Tarbiyah Drive, Ramgoolie Trace North, Cunupia, Trinidad Antilles. Tél: (868) 693-1722, 693-1393\",\"sources\":[\"http://162.244.81.145:2215/live/livestream/playlist.m3u8\"],\"subtitle\":\"By Channel\",\"thumb\":\"http://theislamicnetwork.org/wp-content/uploads/musicpro/bd-uploads/logo_logo_TIN-Logo-White-Text.png\",\"title\":\"THE ISLAMIC NETWORK\"},{\"description\":\"D Sports HD est une chaine qui se fcalise sur les Sports en General : WWE, BOX, Football: Ligue brésilienne, Super League chinoise, Ligue portugaise, Major League Soccer (USA) Courses hippiques: courses quotidiennes diffusées en direct du Royaume-Uni et d'Irlande Golf: British Open (The Open Championship), US Open, PGA Championship, LPGA Motorsports: NASCAR, Championnat du Monde de Rallycross FIA Rugby: 6 Nations Rugby Cyclisme: Tour de France (propriété d'Eurosport).\",\"sources\":[\"http://jiocgehub.jio.ril.com/Dsports_HD/Dsports_HD.m3u8?fluxustv.m3u8\"],\"subtitle\":\"By Channel\",\"thumb\":\"https://kccl.tv/sites/default/files/dsportjpg.jpg\",\"title\":\"D Sports TV\"},{\"description\":\"Africa Sports TV est la première chaîne francophone d’information en continue de sport en Afrique. C’est un média fédérateur des sports africains. On parle de compétition locales, des ligues nationales sur toutes les disciplines du continent, dont le basketball, le football, la lutte… Il y aura beaucoup de lutte, qui prend un essor important sur le continent. Il y a tout un lobby autour de la lutte. Africa Sports TV est disponible Sur Le Canal 56 de la BbOX – Sur Le Canal 614 du Bouquet Africain Max de TV ORANGE.\",\"sources\":[\"https://strhls.streamakaci.tv/str_africasportstv_africasportstv/str_africasportstv_multi/str_africasportstv_africasportstv/str_africasportstv_player_1080p/chunks.m3u8\"],\"subtitle\":\"By Channel\",\"thumb\":\"https://pbs.twimg.com/profile_images/1215646342812401668/SOnvVloX_400x400.jpg\",\"title\":\"Africa Sports TV\"},{\"description\":\"Real Madrid TV est une chaîne de télévision numérique gratuite, exploitée par le Real Madrid, spécialisée dans le club de football espagnol. La chaîne est disponible en espagnol et en anglais. Il est situé à Ciudad Real Madrid à Valdebebas (Madrid), le centre de formation du Real Madrid.\",\"sources\":[\"http://rmtv24hweblive-lh.akamaihd.net/i/rmtv24hwebes_1@300661/index_3_av-b.m3u8\"],\"subtitle\":\"By Channel\",\"thumb\":\"https://files.cults3d.com/uploaders/13539675/illustration-file/9c08780f-eb52-427b-aad7-b0a8c0fb83a1/real_madrid_ref1_large.JPG\",\"title\":\"Real Madrid TV\"},{\"description\":\"Real Madrid Club de Fútbol, ce qui signifie Royal Madrid Football Club), communément appelé Real Madrid, est un club de football professionnel espagnol basé à Madrid. Fondé le 6 mars 1902 sous le nom de Madrid Football Club, le club porte traditionnellement un maillot blanc à domicile depuis sa création. Le mot réel est espagnol pour royal et a été accordé au club par le roi Alfonso XIII en 1920 avec la couronne royale dans l'emblème. L'équipe a disputé ses matchs à domicile dans le stade Santiago Bernabéu d'une capacité de 81 044 places au centre-ville de Madrid depuis 1947.\",\"sources\":[\"http://rmtv24hweblive-lh.akamaihd.net/i/rmtv24hweben_1@300662/master.m3u8\"],\"subtitle\":\"By Channel\",\"thumb\":\"https://i.pinimg.com/564x/e4/de/18/e4de1869c0eba3beab9ffc9d01660e65.jpg\",\"title\":\"Real Madrid TV\"},{\"description\":\" EPT SPORTS HD est la nouvelle chaîne exclusivement sportive de l’audiovisuel public, ERT Sports HD, sa première officielle à 06h00 le matin du samedi 9 février 2019.\",\"sources\":[\"https://ert-live.siliconweb.com/media/ert_sports/ert_sportshigh.m3u8\"],\"subtitle\":\"By Channel\",\"thumb\":\"https://png.pngitem.com/pimgs/s/681-6814150_ert-sports-hd-logo-ert-sports-hd-hd.png\",\"title\":\"EPT Sports HD\"},{\"description\":\"Sports Tonight Live, branded simply as Sports Tonight, was a British television show and channel, owned by VISION247 based in Central London. It was launched online on 29 August 2011.\",\"sources\":[\"http://sports.ashttp9.visionip.tv/live/visiontvuk-sports-sportstonightlive-hsslive-25f-4x3-SD/chunklist.m3u8\"],\"subtitle\":\"By Channel\",\"thumb\":\"https://embeddedplayer.visionip.tv/portals/Sports_Tonight_Live/Sports_Tonight_Live/overlay_logos/Sports%20Tonight%20Live-plBackground-1308.png\",\"title\":\"Sports Tonight\"},{\"description\":\"Arryadia HD TV est une chaîne sportive de télévision publique marocaine. Il fait partie du groupe public SNRT avec Al Aoula, Athaqafia, Al Maghribia, Assadissa, Aflam TV, Tamazight TV et Laayoune TV. La chaîne a été lancée le 16 septembre 2006. Arryadia est le diffuseur officiel de la ligue marocaine Botola.\",\"sources\":[\"http://cdn-hls.globecast.tv/live/ramdisk/arriadia/hls_snrt/index.m3u8\"],\"subtitle\":\"By Channel\",\"thumb\":\"https://4.bp.blogspot.com/-lnh_8LWuXaw/WZ09LDkMsZI/AAAAAAAAEeI/9FKtxdQjbl4UVqmZjqN4R-fE9uOLG2ccQCLcBGAs/s1600/FB_IMG_1503465850383.jpg\",\"title\":\"Arryadia TV / Maroc\"},{\"description\":\"Assadissa TV est une chaîne de télévision publique marocaine dédiée aux affaires religieuses. Il fait partie du groupe public SNRT avec Al Aoula, Arryadia, Athaqafia, Al Maghribia, Aflam TV, Tamazight TV et Laayoune TV. La chaîne a été lancée le 3 novembre 2005. Outre les lectures du Coran, il existe également des programmes de services religieux, de débats et de documentaires. Il est diffusé tous les jours de 2h00 à 23h00. Le samedi, il est de 6h00 à 21h00.\",\"sources\":[\"http://cdn-hls.globecast.tv/live/ramdisk/assadissa/hls_snrt/index.m3u8\"],\"subtitle\":\"By Channel\",\"thumb\":\"https://upload.wikimedia.org/wikipedia/commons/7/7e/Assadissa.png\",\"title\":\"Assadissa TV/ Maroc\"},{\"description\":\"Al Aoula, anciennement appelée TVM (Télévision marocaine, arabe: ??????? ????????), est la première chaîne de télévision publique marocaine. Il fait partie du groupe public SNRT avec Arryadia, Athaqafia, Al Maghribia, Assadissa, Aflam TV, Tamazight TV et Laayoune TV. Le réseau diffuse des programmes en arabe, berbère, français et espagnol. Son siège est situé à Rabat. Lancé en 1962, Al Aoula a été le premier réseau de télévision à produire et à diffuser ses propres programmes dans le pays. En 1962, il a commencé des émissions en couleur.\",\"sources\":[\"http://cdn-hls.globecast.tv/live/ramdisk/al_aoula_inter/hls_snrt/index.m3u8\"],\"subtitle\":\"By Channel\",\"thumb\":\"https://live.staticflickr.com/1853/44065447112_7a93bb434f.jpg\",\"title\":\"Al Aoula TV/ Maroc\"},{\"description\":\"2M TV est une chaîne de télévision marocaine gratuite. Il a été créé par le conglomérat royal, ONA, avant d'être en partie vendu à l'État marocain. 20,7% de 2M appartiennent à la société holding de Mohammed VI SNI. Alors qu'environ 60% sont contrôlés par l'État marocain. Il est basé à Casablanca. Il est disponible gratuitement localement sur signal numérique avec une couverture sur tout le Maroc et sur la télévision par satellite via Globecast, Nilesat et Arabsat. 2M propose des services en arabe, français et berbère.\",\"sources\":[\"https://cdnamd-hls-globecast.akamaized.net/live/ramdisk/2m_monde/hls_video_ts/2m_monde.m3u8\"],\"subtitle\":\"By Channel\",\"thumb\":\"https://caidal.ma/wp-content/uploads/2019/04/ob_febd69_2-m-maroc-en-ligne.jpg\",\"title\":\"2M TV / Maroc\"},{\"description\":\"La chaîne Al Magharibia diffuse des programmes politiques, sociaux et économiques depuis sa base privée de Londres. La chaîne est diffusée en arabe et s'adresse aux pays du Mahgreb, l'Algérie en particulier. Le ton d'Al Magharibia est fermement basé sur un discours politique et idéologique. Le ton d'Al Magharibia est fermement basé sur un discours politique et idéologique.\",\"sources\":[\"https://cdnamd-hls-globecast.akamaized.net/live/ramdisk/al_maghribia_snrt/hls_snrt/index.m3u8\"],\"subtitle\":\"By Channel\",\"thumb\":\"https://cdn.sat.tv/wp-content/uploads/2016/05/SNRT-AlMaghribia.png\",\"title\":\"Al maghribia TV / Maroc\"},{\"description\":\"Athaqafia TV est une chaîne gratuite disponible sur le satellite Hotbird et propose une gamme de programmes allant des documentaires et des programmes éducatifs ainsi que de la musique, des dessins animés et des divertissements familiaux. La chaîne s'adresse principalement aux familles et est diffusée principalement en arabe mais parfois en langue française et berbère. La chaîne a été créée par la société de production marocaine appartenant à l'État, SNRT.\",\"sources\":[\"http://cdn-hls.globecast.tv/live/ramdisk/arrabiaa/hls_snrt/index.m3u8\"],\"subtitle\":\"By Channel\",\"thumb\":\"https://cdn.sat.tv/wp-content/uploads/2016/05/SNRTAThaqafia.png\",\"title\":\"Athaqafia TV / Maroc\"},{\"description\":\"Tele Maroc est la nouvelle chaîne satellitaire généraliste marocaine créée par rachid Niny. Siège à Madrid. « C’est donc une chaéne de télévision légalement espagnole avec un contenu marocain.\",\"sources\":[\"https://api.new.livestream.com/accounts/27130247/events/8196478/live.m3u8\"],\"subtitle\":\"By Channel\",\"thumb\":\"https://i.pinimg.com/564x/9e/1d/b5/9e1db51201d4debce634f6e8b44a2424.jpg\",\"title\":\"Tele Maroc\"},{\"description\":\"Tamazinght TV est une chaîne de télévision publique marocaine créée le 6 janvier 2010, propriété de la Société nationale de radiodiffusion et de télévision. La chaîne a pour objectif la promotion et la préservation de la culture amazighe au Maroc et dans la région de l'Afrique du Nord. en langue berbère. 70% en tashelhit, tarifit et tamazight (les 3 variantes du berbère du Maroc), le reste en arabe.\",\"sources\":[\"https://cdnamd-hls-globecast.akamaized.net/live/ramdisk/tamazight_tv8_snrt/hls_snrt/index.m3u8\"],\"subtitle\":\"By Channel\",\"thumb\":\"http://hub.tv-ark.org.uk/images/International/international_images/morocco_images/tamazight/Tamazight_TV_ident4_060912a.jpg\",\"title\":\"Tamazight TV / Maroc\"},{\"description\":\"EMCI TV est une chaîne de télévision chrétienne évangélique francophone. Les studios de la chaîne se trouvent dans la ville de Québec, Canada. Le contenu de la programmation est assez varié et provient de divers pays francophones d’Afrique, d’Europe et d’Amérique. Des clips musicaux, des enseignements bibliques, des prédications, la Bible en vidéo, des temps de prière, des reportages, des documentaires, des films ainsi que des séries y sont présentés.\",\"sources\":[\"https://emci-fr-hls.akamaized.net/hls/live/2007265/emcifrhls/index.m3u8\"],\"subtitle\":\"By Channel\",\"thumb\":\"https://www.enseignemoi-files.com/site/view/images/dyn-cache/pages/image/img/23/62/1522940482_236277_1200x630x1.f.jpg?v=2018021301\",\"title\":\"EMCI TV / Religion\"},{\"description\":\"CIS TV est une chaine tv guinéen consacré au sport et à la culture. basée à Conakry, fondé en 2016 par Mamadou Antonio Souaré. CIS TV est diffuse via le satellite Fréquence Tv 3689: Symbole 1083: Satelite eutelsat 10a ZONES DE DIFFUSION : tiers d'Afrique.\",\"sources\":[\"http://51.81.109.113:1935/CDNLIVE/CISTV/playlist.m3u8\"],\"subtitle\":\"By Channel\",\"thumb\":\"https://www.senegal7.com/wp-content/uploads/2019/03/f9180cb9286c49c4f3a6c793798b9ddf.png\",\"title\":\"CIS TV / Guinee\"},{\"description\":\"Faso TV est une initiative de Magic Communication et Médias, une société à responsabilité limitée basée à Ouagadougou, capitale du Burkina Faso. C’est une chaîne de télévision en ligne destinée à l’événementiel. Nous entendons par événementiel toutes manifestations ou activités à caractère culturel, économique, éducatif ou sportif dont l’objectif est de susciter la mobilisation, l’adhésion, l’engouement de la population ou d’un public cible au plan local, national ou international. Autrement dit, notre stratégie éditoriale consiste à faire la promotion de toutes activités qui contribuent au développement socio-économique et culturel, à l’éducation, au divertissement et au bien être de la population burkinabé et de sa diaspora.\",\"sources\":[\"https://playtv4kpro.com:5443/LiveApp/streams/163893638025530331068059.m3u8\"],\"subtitle\":\"By Channel\",\"thumb\":\"https://fasotv.net/wp-content/uploads/2019/10/logo-final-sans-slogan.png\",\"title\":\"FASO TV / Burkina Fasso \"},{\"description\":\"Plex tv une chaîne généraliste spécialisé dans la retransmissions des événement. émission et qui diffuse aussi des films, musiques, divertissement, sport, magasine etc et une multitude de programme en haute définition.\",\"sources\":[\"http://connectiktv.ddns.net:5000/plextv/@plextv/playlist.m3u8\"],\"subtitle\":\"By Channel\",\"thumb\":\"https://www.lifetimepremiumaccounts.com/wp-content/uploads/2019/03/plex-logo.jpg\",\"title\":\"PLEX TV / \"},{\"description\":\"PLAY TV est une chaine de télévision musicale Camerounaise basée à Yaoundé, elle diffuse un programme 100% musicale la musique d’ici et d’ailleurs en haute définition..\",\"sources\":[\"http://connectiktv.ddns.net:5000/playtv/@playtv/playlist.m3u8\"],\"subtitle\":\"By Channel\",\"thumb\":\"http://connectik.tv/wp-content/uploads/2019/04/logo-play-tv-300x113.jpg\",\"title\":\"PLAT TV / Cameroune \"},{\"description\":\"TVR Rennes 35 Bretagne est une chaîne de télévision locale née en mars 1987 sous le nom de TV Rennes. TVR Rennes 35 Bretagne fut inaugurée à son lancement par le président de la République, elle fut la première télévision locale créée en France elle est diffusée Canal 35 sur la TNT / Canal 30 sur Orange, Freebox et BBox / Canal 95 sur Numéricable et en direct streaming sur son site Internet.\",\"sources\":[\"https://streamtv.cdn.dvmr.fr/TVR/ngrp:tvr.stream_all/master.m3u8\"],\"subtitle\":\"By Channel\",\"thumb\":\"https://w0.pngwave.com/png/890/19/tvr-tv-rennes-35-logo-television-channel-tvr-t350-png-clip-art.png\",\"title\":\"Rennes TV / France Sports \"},{\"description\":\"Chaîne franco-marocaine basée à Tanger et destinée au Maghreb. Programmation culturelle avec information, reportages et documentaires. En arabe et en Français. Fin 2010, elle a également commencé à diffuser à la télévision analogique terrestre au Maroc, en plus de la télévision numérique par satellite. Il a été rebaptisé Medi 1 TV.\",\"sources\":[\"http://streaming.medi1tv.com/live/Medi1tvmaghreb.sdp/chunklist.m3u8\"],\"subtitle\":\"By Channel\",\"thumb\":\"http://www.logotypes101.com/logos/807/C85CC3231EAD10CEC61C182C7DED072D/medi1tvlogo.png\",\"title\":\"Medi 1 TV / Maroc\"},{\"description\":\"M24 Television est la chaîne d’info en continu de l’agence marocaine de presse (MAP). Une chaîne qui couvre l’actualité marocaine et internationale. Une chaîne fidèle aux valeurs de la MAP qui est le premier producteur d'information au Maroc. Le fil de la MAP se décline en cinq langues : Arabe, Amazighe, Français, Anglais et Espagnol. la MAP présente dans toutes les régions du Royaume et dans les cinq continents, elle fournit tous les médias en informations, reportages, analyses et portraits.\",\"sources\":[\"https://www.m24tv.ma/live/smil:OutStream1.smil/chunklist.m3u8\"],\"subtitle\":\"By Channel\",\"thumb\":\"https://is5-ssl.mzstatic.com/image/thumb/Purple114/v4/e4/c6/3e/e4c63e4e-b8ff-a14e-cacd-3593f09c1f78/source/512x512bb.jpg\",\"title\":\"M24 TV / Maroc\"},{\"description\":\"La chaîne Al Magharibia diffuse des programmes politiques, sociaux et économiques depuis sa base privée de Londres. La chaîne est diffusée en arabe et s'adresse aux pays du Mahgreb, l'Algérie en particulier. Le ton d'Al Magharibia est fermement basé sur un discours politique et idéologique. Le ton d'Al Magharibia est fermement basé sur un discours politique et idéologique.\",\"sources\":[\"https://cdnamd-hls-globecast.akamaized.net/live/ramdisk/al_maghribia_snrt/hls_snrt/index.m3u8\"],\"subtitle\":\"By Channel\",\"thumb\":\"https://cdn.sat.tv/wp-content/uploads/2016/05/SNRT-AlMaghribia.png\",\"title\":\"Al maghribia TV / Maroc\"},{\"description\":\"Athaqafia TV est une chaîne gratuite disponible sur le satellite Hotbird et propose une gamme de programmes allant des documentaires et des programmes éducatifs ainsi que de la musique, des dessins animés et des divertissements familiaux. La chaîne s'adresse principalement aux familles et est diffusée principalement en arabe mais parfois en langue française et berbère. La chaîne a été créée par la société de production marocaine appartenant à l'État, SNRT.\",\"sources\":[\"http://cdn-hls.globecast.tv/live/ramdisk/arrabiaa/hls_snrt/index.m3u8\"],\"subtitle\":\"By Channel\",\"thumb\":\"https://cdn.sat.tv/wp-content/uploads/2016/05/SNRTAThaqafia.png\",\"title\":\"Athaqafia TV / Maroc\"},{\"description\":\"Al-Fath channel is the property of Sheikh Ahmed Awad Abdo, and is considered the satellite channel of the Islamic religious channels that follow the Sunnah, and offers a series of programs interpretation for the Quran Al-Kareem, and many true prophetic and the CEO is Prof. Ahmed Abdou Awad, the Islamic Scholar.\",\"sources\":[\"https://svs.itworkscdn.net/alfatehlive/fatehtv/playlist.m3u8\"],\"subtitle\":\"By Channel\",\"thumb\":\"https://live-tv-channels.org/pt-data/uploads/logo/eg-alfath-tv.jpg\",\"title\":\"Al Fath TV / Egypte\"},{\"description\":\"Al Hayah started broadcasting in 2008 during the last years of Mubarak's rule, which saw a revival in the ownership of the media. It was founded by businessman El Sayed El Badawi as part of Al Hayah Channels Network. El Badawi assumed the presidency of the Wafd Party from May 2010 until March 2018. El Badawi is one of the businessmen who played political roles in addition to owning media outlets, such as Al Dostor (link to profile). \",\"sources\":[\"http://media.islamexplained.com:1935/live/_definst_mp4:ahme.stream_360p/playlist.m3u8\"],\"subtitle\":\"By Channel\",\"thumb\":\"https://i.pinimg.com/474x/76/1a/a4/761aa46eb54c24d21ca5866f21442426.jpg\",\"title\":\"Al hayat TV / Maroc\"},{\"description\":\"The El Sharq channel broadcasts Various programs, from Egypt country in the Arabic language, last updated time on March 25, 2016. El Sharq which considered to view as a Free to air satellite TV channel.\",\"sources\":[\"https://mn-nl.mncdn.com/elsharq_live/live/playlist.m3u8\"],\"subtitle\":\"By Channel\",\"thumb\":\"https://egytvs.com/wp-content/uploads/2014/06/al-sharq-200x75.jpg\",\"title\":\"Al sharq TV / Maroc\"},{\"description\":\"Guinée TV1 est une chaine de télévision généraliste Guinéenne basée à Conakry. Elle diffuse de la musique des informations des documentaires. des programmes religieux et autre.\",\"sources\":[\"https://playtv4kpro.com:5443/LiveApp/streams/664825404798849938149128.m3u8\"],\"subtitle\":\"By Channel\",\"thumb\":\"https://gtv1love.com/wp-content/uploads/2019/10/logo4.png\",\"title\":\"GUINEE TV / Guinee \"},{\"description\":\"Inooro TV chaînes de télévision généraliste Kényane en langue Kikuyu lancé le 26 octobre 2015. Elle diffuse 24 heures sur 24. Inooro TV est une chaine du groupe Royal Media Services (RMS).\",\"sources\":[\"https://vidcdn.vidgyor.com/inoorotv-origin/liveabr/playlist.m3u8\"],\"subtitle\":\"By Channel\",\"thumb\":\"https://royalmedia.s3.amazonaws.com/wp-content/uploads/2019/10/inoorotv.jpg\",\"title\":\"INOORO TV / Kenya \"},{\"description\":\"Citizen TV Kenya est une station nationale Kényane détenue par Royal Media Services Ltd.Elle diffuse principalement en anglais et en swahili. Elle a été lancé en 1999 et relancé en Juin 2006 c’est la station de télévision avec la plus forte croissance au Kenya avec un fort accent sur ??la programmation locale Basé au Communication Centre,Maalim Juma Road,Off Dennis Pritt Road, Nairobi, 7498-00300.\",\"sources\":[\"https://vidcdn.vidgyor.com/citizentv-origin/liveabr/playlist.m3u8\"],\"subtitle\":\"By Channel\",\"thumb\":\"https://www.innocirc.com/wp-content/uploads/2017/07/citizen.jpg\",\"title\":\"CITIZEN TV / Kenya \"},{\"description\":\"RTJ TV ( Radio Télévision Jeune ) est une chaine de télévision culturel Sénégalaise. Elle diffuse des programme de divertissement( WatZapp le Zapping), Musique (playlist Mix Afro Mix Zouk Mix Hip Hop Musique sénégalaise), bien être, documentaire, Émission éducatif qui consiste à joindre l’utile à l’agréable à travers l'éducation des enfants, interviews ect.\",\"sources\":[\"http://public.acangroup.org:1935/output/rtjtv.stream/playlist.m3u8\"],\"subtitle\":\"By Channel\",\"thumb\":\"http://rtjtv.com/images/rtjtv.png\",\"title\":\"RTJ TV / Senegal\"},{\"description\":\"Mouride tv est une chaine de télévision généraliste sénégalaise basé à touba, Senegal. Mouride tv c’est la télévision base au coeur des événement mourides magal, thiante, wakhtane, khassaide, kourel en direct..\",\"sources\":[\"http://51.81.109.113:1935/Livemouridetv/mouridetv/playlist.m3u8\"],\"subtitle\":\"By Channel\",\"thumb\":\"https://live-tv-channels.org/pt-data/uploads/logo/sn-mouride-tv.jpg\",\"title\":\"MOURIDE TV / Senegal\"},{\"description\":\"ANN TV est une chaîne d’Informations générales et de Divertissement. Elle est produite par JUUF COMMUNICATION et diffusée sur le site d’informations générales multimédia ANN. La plateforme ANN comporte un journal en ligne (ANN), une WebRadio (ANN FM) et une WebTV (ANN TV).\",\"sources\":[\"http://vod.acangroup.org:1935/output/anntv.stream/playlist.m3u8\"],\"subtitle\":\"By Channel\",\"thumb\":\"https://an-news.com/wp-content/uploads/2019/05/aan.png\",\"title\":\"ANN TV / Senegal\"},{\"description\":\"Louga TV est une chaine culturelle et religieuse Senegalaise qui se veut attractive et objective. En temps réel, elle produit des vidéos de qualité qui tiennent compte de la spécificité de l’information et de la crédibilité de ses sources. Également, l’équipe technique et rédactionnelle est constituée de techniciens chevronnés aux compétences avérées. Dans son approche des enjeux de l’information capitale, la chaine louga tv offre des vidéos qui informent, forment et transforment le citoyen dans l’approche de son monde en devenir..\",\"sources\":[\"http://ira.dyndns.tv:8080/live/louga/CAnhiMtR6C/1708.m3u8\"],\"subtitle\":\"By Channel\",\"thumb\":\"https://i.ytimg.com/vi/3Gnt2_SndXw/maxresdefault.jpg\",\"title\":\"LOUGA TV / Senegal\"},{\"description\":\"Dieu TV est une chaine de télévision généraliste chrétienne pour la Francophonie.Elle proclame la Bonne Nouvelle du Salut en Jésus-Christ pour atteindre les 400 millions de Francophones dans le monde. Fondée en 2007. Dieu TV diffuse sur le Satellite Eutelsat 5WA (Europe et Afrique du Nord), et le Satellite Amos 5 et en streaming sur son site interne\",\"sources\":[\"https://katapy.hs.llnwd.net/dieutvwza1/DIEUTVLIVE/smil:dieutv.smil/playlist.m3u8\"],\"subtitle\":\"By Channel\",\"thumb\":\"https://live-tv-channels.org/pt-data/uploads/logo/fr-dieu-tv.jpg\",\"title\":\"DIEU TV / Religion \"},{\"description\":\"Radio Télévision Hirondelle : La nouvelle couleur du Sud. Elle diffuse des émissions pour divers catégories nouvelles locales, nationales et internationales le sport du monde Entier la musique et videos clips Promotions des artistes Locaux.\",\"sources\":[\"http://play.acwstream.com:2000/live/acw_01/index.m3u8\"],\"subtitle\":\"By Channel\",\"thumb\":\"https://radiotelehirondelle.com/wp-content/uploads/2020/08/logo.png\",\"title\":\"HIRONDELLE TV\"},{\"description\":\"BEL TV est une station de télévision haïtienne qui diffuse sur le web via diverses plateformes et par câble. Notre vision est de créer une télévision standard dont la qualité du programme est aussi instructive que divertissante. À cote de cette vision, BEL TV s’est fixé pour mission de promouvoir la Culture haïtienne, à savoir le Cinéma, la musique, la littérature et bien plus encore, ce à travers la Caraïbe et le monde entier. BEL TV c’est une toute autre façon de faire la télé.\",\"sources\":[\"https://hbiptv.live/player/sakchotv/index.m3u8\"],\"subtitle\":\"By Channel\",\"thumb\":\"https://image.roku.com/developer_channels/prod/1de97a21d9bd773a115a5467974be0b859d1157256316bd1e72ed48965c0191a.png\",\"title\":\"BEL TV / Haiti \"},{\"description\":\"The Middle East Broadcasting Center (MBC) Group is the first private free-to-air satellite broadcasting company in the Arab World. It was launched in London in 1991 and later moved to its headquarters in Dubai in 2002. MBC Group provides multiple channels of information, interaction and entertainment. MBC Group includes 10 television channels: MBC1 (general family entertainment via terrestrial), MBC2 and MBC MAX (24-hour movies), MBC3 (children’s entertainment), MBC4 (entertainment for new Arab women via terrestrial).\",\"sources\":[\"https://shls-masr-prod.shahid.net/masr-prod.m3u8\"],\"subtitle\":\"By Channel\",\"thumb\":\"https://upload.wikimedia.org/wikipedia/commons/7/7c/MBC_Masr_Logo.png\",\"title\":\"MBC MSR 1 / Egypte\"},{\"description\":\"The Middle East Broadcasting Center (MBC) Group is the first private free-to-air satellite broadcasting company in the Arab World. It was launched in London in 1991 and later moved to its headquarters in Dubai in 2002. MBC Group provides multiple channels of information, interaction and entertainment. MBC Group includes 10 television channels: MBC1 (general family entertainment via terrestrial), MBC2 and MBC MAX (24-hour movies), MBC3 (children’s entertainment), MBC4 (entertainment for new Arab women via terrestrial).\",\"sources\":[\"https://shls-masr2-prod.shahid.net/masr2-prod.m3u8\"],\"subtitle\":\"By Channel\",\"thumb\":\"https://i.pinimg.com/564x/01/3c/21/013c218c3ce9b3cfc883bdcdb121e5e6.jpg\",\"title\":\"MBC MSR 2 / Egypte\"},{\"description\":\"Mekameleen TV is an Egyptian opposition TV Channel. It is based in Istanbul. It's known to be supportive of the Muslim Brotherhood\",\"sources\":[\"https://mn-nl.mncdn.com/mekameleen/smil:mekameleentv.smil/playlist.m3u8\"],\"subtitle\":\"By Channel\",\"thumb\":\"https://i.pinimg.com/564x/12/5b/1f/125b1febb8ada3a4f83475c2643adeb7.jpg\",\"title\":\"Mekameleen TV / Egypte\"},{\"description\":\"The Kingdome Sat is television from Egypte founded in 2009 by Dr. Michael Yousef, the KingdomSat channel aims to introduce written teachings from the East and West to complement the vision given by God to the loss of the faraway and to encourage believers in the Middle East and North Africa region.\",\"sources\":[\"https://bcovlive-a.akamaihd.net/87f7c114719b4646b7c4263c26515cf3/eu-central-1/6008340466001/profile_0/chunklist.m3u8\"],\"subtitle\":\"By Channel\",\"thumb\":\"https://live-tv-channels.org/pt-data/uploads/logo/eg-kingdom-sat-channe.jpg\",\"title\":\"The Kingdom Sat TV / Egypt\"},{\"description\":\"D5 TV Music est une nouvelle chaîne de télévision musicale internationale, elle est dédiée aux musiques et aux cultures urbaines du monde entier (Rap, R&B, Hip-Hop, Pop, Rai, Naija, Olschool etc.) ciblant un public très large. D5Music entend devenir la chaîne référence musicale des 5 continents\",\"sources\":[\"https://www.rti.ci/direct_rti2.html\"],\"subtitle\":\"By Channel\",\"thumb\":\"https://d5music.tv/wp-content/uploads/2020/07/cropped-LOGO-D5-MUSIC-BLANCROUGE_carre-192x192.png\",\"title\":\"RTI 2 TV\"},{\"description\":\"A2iTV la chaine 100% immigration Senegalais, qui est née de la synergie de personnes qui ont décidé d’ unir leur force, leur compétence et leur ressources matérielles et financiéres pour participer avec l’aide des nouvelles technologies à informer sur l’ immigration .\",\"sources\":[\"http://51.158.31.93:1935/a2itv/myStream/playlist.m3u8\"],\"subtitle\":\"By Channel\",\"thumb\":\"http://www.centraltv.fr/wp-content/uploads/A2itv_logo.jpg\",\"title\":\"A2i TV / Senegal\"},{\"description\":\"A2i music est une chaine culturelle destinée à la Diaspora avec des programmes musicales et des dramatiques. A2i music couvre aussi les autres parties du monde, notament les Etats Unis, le Canada, l’Asie, etc. à travers les boitiers Roku fournis par AfricaAstv, Acantv, My African pack de Invevo et Sénégal.\",\"sources\":[\"http://51.158.31.93:1935/a2itvtwo/myStream/playlist.m3u8\"],\"subtitle\":\"By Channel\",\"thumb\":\"http://www.centraltv.fr/wp-content/uploads/a2i-music_logo.jpg\",\"title\":\"A2i TV / Music \"},{\"description\":\"A2i tv Relegion est une chaine culturelle destinée à la Diasporat senegalais avec des programme chretiens.\",\"sources\":[\"http://51.158.31.93:1935/a2itvthree/myStream/playlist.m3u8\"],\"subtitle\":\"By Channel\",\"thumb\":\"https://lh3.googleusercontent.com/wwumXcAbY83D0q-NgUv2veS-p54FJTq6LAvsPRwYwWo-70ggeDkCM1VdhqhibRQNk4o=s180-rw\",\"title\":\"A2i TV / Religion \"},{\"description\":\"Love World Plus TV is your Christian faith and lifestyle channel destined to bring a new level of dynamism into Christian television programming through satellite and the internet. The reach of LoveWorld Plus is limitless.\",\"sources\":[\"http://hls.live.metacdn.com/2450C7/bedkcjfty/lwplus_628.m3u8\"],\"subtitle\":\"By Channel\",\"thumb\":\"https://d3c5pcohbexzc4.cloudfront.net/videos/thumbs/be214-loveworldplus.jpg\",\"title\":\"Love World Plus TV\"},{\"description\":\"A2i naija est une nouvelle chaîne de télévision musicale internationale, elle est dédiée aux musiques et aux cultures urbaines du monde entier (Rap, R&B, Hip-Hop, Pop, Rai, Naija, Olschool etc.) ciblant un public très large. D5Music entend devenir la chaîne référence musicale des 5 continents\",\"sources\":[\"http://51.158.31.93:1935/devtv/myStream/playlist.m3u8\"],\"subtitle\":\"By Channel\",\"thumb\":\"https://image.winudf.com/v2/image/YTVjZW50cy5hMmlfc2NyZWVuXzVfMTUxNTk5NTEyNl8wNTQ/screen-5.jpg?fakeurl=1&type=.jpg\",\"title\":\"A2i / naija Music\"},{\"description\":\"BOK TV is an online and public access variety show and the show's log line what would happen if In Living Color and The Daily Show had a bastard child! BOKTV is what would happen and he show is split into segments: MONOLOGUE, SKETCH, ROUND TABLE, COMMERCIAL, BLACK TWITTER. create a platform of discourse that encourages exchange as opposed to polarity, and to showcase the talents of the host and other cast members.\",\"sources\":[\"http://boktv.interworks.in:1935/live/boktv/playlist.m3u8\"],\"subtitle\":\"By Channel\",\"thumb\":\"https://bokradio.co.za/wp-content/uploads/2017/07/button_cameratv.jpg\",\"title\":\"BOK TV\"},{\"description\":\"Salt TV is a Christian television channel station from Uganda. Salt TV is based in Kampala. Matthew 5:13-16 (NKJV) Believers Are Salt and Light 13 You are the salt of the earth, but if the salt loses its flavor, how shall it be seasoned? It is then good for nothing but to be thrown out and trampled underfoot by men.\",\"sources\":[\"http://dcunilive38-lh.akamaihd.net/i/dclive_1@692676/index_150_av-p.m3u8\"],\"subtitle\":\"By Channel\",\"thumb\":\"https://www.saltmedia.ug/images/NOV/SALT-TV.jpg\",\"title\":\"Salt TV/ Uganda\"},{\"description\":\"TFM is Senegal’s privately-owned television channel.Owned by Senegalese musician Youssou N Dour, who owns a major media group in Dakar.\",\"sources\":[\"http://46.105.114.82/tfm_senegal.m3u8\"],\"subtitle\":\"By Channel\",\"thumb\":\"https://3.bp.blogspot.com/-eyo4UyKqjlI/WWTobvXxLqI/AAAAAAAAB_g/BFn1KiR6vcYQMilgX4nWhGJHbHMEP_l0ACLcBGAs/s1600/tfm%2Bsenegal.png\",\"title\":\"TFM TV/ Senegal\"},{\"description\":\"Africa tv1 est une télévision africaine qui travaille pour aider les peuples a se communiquer avec DIEU et surtout sensibiliser les Africains musulmans de partout.\",\"sources\":[\"http://africatv.live.net.sa:1935/live/africatv/playlist.m3u8\"],\"subtitle\":\"By Channel\",\"thumb\":\"http://www.africagroup.tv/img/bgTV1.png\",\"title\":\"Africa TV 1\"},{\"description\":\"Africa tv2 est une télévision africaine qui travaille pour aider les peuples a se communiquer avec DIEU et surtout sensibiliser les Africains musulmans de partout.\",\"sources\":[\"http://africatv.live.net.sa:1935/live/africatv2/playlist.m3u8\"],\"subtitle\":\"By Channel\",\"thumb\":\"http://www.africagroup.tv/img/bgTV2.png\",\"title\":\"Africa TV 2\"},{\"description\":\"Africa tv3 est une télévision africaine qui travaille pour aider les peuples a se communiquer avec DIEU et surtout sensibiliser les Africains de langue haoussa.\",\"sources\":[\"http://africatv.live.net.sa:1935/live/africatv3/playlist.m3u8\"],\"subtitle\":\"By Channel\",\"thumb\":\"https://www.africagroup.tv/img/bgTV3.png\",\"title\":\"Africa TV 3\"},{\"description\":\"La télévision nationale tunisienne 1 est la chaîne publique nationale tunisienne. Il a été officiellement lancé le 31 mai 1966, mais diffuse des programmes pilotes de manière irrégulière depuis octobre 1965, puis régulièrement depuis janvier 1966 et s’appelle la radio et la télévision tunisienne (ATT). Elle est devenue Channel 7 en 1992 et Tunisia 7 en 1997, mais elle est restée une filiale de la Société tunisienne de radio et de télévision jusqu’en 2008, a conservé le siège qu’elle partageait et la Société tunisienne de télévision avec ses chaînes de télévision nationales tunisiennes et La Tunisie 21 plus tard connue sous le nom de Télévision nationale tunisienne 2 est devenue son nouveau siège. Après le déclenchement de la révolution populaire tunisienne et la défection de zine El Abidine Ben Ali du pays, il est devenu Télévision nationale tunisienne.\",\"sources\":[\"http://54.36.122.126/tunisie1.m3u8\"],\"subtitle\":\"By Channel.\",\"thumb\":\"https://www.histoiredesfax.com/wp-content/uploads/2015/11/Television-nationale-watania.jpg\",\"title\":\"TUNISIA 1\"},{\"description\":\"Sahel TV est la plateforme unique, ouverte à la société civile, aux citoyens et à l'autorité locale de la ville et de sa région pour leur permettre de s’exprimer librement, proposer leurs idées et accéder à toutes les informations économiques, environnementale, culturelle, sportive. Vos idées et vos propositions sont les bienvenues.\",\"sources\":[\"http://142.44.214.231:1935/saheltv/myStream/playlist.m3u8\"],\"subtitle\":\"By Channel\",\"thumb\":\"https://mobiletv.mobibase.com/html/logo/hd/channel_ld_747.png\",\"title\":\"SAHEL TV / Tunisie\"},{\"description\":\"NIGERIA TELEVISION AUTORTEAutorité a commencé sous le nom de Western Nigerian Television Services (WNTV), qui a transmis ses premiers signaux au peuple nigérian et à toute l'Afrique le 31 octobre 1959. Au début de 1962, les trois gouvernements régionaux qui existaient au Nigéria avaient mis en place le Service de télévision nigérian (NTS). Télévision ont été créés et en 1976, l'Autorité de la télévision nigériane est née en tant que seule entité responsable de Diffusion télévisée au Nigéria.\",\"sources\":[\"http://54.38.93.93/nta.m3u8\"],\"subtitle\":\"By Channel\",\"thumb\":\"https://static.squarespace.com/static/53d2a092e4b0125510bfe57d/53d2a2c6e4b018cd23e33d7b/53d2a2c6e4b018cd23e33f6f/1362042333867/1000w/nta.jpg\",\"title\":\"NTA TV / Nigeria\"},{\"description\":\"ESPACE TV est une télévision basée à Conakry dans la commune de Matoto Kondeboungny au bord de l'autoroute Fidèle Castro (République de Guinée). La télé diffuse des informations du pays et du monde en temps réel. Des magazines axés sur les réalités des terroirs et des séries de divertissement. Détenue par le groupe Hadafo Médias, cette chaîne est la première du pays en terme d'audience; selon le rapport de Stat view international en 2019.\",\"sources\":[\"http://46.105.114.82/espacetv.m3u8\"],\"subtitle\":\"By Channel\",\"thumb\":\"https://lh3.googleusercontent.com/ric-bS2gzvt-UyrhBIEdWENN9U-fL9Bnlhv12GEYSzSkZFWEIr7hc74k83kfLPqZDk0\",\"title\":\"Espace TV / Guinée\"},{\"description\":\" Movies Now is an Indian high-definition television channel featuring Hollywood films. It was launched on 19 December 2010 with a picture quality of 1080i and 5.1 surround sound. The channel is owned by The Times Group. It has exclusive content licensing from films produced or distributed by MGM and has content licensing from Universal Studios, Walt Disney Studios, Marvel Studios, 20th Century Studios, Warner Bros and Paramount Pictures.\",\"sources\":[\"https://timesnow.airtel.tv/live/MN_pull/master.m3u8\"],\"subtitle\":\"By Channel\",\"thumb\":\"https://upload.wikimedia.org/wikipedia/en/4/49/Movies_Now_logo.png\",\"title\":\"Movies Now HD\"},{\"description\":\"Tunisie Immobilier TV, la première chaîne de l’immobilier en Tunisie Vous présente toutes les semaines, les actualités immobilières et économiques en Tunisie et dans le monde à travers des reportages.contact; E-mail:tunisieimmob@planet.tn/ Tel:(+216) 71 894500.\",\"sources\":[\"https://5ac31d8a4c9af.streamlock.net/tunimmob/myStream/chunklist.m3u8\"],\"subtitle\":\"By Channel\",\"thumb\":\"https://i2.wp.com/www.tunisieimmobiliertv.net/wp-content/uploads/2016/10/fb.jpg?fit=1024%2C500&ssl=1\",\"title\":\"Tunisie Immobilier TV\"}]}]}",
+          "Linguagem Principal": "N/A",
+          "Estrelas": 54,
+          "Licenca": "LGPL-2.1",
+          "Ultima Atualizacao": "2026-02-09T00:37:23Z",
+          "Link de Acesso": "https://github.com/bermufine/dcmp",
+          "Organizacao": false,
+          "Forks": 9,
+          "Topics": [],
+          "Data_Criacao": "2021-09-06T21:10:45Z"
+        },
+        {
+          "Nome do Repositório": "UniRideAndroid",
+          "Descricao": "Carpool Android app for University students",
+          "Linguagem Principal": "Java",
+          "Estrelas": 24,
+          "Licenca": "N/A",
+          "Ultima Atualizacao": "2026-01-21T16:15:40Z",
+          "Link de Acesso": "https://github.com/195-uniride/UniRideAndroid",
+          "Organizacao": true,
+          "Forks": 18,
+          "Topics": [],
+          "Data_Criacao": "2017-09-06T20:25:42Z"
+        },
+        {
+          "Nome do Repositório": "Unirom",
+          "Descricao": "University Management System built in JavaFX",
+          "Linguagem Principal": "Java",
+          "Estrelas": 17,
+          "Licenca": "MIT",
+          "Ultima Atualizacao": "2026-01-06T17:24:43Z",
+          "Link de Acesso": "https://github.com/zawster/Unirom",
+          "Organizacao": false,
+          "Forks": 6,
+          "Topics": [
+            "admin-dashboard",
+            "attendance",
+            "faculty-dashboard",
+            "fee-details",
+            "javafx",
+            "javafx-application",
+            "javafx-project",
+            "offered-courses",
+            "semesters",
+            "student-dashboard",
+            "study-plan",
+            "university-management"
+          ],
+          "Data_Criacao": "2019-12-13T13:38:01Z"
+        },
+        {
           "Nome do Repositório": "socialpullrequest",
           "Descricao": "Encontro voltado para unir programadores com ações sociais",
           "Linguagem Principal": "N/A",
@@ -272669,6 +273271,19 @@
           "Data_Criacao": "2021-07-28T14:22:40Z"
         },
         {
+          "Nome do Repositório": "UniRitter2015",
+          "Descricao": "Código base para a cadeira de .net, do curso de pós em metodologias ágeis da UniRitter;",
+          "Linguagem Principal": "C#",
+          "Estrelas": 4,
+          "Licenca": "GPL-2.0",
+          "Ultima Atualizacao": "2015-11-12T11:02:54Z",
+          "Link de Acesso": "https://github.com/dclucas/UniRitter2015",
+          "Organizacao": false,
+          "Forks": 20,
+          "Topics": [],
+          "Data_Criacao": "2015-06-08T01:07:57Z"
+        },
+        {
           "Nome do Repositório": "unir-noticias-scrapping",
           "Descricao": "Scrapping das notícias e comunicados dos sites dacc.unir.br e unir.br ",
           "Linguagem Principal": "Python",
@@ -272706,6 +273321,28 @@
           "Forks": 0,
           "Topics": [],
           "Data_Criacao": "2024-08-06T16:38:04Z"
+        },
+        {
+          "Nome do Repositório": "UniRide",
+          "Descricao": "An Android application offering real-time tracking and monitoring of university bus services.",
+          "Linguagem Principal": "Kotlin",
+          "Estrelas": 3,
+          "Licenca": "N/A",
+          "Ultima Atualizacao": "2026-02-01T14:12:14Z",
+          "Link de Acesso": "https://github.com/Mahmud0808/UniRide",
+          "Organizacao": false,
+          "Forks": 2,
+          "Topics": [
+            "android-application",
+            "bus-tracking",
+            "firebase",
+            "gps-location",
+            "jetpack-compose",
+            "kotlin",
+            "maps-api",
+            "university-project"
+          ],
+          "Data_Criacao": "2024-03-23T18:44:40Z"
         },
         {
           "Nome do Repositório": "UNIR-GII-TFG-Portal-Socio",
@@ -272771,6 +273408,71 @@
           "Forks": 0,
           "Topics": [],
           "Data_Criacao": "2022-07-07T14:40:36Z"
+        },
+        {
+          "Nome do Repositório": "UniRide",
+          "Descricao": "N/A",
+          "Linguagem Principal": "Objective-C",
+          "Estrelas": 2,
+          "Licenca": "N/A",
+          "Ultima Atualizacao": "2017-11-01T19:36:35Z",
+          "Link de Acesso": "https://github.com/tunaonder/UniRide",
+          "Organizacao": false,
+          "Forks": 0,
+          "Topics": [],
+          "Data_Criacao": "2016-06-15T10:32:40Z"
+        },
+        {
+          "Nome do Repositório": "UniRide",
+          "Descricao": "Aplicación multiplataforma de carpooling universitario",
+          "Linguagem Principal": "Dart",
+          "Estrelas": 2,
+          "Licenca": "N/A",
+          "Ultima Atualizacao": "2026-02-03T00:40:04Z",
+          "Link de Acesso": "https://github.com/dsavilam/UniRide",
+          "Organizacao": false,
+          "Forks": 0,
+          "Topics": [],
+          "Data_Criacao": "2025-12-06T20:14:10Z"
+        },
+        {
+          "Nome do Repositório": "UniRide-SME",
+          "Descricao": "API et objets métiers de l'application web UniRide",
+          "Linguagem Principal": "N/A",
+          "Estrelas": 2,
+          "Licenca": "GPL-3.0",
+          "Ultima Atualizacao": "2025-02-21T23:01:26Z",
+          "Link de Acesso": "https://github.com/nayren23/UniRide-SME",
+          "Organizacao": false,
+          "Forks": 0,
+          "Topics": [],
+          "Data_Criacao": "2024-01-29T09:58:06Z"
+        },
+        {
+          "Nome do Repositório": "uniritter-artigo-refatoracao-banco-de-dados",
+          "Descricao": "Trabalho Final da Pós-graduação Tecnologias Aplicadas a Sistemas de Informação com Métodos Ágeis",
+          "Linguagem Principal": "TeX",
+          "Estrelas": 2,
+          "Licenca": "N/A",
+          "Ultima Atualizacao": "2023-10-08T12:45:00Z",
+          "Link de Acesso": "https://github.com/fabriziomello/uniritter-artigo-refatoracao-banco-de-dados",
+          "Organizacao": false,
+          "Forks": 0,
+          "Topics": [],
+          "Data_Criacao": "2017-06-22T12:24:34Z"
+        },
+        {
+          "Nome do Repositório": "UniRideHub-Figma-UI-UX",
+          "Descricao": "N/A",
+          "Linguagem Principal": "N/A",
+          "Estrelas": 2,
+          "Licenca": "N/A",
+          "Ultima Atualizacao": "2025-02-20T07:20:54Z",
+          "Link de Acesso": "https://github.com/abhis40/UniRideHub-Figma-UI-UX",
+          "Organizacao": false,
+          "Forks": 0,
+          "Topics": [],
+          "Data_Criacao": "2025-02-20T06:30:19Z"
         },
         {
           "Nome do Repositório": "NLWEsport",
@@ -272938,6 +273640,19 @@
           "Data_Criacao": "2022-12-04T16:47:09Z"
         },
         {
+          "Nome do Repositório": "UniRide",
+          "Descricao": "N/A",
+          "Linguagem Principal": "Kotlin",
+          "Estrelas": 1,
+          "Licenca": "N/A",
+          "Ultima Atualizacao": "2019-10-22T21:42:56Z",
+          "Link de Acesso": "https://github.com/tayir149/UniRide",
+          "Organizacao": false,
+          "Forks": 2,
+          "Topics": [],
+          "Data_Criacao": "2019-08-13T20:26:19Z"
+        },
+        {
           "Nome do Repositório": "Miritronica",
           "Descricao": "O Miritrônica (Miriti com Eletrônica) tem como objetivo unir os avanços tecnológicos com a tradição dos brinquedos de miriti.",
           "Linguagem Principal": "Arduino",
@@ -272977,6 +273692,19 @@
           "Data_Criacao": "2020-04-21T01:26:20Z"
         },
         {
+          "Nome do Repositório": "Uniroma2Wifi",
+          "Descricao": "iOS Application that allows access to the captive network without typing everytime a username and password.",
+          "Linguagem Principal": "Objective-C",
+          "Estrelas": 1,
+          "Licenca": "N/A",
+          "Ultima Atualizacao": "2017-05-11T03:49:33Z",
+          "Link de Acesso": "https://github.com/andreeweb/Uniroma2Wifi",
+          "Organizacao": false,
+          "Forks": 0,
+          "Topics": [],
+          "Data_Criacao": "2016-04-20T19:33:22Z"
+        },
+        {
           "Nome do Repositório": "trabalhoidw0",
           "Descricao": "trabalho de idw UNIR",
           "Linguagem Principal": "HTML",
@@ -272988,6 +273716,19 @@
           "Forks": 0,
           "Topics": [],
           "Data_Criacao": "2023-07-10T20:04:56Z"
+        },
+        {
+          "Nome do Repositório": "uniroma3-diadia",
+          "Descricao": "Piccolo progetto universitario per farci accostare al mondo java con un semplice gioco di ruolo a comandi testuali",
+          "Linguagem Principal": "Java",
+          "Estrelas": 1,
+          "Licenca": "N/A",
+          "Ultima Atualizacao": "2022-03-25T09:22:23Z",
+          "Link de Acesso": "https://github.com/Matteoleme/uniroma3-diadia",
+          "Organizacao": false,
+          "Forks": 0,
+          "Topics": [],
+          "Data_Criacao": "2022-03-24T15:05:25Z"
         },
         {
           "Nome do Repositório": "UnirDividirPDF-PyPDF2",
@@ -273016,6 +273757,32 @@
           "Data_Criacao": "2020-09-19T20:47:15Z"
         },
         {
+          "Nome do Repositório": "uniritter",
+          "Descricao": "Repositório com informações, documentos, fontes do Pós-Graduação na Uniritter",
+          "Linguagem Principal": "TeX",
+          "Estrelas": 1,
+          "Licenca": "N/A",
+          "Ultima Atualizacao": "2017-06-20T14:09:36Z",
+          "Link de Acesso": "https://github.com/fabriziomello/uniritter",
+          "Organizacao": false,
+          "Forks": 0,
+          "Topics": [],
+          "Data_Criacao": "2013-04-26T23:59:02Z"
+        },
+        {
+          "Nome do Repositório": "unirevsin",
+          "Descricao": "Sinatra Unicode Reversor",
+          "Linguagem Principal": "Ruby",
+          "Estrelas": 1,
+          "Licenca": "N/A",
+          "Ultima Atualizacao": "2014-12-24T15:32:00Z",
+          "Link de Acesso": "https://github.com/rebelwarrior/unirevsin",
+          "Organizacao": false,
+          "Forks": 0,
+          "Topics": [],
+          "Data_Criacao": "2012-07-25T19:24:23Z"
+        },
+        {
           "Nome do Repositório": "Diplomado_Unir",
           "Descricao": "N/A",
           "Linguagem Principal": "Jupyter Notebook",
@@ -273040,6 +273807,32 @@
           "Forks": 0,
           "Topics": [],
           "Data_Criacao": "2020-01-19T14:30:26Z"
+        },
+        {
+          "Nome do Repositório": "UniRide",
+          "Descricao": "A carpooling app using java, realised for OOP group project.",
+          "Linguagem Principal": "Java",
+          "Estrelas": 1,
+          "Licenca": "N/A",
+          "Ultima Atualizacao": "2025-10-12T16:41:23Z",
+          "Link de Acesso": "https://github.com/ImadNait/UniRide",
+          "Organizacao": false,
+          "Forks": 0,
+          "Topics": [],
+          "Data_Criacao": "2025-04-17T16:33:05Z"
+        },
+        {
+          "Nome do Repositório": "UniRide",
+          "Descricao": "N/A",
+          "Linguagem Principal": "Pug",
+          "Estrelas": 1,
+          "Licenca": "N/A",
+          "Ultima Atualizacao": "2025-04-29T19:33:34Z",
+          "Link de Acesso": "https://github.com/bindahman/UniRide",
+          "Organizacao": false,
+          "Forks": 0,
+          "Topics": [],
+          "Data_Criacao": "2025-02-04T13:58:03Z"
         }
       ]
     },
@@ -286321,6 +287114,90 @@
       "URL Oficial": "https://www.ufra.edu.br",
       "Repositorios": [
         {
+          "Nome do Repositório": "uFrame-MVVM",
+          "Descricao": "uFrame MVVM Framework for Unity3D",
+          "Linguagem Principal": "C#",
+          "Estrelas": 473,
+          "Licenca": "N/A",
+          "Ultima Atualizacao": "2025-12-23T07:56:01Z",
+          "Link de Acesso": "https://github.com/InvertGames/uFrame-MVVM",
+          "Organizacao": true,
+          "Forks": 118,
+          "Topics": [],
+          "Data_Criacao": "2014-05-11T01:29:15Z"
+        },
+        {
+          "Nome do Repositório": "uFrame",
+          "Descricao": "N/A",
+          "Linguagem Principal": "C#",
+          "Estrelas": 82,
+          "Licenca": "N/A",
+          "Ultima Atualizacao": "2025-11-14T03:09:55Z",
+          "Link de Acesso": "https://github.com/micahosborne/uFrame",
+          "Organizacao": false,
+          "Forks": 18,
+          "Topics": [],
+          "Data_Criacao": "2016-04-17T19:40:10Z"
+        },
+        {
+          "Nome do Repositório": "uFrame.ECS",
+          "Descricao": "uFrame ECS Framework",
+          "Linguagem Principal": "C#",
+          "Estrelas": 50,
+          "Licenca": "N/A",
+          "Ultima Atualizacao": "2022-01-14T09:59:52Z",
+          "Link de Acesso": "https://github.com/uFrame/uFrame.ECS",
+          "Organizacao": true,
+          "Forks": 12,
+          "Topics": [],
+          "Data_Criacao": "2016-07-11T01:22:35Z"
+        },
+        {
+          "Nome do Repositório": "uFrame.MVVM",
+          "Descricao": "uFrame MVVM Framework",
+          "Linguagem Principal": "C#",
+          "Estrelas": 41,
+          "Licenca": "N/A",
+          "Ultima Atualizacao": "2024-06-30T10:53:03Z",
+          "Link de Acesso": "https://github.com/uFrame/uFrame.MVVM",
+          "Organizacao": true,
+          "Forks": 14,
+          "Topics": [],
+          "Data_Criacao": "2016-07-11T01:22:12Z"
+        },
+        {
+          "Nome do Repositório": "uFrame.ECS",
+          "Descricao": "Entity Component System For Unity3D",
+          "Linguagem Principal": "C#",
+          "Estrelas": 17,
+          "Licenca": "N/A",
+          "Ultima Atualizacao": "2023-03-04T17:03:00Z",
+          "Link de Acesso": "https://github.com/InvertGames/uFrame.ECS",
+          "Organizacao": true,
+          "Forks": 9,
+          "Topics": [],
+          "Data_Criacao": "2015-09-13T02:50:25Z"
+        },
+        {
+          "Nome do Repositório": "uFrame",
+          "Descricao": "an experimental approach to make floating windows in unity based on Unity UI",
+          "Linguagem Principal": "C#",
+          "Estrelas": 14,
+          "Licenca": "MIT",
+          "Ultima Atualizacao": "2025-11-27T07:54:27Z",
+          "Link de Acesso": "https://github.com/cemuka/uFrame",
+          "Organizacao": false,
+          "Forks": 1,
+          "Topics": [
+            "framework",
+            "ugui",
+            "ui",
+            "unity",
+            "unity3d"
+          ],
+          "Data_Criacao": "2020-02-02T13:33:58Z"
+        },
+        {
           "Nome do Repositório": "UFrameIT",
           "Descricao": "The current Unity-based implementation of the FrameIT approach",
           "Linguagem Principal": "HTML",
@@ -286340,6 +287217,45 @@
           "Data_Criacao": "2019-11-22T10:58:19Z"
         },
         {
+          "Nome do Repositório": "uframe-nodecanvas",
+          "Descricao": "Allows uFrame variables to co-exist with nodeCanvas variables",
+          "Linguagem Principal": "C#",
+          "Estrelas": 9,
+          "Licenca": "N/A",
+          "Ultima Atualizacao": "2019-12-01T08:13:58Z",
+          "Link de Acesso": "https://github.com/grofit/uframe-nodecanvas",
+          "Organizacao": false,
+          "Forks": 0,
+          "Topics": [],
+          "Data_Criacao": "2014-11-15T13:45:12Z"
+        },
+        {
+          "Nome do Repositório": "uFrame.Editor",
+          "Descricao": "N/A",
+          "Linguagem Principal": "C#",
+          "Estrelas": 5,
+          "Licenca": "N/A",
+          "Ultima Atualizacao": "2020-12-01T13:29:11Z",
+          "Link de Acesso": "https://github.com/InvertGames/uFrame.Editor",
+          "Organizacao": true,
+          "Forks": 4,
+          "Topics": [],
+          "Data_Criacao": "2015-09-13T02:39:26Z"
+        },
+        {
+          "Nome do Repositório": "uFrame.ECS.Editor",
+          "Descricao": "N/A",
+          "Linguagem Principal": "C#",
+          "Estrelas": 4,
+          "Licenca": "N/A",
+          "Ultima Atualizacao": "2016-11-26T15:56:02Z",
+          "Link de Acesso": "https://github.com/InvertGames/uFrame.ECS.Editor",
+          "Organizacao": true,
+          "Forks": 5,
+          "Topics": [],
+          "Data_Criacao": "2015-09-13T02:39:58Z"
+        },
+        {
           "Nome do Repositório": "uFrameECSDemo",
           "Descricao": "N/A",
           "Linguagem Principal": "C#",
@@ -286351,6 +287267,45 @@
           "Forks": 3,
           "Topics": [],
           "Data_Criacao": "2015-09-02T20:48:02Z"
+        },
+        {
+          "Nome do Repositório": "uFrame.ECS.Templates",
+          "Descricao": "N/A",
+          "Linguagem Principal": "C#",
+          "Estrelas": 4,
+          "Licenca": "N/A",
+          "Ultima Atualizacao": "2019-02-04T22:19:11Z",
+          "Link de Acesso": "https://github.com/InvertGames/uFrame.ECS.Templates",
+          "Organizacao": true,
+          "Forks": 2,
+          "Topics": [],
+          "Data_Criacao": "2015-09-13T04:25:50Z"
+        },
+        {
+          "Nome do Repositório": "uFrame-Porter",
+          "Descricao": "A tiny tool for porting from uFrame 1.6 (no longer support) to new version of uFrame",
+          "Linguagem Principal": "C#",
+          "Estrelas": 4,
+          "Licenca": "N/A",
+          "Ultima Atualizacao": "2019-02-14T00:41:53Z",
+          "Link de Acesso": "https://github.com/phamtanlong/uFrame-Porter",
+          "Organizacao": false,
+          "Forks": 1,
+          "Topics": [],
+          "Data_Criacao": "2016-08-01T15:14:55Z"
+        },
+        {
+          "Nome do Repositório": "uFrameMVVM",
+          "Descricao": "uFrame MVVM Graphs",
+          "Linguagem Principal": "C#",
+          "Estrelas": 3,
+          "Licenca": "N/A",
+          "Ultima Atualizacao": "2019-02-04T22:18:58Z",
+          "Link de Acesso": "https://github.com/InvertGames/uFrameMVVM",
+          "Organizacao": true,
+          "Forks": 2,
+          "Topics": [],
+          "Data_Criacao": "2015-03-07T00:21:35Z"
         },
         {
           "Nome do Repositório": "elixir-phoenix",
@@ -286421,6 +287376,19 @@
           "Data_Criacao": "2020-02-16T19:55:32Z"
         },
         {
+          "Nome do Repositório": "uFrame.MVVM.NodeCanvasPlugin",
+          "Descricao": "A plugin for uFrame which will automatically generate NC actions for get/set/check/execute ViewModel properties/commands.",
+          "Linguagem Principal": "C#",
+          "Estrelas": 2,
+          "Licenca": "N/A",
+          "Ultima Atualizacao": "2017-05-03T01:17:58Z",
+          "Link de Acesso": "https://github.com/grofit/uFrame.MVVM.NodeCanvasPlugin",
+          "Organizacao": false,
+          "Forks": 0,
+          "Topics": [],
+          "Data_Criacao": "2015-10-07T11:16:09Z"
+        },
+        {
           "Nome do Repositório": "TEC2LIC",
           "Descricao": "Repositorio da disciplina de Tecnicas de programação 2 - curso de Licenciatura em Computação - UFRA",
           "Linguagem Principal": "Python",
@@ -286471,6 +287439,19 @@
           "Forks": 0,
           "Topics": [],
           "Data_Criacao": "2024-11-21T03:41:07Z"
+        },
+        {
+          "Nome do Repositório": "UFrame",
+          "Descricao": "UFrame for Android (homepage: https://play.google.com/store/apps/details?id=vnd.blueararat.UFrame)",
+          "Linguagem Principal": "Java",
+          "Estrelas": 1,
+          "Licenca": "N/A",
+          "Ultima Atualizacao": "2019-11-22T06:08:20Z",
+          "Link de Acesso": "https://github.com/prrt714/UFrame",
+          "Organizacao": false,
+          "Forks": 0,
+          "Topics": [],
+          "Data_Criacao": "2012-08-08T20:27:49Z"
         },
         {
           "Nome do Repositório": "DevGPT-UFRA",
@@ -286536,6 +287517,19 @@
           "Forks": 0,
           "Topics": [],
           "Data_Criacao": "2024-11-18T04:00:14Z"
+        },
+        {
+          "Nome do Repositório": "UFrame16",
+          "Descricao": "The Book of uFrame - Tutorial",
+          "Linguagem Principal": "C#",
+          "Estrelas": 0,
+          "Licenca": "N/A",
+          "Ultima Atualizacao": "2015-08-03T15:42:08Z",
+          "Link de Acesso": "https://github.com/wang-yichun/UFrame16",
+          "Organizacao": false,
+          "Forks": 0,
+          "Topics": [],
+          "Data_Criacao": "2015-08-03T15:21:45Z"
         },
         {
           "Nome do Repositório": "UFRA2024",
@@ -286668,6 +287662,32 @@
           "Data_Criacao": "2022-05-03T01:30:37Z"
         },
         {
+          "Nome do Repositório": "UFrame",
+          "Descricao": "N/A",
+          "Linguagem Principal": "C#",
+          "Estrelas": 0,
+          "Licenca": "N/A",
+          "Ultima Atualizacao": "2024-04-21T05:54:29Z",
+          "Link de Acesso": "https://github.com/Ulma-S/UFrame",
+          "Organizacao": false,
+          "Forks": 0,
+          "Topics": [],
+          "Data_Criacao": "2024-04-07T09:42:23Z"
+        },
+        {
+          "Nome do Repositório": "UFrame",
+          "Descricao": "Academic Project (2022) Admin and Client",
+          "Linguagem Principal": "HTML",
+          "Estrelas": 0,
+          "Licenca": "N/A",
+          "Ultima Atualizacao": "2024-09-10T00:53:44Z",
+          "Link de Acesso": "https://github.com/Benz27/UFrame",
+          "Organizacao": false,
+          "Forks": 0,
+          "Topics": [],
+          "Data_Criacao": "2024-09-09T03:56:02Z"
+        },
+        {
           "Nome do Repositório": "projeto-ufra",
           "Descricao": "Esse e um pequeno projeto de um site para minha Universidade",
           "Linguagem Principal": "HTML",
@@ -286707,6 +287727,45 @@
           "Data_Criacao": "2015-11-08T22:22:06Z"
         },
         {
+          "Nome do Repositório": "uFrame",
+          "Descricao": " 我的框架",
+          "Linguagem Principal": "N/A",
+          "Estrelas": 0,
+          "Licenca": "N/A",
+          "Ultima Atualizacao": "2017-10-13T09:44:41Z",
+          "Link de Acesso": "https://github.com/Dingbq/uFrame",
+          "Organizacao": false,
+          "Forks": 0,
+          "Topics": [],
+          "Data_Criacao": "2017-10-13T09:44:41Z"
+        },
+        {
+          "Nome do Repositório": "uFrame",
+          "Descricao": "N/A",
+          "Linguagem Principal": "C#",
+          "Estrelas": 0,
+          "Licenca": "N/A",
+          "Ultima Atualizacao": "2016-02-21T13:35:37Z",
+          "Link de Acesso": "https://github.com/mob-ippeitakagi/uFrame",
+          "Organizacao": false,
+          "Forks": 0,
+          "Topics": [],
+          "Data_Criacao": "2016-02-21T13:34:26Z"
+        },
+        {
+          "Nome do Repositório": "team-uframe",
+          "Descricao": "N/A",
+          "Linguagem Principal": "N/A",
+          "Estrelas": 0,
+          "Licenca": "N/A",
+          "Ultima Atualizacao": "2014-12-18T14:37:21Z",
+          "Link de Acesso": "https://github.com/emur28/team-uframe",
+          "Organizacao": false,
+          "Forks": 0,
+          "Topics": [],
+          "Data_Criacao": "2014-09-15T20:15:03Z"
+        },
+        {
           "Nome do Repositório": "OndeNaUfra-Motorista",
           "Descricao": "Projeto Onde Na Ufra, aplicativo do motorista.",
           "Linguagem Principal": "JavaScript",
@@ -286731,6 +287790,19 @@
           "Forks": 0,
           "Topics": [],
           "Data_Criacao": "2023-09-18T22:15:08Z"
+        },
+        {
+          "Nome do Repositório": "uFRAME",
+          "Descricao": "A SPA zero-dependency micro MVC-framework",
+          "Linguagem Principal": "PHP",
+          "Estrelas": 0,
+          "Licenca": "MIT",
+          "Ultima Atualizacao": "2023-04-03T15:39:14Z",
+          "Link de Acesso": "https://github.com/astepanenko-turkiye/uFRAME",
+          "Organizacao": false,
+          "Forks": 0,
+          "Topics": [],
+          "Data_Criacao": "2023-03-20T22:49:57Z"
         },
         {
           "Nome do Repositório": "Aula-Web-Ufra",
@@ -286772,6 +287844,19 @@
           "Data_Criacao": "2015-06-09T19:16:52Z"
         },
         {
+          "Nome do Repositório": "uFramePractice",
+          "Descricao": "uFrame",
+          "Linguagem Principal": "C#",
+          "Estrelas": 0,
+          "Licenca": "N/A",
+          "Ultima Atualizacao": "2015-10-30T11:33:55Z",
+          "Link de Acesso": "https://github.com/masaaania/uFramePractice",
+          "Organizacao": false,
+          "Forks": 0,
+          "Topics": [],
+          "Data_Criacao": "2015-10-30T11:18:49Z"
+        },
+        {
           "Nome do Repositório": "DevWebUfra",
           "Descricao": "Servlet e JSP para atividade da disciplina de Desenvolvimento Web - UFRA",
           "Linguagem Principal": "Java",
@@ -286809,6 +287894,19 @@
           "Forks": 0,
           "Topics": [],
           "Data_Criacao": "2015-04-01T19:25:42Z"
+        },
+        {
+          "Nome do Repositório": "uFrameDoc",
+          "Descricao": "A document site for uFrame",
+          "Linguagem Principal": "HTML",
+          "Estrelas": 0,
+          "Licenca": "N/A",
+          "Ultima Atualizacao": "2016-07-03T12:29:39Z",
+          "Link de Acesso": "https://github.com/sdotyxz/uFrameDoc",
+          "Organizacao": false,
+          "Forks": 0,
+          "Topics": [],
+          "Data_Criacao": "2016-07-03T12:18:36Z"
         },
         {
           "Nome do Repositório": "ufra_pre_agenda",
@@ -287591,6 +288689,19 @@
           "Forks": 0,
           "Topics": [],
           "Data_Criacao": "2020-06-04T20:14:21Z"
+        },
+        {
+          "Nome do Repositório": "unilang",
+          "Descricao": "Code Compiler",
+          "Linguagem Principal": "Rust",
+          "Estrelas": 0,
+          "Licenca": "N/A",
+          "Ultima Atualizacao": "2024-02-02T20:20:52Z",
+          "Link de Acesso": "https://github.com/rhit99900/unilang",
+          "Organizacao": false,
+          "Forks": 0,
+          "Topics": [],
+          "Data_Criacao": "2024-02-02T19:01:33Z"
         },
         {
           "Nome do Repositório": "busca-bolsa-unila",
