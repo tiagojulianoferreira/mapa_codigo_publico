@@ -6,6 +6,7 @@ import re
 import nltk
 from nltk.corpus import stopwords
 import os
+from datetime import datetime
 
 # --- Configuração de Stopwords (o mesmo código anterior) ---
 try:
@@ -40,10 +41,16 @@ def preprocess_text(text):
     text = ' '.join([word for word in text.split() if word not in all_stopwords and len(word) > 2])
     return text
 
-def clusterizar_repositorios(input_file, output_file, n_clusters=15):
+def clusterizar_repositorios(input_file, output_file, n_clusters=15, top_repos_por_cluster=50):
     """
     Carrega, pré-processa, clusteriza e salva os dados dos repositórios
-    em um novo arquivo JSON, incluindo as descrições dos clusters.
+    em um novo arquivo JSON no formato especificado.
+    
+    Args:
+        input_file: Arquivo JSON de entrada com os dados dos repositórios
+        output_file: Arquivo JSON de saída
+        n_clusters: Número de clusters para o KMeans
+        top_repos_por_cluster: Número de repositórios mais populares por cluster
     """
     try:
         with open(input_file, 'r', encoding='utf-8') as f:
@@ -64,7 +71,7 @@ def clusterizar_repositorios(input_file, output_file, n_clusters=15):
         print("Não há repositórios para clusterizar. Verifique o arquivo de entrada.")
         return
 
-    # Preparar dados para o DataFrame (incluindo nome da instituição para referência)
+    # Preparar dados para o DataFrame
     repos_df_data = []
     for institution in full_data.get('institutions_data', []):
         sigla = institution.get('Sigla')
@@ -72,10 +79,17 @@ def clusterizar_repositorios(input_file, output_file, n_clusters=15):
             # Pré-processa o texto para clustering
             combined_text = f"{repo.get('Nome do Repositório', '')} {repo.get('Descricao', '')}"
             processed_text = preprocess_text(combined_text)
+            
+            # Garantir que o campo Estrelas seja numérico
+            estrelas = repo.get('Estrelas', 0)
+            if estrelas is None:
+                estrelas = 0
+            
             repos_df_data.append({
                 'text': processed_text,
-                'repo_obj': repo,  # Armazena o objeto original do repositório
-                'sigla': sigla
+                'repo_obj': repo.copy(),  # Cria uma cópia para não modificar o original
+                'sigla': sigla,
+                'estrelas': int(estrelas) if estrelas else 0
             })
     
     # Se não houver texto processado, encerra
@@ -85,7 +99,7 @@ def clusterizar_repositorios(input_file, output_file, n_clusters=15):
 
     repos_df = pd.DataFrame(repos_df_data)
 
-    # --- TF-IDF e KMeans (o mesmo código anterior) ---
+    # --- TF-IDF e KMeans ---
     tfidf_vectorizer = TfidfVectorizer(max_features=1000)
     tfidf_matrix = tfidf_vectorizer.fit_transform(repos_df['text'])
     
@@ -93,16 +107,7 @@ def clusterizar_repositorios(input_file, output_file, n_clusters=15):
     kmeans_model.fit(tfidf_matrix)
 
     # Adiciona o ID do cluster ao DataFrame
-    repos_df['Cluster_ID'] = kmeans_model.labels_ + 1 # +1 para começar do 1
-    
-    # Adiciona o ID do cluster de volta ao objeto do repositório original
-    for index, row in repos_df.iterrows():
-        repo_obj = row['repo_obj']
-        repo_obj['Cluster_ID'] = row['Cluster_ID']
-    
-    # Reorganiza o JSON completo com os novos Cluster_IDs
-    # O loop acima já atualizou os objetos 'repo_obj' que estavam no 'full_data',
-    # então 'full_data' já contém os 'Cluster_ID's.
+    repos_df['Cluster_ID'] = kmeans_model.labels_ + 1  # +1 para começar do 1
 
     # Gerar descrições dos clusters
     generated_cluster_descriptions = []
@@ -110,33 +115,77 @@ def clusterizar_repositorios(input_file, output_file, n_clusters=15):
     order_centroids = kmeans_model.cluster_centers_.argsort()[:, ::-1]
     terms = tfidf_vectorizer.get_feature_names_out()
     
+    cluster_desc_map = {}
     for i in range(n_clusters):
+        cluster_id = i + 1
         top_terms = [terms[ind] for ind in order_centroids[i, :5]]
-        description_text = f"Cluster {i+1}: {', '.join(top_terms)}"
+        description_text = f"Cluster {cluster_id}: {', '.join(top_terms)}"
         print(description_text)
-        generated_cluster_descriptions.append({"id": i + 1, "description": description_text})
+        cluster_desc_map[cluster_id] = description_text
+        generated_cluster_descriptions.append({"id": cluster_id, "description": description_text})
 
-    # --- FINAL: Salvar os dados atualizados em um novo arquivo JSON ---
-    final_output_data = {
-        "institutions_data": full_data.get('institutions_data', []),
-        "cluster_descriptions": generated_cluster_descriptions
+    # --- Preparar a saída no formato especificado ---
+    
+    # Obter a data e hora atual para data_analise
+    data_analise = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    
+    # Inicializar o dicionário de saída
+    output_data = {
+        "data_analise": data_analise
     }
+    
+    # Para cada cluster, selecionar os top repositórios por estrelas
+    for cluster_id in range(1, n_clusters + 1):
+        # Filtrar repositórios do cluster atual
+        cluster_repos = repos_df[repos_df['Cluster_ID'] == cluster_id]
+        
+        # Ordenar por estrelas (decrescente) e pegar os top N
+        top_repos = cluster_repos.nlargest(top_repos_por_cluster, 'estrelas')
+        
+        # Formatar os repositórios para o formato de saída
+        repos_formatados = []
+        for _, row in top_repos.iterrows():
+            repo = row['repo_obj']
+            repos_formatados.append({
+                "Nome do Repositório": repo.get('Nome do Repositório', ''),
+                "Descricao": repo.get('Descricao', ''),
+                "Estrelas": repo.get('Estrelas', 0),
+                "Linguagem Principal": repo.get('Linguagem Principal'),
+                "Organizacao": repo.get('Organizacao', False),
+                "Link de Acesso": repo.get('Link de Acesso', '')
+            })
+        
+        # Adicionar ao dicionário de saída
+        output_data[f"repositorios_destaque_cluster_{cluster_id}"] = repos_formatados
+        
+        # Imprimir estatísticas
+        print(f"\nCluster {cluster_id}: {len(cluster_repos)} repositórios no total, {len(repos_formatados)} destacados")
 
+    # Opcional: Incluir descrições dos clusters no arquivo de saída
+    output_data["cluster_descriptions"] = generated_cluster_descriptions
+
+    # --- Salvar o arquivo de saída ---
     try:
+        # Garantir que o diretório de saída existe
+        os.makedirs(os.path.dirname(output_file), exist_ok=True)
+        
         with open(output_file, 'w', encoding='utf-8') as f:
-            json.dump(final_output_data, f, indent=2, ensure_ascii=False)
-        print(f"\nProcessamento concluído. Repositórios com Cluster_ID e descrições de clusters salvos em '{output_file}'.")
+            json.dump(output_data, f, indent=2, ensure_ascii=False)
+        print(f"\nProcessamento concluído. Dados salvos em '{output_file}'.")
+        print(f"Total de clusters: {n_clusters}")
+        print(f"Total de repositórios processados: {len(repos_df)}")
+        print(f"Top {top_repos_por_cluster} repositórios por cluster incluídos")
+        
     except IOError as e:
         print(f"Erro ao escrever o arquivo '{output_file}': {e}")
 
 
 # --- Configurações para rodar ---
-# O arquivo de entrada deve ser o JSON que contém a estrutura completa,
-# incluindo os dados de organização. 'repositorios_federais_desduplicados.json' é um bom exemplo.
-input_json_file = 'repositorios_filtrados.json' 
-output_json_file = 'repositorios_federais_com_clusters_visualizado.json'
-N_CLUSTERS = 15 # Ajuste conforme sua análise
+input_json_file = 'repositorios_federais_filtrado_idioma_sem_stopwords.json'
+output_json_file = './dados/repositorios_federais_por_cluster.json'
+N_CLUSTERS = 15  # Número de clusters
+TOP_REPOS_POR_CLUSTER = 50  # Número de repositórios mais populares por cluster
 
 # Chama a função para iniciar o processo
 if __name__ == "__main__":
-    clusterizar_repositorios(input_json_file, output_json_file, N_CLUSTERS)
+    clusterizar_repositorios(input_json_file, output_json_file, N_CLUSTERS, TOP_REPOS_POR_CLUSTER)

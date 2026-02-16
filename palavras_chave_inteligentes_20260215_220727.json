@@ -1,0 +1,1410 @@
+{
+  "timestamp_consulta": "2026-02-15T18:42:23.975540",
+  "institutions_keywords": [
+    {
+      "Sigla": "UFRJ",
+      "Palavras_Chave": [
+        "trabalho",
+        "desenvolvido",
+        "universidade federal",
+        "projeto",
+        "dados",
+        "federal",
+        "curso",
+        "ufrj",
+        "para",
+        "sistemas",
+        "universidade",
+        "disciplina",
+        "final",
+        "project",
+        "course"
+      ]
+    },
+    {
+      "Sigla": "USP",
+      "Palavras_Chave": [
+        "this",
+        "https",
+        "button",
+        "projeto",
+        "style",
+        "usp",
+        "usps",
+        "class",
+        "function",
+        "href",
+        "null",
+        "target",
+        "return",
+        "universidade",
+        "disciplina"
+      ]
+    },
+    {
+      "Sigla": "UFMG",
+      "Palavras_Chave": [
+        "trabalho",
+        "desenvolvido",
+        "universidade federal",
+        "software",
+        "engenharia",
+        "projeto",
+        "dados",
+        "federal",
+        "curso",
+        "para",
+        "sistemas",
+        "universidade",
+        "disciplina",
+        "project",
+        "ufmg"
+      ]
+    },
+    {
+      "Sigla": "UNB",
+      "Palavras_Chave": [
+        "trabalho",
+        "software",
+        "engenharia",
+        "brasília",
+        "projeto",
+        "unblock",
+        "curso",
+        "unb",
+        "paulo",
+        "para",
+        "sistemas",
+        "universidade",
+        "disciplina",
+        "universidade brasília",
+        "unbound",
+        "python"
+      ]
+    },
+    {
+      "Sigla": "UFC",
+      "Palavras_Chave": [
+        "http",
+        "english",
+        "token",
+        "group",
+        "federal",
+        "live",
+        "movie",
+        "extinf",
+        "logo",
+        "title",
+        "bgapp",
+        "video",
+        "universidade",
+        "play",
+        "ufc"
+      ]
+    },
+    {
+      "Sigla": "UFPE",
+      "Palavras_Chave": [
+        "trabalho",
+        "universidade federal",
+        "engenharia",
+        "software",
+        "projeto",
+        "dados",
+        "federal",
+        "curso",
+        "cin",
+        "para",
+        "sistemas",
+        "universidade",
+        "ufpe",
+        "disciplina",
+        "project"
+      ]
+    },
+    {
+      "Sigla": "UFRGS",
+      "Palavras_Chave": [
+        "trabalho",
+        "desenvolvido",
+        "universidade federal",
+        "projeto",
+        "dados",
+        "federal",
+        "curso",
+        "para",
+        "sistemas",
+        "universidade",
+        "project",
+        "disciplina",
+        "ufrgs",
+        "final",
+        "course"
+      ]
+    },
+    {
+      "Sigla": "UFPR",
+      "Palavras_Chave": [
+        "trabalho",
+        "desenvolvido",
+        "universidade federal",
+        "sistema",
+        "projeto",
+        "dados",
+        "federal",
+        "curso",
+        "para",
+        "sistemas",
+        "campus",
+        "ufpr",
+        "universidade",
+        "disciplina",
+        "desenvolvimento"
+      ]
+    },
+    {
+      "Sigla": "UFSC",
+      "Palavras_Chave": [
+        "trabalho",
+        "desenvolvido",
+        "universidade federal",
+        "ufscar",
+        "projeto",
+        "dados",
+        "federal",
+        "curso",
+        "para",
+        "sistemas",
+        "universidade",
+        "disciplina",
+        "final",
+        "project",
+        "ufsc"
+      ]
+    },
+    {
+      "Sigla": "UFBA",
+      "Palavras_Chave": [
+        "trabalho",
+        "desenvolvido",
+        "universidade federal",
+        "engenharia",
+        "sistema",
+        "ufba",
+        "projeto",
+        "dados",
+        "federal",
+        "curso",
+        "para",
+        "sistemas",
+        "campus",
+        "universidade",
+        "disciplina"
+      ]
+    },
+    {
+      "Sigla": "UFF",
+      "Palavras_Chave": [
+        "trabalho",
+        "desenvolvido",
+        "universidade federal",
+        "uffs",
+        "projeto",
+        "dados",
+        "federal",
+        "curso",
+        "para",
+        "sistemas",
+        "uff",
+        "campus",
+        "universidade",
+        "disciplina",
+        "project"
+      ]
+    },
+    {
+      "Sigla": "UFG",
+      "Palavras_Chave": [
+        "trabalho",
+        "desenvolvido",
+        "universidade federal",
+        "software",
+        "ufg",
+        "engenharia",
+        "sistema",
+        "projeto",
+        "dados",
+        "federal",
+        "curso",
+        "para",
+        "sistemas",
+        "universidade",
+        "disciplina"
+      ]
+    },
+    {
+      "Sigla": "UFPA",
+      "Palavras_Chave": [
+        "trabalho",
+        "ufpa",
+        "universidade federal",
+        "engenharia",
+        "desenvolvido",
+        "sistema",
+        "projeto",
+        "dados",
+        "federal",
+        "curso",
+        "para",
+        "sistemas",
+        "campus",
+        "universidade",
+        "disciplina"
+      ]
+    },
+    {
+      "Sigla": "UFRN",
+      "Palavras_Chave": [
+        "trabalho",
+        "desenvolvido",
+        "universidade federal",
+        "engenharia",
+        "sistema",
+        "projeto",
+        "dados",
+        "federal",
+        "curso",
+        "para",
+        "sistemas",
+        "universidade",
+        "disciplina",
+        "ufrn",
+        "final"
+      ]
+    },
+    {
+      "Sigla": "UFES",
+      "Palavras_Chave": [
+        "trabalho",
+        "desenvolvido",
+        "universidade federal",
+        "engenharia",
+        "projeto",
+        "dados",
+        "federal",
+        "curso",
+        "para",
+        "sistemas",
+        "campus",
+        "universidade",
+        "ufes",
+        "disciplina",
+        "course"
+      ]
+    },
+    {
+      "Sigla": "UFPB",
+      "Palavras_Chave": [
+        "trabalho",
+        "desenvolvido",
+        "universidade federal",
+        "engenharia",
+        "projeto",
+        "dados",
+        "federal",
+        "ufpb",
+        "curso",
+        "para",
+        "sistemas",
+        "campus",
+        "universidade",
+        "disciplina",
+        "project"
+      ]
+    },
+    {
+      "Sigla": "UFPI",
+      "Palavras_Chave": [
+        "trabalho",
+        "desenvolvido",
+        "universidade federal",
+        "engenharia",
+        "sistema",
+        "ufpi",
+        "projeto",
+        "federal",
+        "dados",
+        "curso",
+        "para",
+        "sistemas",
+        "campus",
+        "universidade",
+        "disciplina"
+      ]
+    },
+    {
+      "Sigla": "UFAM",
+      "Palavras_Chave": [
+        "trabalho",
+        "desenvolvido",
+        "universidade federal",
+        "engenharia",
+        "sistema",
+        "projeto",
+        "dados",
+        "federal",
+        "curso",
+        "para",
+        "ufam",
+        "sistemas",
+        "campus",
+        "universidade",
+        "disciplina"
+      ]
+    },
+    {
+      "Sigla": "UFAL",
+      "Palavras_Chave": [
+        "trabalho",
+        "desenvolvido",
+        "universidade federal",
+        "engenharia",
+        "sistema",
+        "projeto",
+        "dados",
+        "federal",
+        "curso",
+        "para",
+        "campus",
+        "universidade",
+        "disciplina",
+        "ufal",
+        "project"
+      ]
+    },
+    {
+      "Sigla": "UFMA",
+      "Palavras_Chave": [
+        "trabalho",
+        "desenvolvido",
+        "universidade federal",
+        "engenharia",
+        "ufma",
+        "software",
+        "sistema",
+        "projeto",
+        "dados",
+        "federal",
+        "curso",
+        "para",
+        "sistemas",
+        "universidade",
+        "disciplina"
+      ]
+    },
+    {
+      "Sigla": "UFMT",
+      "Palavras_Chave": [
+        "trabalho",
+        "desenvolvido",
+        "universidade federal",
+        "engenharia",
+        "projeto",
+        "dados",
+        "federal",
+        "curso",
+        "para",
+        "sistemas",
+        "campus",
+        "universidade",
+        "ufmt",
+        "disciplina",
+        "final"
+      ]
+    },
+    {
+      "Sigla": "UFS",
+      "Palavras_Chave": [
+        "trabalho",
+        "desenvolvido",
+        "universidade federal",
+        "ufscar",
+        "ufs",
+        "projeto",
+        "dados",
+        "federal",
+        "curso",
+        "para",
+        "campus",
+        "universidade",
+        "disciplina",
+        "project",
+        "ufsc"
+      ]
+    },
+    {
+      "Sigla": "UFRRJ",
+      "Palavras_Chave": [
+        "trabalho",
+        "desenvolvido",
+        "universidade federal",
+        "sistema",
+        "projeto",
+        "dados",
+        "federal",
+        "curso",
+        "para",
+        "sistemas",
+        "campus",
+        "universidade",
+        "ufrrj",
+        "disciplina",
+        "final"
+      ]
+    },
+    {
+      "Sigla": "UFSM",
+      "Palavras_Chave": [
+        "trabalho",
+        "desenvolvido",
+        "universidade federal",
+        "software",
+        "projeto",
+        "dados",
+        "federal",
+        "curso",
+        "para",
+        "sistemas",
+        "campus",
+        "universidade",
+        "disciplina",
+        "project",
+        "ufsm"
+      ]
+    },
+    {
+      "Sigla": "UFU",
+      "Palavras_Chave": [
+        "trabalho",
+        "desenvolvido",
+        "universidade federal",
+        "projeto",
+        "dados",
+        "federal",
+        "github",
+        "curso",
+        "para",
+        "config",
+        "sistemas",
+        "universidade",
+        "disciplina",
+        "files",
+        "ufu"
+      ]
+    },
+    {
+      "Sigla": "UEL",
+      "Palavras_Chave": [
+        "trabalho",
+        "uel",
+        "desenvolvido",
+        "engenharia",
+        "campinas",
+        "uel106",
+        "projeto",
+        "dados",
+        "curso",
+        "estadual",
+        "para",
+        "sistemas",
+        "universidade",
+        "disciplina",
+        "universidade estadual"
+      ]
+    },
+    {
+      "Sigla": "UFV",
+      "Palavras_Chave": [
+        "trabalho",
+        "desenvolvido",
+        "universidade federal",
+        "sistema",
+        "projeto",
+        "dados",
+        "federal",
+        "curso",
+        "para",
+        "sistemas",
+        "campus",
+        "universidade",
+        "disciplina",
+        "project",
+        "ufv"
+      ]
+    },
+    {
+      "Sigla": "UFMS",
+      "Palavras_Chave": [
+        "trabalho",
+        "desenvolvido",
+        "universidade federal",
+        "engenharia",
+        "sistema",
+        "projeto",
+        "dados",
+        "federal",
+        "curso",
+        "para",
+        "sistemas",
+        "campus",
+        "universidade",
+        "disciplina",
+        "ufms"
+      ]
+    },
+    {
+      "Sigla": "UNIRIO",
+      "Palavras_Chave": [
+        "trabalho",
+        "desenvolvido",
+        "universidade federal",
+        "unirio",
+        "sistema",
+        "site",
+        "projeto",
+        "federal",
+        "curso",
+        "para",
+        "sistemas",
+        "tecnologia",
+        "universidade",
+        "disciplina",
+        "unirios"
+      ]
+    },
+    {
+      "Sigla": "UNIFESP",
+      "Palavras_Chave": [
+        "trabalho",
+        "desenvolvido",
+        "universidade federal",
+        "engenharia",
+        "unifesp",
+        "projeto",
+        "dados",
+        "federal",
+        "durante",
+        "curso",
+        "para",
+        "sistemas",
+        "campus",
+        "universidade",
+        "disciplina"
+      ]
+    },
+    {
+      "Sigla": "UNICAMP",
+      "Palavras_Chave": [
+        "trabalho",
+        "desenvolvido",
+        "engenharia",
+        "unicamp",
+        "campinas",
+        "projeto",
+        "dados",
+        "curso",
+        "estadual",
+        "para",
+        "sistemas",
+        "universidade",
+        "disciplina",
+        "project",
+        "universidade estadual"
+      ]
+    },
+    {
+      "Sigla": "UERJ",
+      "Palavras_Chave": [
+        "trabalho",
+        "engenharia",
+        "estado",
+        "projeto",
+        "dados",
+        "universidade minho",
+        "curso",
+        "uerj",
+        "para",
+        "sistemas",
+        "universidade",
+        "minho",
+        "disciplina",
+        "project",
+        "python"
+      ]
+    },
+    {
+      "Sigla": "UFJF",
+      "Palavras_Chave": [
+        "trabalho",
+        "desenvolvido",
+        "universidade federal",
+        "created",
+        "projeto",
+        "dados",
+        "federal",
+        "github",
+        "curso",
+        "ufjf",
+        "para",
+        "sistemas",
+        "universidade",
+        "classroom",
+        "disciplina"
+      ]
+    },
+    {
+      "Sigla": "UFLA",
+      "Palavras_Chave": [
+        "trabalho",
+        "desenvolvido",
+        "universidade federal",
+        "engenharia",
+        "projeto",
+        "dados",
+        "federal",
+        "ufla",
+        "curso",
+        "para",
+        "sistemas",
+        "campus",
+        "universidade",
+        "disciplina",
+        "project"
+      ]
+    },
+    {
+      "Sigla": "UFOP",
+      "Palavras_Chave": [
+        "trabalho",
+        "desenvolvido",
+        "universidade federal",
+        "engenharia",
+        "projeto",
+        "dados",
+        "federal",
+        "curso",
+        "para",
+        "sistemas",
+        "campus",
+        "universidade",
+        "ufopa",
+        "disciplina",
+        "ufop"
+      ]
+    },
+    {
+      "Sigla": "UFSJ",
+      "Palavras_Chave": [
+        "trabalho",
+        "desenvolvido",
+        "universidade federal",
+        "engenharia",
+        "ufsj",
+        "sistema",
+        "projeto",
+        "dados",
+        "federal",
+        "curso",
+        "para",
+        "sistemas",
+        "campus",
+        "universidade",
+        "disciplina"
+      ]
+    },
+    {
+      "Sigla": "UFTM",
+      "Palavras_Chave": [
+        "trabalho",
+        "desenvolvido",
+        "universidade federal",
+        "engenharia",
+        "sistema",
+        "projeto",
+        "dados",
+        "federal",
+        "uftm",
+        "curso",
+        "para",
+        "sistemas",
+        "campus",
+        "universidade",
+        "disciplina"
+      ]
+    },
+    {
+      "Sigla": "UFABC",
+      "Palavras_Chave": [
+        "trabalho",
+        "desenvolvido",
+        "universidade federal",
+        "engenharia",
+        "projeto",
+        "dados",
+        "federal",
+        "curso",
+        "para",
+        "sistemas",
+        "campus",
+        "universidade",
+        "ufabc",
+        "disciplina",
+        "project"
+      ]
+    },
+    {
+      "Sigla": "UTFPR",
+      "Palavras_Chave": [
+        "trabalho",
+        "desenvolvido",
+        "software",
+        "engenharia",
+        "java",
+        "projeto",
+        "dados",
+        "federal",
+        "curso",
+        "utfpr",
+        "para",
+        "sistemas",
+        "campus",
+        "universidade",
+        "disciplina"
+      ]
+    },
+    {
+      "Sigla": "UNIFAL-MG",
+      "Palavras_Chave": [
+        "trabalho",
+        "desenvolvido",
+        "universidade federal",
+        "engenharia",
+        "projeto",
+        "dados",
+        "federal",
+        "unifal",
+        "curso",
+        "unifal-mg",
+        "para",
+        "sistemas",
+        "campus",
+        "universidade",
+        "disciplina",
+        "project"
+      ]
+    },
+    {
+      "Sigla": "UFSCAR",
+      "Palavras_Chave": [
+        "trabalho",
+        "desenvolvido",
+        "universidade federal",
+        "ufscar",
+        "engenharia",
+        "projeto",
+        "dados",
+        "federal",
+        "curso",
+        "para",
+        "sistemas",
+        "universidade",
+        "project",
+        "disciplina",
+        "desenvolvimento"
+      ]
+    },
+    {
+      "Sigla": "UEM",
+      "Palavras_Chave": [
+        "trabalho",
+        "desenvolvido",
+        "engenharia",
+        "sistema",
+        "campinas",
+        "projeto",
+        "dados",
+        "curso",
+        "estadual",
+        "para",
+        "sistemas",
+        "universidade",
+        "disciplina",
+        "uem",
+        "universidade estadual"
+      ]
+    },
+    {
+      "Sigla": "UEPG",
+      "Palavras_Chave": [
+        "trabalho",
+        "desenvolvido",
+        "software",
+        "engenharia",
+        "sistema",
+        "uepg",
+        "projeto",
+        "dados",
+        "curso",
+        "estadual",
+        "para",
+        "sistemas",
+        "universidade",
+        "disciplina",
+        "universidade estadual"
+      ]
+    },
+    {
+      "Sigla": "UNIOESTE",
+      "Palavras_Chave": [
+        "trabalho",
+        "desenvolvido",
+        "algoritmos",
+        "engenharia",
+        "campinas",
+        "projeto",
+        "dados",
+        "curso",
+        "estadual",
+        "para",
+        "sistemas",
+        "universidade",
+        "unioeste",
+        "disciplina",
+        "universidade estadual"
+      ]
+    },
+    {
+      "Sigla": "UENF",
+      "Palavras_Chave": [
+        "trabalho",
+        "desenvolvido",
+        "engenharia",
+        "sistema",
+        "campinas",
+        "uenf",
+        "projeto",
+        "dados",
+        "curso",
+        "estadual",
+        "para",
+        "sistemas",
+        "universidade",
+        "disciplina",
+        "universidade estadual"
+      ]
+    },
+    {
+      "Sigla": "UFSB",
+      "Palavras_Chave": [
+        "trabalho",
+        "desenvolvido",
+        "universidade federal",
+        "engenharia",
+        "sistema",
+        "projeto",
+        "dados",
+        "federal",
+        "curso",
+        "para",
+        "sistemas",
+        "campus",
+        "universidade",
+        "disciplina",
+        "ufsb",
+        "project"
+      ]
+    },
+    {
+      "Sigla": "UFOB",
+      "Palavras_Chave": [
+        "trabalho",
+        "desenvolvido",
+        "universidade federal",
+        "engenharia",
+        "sistema",
+        "projeto",
+        "dados",
+        "federal",
+        "curso",
+        "para",
+        "ufob",
+        "sistemas",
+        "campus",
+        "universidade",
+        "disciplina",
+        "project"
+      ]
+    },
+    {
+      "Sigla": "UFRB",
+      "Palavras_Chave": [
+        "trabalho",
+        "desenvolvido",
+        "universidade federal",
+        "engenharia",
+        "sistema",
+        "projeto",
+        "dados",
+        "federal",
+        "curso",
+        "para",
+        "sistemas",
+        "campus",
+        "universidade",
+        "disciplina",
+        "ufrb"
+      ]
+    },
+    {
+      "Sigla": "UNIVASF",
+      "Palavras_Chave": [
+        "trabalho",
+        "desenvolvido",
+        "universidade federal",
+        "engenharia",
+        "projeto",
+        "dados",
+        "federal",
+        "curso",
+        "para",
+        "sistemas",
+        "campus",
+        "universidade",
+        "disciplina",
+        "univasf",
+        "project"
+      ]
+    },
+    {
+      "Sigla": "UNIFEI",
+      "Palavras_Chave": [
+        "trabalho",
+        "desenvolvido",
+        "universidade federal",
+        "unifei",
+        "projeto",
+        "dados",
+        "federal",
+        "aula",
+        "curso",
+        "para",
+        "sistemas",
+        "campus",
+        "universidade",
+        "disciplina",
+        "final"
+      ]
+    },
+    {
+      "Sigla": "UNILAB",
+      "Palavras_Chave": [
+        "interior",
+        "https",
+        "projeto",
+        "dados",
+        "github",
+        "curso",
+        "unilabs",
+        "para",
+        "beira",
+        "final",
+        "universidade",
+        "unilab",
+        "homework",
+        "disciplina",
+        "project"
+      ]
+    },
+    {
+      "Sigla": "UNIR",
+      "Palavras_Chave": [
+        "trabalho",
+        "http",
+        "universidade federal",
+        "https",
+        "projeto",
+        "thumb",
+        "federal",
+        "sources",
+        "curso",
+        "channel",
+        "unir",
+        "description",
+        "para",
+        "universidade",
+        "disciplina"
+      ]
+    },
+    {
+      "Sigla": "UFRR",
+      "Palavras_Chave": [
+        "trabalho",
+        "desenvolvido",
+        "universidade federal",
+        "ufrr",
+        "projeto",
+        "dados",
+        "federal",
+        "curso",
+        "para",
+        "sistemas",
+        "campus",
+        "universidade",
+        "ufrrj",
+        "disciplina",
+        "final"
+      ]
+    },
+    {
+      "Sigla": "UNIFAP",
+      "Palavras_Chave": [
+        "trabalho",
+        "desenvolvido",
+        "universidade federal",
+        "engenharia",
+        "projeto",
+        "dados",
+        "federal",
+        "curso",
+        "para",
+        "sistemas",
+        "campus",
+        "universidade",
+        "disciplina",
+        "unifap",
+        "project"
+      ]
+    },
+    {
+      "Sigla": "UFAC",
+      "Palavras_Chave": [
+        "trabalho",
+        "ufac",
+        "universidade federal",
+        "desenvolvido",
+        "engenharia",
+        "projeto",
+        "dados",
+        "federal",
+        "curso",
+        "para",
+        "sistemas",
+        "campus",
+        "universidade",
+        "disciplina",
+        "project"
+      ]
+    },
+    {
+      "Sigla": "UFT",
+      "Palavras_Chave": [
+        "trabalho",
+        "desenvolvido",
+        "universidade federal",
+        "engenharia",
+        "projeto",
+        "dados",
+        "federal",
+        "curso",
+        "uft",
+        "para",
+        "sistemas",
+        "campus",
+        "universidade",
+        "disciplina",
+        "project"
+      ]
+    },
+    {
+      "Sigla": "UFCA",
+      "Palavras_Chave": [
+        "trabalho",
+        "desenvolvido",
+        "universidade federal",
+        "sistema",
+        "projeto",
+        "dados",
+        "federal",
+        "curso",
+        "para",
+        "sistemas",
+        "campus",
+        "universidade",
+        "disciplina",
+        "project",
+        "ufca"
+      ]
+    },
+    {
+      "Sigla": "UFAPE",
+      "Palavras_Chave": [
+        "trabalho",
+        "desenvolvido",
+        "universidade federal",
+        "engenharia",
+        "sistema",
+        "projeto",
+        "dados",
+        "federal",
+        "curso",
+        "ufape",
+        "para",
+        "sistemas",
+        "campus",
+        "universidade",
+        "disciplina"
+      ]
+    },
+    {
+      "Sigla": "UFRPE",
+      "Palavras_Chave": [
+        "trabalho",
+        "desenvolvido",
+        "universidade federal",
+        "sistema",
+        "projeto",
+        "dados",
+        "federal",
+        "ufrpe",
+        "curso",
+        "para",
+        "sistemas",
+        "campus",
+        "universidade",
+        "disciplina",
+        "project"
+      ]
+    },
+    {
+      "Sigla": "UFRA",
+      "Palavras_Chave": [
+        "trabalho",
+        "desenvolvido",
+        "universidade federal",
+        "uframe",
+        "ufra",
+        "projeto",
+        "dados",
+        "federal",
+        "curso",
+        "para",
+        "uframework",
+        "campus",
+        "universidade",
+        "disciplina",
+        "project"
+      ]
+    },
+    {
+      "Sigla": "UNILA",
+      "Palavras_Chave": [
+        "trabalho",
+        "desenvolvido",
+        "universidade federal",
+        "projeto",
+        "dados",
+        "federal",
+        "curso",
+        "para",
+        "unilag",
+        "unilab",
+        "campus",
+        "universidade",
+        "disciplina",
+        "unila",
+        "project"
+      ]
+    },
+    {
+      "Sigla": "UNIPAMPA",
+      "Palavras_Chave": [
+        "trabalho",
+        "desenvolvido",
+        "universidade federal",
+        "engenharia",
+        "sistema",
+        "unipampa",
+        "projeto",
+        "dados",
+        "federal",
+        "curso",
+        "para",
+        "sistemas",
+        "campus",
+        "universidade",
+        "disciplina"
+      ]
+    },
+    {
+      "Sigla": "FURG",
+      "Palavras_Chave": [
+        "trabalho",
+        "http",
+        "universidade federal",
+        "playlist",
+        "https",
+        "projeto",
+        "dados",
+        "federal",
+        "curso",
+        "para",
+        "furg",
+        "universidade",
+        "disciplina",
+        "extinf",
+        "project"
+      ]
+    },
+    {
+      "Sigla": "UFCSPA",
+      "Palavras_Chave": [
+        "trabalho",
+        "desenvolvido",
+        "universidade federal",
+        "engenharia",
+        "ufcspa",
+        "projeto",
+        "dados",
+        "federal",
+        "curso",
+        "para",
+        "sistemas",
+        "campus",
+        "universidade",
+        "disciplina",
+        "project"
+      ]
+    },
+    {
+      "Sigla": "UNIFESSPA",
+      "Palavras_Chave": [
+        "trabalho",
+        "desenvolvido",
+        "universidade federal",
+        "engenharia",
+        "projeto",
+        "dados",
+        "federal",
+        "curso",
+        "para",
+        "sistemas",
+        "campus",
+        "universidade",
+        "unifesspa",
+        "disciplina",
+        "project"
+      ]
+    },
+    {
+      "Sigla": "UFVJM",
+      "Palavras_Chave": [
+        "trabalho",
+        "desenvolvido",
+        "universidade federal",
+        "engenharia",
+        "sistema",
+        "projeto",
+        "dados",
+        "federal",
+        "curso",
+        "para",
+        "sistemas",
+        "campus",
+        "ufvjm",
+        "universidade",
+        "disciplina"
+      ]
+    },
+    {
+      "Sigla": "UFGD",
+      "Palavras_Chave": [
+        "trabalho",
+        "desenvolvido",
+        "universidade federal",
+        "engenharia",
+        "projeto",
+        "dados",
+        "federal",
+        "ufgd",
+        "curso",
+        "para",
+        "sistemas",
+        "campus",
+        "universidade",
+        "disciplina",
+        "project"
+      ]
+    },
+    {
+      "Sigla": "UFERSA",
+      "Palavras_Chave": [
+        "trabalho",
+        "desenvolvido",
+        "universidade federal",
+        "engenharia",
+        "sistema",
+        "projeto",
+        "dados",
+        "federal",
+        "curso",
+        "para",
+        "ufersa",
+        "sistemas",
+        "campus",
+        "universidade",
+        "disciplina"
+      ]
+    },
+    {
+      "Sigla": "UFJ",
+      "Palavras_Chave": [
+        "ufj",
+        "trabalho",
+        "universidade federal",
+        "desenvolvido",
+        "created",
+        "projeto",
+        "dados",
+        "federal",
+        "github",
+        "curso",
+        "ufjf",
+        "para",
+        "sistemas",
+        "universidade",
+        "classroom",
+        "disciplina"
+      ]
+    },
+    {
+      "Sigla": "UFCAT",
+      "Palavras_Chave": [
+        "trabalho",
+        "desenvolvido",
+        "universidade federal",
+        "engenharia",
+        "sistema",
+        "projeto",
+        "dados",
+        "federal",
+        "curso",
+        "para",
+        "ufcat",
+        "sistemas",
+        "campus",
+        "universidade",
+        "disciplina"
+      ]
+    }
+  ]
+}

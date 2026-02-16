@@ -81,7 +81,7 @@ def filter_repos_by_language(input_data: Dict[str, Any], accepted_languages: Lis
 
 if __name__ == "__main__":
     # Nomes dos arquivos
-    input_json_file = 'repositorios_filtrados.json'
+    input_json_file = 'repositorios_federais_geral.json'
     output_json_file = 'repositorios_federais_filtrado_idioma.json'
     
     # Lista de idiomas aceitos: 'pt' para Português, 'en' para Inglês.

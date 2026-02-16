@@ -8662,3 +8662,291 @@
 2026-02-15 21:59:04,502 - INFO -   🔎 Testando: "uft"
 2026-02-15 21:59:25,926 - INFO -      ✅ 500 resultados (eficiência: 0.30)
 2026-02-15 21:59:26,927 - INFO -   🔎 Testando: "universidade federal"
+2026-02-15 21:59:42,103 - INFO -      ✅ 500 resultados (eficiência: 0.30)
+2026-02-15 21:59:45,105 - INFO - 
+🔄 Iteração 2/3 para UFT
+2026-02-15 21:59:45,105 - INFO -   ⚠️ Sem novas queries para testar
+2026-02-15 21:59:45,106 - INFO - 
+📊 Métricas finais para UFT:
+2026-02-15 21:59:45,106 - INFO -    Total de queries testadas: 2
+2026-02-15 21:59:45,106 - INFO -    Queries com sucesso: 0
+2026-02-15 21:59:45,176 - INFO - ✅ UFT: 998 repositórios
+2026-02-15 21:59:45,176 - INFO -    Palavras-chave: trabalho, desenvolvido, universidade federal, engenharia, projeto, dados, federal, curso, uft, para
+2026-02-15 21:59:48,177 - INFO - 
+============================================================
+2026-02-15 21:59:48,177 - INFO - 🏛️  Processando UFCA - Universidade Federal do Cariri
+2026-02-15 21:59:48,177 - INFO - ============================================================
+2026-02-15 21:59:48,177 - INFO - 
+🔄 Iteração 1/3 para UFCA
+2026-02-15 21:59:48,177 - INFO -   🔎 Testando: "universidade federal"
+2026-02-15 22:00:02,092 - INFO -      ✅ 500 resultados (eficiência: 0.30)
+2026-02-15 22:00:03,093 - INFO -   🔎 Testando: "ufca"
+2026-02-15 22:00:14,451 - INFO -      ✅ 250 resultados (eficiência: 0.30)
+2026-02-15 22:00:17,453 - INFO - 
+🔄 Iteração 2/3 para UFCA
+2026-02-15 22:00:17,453 - INFO -   ⚠️ Sem novas queries para testar
+2026-02-15 22:00:17,454 - INFO - 
+📊 Métricas finais para UFCA:
+2026-02-15 22:00:17,454 - INFO -    Total de queries testadas: 2
+2026-02-15 22:00:17,454 - INFO -    Queries com sucesso: 0
+2026-02-15 22:00:17,672 - INFO - ✅ UFCA: 747 repositórios
+2026-02-15 22:00:17,672 - INFO -    Palavras-chave: trabalho, desenvolvido, universidade federal, sistema, projeto, dados, federal, curso, para, sistemas
+2026-02-15 22:00:20,673 - INFO - 
+============================================================
+2026-02-15 22:00:20,673 - INFO - 🏛️  Processando UFAPE - Universidade Federal do Agreste de Pernambuco
+2026-02-15 22:00:20,673 - INFO - ============================================================
+2026-02-15 22:00:20,673 - INFO - 
+🔄 Iteração 1/3 para UFAPE
+2026-02-15 22:00:20,674 - INFO -   🔎 Testando: "universidade federal"
+2026-02-15 22:00:36,586 - INFO -      ✅ 500 resultados (eficiência: 0.30)
+2026-02-15 22:00:37,587 - INFO -   🔎 Testando: "ufape"
+2026-02-15 22:00:44,354 - INFO -      ✅ 171 resultados (eficiência: 0.30)
+2026-02-15 22:00:47,358 - INFO - 
+🔄 Iteração 2/3 para UFAPE
+2026-02-15 22:00:47,360 - INFO -   ⚠️ Sem novas queries para testar
+2026-02-15 22:00:47,361 - INFO - 
+📊 Métricas finais para UFAPE:
+2026-02-15 22:00:47,362 - INFO -    Total de queries testadas: 2
+2026-02-15 22:00:47,362 - INFO -    Queries com sucesso: 0
+2026-02-15 22:00:47,534 - INFO - ✅ UFAPE: 666 repositórios
+2026-02-15 22:00:47,534 - INFO -    Palavras-chave: trabalho, desenvolvido, universidade federal, engenharia, sistema, projeto, dados, federal, curso, ufape
+2026-02-15 22:00:50,538 - INFO - 
+============================================================
+2026-02-15 22:00:50,538 - INFO - 🏛️  Processando UFRPE - Universidade Federal Rural de Pernambuco
+2026-02-15 22:00:50,538 - INFO - ============================================================
+2026-02-15 22:00:50,538 - INFO - 
+🔄 Iteração 1/3 para UFRPE
+2026-02-15 22:00:50,538 - INFO -   🔎 Testando: "ufrpe"
+2026-02-15 22:01:11,403 - INFO -      ✅ 500 resultados (eficiência: 0.30)
+2026-02-15 22:01:12,404 - INFO -   🔎 Testando: "universidade federal"
+2026-02-15 22:01:26,459 - INFO -      ✅ 500 resultados (eficiência: 0.30)
+2026-02-15 22:01:29,464 - INFO - 
+🔄 Iteração 2/3 para UFRPE
+2026-02-15 22:01:29,465 - INFO -   ⚠️ Sem novas queries para testar
+2026-02-15 22:01:29,467 - INFO - 
+📊 Métricas finais para UFRPE:
+2026-02-15 22:01:29,468 - INFO -    Total de queries testadas: 2
+2026-02-15 22:01:29,468 - INFO -    Queries com sucesso: 0
+2026-02-15 22:01:29,565 - INFO - ✅ UFRPE: 999 repositórios
+2026-02-15 22:01:29,566 - INFO -    Palavras-chave: trabalho, desenvolvido, universidade federal, sistema, projeto, dados, federal, ufrpe, curso, para
+2026-02-15 22:01:32,570 - INFO - 
+============================================================
+2026-02-15 22:01:32,570 - INFO - 🏛️  Processando UFRA - Universidade Federal Rural da Amazônia
+2026-02-15 22:01:32,570 - INFO - ============================================================
+2026-02-15 22:01:32,570 - INFO - 
+🔄 Iteração 1/3 para UFRA
+2026-02-15 22:01:32,570 - INFO -   🔎 Testando: "universidade federal"
+2026-02-15 22:01:47,704 - INFO -      ✅ 500 resultados (eficiência: 0.30)
+2026-02-15 22:01:48,705 - INFO -   🔎 Testando: "ufra"
+2026-02-15 22:02:02,343 - INFO -      ✅ 321 resultados (eficiência: 0.30)
+2026-02-15 22:02:05,345 - INFO - 
+🔄 Iteração 2/3 para UFRA
+2026-02-15 22:02:05,347 - INFO -   ⚠️ Sem novas queries para testar
+2026-02-15 22:02:05,348 - INFO - 
+📊 Métricas finais para UFRA:
+2026-02-15 22:02:05,349 - INFO -    Total de queries testadas: 2
+2026-02-15 22:02:05,350 - INFO -    Queries com sucesso: 0
+2026-02-15 22:02:05,443 - INFO - ✅ UFRA: 821 repositórios
+2026-02-15 22:02:05,443 - INFO -    Palavras-chave: trabalho, desenvolvido, universidade federal, uframe, ufra, projeto, dados, federal, curso, para
+2026-02-15 22:02:08,446 - INFO - 
+============================================================
+2026-02-15 22:02:08,447 - INFO - 🏛️  Processando UNILA - Universidade Federal da Integração Latino-Americana
+2026-02-15 22:02:08,447 - INFO - ============================================================
+2026-02-15 22:02:08,447 - INFO - 
+🔄 Iteração 1/3 para UNILA
+2026-02-15 22:02:08,447 - INFO -   🔎 Testando: "unila"
+2026-02-15 22:02:29,187 - INFO -      ✅ 500 resultados (eficiência: 0.30)
+2026-02-15 22:02:30,188 - INFO -   🔎 Testando: "universidade federal"
+2026-02-15 22:02:47,208 - INFO -      ✅ 500 resultados (eficiência: 0.30)
+2026-02-15 22:02:50,211 - INFO - 
+🔄 Iteração 2/3 para UNILA
+2026-02-15 22:02:50,213 - INFO -   ⚠️ Sem novas queries para testar
+2026-02-15 22:02:50,214 - INFO - 
+📊 Métricas finais para UNILA:
+2026-02-15 22:02:50,215 - INFO -    Total de queries testadas: 2
+2026-02-15 22:02:50,216 - INFO -    Queries com sucesso: 0
+2026-02-15 22:02:50,477 - INFO - ✅ UNILA: 999 repositórios
+2026-02-15 22:02:50,477 - INFO -    Palavras-chave: trabalho, desenvolvido, universidade federal, projeto, dados, federal, curso, para, unilag, unilab
+2026-02-15 22:02:53,481 - INFO - 
+============================================================
+2026-02-15 22:02:53,481 - INFO - 🏛️  Processando UNIPAMPA - Universidade Federal do Pampa
+2026-02-15 22:02:53,481 - INFO - ============================================================
+2026-02-15 22:02:53,481 - INFO - 
+🔄 Iteração 1/3 para UNIPAMPA
+2026-02-15 22:02:53,482 - INFO -   🔎 Testando: "unipampa"
+2026-02-15 22:02:59,988 - INFO -      ✅ 162 resultados (eficiência: 0.30)
+2026-02-15 22:03:00,989 - INFO -   🔎 Testando: "universidade federal"
+2026-02-15 22:03:17,112 - INFO -      ✅ 500 resultados (eficiência: 0.30)
+2026-02-15 22:03:20,116 - INFO - 
+🔄 Iteração 2/3 para UNIPAMPA
+2026-02-15 22:03:20,117 - INFO -   ⚠️ Sem novas queries para testar
+2026-02-15 22:03:20,118 - INFO - 
+📊 Métricas finais para UNIPAMPA:
+2026-02-15 22:03:20,119 - INFO -    Total de queries testadas: 2
+2026-02-15 22:03:20,120 - INFO -    Queries com sucesso: 0
+2026-02-15 22:03:20,199 - INFO - ✅ UNIPAMPA: 661 repositórios
+2026-02-15 22:03:20,200 - INFO -    Palavras-chave: trabalho, desenvolvido, universidade federal, engenharia, sistema, unipampa, projeto, dados, federal, curso
+2026-02-15 22:03:23,202 - INFO - 
+============================================================
+2026-02-15 22:03:23,202 - INFO - 🏛️  Processando FURG - Universidade Federal do Rio Grande
+2026-02-15 22:03:23,202 - INFO - ============================================================
+2026-02-15 22:03:23,202 - INFO - 
+🔄 Iteração 1/3 para FURG
+2026-02-15 22:03:23,203 - INFO -   🔎 Testando: "universidade federal"
+2026-02-15 22:03:38,349 - INFO -      ✅ 500 resultados (eficiência: 0.30)
+2026-02-15 22:03:39,351 - INFO -   🔎 Testando: "furg"
+2026-02-15 22:03:59,683 - INFO -      ✅ 500 resultados (eficiência: 0.30)
+2026-02-15 22:04:02,687 - INFO - 
+🔄 Iteração 2/3 para FURG
+2026-02-15 22:04:02,688 - INFO -   ⚠️ Sem novas queries para testar
+2026-02-15 22:04:02,691 - INFO - 
+📊 Métricas finais para FURG:
+2026-02-15 22:04:02,691 - INFO -    Total de queries testadas: 2
+2026-02-15 22:04:02,692 - INFO -    Queries com sucesso: 0
+2026-02-15 22:04:02,799 - INFO - ✅ FURG: 995 repositórios
+2026-02-15 22:04:02,799 - INFO -    Palavras-chave: trabalho, http, universidade federal, playlist, https, projeto, dados, federal, curso, para
+2026-02-15 22:04:05,803 - INFO - 
+============================================================
+2026-02-15 22:04:05,804 - INFO - 🏛️  Processando UFCSPA - Universidade Federal de Ciências da Saúde de Porto Alegre
+2026-02-15 22:04:05,804 - INFO - ============================================================
+2026-02-15 22:04:05,804 - INFO - 
+🔄 Iteração 1/3 para UFCSPA
+2026-02-15 22:04:05,805 - INFO -   🔎 Testando: "ufcspa"
+2026-02-15 22:04:09,159 - INFO -      ✅ 80 resultados (eficiência: 0.24)
+2026-02-15 22:04:10,160 - INFO -   🔎 Testando: "universidade federal"
+2026-02-15 22:04:23,772 - INFO -      ✅ 500 resultados (eficiência: 0.30)
+2026-02-15 22:04:26,776 - INFO - 
+🔄 Iteração 2/3 para UFCSPA
+2026-02-15 22:04:26,778 - INFO -   ⚠️ Sem novas queries para testar
+2026-02-15 22:04:26,779 - INFO - 
+📊 Métricas finais para UFCSPA:
+2026-02-15 22:04:26,780 - INFO -    Total de queries testadas: 2
+2026-02-15 22:04:26,780 - INFO -    Queries com sucesso: 0
+2026-02-15 22:04:27,479 - INFO - ✅ UFCSPA: 580 repositórios
+2026-02-15 22:04:27,480 - INFO -    Palavras-chave: trabalho, desenvolvido, universidade federal, engenharia, ufcspa, projeto, dados, federal, curso, para
+2026-02-15 22:04:30,486 - INFO - 
+============================================================
+2026-02-15 22:04:30,486 - INFO - 🏛️  Processando UNIFESSPA - Universidade Federal do Sul e Sudeste do Pará
+2026-02-15 22:04:30,487 - INFO - ============================================================
+2026-02-15 22:04:30,487 - INFO - 
+🔄 Iteração 1/3 para UNIFESSPA
+2026-02-15 22:04:30,487 - INFO -   🔎 Testando: "unifesspa"
+2026-02-15 22:04:32,620 - INFO -      ✅ 59 resultados (eficiência: 0.18)
+2026-02-15 22:04:33,621 - INFO -   🔎 Testando: "universidade federal"
+2026-02-15 22:04:48,930 - INFO -      ✅ 500 resultados (eficiência: 0.30)
+2026-02-15 22:04:51,934 - INFO - 
+🔄 Iteração 2/3 para UNIFESSPA
+2026-02-15 22:04:51,935 - INFO -   ⚠️ Sem novas queries para testar
+2026-02-15 22:04:51,936 - INFO - 
+📊 Métricas finais para UNIFESSPA:
+2026-02-15 22:04:51,937 - INFO -    Total de queries testadas: 2
+2026-02-15 22:04:51,937 - INFO -    Queries com sucesso: 0
+2026-02-15 22:04:52,008 - INFO - ✅ UNIFESSPA: 559 repositórios
+2026-02-15 22:04:52,008 - INFO -    Palavras-chave: trabalho, desenvolvido, universidade federal, engenharia, projeto, dados, federal, curso, para, sistemas
+2026-02-15 22:04:55,010 - INFO - 
+============================================================
+2026-02-15 22:04:55,011 - INFO - 🏛️  Processando UFVJM - Universidade Federal dos Vales do Jequitinhonha e Mucuri
+2026-02-15 22:04:55,011 - INFO - ============================================================
+2026-02-15 22:04:55,011 - INFO - 
+🔄 Iteração 1/3 para UFVJM
+2026-02-15 22:04:55,011 - INFO -   🔎 Testando: "ufvjm"
+2026-02-15 22:05:00,117 - INFO -      ✅ 105 resultados (eficiência: 0.30)
+2026-02-15 22:05:01,119 - INFO -   🔎 Testando: "universidade federal"
+2026-02-15 22:05:15,832 - INFO -      ✅ 500 resultados (eficiência: 0.30)
+2026-02-15 22:05:18,836 - INFO - 
+🔄 Iteração 2/3 para UFVJM
+2026-02-15 22:05:18,837 - INFO -   ⚠️ Sem novas queries para testar
+2026-02-15 22:05:18,837 - INFO - 
+📊 Métricas finais para UFVJM:
+2026-02-15 22:05:18,837 - INFO -    Total de queries testadas: 2
+2026-02-15 22:05:18,837 - INFO -    Queries com sucesso: 0
+2026-02-15 22:05:18,909 - INFO - ✅ UFVJM: 605 repositórios
+2026-02-15 22:05:18,909 - INFO -    Palavras-chave: trabalho, desenvolvido, universidade federal, engenharia, sistema, projeto, dados, federal, curso, para
+2026-02-15 22:05:21,913 - INFO - 
+============================================================
+2026-02-15 22:05:21,914 - INFO - 🏛️  Processando UFGD - Universidade Federal da Grande Dourados
+2026-02-15 22:05:21,914 - INFO - ============================================================
+2026-02-15 22:05:21,914 - INFO - 
+🔄 Iteração 1/3 para UFGD
+2026-02-15 22:05:21,914 - INFO -   🔎 Testando: "universidade federal"
+2026-02-15 22:05:36,276 - INFO -      ✅ 500 resultados (eficiência: 0.30)
+2026-02-15 22:05:37,277 - INFO -   🔎 Testando: "ufgd"
+2026-02-15 22:05:40,787 - INFO -      ✅ 94 resultados (eficiência: 0.28)
+2026-02-15 22:05:43,791 - INFO - 
+🔄 Iteração 2/3 para UFGD
+2026-02-15 22:05:43,792 - INFO -   ⚠️ Sem novas queries para testar
+2026-02-15 22:05:43,794 - INFO - 
+📊 Métricas finais para UFGD:
+2026-02-15 22:05:43,794 - INFO -    Total de queries testadas: 2
+2026-02-15 22:05:43,795 - INFO -    Queries com sucesso: 0
+2026-02-15 22:05:43,872 - INFO - ✅ UFGD: 594 repositórios
+2026-02-15 22:05:43,872 - INFO -    Palavras-chave: trabalho, desenvolvido, universidade federal, engenharia, projeto, dados, federal, ufgd, curso, para
+2026-02-15 22:05:46,877 - INFO - 
+============================================================
+2026-02-15 22:05:46,877 - INFO - 🏛️  Processando UFERSA - Universidade Federal Rural do Semi-Árido
+2026-02-15 22:05:46,878 - INFO - ============================================================
+2026-02-15 22:05:46,878 - INFO - 
+🔄 Iteração 1/3 para UFERSA
+2026-02-15 22:05:46,878 - INFO -   🔎 Testando: "ufersa"
+2026-02-15 22:06:02,500 - INFO -      ✅ 378 resultados (eficiência: 0.30)
+2026-02-15 22:06:03,502 - INFO -   🔎 Testando: "universidade federal"
+2026-02-15 22:06:18,023 - INFO -      ✅ 500 resultados (eficiência: 0.30)
+2026-02-15 22:06:21,026 - INFO - 
+🔄 Iteração 2/3 para UFERSA
+2026-02-15 22:06:21,027 - INFO -   ⚠️ Sem novas queries para testar
+2026-02-15 22:06:21,029 - INFO - 
+📊 Métricas finais para UFERSA:
+2026-02-15 22:06:21,030 - INFO -    Total de queries testadas: 2
+2026-02-15 22:06:21,030 - INFO -    Queries com sucesso: 0
+2026-02-15 22:06:21,159 - INFO - ✅ UFERSA: 874 repositórios
+2026-02-15 22:06:21,159 - INFO -    Palavras-chave: trabalho, desenvolvido, universidade federal, engenharia, sistema, projeto, dados, federal, curso, para
+2026-02-15 22:06:24,164 - INFO - 
+============================================================
+2026-02-15 22:06:24,164 - INFO - 🏛️  Processando UFJ - Universidade Federal de Jataí
+2026-02-15 22:06:24,164 - INFO - ============================================================
+2026-02-15 22:06:24,165 - INFO - 
+🔄 Iteração 1/3 para UFJ
+2026-02-15 22:06:24,165 - INFO -   🔎 Testando: "universidade federal"
+2026-02-15 22:06:38,375 - INFO -      ✅ 500 resultados (eficiência: 0.30)
+2026-02-15 22:06:39,377 - INFO -   🔎 Testando: "ufj"
+2026-02-15 22:07:00,572 - INFO -      ✅ 500 resultados (eficiência: 0.30)
+2026-02-15 22:07:03,576 - INFO - 
+🔄 Iteração 2/3 para UFJ
+2026-02-15 22:07:03,577 - INFO -   ⚠️ Sem novas queries para testar
+2026-02-15 22:07:03,579 - INFO - 
+📊 Métricas finais para UFJ:
+2026-02-15 22:07:03,580 - INFO -    Total de queries testadas: 2
+2026-02-15 22:07:03,580 - INFO -    Queries com sucesso: 0
+2026-02-15 22:07:03,720 - INFO - ✅ UFJ: 1000 repositórios
+2026-02-15 22:07:03,720 - INFO -    Palavras-chave: ufj, trabalho, universidade federal, desenvolvido, created, projeto, dados, federal, github, curso
+2026-02-15 22:07:06,721 - INFO - 
+============================================================
+2026-02-15 22:07:06,722 - INFO - 🏛️  Processando UFCAT - Universidade Federal de Catalão
+2026-02-15 22:07:06,722 - INFO - ============================================================
+2026-02-15 22:07:06,722 - INFO - 
+🔄 Iteração 1/3 para UFCAT
+2026-02-15 22:07:06,722 - INFO -   🔎 Testando: "ufcat"
+2026-02-15 22:07:08,120 - INFO -      ✅ 32 resultados (eficiência: 0.10)
+2026-02-15 22:07:09,121 - INFO -   🔎 Testando: "universidade federal"
+2026-02-15 22:07:24,697 - INFO -      ✅ 500 resultados (eficiência: 0.30)
+2026-02-15 22:07:27,701 - INFO - 
+🔄 Iteração 2/3 para UFCAT
+2026-02-15 22:07:27,703 - INFO -   ⚠️ Sem novas queries para testar
+2026-02-15 22:07:27,704 - INFO - 
+📊 Métricas finais para UFCAT:
+2026-02-15 22:07:27,704 - INFO -    Total de queries testadas: 2
+2026-02-15 22:07:27,705 - INFO -    Queries com sucesso: 0
+2026-02-15 22:07:27,776 - INFO - ✅ UFCAT: 530 repositórios
+2026-02-15 22:07:27,776 - INFO -    Palavras-chave: trabalho, desenvolvido, universidade federal, engenharia, sistema, projeto, dados, federal, curso, para
+2026-02-15 22:07:27,782 - INFO - 
+🔄 Realizando desduplicação global...
+2026-02-15 22:07:34,752 - INFO - 
+======================================================================
+2026-02-15 22:07:34,753 - INFO - ✅ PROCESSO CONCLUÍDO!
+2026-02-15 22:07:34,753 - INFO - ======================================================================
+2026-02-15 22:07:34,754 - INFO - 📁 Arquivo para frontend: repositorios_federais_filtrado_idioma.json
+2026-02-15 22:07:34,754 - INFO - 📁 Arquivo para série histórica: repositorios_federais_20260215_184223.json
+2026-02-15 22:07:34,754 - INFO - 📊 Total de instituições: 496
+2026-02-15 22:07:34,754 - INFO - 📊 Total de repositórios únicos: 44572
+2026-02-15 22:07:34,755 - INFO - 📊 Palavras-chave: palavras_chave_inteligentes_20260215_184223.json
+2026-02-15 22:07:34,756 - INFO - ======================================================================

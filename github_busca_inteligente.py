@@ -13,6 +13,10 @@ import numpy as np
 from sklearn.feature_extraction.text import TfidfVectorizer
 import nltk
 from nltk.corpus import stopwords
+from langdetect import detect, DetectorFactory, LangDetectException
+
+# Garantir que a detecção seja determinística
+DetectorFactory.seed = 0
 
 # === Configuração ===
 load_dotenv()
@@ -375,12 +379,86 @@ class BuscaInteligenteGitHub:
         return list(set(queries))  # Remove duplicatas
     
     # ==================================================
-    # 4. PROCESSAMENTO PRINCIPAL
+    # 4. FILTRO DE IDIOMA (NOVO!)
+    # ==================================================
+    
+    def filtrar_por_idioma_portugues(self, repositorios: List[Dict]) -> List[Dict]:
+        """
+        Filtra repositórios mantendo apenas os em português
+        Usa langdetect para análise do texto (nome + descrição)
+        """
+        if not repositorios:
+            return []
+        
+        repos_filtrados = []
+        
+        logger.info(f"   🔤 Filtrando {len(repositorios)} repositórios por idioma (português)...")
+        
+        # Palavras de contexto português para fallback
+        palavras_portugues = [
+            'ifsc', 'instituto', 'federal', 'santa', 'catarina', 
+            'tubarão', 'campus', 'projeto', 'pesquisa', 'universidade',
+            'brasil', 'brasileiro', 'graduação', 'mestrado', 'doutorado',
+            'laboratório', 'disciplina', 'tcc', 'trabalho', 'conclusão',
+            'curso', 'aluno', 'professor', 'ensino', 'extensão'
+        ]
+        
+        for repo in repositorios:
+            nome = repo.get('Nome do Repositório', '')
+            descricao = repo.get('Descricao', '')
+            
+            # Se não tem descrição, usa apenas o nome
+            if descricao == 'N/A' or not descricao:
+                texto = nome
+            else:
+                texto = f"{nome} {descricao}"
+            
+            # Critérios para manter:
+            manter = False
+            
+            # Estratégia 1: Detecção automática com langdetect
+            try:
+                if len(texto) >= 10:  # Precisa de texto mínimo
+                    idioma = detect(texto)
+                    if idioma == 'pt':
+                        manter = True
+                        logger.debug(f"      ✅ {nome[:30]}... detectado como português")
+            except LangDetectException:
+                # Se falhar, tenta estratégia de fallback
+                pass
+            except Exception as e:
+                logger.debug(f"      ⚠️ Erro na detecção: {e}")
+            
+            # Estratégia 2: Fallback - verificar presença de palavras portuguesas
+            if not manter:
+                texto_lower = texto.lower()
+                # Conta quantas palavras portuguesas aparecem
+                ocorrencias = sum(1 for p in palavras_portugues if p in texto_lower)
+                
+                # Se encontrar pelo menos 2 palavras portuguesas ou se for muito curto
+                if ocorrencias >= 2:
+                    manter = True
+                    logger.debug(f"      ✅ {nome[:30]}... mantido por palavras-chave ({ocorrencias} ocorrências)")
+                elif len(texto) < 20:  # Texto muito curto, mantém por segurança
+                    manter = True
+                    logger.debug(f"      ✅ {nome[:30]}... texto curto, mantido por segurança")
+            
+            if manter:
+                repos_filtrados.append(repo)
+        
+        taxa_manutencao = (len(repos_filtrados) / len(repositorios)) * 100 if repositorios else 0
+        logger.info(f"   ✅ Filtro de idioma: {len(repos_filtrados)}/{len(repositorios)} repositórios mantidos ({taxa_manutencao:.1f}% em português)")
+        
+        return repos_filtrados
+    
+    # ==================================================
+    # 5. PROCESSAMENTO PRINCIPAL
     # ==================================================
     
     def processar_instituicoes_com_inteligencia(self, df: pd.DataFrame) -> Dict:
         """
         Processa todas as instituições usando busca inteligente
+        AGORA COM FILTRO DE IDIOMA NO FINAL!
         """
         resultado_final = {"institutions_data": []}
         todas_keywords = {}
@@ -415,15 +493,19 @@ class BuscaInteligenteGitHub:
             palavras_finais = list(set([sigla.lower()] + palavras_relevantes[:15]))
             todas_keywords[sigla] = palavras_finais
             
-            logger.info(f"✅ {sigla}: {len(repos_detalhados)} repositórios")
+            # PASSO 4: FILTRO DE IDIOMA (NOVO!)
+            repos_detalhados = self.filtrar_por_idioma_portugues(repos_detalhados)
+            
+            logger.info(f"✅ {sigla}: {len(repos_detalhados)} repositórios em português")
             logger.info(f"   Palavras-chave: {', '.join(palavras_finais[:10])}")
             
-            resultado_final["institutions_data"].append({
-                "Sigla": sigla,
-                "Nome Completo": nome,
-                "URL Oficial": url,
-                "Repositorios": repos_detalhados
-            })
+            if repos_detalhados:  # Só adiciona se tiver repositórios após filtro
+                resultado_final["institutions_data"].append({
+                    "Sigla": sigla,
+                    "Nome Completo": nome,
+                    "URL Oficial": url,
+                    "Repositorios": repos_detalhados
+                })
             
             # Pausa entre instituições
             if idx < len(df) - 1:
@@ -512,7 +594,7 @@ class BuscaInteligenteGitHub:
 
 def main():
     logger.info("=" * 70)
-    logger.info("🚀 INICIANDO BUSCA INTELIGENTE COM FEEDBACK LOOP")
+    logger.info("🚀 INICIANDO BUSCA INTELIGENTE COM FEEDBACK LOOP E FILTRO DE IDIOMA")
     logger.info("=" * 70)
     
     timestamp_geral = datetime.now()
@@ -566,20 +648,26 @@ def main():
                 seen.add(chave)
         inst["Repositorios"] = novos_repos
     
+    # Estatísticas antes do filtro final
+    total_antes = sum(len(inst["Repositorios"]) for inst in todos_dados)
+    
+    logger.info(f"\n📊 Antes do filtro final: {total_antes} repositórios totais")
+    
     # Cria estrutura final com timestamp e metadados
     saida = {
         "metadata": {
             "timestamp_consulta": timestamp_geral.isoformat(),
             "data_consulta": timestamp_geral.strftime("%Y-%m-%d"),
             "hora_consulta": timestamp_geral.strftime("%H:%M:%S"),
-            "versao_script": "2.0.0",
+            "versao_script": "2.1.0",
             "total_instituicoes": len(todos_dados),
-            "total_repositorios": sum(len(inst["Repositorios"]) for inst in todos_dados)
+            "total_repositorios": total_antes,
+            "filtro_idioma": "português"
         },
         "institutions_data": todos_dados
     }
     
-    # Salva arquivo principal para o frontend (SEM METADADOS - compatível)
+    # Salva arquivo para o frontend (AGORA COM FILTRO DE IDIOMA APLICADO!)
     with open("repositorios_federais_filtrado_idioma.json", "w", encoding="utf-8") as f:
         json.dump({"institutions_data": todos_dados}, f, indent=2, ensure_ascii=False)
     
@@ -598,7 +686,8 @@ def main():
     logger.info(f"📁 Arquivo para frontend: repositorios_federais_filtrado_idioma.json")
     logger.info(f"📁 Arquivo para série histórica: {arquivo_historico}")
     logger.info(f"📊 Total de instituições: {total_inst}")
-    logger.info(f"📊 Total de repositórios únicos: {total_repos}")
+    logger.info(f"📊 Total de repositórios em português: {total_repos}")
+    logger.info(f"📊 Redução do filtro: {total_antes - total_repos} repositórios removidos")
     logger.info(f"📊 Palavras-chave: palavras_chave_inteligentes_{timestamp_str}.json")
     logger.info("=" * 70)
 

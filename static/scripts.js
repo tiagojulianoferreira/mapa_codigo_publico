@@ -138,8 +138,10 @@ document.addEventListener('DOMContentLoaded', () => {
         try {
             // Busca os dois arquivos JSON em paralelo
             const [responseMain, responseHighlighted] = await Promise.all([
-                fetch('./repositorios_federais_filtrado_idioma.json'),
-                fetch('./dados/repositorios_destaque_cluster_3.json')
+                //fetch('./repositorios_federais_filtrado_idioma.json'),
+                fetch('./repositorios_federais_filtrado_idioma_sem_stopwords.json'),
+                fetch('./dados/repositorios_federais_por_cluster.json')
+              
             ]);
 
             if (!responseMain.ok || !responseHighlighted.ok) {
