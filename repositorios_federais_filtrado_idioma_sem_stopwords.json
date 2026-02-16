@@ -86342,25 +86342,6 @@
           "Data_Criacao": "2025-11-02T22:49:35Z"
         },
         {
-          "Nome do Repositório": "Xbim.IDS.Validator",
-          "Descricao": "Library to validate IFC and COBie models using IDS1.0 and xbim Toolkit",
-          "Linguagem Principal": "C#",
-          "Estrelas": 14,
-          "Licenca": "AGPL-3.0",
-          "Ultima Atualizacao": "2026-02-13T18:01:39Z",
-          "Link de Acesso": "https://github.com/xBimTeam/Xbim.IDS.Validator",
-          "Organizacao": true,
-          "Forks": 6,
-          "Topics": [
-            "bim",
-            "buildingsmart",
-            "ids",
-            "ifc",
-            "qa"
-          ],
-          "Data_Criacao": "2022-11-21T17:41:48Z"
-        },
-        {
           "Nome do Repositório": "Ifc-to-excel",
           "Descricao": "Convert Metadata From IFC To Excel",
           "Linguagem Principal": "Jupyter Notebook",
