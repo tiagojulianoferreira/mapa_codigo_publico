@@ -228,4 +228,6 @@ emapic
 chaos-master
 ifs-passcode-solver
 hydrogen
-paco
+paco-ua-api
+Universidade-de-Aveiro
+MEI-Uminho
