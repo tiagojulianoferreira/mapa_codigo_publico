@@ -224,3 +224,6 @@ UCS
 ucsc-go
 UniRitter
 Xbim.IDS.Validator
+emapic
+chaos-master
+ifs-passcode-solver

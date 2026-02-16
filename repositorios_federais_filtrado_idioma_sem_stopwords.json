@@ -83091,19 +83091,6 @@
           "Data_Criacao": "2023-06-07T00:31:04Z"
         },
         {
-          "Nome do Repositório": "chaos-master",
-          "Descricao": "WebGPU based IFS Flame Generator for Artists & Explorers",
-          "Linguagem Principal": "TypeScript",
-          "Estrelas": 9,
-          "Licenca": "AGPL-3.0",
-          "Ultima Atualizacao": "2025-12-03T18:06:14Z",
-          "Link de Acesso": "https://github.com/chaos-matters/chaos-master",
-          "Organizacao": true,
-          "Forks": 3,
-          "Topics": [],
-          "Data_Criacao": "2025-03-26T20:01:05Z"
-        },
-        {
           "Nome do Repositório": "ifs-java-rest-api-academico",
           "Descricao": "Este é um exemplo de código-fonte de uma API REST desenvolvida usando a linguagem de programação Java e o framework Spring.",
           "Linguagem Principal": "Java",
@@ -83210,19 +83197,6 @@
             "tcc"
           ],
           "Data_Criacao": "2025-04-15T04:53:04Z"
-        },
-        {
-          "Nome do Repositório": "ifs-passcode-solver",
-          "Descricao": "N/A",
-          "Linguagem Principal": "TypeScript",
-          "Estrelas": 3,
-          "Licenca": "AGPL-3.0",
-          "Ultima Atualizacao": "2020-09-15T01:13:16Z",
-          "Link de Acesso": "https://github.com/zhyupe/ifs-passcode-solver",
-          "Organizacao": false,
-          "Forks": 0,
-          "Topics": [],
-          "Data_Criacao": "2020-09-12T12:55:25Z"
         },
         {
           "Nome do Repositório": "Mapa_do_Site_IFSUDESTEMG-Barbcena",
@@ -270875,22 +270849,6 @@
           "Forks": 1,
           "Topics": [],
           "Data_Criacao": "2024-08-05T12:51:56Z"
-        },
-        {
-          "Nome do Repositório": "emapic",
-          "Descricao": "Open source repository with the source code of the geolocated surveys engine Emapic, developed by the laboratory CartoLAB of the Universidade da Coruña.",
-          "Linguagem Principal": "JavaScript",
-          "Estrelas": 14,
-          "Licenca": "AGPL-3.0",
-          "Ultima Atualizacao": "2025-11-13T15:06:19Z",
-          "Link de Acesso": "https://github.com/Emapic/emapic",
-          "Organizacao": true,
-          "Forks": 0,
-          "Topics": [
-            "geolocation",
-            "surveys"
-          ],
-          "Data_Criacao": "2016-07-13T12:35:34Z"
         },
         {
           "Nome do Repositório": "congresso-unama",
