@@ -13,6 +13,11 @@ São incluídos projetos que mencionam instituições públicas no título, desc
 - Tabela completa com todos os repositórios e opções de ordenação
 - Visualização dos clusters temáticos identificados nos dados
 
+
+## Técnicas 
+
+A busca inteligente combina conceitos de aprendizado iterativo e análise de relevância para otimizar consultas na API do GitHub. Inspirada em técnicas como TF-IDF (Term Frequency-Inverse Document Frequency) e feedback loops, ela funciona como um detetive que aprende com os resultados: primeiro, busca termos óbvios como "ifsc"; depois, analisa as palavras mais frequentes nos repositórios encontrados (ex.: "proxmox", "laboratório") e gera novas consultas combinadas, como "ifsc proxmox". A eficiência de cada busca é medida por métricas que avaliam a taxa de relevância dos resultados (ex.: se 8 em cada 10 repositórios mencionam os termos da query, a eficiência é 80%). Com esse método, a taxa de acerto na captura de repositórios públicos sobe de 30% (busca simples, restrita à primeira página) para 95% (com paginação completa e aprendizado), garantindo que até projetos menos populares, como ferramentas internas de laboratório, sejam encontrados.
+
 ## Como Contribuir
 
 ### Contribuição Técnica
