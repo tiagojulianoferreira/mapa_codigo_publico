@@ -231,3 +231,4 @@ hydrogen
 paco-ua-api
 Universidade-de-Aveiro
 MEI-Uminho
+GomeraX
