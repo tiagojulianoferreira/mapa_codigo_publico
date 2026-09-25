@@ -38,6 +38,9 @@ IFBAIANO,Instituto Federal Baiano,Instituto,https://www.ifbaiano.edu.br
 IFAC,Campus Rio Branco,Campus,https://www.ifac.edu.br
 IFAC,Campus Cruzeiro do Sul,Campus,https://www.ifac.edu.br
 IFAC,Campus Sena Madureira,Campus,https://www.ifac.edu.br
+IFAC,Campus Tarauacá,Campus,https://www.ifac.edu.br
+IFAC,Campus Xapuri,Campus,https://www.ifac.edu.br
+IFAC,Campus Feijó,Campus,https://www.ifac.edu.br
 IFAL,Campus Maceió,Campus,https://www.ifal.edu.br
 IFAL,Campus Satuba,Campus,https://www.ifal.edu.br
 IFAL,Campus Palmeira dos Índios,Campus,https://www.ifal.edu.br
@@ -56,36 +59,102 @@ IFAM,Campus Maués,Campus,https://www.ifam.edu.br
 IFAM,Campus Tabatinga,Campus,https://www.ifam.edu.br
 IFAM,Campus Parintins,Campus,https://www.ifam.edu.br
 IFAM,Campus Agrotécnico de Manaus,Campus,https://www.ifam.edu.br
+IFAM,Campus Distrito Industrial,Campus,https://www.ifam.edu.br
+IFAM,Campus Boca do Acre,Campus,https://www.ifam.edu.br
+IFAM,Campus Borba,Campus,https://www.ifam.edu.br
+IFAM,Campus Carauari,Campus,https://www.ifam.edu.br
+IFAM,Campus Careiro,Campus,https://www.ifam.edu.br
+IFAM,Campus Eirunepé,Campus,https://www.ifam.edu.br
+IFAM,Campus Humaitá,Campus,https://www.ifam.edu.br
+IFAM,Campus Iranduba,Campus,https://www.ifam.edu.br
+IFAM,Campus Itacoatiara,Campus,https://www.ifam.edu.br
+IFAM,Campus Manacapuru,Campus,https://www.ifam.edu.br
+IFAM,Campus Novo Aripuanã,Campus,https://www.ifam.edu.br
+IFAM,Campus Rio Preto da Eva,Campus,https://www.ifam.edu.br
+IFAM,Campus Tefé,Campus,https://www.ifam.edu.br
 IFAP,Campus Macapá,Campus,https://portal.ifap.edu.br
 IFAP,Campus Laranjal do Jari,Campus,https://portal.ifap.edu.br
+IFAP,Campus Oiapoque,Campus,https://portal.ifap.edu.br
+IFAP,Campus Porto Grande,Campus,https://portal.ifap.edu.br
+IFAP,Campus Santana,Campus,https://portal.ifap.edu.br
+IFAP,Campus Tartarugalzinho,Campus,https://portal.ifap.edu.br
+IFAP,Campus Vitória do Jari,Campus,https://portal.ifap.edu.br
 IFBA,Campus Salvador,Campus,https://www.ifba.edu.br
 IFBA,Campus Feira de Santana,Campus,https://www.ifba.edu.br
 IFBA,Campus Vitória da Conquista,Campus,https://www.ifba.edu.br
 IFBA,Campus Porto Seguro,Campus,https://www.ifba.edu.br
 IFBA,Campus Barreiras,Campus,https://www.ifba.edu.br
 IFBA,Campus Camaçari,Campus,https://www.ifba.edu.br
+IFBA,Campus Santo Amaro,Campus,https://www.ifba.edu.br
+IFBA,Campus Simões Filho,Campus,https://www.ifba.edu.br
+IFBA,Campus Eunápolis,Campus,https://www.ifba.edu.br
+IFBA,Campus Jequié,Campus,https://www.ifba.edu.br
+IFBA,Campus Irecê,Campus,https://www.ifba.edu.br
+IFBA,Campus Jacobina,Campus,https://www.ifba.edu.br
+IFBA,Campus Seabra,Campus,https://www.ifba.edu.br
+IFBA,Campus Ilhéus,Campus,https://www.ifba.edu.br
+IFBA,Campus Paulo Afonso,Campus,https://www.ifba.edu.br
+IFBAIANO,Campus Santo Estêvão,Campus,https://www.ifbaiano.edu.br
+IFBAIANO,Campus Ribeira do Pombal,Campus,https://www.ifbaiano.edu.br
+IFBAIANO,Campus Remanso,Campus,https://www.ifbaiano.edu.br
+IFBAIANO,Campus Ruy Barbosa,Campus,https://www.ifbaiano.edu.br
 IFB,Campus Brasília,Campus,https://www.ifb.edu.br
 IFB,Campus Gama,Campus,https://www.ifb.edu.br
 IFB,Campus Samambaia,Campus,https://www.ifb.edu.br
 IFB,Campus Planaltina,Campus,https://www.ifb.edu.br
 IFB,Campus Taguatinga,Campus,https://www.ifb.edu.br
+IFB,Campus Sol Nascente,Campus,https://www.ifb.edu.br
+IFB,Campus Sobradinho,Campus,https://www.ifb.edu.br
 IFCE,Campus Fortaleza,Campus,https://www.ifce.edu.br
 IFCE,Campus Cedro,Campus,https://www.ifce.edu.br
 IFCE,Campus Juazeiro do Norte,Campus,https://www.ifce.edu.br
 IFCE,Campus Maracanaú,Campus,https://www.ifce.edu.br
 IFCE,Campus Crato,Campus,https://www.ifce.edu.br
 IFCE,Campus Iguatu,Campus,https://www.ifce.edu.br
+IFCE,Campus Canindé,Campus,https://www.ifce.edu.br
+IFCE,Campus Limoeiro do Norte,Campus,https://www.ifce.edu.br
+IFCE,Campus Sobral,Campus,https://www.ifce.edu.br
+IFCE,Campus Acaraú,Campus,https://www.ifce.edu.br
+IFCE,Campus Crateús,Campus,https://www.ifce.edu.br
+IFCE,Campus Quixadá,Campus,https://www.ifce.edu.br
 IFPA,Campus Belém,Campus,https://www.ifpa.edu.br
 IFPA,Campus Castanhal,Campus,https://www.ifpa.edu.br
 IFPA,Campus Altamira,Campus,https://www.ifpa.edu.br
 IFPA,Campus Marabá,Campus,https://www.ifpa.edu.br
 IFPA,Campus Tucuruí,Campus,https://www.ifpa.edu.br
+IFPA,Campus Marabá Industrial,Campus,https://www.ifpa.edu.br
+IFPA,Campus Abaetetuba,Campus,https://www.ifpa.edu.br
+IFPA,Campus Bragança,Campus,https://www.ifpa.edu.br
+IFPA,Campus Itaituba,Campus,https://www.ifpa.edu.br
+IFPA,Campus Conceição do Araguaia,Campus,https://www.ifpa.edu.br
+IFPA,Campus Santarém,Campus,https://www.ifpa.edu.br
+IFPA,Campus Parauapebas,Campus,https://www.ifpa.edu.br
+IFPA,Campus Cametá,Campus,https://www.ifpa.edu.br
+IFPA,Campus Breves,Campus,https://www.ifpa.edu.br
+IFPA,Campus Óbidos,Campus,https://www.ifpa.edu.br
+IFPA,Campus Oriximiná,Campus,https://www.ifpa.edu.br
+IFPA,Campus Portel,Campus,https://www.ifpa.edu.br
+IFPA,Campus Salvaterra,Campus,https://www.ifpa.edu.br
+IFPA,Campus São Félix do Xingu,Campus,https://www.ifpa.edu.br
+IFPA,Campus Vigia,Campus,https://www.ifpa.edu.br
+IFPA,Campus Viseu,Campus,https://www.ifpa.edu.br
+IFPA,Campus Xinguara,Campus,https://www.ifpa.edu.br
 IFRN,Campus Natal Central,Campus,https://portal.ifrn.edu.br
 IFRN,Campus Zona Norte de Natal,Campus,https://portal.ifrn.edu.br
 IFRN,Campus Mossoró,Campus,https://portal.ifrn.edu.br
 IFRN,Campus Currais Novos,Campus,https://portal.ifrn.edu.br
 IFRN,Campus Santa Cruz,Campus,https://portal.ifrn.edu.br
 IFRN,Campus Caicó,Campus,https://portal.ifrn.edu.br
+IFRN,Campus Zona Norte,Campus,https://portal.ifrn.edu.br
+IFRN,Campus Ipanguaçu,Campus,https://portal.ifrn.edu.br
+IFRN,Campus João Câmara,Campus,https://portal.ifrn.edu.br
+IFRN,Campus Macau,Campus,https://portal.ifrn.edu.br
+IFRN,Campus Pau dos Ferros,Campus,https://portal.ifrn.edu.br
+IFRN,Campus Apodi,Campus,https://portal.ifrn.edu.br
+IFRN,Campus São Paulo do Potengi,Campus,https://portal.ifrn.edu.br
+IFRN,Campus Parnamirim,Campus,https://portal.ifrn.edu.br
+IFRN,Campus Ceará-Mirim,Campus,https://portal.ifrn.edu.br
+IFRN,Campus São Gonçalo do Amarante,Campus,https://portal.ifrn.edu.br
 IFRS,Campus Bento Gonçalves,Campus,https://ifrs.edu.br
 IFRS,Campus Canoas,Campus,https://ifrs.edu.br
 IFRS,Campus Caxias do Sul,Campus,https://ifrs.edu.br
@@ -102,15 +171,12 @@ IFRS,Campus Sertão,Campus,https://ifrs.edu.br
 IFRS,Campus Vacaria,Campus,https://ifrs.edu.br
 IFRS,Campus Veranópolis,Campus,https://ifrs.edu.br
 IFRS,Campus Viamão,Campus,https://ifrs.edu.br
-IFBA,Campus Santo Amaro,Campus,https://www.ifba.edu.br
-IFBA,Campus Simões Filho,Campus,https://www.ifba.edu.br
-IFBA,Campus Eunápolis,Campus,https://www.ifba.edu.br
-IFBA,Campus Jequié,Campus,https://www.ifba.edu.br
-IFBA,Campus Irecê,Campus,https://www.ifba.edu.br
-IFBA,Campus Jacobina,Campus,https://www.ifba.edu.br
-IFBA,Campus Seabra,Campus,https://www.ifba.edu.br
-IFBA,Campus Ilhéus,Campus,https://www.ifba.edu.br
-IFBA,Campus Paulo Afonso,Campus,https://www.ifba.edu.br
+IFRS,Campus Alvorada,Campus,https://ifrs.edu.br
+IFRS,Campus Camaquã,Campus,https://ifrs.edu.br
+IFRS,Campus Charqueadas,Campus,https://ifrs.edu.br
+IFRS,Campus Gravataí,Campus,https://ifrs.edu.br
+IFRS,Campus Guaíba,Campus,https://ifrs.edu.br
+IFRS Campus Sertão,Campus Sertão,Campus,https://ifrs.edu.br/sertao
 IFPI,Campus Teresina,Campus,https://www.ifpi.edu.br
 IFPI,Campus Floriano,Campus,https://www.ifpi.edu.br
 IFPI,Campus Parnaíba,Campus,https://www.ifpi.edu.br
@@ -121,6 +187,9 @@ IFPI,Campus São Raimundo Nonato,Campus,https://www.ifpi.edu.br
 IFPI,Campus Paulistana,Campus,https://www.ifpi.edu.br
 IFPI,Campus Uruçuí,Campus,https://www.ifpi.edu.br
 IFPI,Campus Angical,Campus,https://www.ifpi.edu.br
+IFPI,Campus Barras,Campus,https://www.ifpi.edu.br
+IFPI,Campus Esperantina,Campus,https://www.ifpi.edu.br
+IFPI,Campus Altos,Campus,https://www.ifpi.edu.br
 IFPB,Campus João Pessoa,Campus,https://www.ifpb.edu.br
 IFPB,Campus Cajazeiras,Campus,https://www.ifpb.edu.br
 IFPB,Campus Sousa,Campus,https://www.ifpb.edu.br
@@ -135,20 +204,18 @@ IFRO,Campus Ariquemes,Campus,https://www.ifro.edu.br
 IFRO,Campus Ji-Paraná,Campus,https://www.ifro.edu.br
 IFRO,Campus Vilhena,Campus,https://www.ifro.edu.br
 IFRO,Campus Colorado do Oeste,Campus,https://www.ifro.edu.br
-IFPA,Campus Marabá Industrial,Campus,https://www.ifpa.edu.br
-IFPA,Campus Abaetetuba,Campus,https://www.ifpa.edu.br
-IFPA,Campus Bragança,Campus,https://www.ifpa.edu.br
-IFPA,Campus Itaituba,Campus,https://www.ifpa.edu.br
-IFPA,Campus Conceição do Araguaia,Campus,https://www.ifpa.edu.br
-IFPA,Campus Santarém,Campus,https://www.ifpa.edu.br
-IFPA,Campus Parauapebas,Campus,https://www.ifpa.edu.br
-IFPA,Campus Cametá,Campus,https://www.ifpa.edu.br
-IFCE,Campus Canindé,Campus,https://www.ifce.edu.br
-IFCE,Campus Limoeiro do Norte,Campus,https://www.ifce.edu.br
-IFCE,Campus Sobral,Campus,https://www.ifce.edu.br
-IFCE,Campus Acaraú,Campus,https://www.ifce.edu.br
-IFCE,Campus Crateús,Campus,https://www.ifce.edu.br
-IFCE,Campus Quixadá,Campus,https://www.ifce.edu.br
+IFRO,Campus Cacoal,Campus,https://www.ifro.edu.br
+IFRO,Campus Guajará-Mirim,Campus,https://www.ifro.edu.br
+IFRO,Campus Jaru,Campus,https://www.ifro.edu.br
+IFRO,Campus Ouro Preto do Oeste,Campus,https://www.ifro.edu.br
+IFRO,Campus Pimenta Bueno,Campus,https://www.ifro.edu.br
+IFRO,Campus Porto Velho Zona Norte,Campus,https://www.ifro.edu.br
+IFRO,Campus Rolim de Moura,Campus,https://www.ifro.edu.br
+IFRR,Campus Boa Vista,Campus,https://ifrr.edu.br
+IFRR,Campus Novo Paraíso,Campus,https://ifrr.edu.br
+IFRR,Campus Amajarí,Campus,https://ifrr.edu.br
+IFRR,Campus Bonfim,Campus,https://ifrr.edu.br
+IFRR,Campus Rorainópolis,Campus,https://ifrr.edu.br
 IFPR,Campus Curitiba,Campus,https://www.ifpr.edu.br
 IFPR,Campus Paranaguá,Campus,https://www.ifpr.edu.br
 IFPR,Campus Paranavaí,Campus,https://www.ifpr.edu.br
@@ -174,6 +241,7 @@ IFSP,Campus Registro,Campus,https://www.ifsp.edu.br
 IFSP,Campus Avaré,Campus,https://www.ifsp.edu.br
 IFSP,Campus Votuporanga,Campus,https://www.ifsp.edu.br
 IFSP,Campus Presidente Epitácio,Campus,https://www.ifsp.edu.br
+IFSP,Campus Mauá,Campus,https://www.ifsp.edu.br
 IFSC,Campus Florianópolis,Campus,https://www.ifsc.edu.br
 IFSC,Campus São José,Campus,https://www.ifsc.edu.br
 IFSC,Campus Continente,Campus,https://www.ifsc.edu.br
@@ -187,10 +255,16 @@ IFSC,Campus Lages,Campus,https://www.ifsc.edu.br
 IFSC,Campus Gaspar,Campus,https://www.ifsc.edu.br
 IFSC,Campus Canoinhas,Campus,https://www.ifsc.edu.br
 IFSC,Campus São Miguel do Oeste,Campus,https://www.ifsc.edu.br
+IFSC,Campus Tubarão,Campus,https://www.ifsc.edu.br
 IFTM,Campus Uberaba,Campus,https://www.iftm.edu.br
 IFTM,Campus Paracatu,Campus,https://www.iftm.edu.br
 IFTM,Campus Ituiutaba,Campus,https://www.iftm.edu.br
 IFTM,Campus Patrocínio,Campus,https://www.iftm.edu.br
+IFTM,Campus Araguari,Campus,https://www.iftm.edu.br
+IFTM,Campus Campina Verde,Campus,https://www.iftm.edu.br
+IFTM,Campus Itapagipe,Campus,https://www.iftm.edu.br
+IFTM,Campus Monte Carmelo,Campus,https://www.iftm.edu.br
+IFTM,Campus Uberlândia,Campus,https://www.iftm.edu.br
 IFNMG,Campus Montes Claros,Campus,https://www.ifnmg.edu.br
 IFNMG,Campus Januária,Campus,https://www.ifnmg.edu.br
 IFNMG,Campus Salinas,Campus,https://www.ifnmg.edu.br
@@ -198,14 +272,26 @@ IFNMG,Campus Pirapora,Campus,https://www.ifnmg.edu.br
 IFNMG,Campus Araçuaí,Campus,https://www.ifnmg.edu.br
 IFNMG,Campus Almenara,Campus,https://www.ifnmg.edu.br
 IFNMG,Campus Arinos,Campus,https://www.ifnmg.edu.br
+IFNMG,Campus Diamantina,Campus,https://www.ifnmg.edu.br
+IFNMG,Campus Porteirinha,Campus,https://www.ifnmg.edu.br
+IFNMG,Campus Rio Pardo de Minas,Campus,https://www.ifnmg.edu.br
+IFNMG,Campus Taiobeiras,Campus,https://www.ifnmg.edu.br
 IFSULDEMINAS,Campus Inconfidentes,Campus,https://www.ifsuldeminas.edu.br
 IFSULDEMINAS,Campus Machado,Campus,https://www.ifsuldeminas.edu.br
 IFSULDEMINAS,Campus Muzambinho,Campus,https://www.ifsuldeminas.edu.br
+IFSULDEMINAS,Campus Poços de Caldas,Campus,https://www.ifsuldeminas.edu.br
+IFSULDEMINAS,Campus Passos,Campus,https://www.ifsuldeminas.edu.br
+IFSULDEMINAS,Campus Três Corações,Campus,https://www.ifsuldeminas.edu.br
+IFSULDEMINAS,Campus Pouso Alegre,Campus,https://www.ifsuldeminas.edu.br
 IFGoiano,Campus Rio Verde,Campus,https://www.ifgoiano.edu.br
 IFGoiano,Campus Ceres,Campus,https://www.ifgoiano.edu.br
 IFGoiano,Campus Urutaí,Campus,https://www.ifgoiano.edu.br
 IFGoiano,Campus Iporá,Campus,https://www.ifgoiano.edu.br
 IFGoiano,Campus Morrinhos,Campus,https://www.ifgoiano.edu.br
+IFGoiano,Campus Campos Belos,Campus,https://www.ifgoiano.edu.br
+IFGoiano,Campus Cristalina,Campus,https://www.ifgoiano.edu.br
+IFGoiano,Campus Hidrolândia,Campus,https://www.ifgoiano.edu.br
+IFGoiano,Campus Posse,Campus,https://www.ifgoiano.edu.br
 IFG,Campus Goiânia,Campus,https://www.ifg.edu.br
 IFG,Campus Luziânia,Campus,https://www.ifg.edu.br
 IFG,Campus Jataí,Campus,https://www.ifg.edu.br
@@ -214,10 +300,22 @@ IFG,Campus Itumbiara,Campus,https://www.ifg.edu.br
 IFG,Campus Uruaçu,Campus,https://www.ifg.edu.br
 IFG,Campus Formosa,Campus,https://www.ifg.edu.br
 IFG,Campus Anápolis,Campus,https://www.ifg.edu.br
+IFG,Campus Águas Lindas,Campus,https://www.ifg.edu.br
+IFG,Campus Aparecida de Goiânia,Campus,https://www.ifg.edu.br
+IFG,Campus Cidade de Goiás,Campus,https://www.ifg.edu.br
+IFG,Campus Goiânia Oeste,Campus,https://www.ifg.edu.br
+IFG,Campus Senador Canedo,Campus,https://www.ifg.edu.br
+IFG,Campus Valparaíso,Campus,https://www.ifg.edu.br
 IFSEMG,Campus Juiz de Fora,Campus,https://www.ifsudestemg.edu.br
 IFSEMG,Campus Muriaé,Campus,https://www.ifsudestemg.edu.br
 IFSEMG,Campus Rio Pomba,Campus,https://www.ifsudestemg.edu.br
 IFSEMG,Campus Santos Dumont,Campus,https://www.ifsudestemg.edu.br
+IFSEMG,Campus Barbacena,Campus,https://www.ifsudestemg.edu.br
+IFSEMG,Campus Bom Sucesso,Campus,https://www.ifsudestemg.edu.br
+IFSEMG,Campus Cataguases,Campus,https://www.ifsudestemg.edu.br
+IFSEMG,Campus Manhuaçu,Campus,https://www.ifsudestemg.edu.br
+IFSEMG,Campus São João del-Rei,Campus,https://www.ifsudestemg.edu.br
+IFSEMG,Campus Ubá,Campus,https://www.ifsudestemg.edu.br
 IFMS,Campus Campo Grande,Campus,https://www.ifms.edu.br
 IFMS,Campus Três Lagoas,Campus,https://www.ifms.edu.br
 IFMS,Campus Nova Andradina,Campus,https://www.ifms.edu.br
@@ -225,7 +323,14 @@ IFMS,Campus Corumbá,Campus,https://www.ifms.edu.br
 IFMS,Campus Aquidauana,Campus,https://www.ifms.edu.br
 IFMS,Campus Coxim,Campus,https://www.ifms.edu.br
 IFMS,Campus Ponta Porã,Campus,https://www.ifms.edu.br
-IFAM,Campus Distrito Industrial,Campus,https://www.ifam.edu.br
+IFMS,Campus Amambai,Campus,https://www.ifms.edu.br
+IFMS,Campus Jardim,Campus,https://www.ifms.edu.br
+IFMS,Campus Maracaju,Campus,https://www.ifms.edu.br
+IFMS,Campus Naviraí,Campus,https://www.ifms.edu.br
+IFMS,Campus Paranaíba,Campus,https://www.ifms.edu.br
+IFMS,Campus Rio Brilhante,Campus,https://www.ifms.edu.br
+IFMS,Campus São Gabriel do Oeste,Campus,https://www.ifms.edu.br
+IFMS,Campus Sidrolândia,Campus,https://www.ifms.edu.br
 IFMT,Campus Cuiabá,Campus,https://www.ifmt.edu.br
 IFMT,Campus Cáceres,Campus,https://www.ifmt.edu.br
 IFMT,Campus Confresa,Campus,https://www.ifmt.edu.br
@@ -236,12 +341,27 @@ IFMT,Campus São Vicente,Campus,https://www.ifmt.edu.br
 IFMT,Campus Bela Vista,Campus,https://www.ifmt.edu.br
 IFMT,Campus Rondonópolis,Campus,https://www.ifmt.edu.br
 IFMT,Campus Campo Novo do Parecis,Campus,https://www.ifmt.edu.br
+IFMT,Campus Alta Floresta,Campus,https://www.ifmt.edu.br
+IFMT,Campus Campo Verde,Campus,https://www.ifmt.edu.br
+IFMT,Campus Diamantino,Campus,https://www.ifmt.edu.br
+IFMT,Campus Guarantã do Norte,Campus,https://www.ifmt.edu.br
+IFMT,Campus Jauru,Campus,https://www.ifmt.edu.br
+IFMT,Campus Lucas do Rio Verde,Campus,https://www.ifmt.edu.br
+IFMT,Campus Nova Mutum,Campus,https://www.ifmt.edu.br
+IFMT,Campus Nova Xavantina,Campus,https://www.ifmt.edu.br
+IFMT,Campus Primavera do Leste,Campus,https://www.ifmt.edu.br
+IFMT,Campus Sorriso,Campus,https://www.ifmt.edu.br
 IFTO,Campus Palmas,Campus,https://portal.ifto.edu.br
 IFTO,Campus Araguaína,Campus,https://portal.ifto.edu.br
 IFTO,Campus Araguatins,Campus,https://portal.ifto.edu.br
 IFTO,Campus Gurupi,Campus,https://portal.ifto.edu.br
 IFTO,Campus Porto Nacional,Campus,https://portal.ifto.edu.br
 IFTO,Campus Paraíso do Tocantins,Campus,https://portal.ifto.edu.br
+IFTO,Campus Formoso do Araguaia,Campus,https://portal.ifto.edu.br
+IFTO,Campus Lagoa da Confusão,Campus,https://portal.ifto.edu.br
+IFTO,Campus Pedro Afonso,Campus,https://portal.ifto.edu.br
+IFTO,Campus Colinas do Tocantins,Campus,https://portal.ifto.edu.br
+IFTO,Campus Dianópolis,Campus,https://portal.ifto.edu.br
 IFFar,Campus Alegrete,Campus,https://www.iffarroupilha.edu.br
 IFFar,Campus Santo Augusto,Campus,https://www.iffarroupilha.edu.br
 IFFar,Campus São Vicente do Sul,Campus,https://www.iffarroupilha.edu.br
@@ -249,12 +369,27 @@ IFFar,Campus Júlio de Castilhos,Campus,https://www.iffarroupilha.edu.br
 IFFar,Campus Panambi,Campus,https://www.iffarroupilha.edu.br
 IFFar,Campus Santa Rosa,Campus,https://www.iffarroupilha.edu.br
 IFFar,Campus São Borja,Campus,https://www.iffarroupilha.edu.br
+IFFar,Campus Frederico Westphalen,Campus,https://www.iffarroupilha.edu.br
+IFFar,Campus Jaguari,Campus,https://www.iffarroupilha.edu.br
+IFFar,Campus Santo Ângelo,Campus,https://www.iffarroupilha.edu.br
+IFSul,Campus Avançado,Campus,https://www.ifsul.edu.br
+IFSul,Campus Charqueadas,Campus,https://www.ifsul.edu.br
+IFSul,Campus Gravataí,Campus,https://www.ifsul.edu.br
+IFSul,Campus Gualba,Campus,https://www.ifsul.edu.br
+IFSul,Campus Lajeado,Campus,https://www.ifsul.edu.br
+IFSul,Campus Passo Fundo,Campus,https://www.ifsul.edu.br
+IFSul,Campus Santana do Livramento,Campus,https://www.ifsul.edu.br
+IFSul,Campus Sapiranga,Campus,https://www.ifsul.edu.br
+IFSul,Campus Sapucaia do Sul,Campus,https://www.ifsul.edu.br
+IFSul,Campus Venâncio Aires,Campus,https://www.ifsul.edu.br
 IFS,Campus Aracaju,Campus,https://ifs.edu.br
 IFS,Campus São Cristóvão,Campus,https://ifs.edu.br
 IFS,Campus Lagarto,Campus,https://ifs.edu.br
 IFS,Campus Estância,Campus,https://ifs.edu.br
 IFS,Campus Nossa Senhora da Glória,Campus,https://ifs.edu.br
 IFS,Campus Itabaiana,Campus,https://ifs.edu.br
+IFS,Campus Propriá,Campus,https://ifs.edu.br
+IFS,Campus Tobias Barreto,Campus,https://ifs.edu.br
 IFES,Campus Vitória,Campus,https://www.ifes.edu.br
 IFES,Campus Alegre,Campus,https://www.ifes.edu.br
 IFES,Campus Cariacica,Campus,https://www.ifes.edu.br
@@ -269,13 +404,23 @@ IFES,Campus Ibatiba,Campus,https://www.ifes.edu.br
 IFES,Campus Linhares,Campus,https://www.ifes.edu.br
 IFES,Campus Nova Venécia,Campus,https://www.ifes.edu.br
 IFES,Campus Vila Velha,Campus,https://www.ifes.edu.br
-IFRN,Campus Zona Norte,Campus,https://portal.ifrn.edu.br
-IFRN,Campus Ipanguaçu,Campus,https://portal.ifrn.edu.br
-IFRN,Campus João Câmara,Campus,https://portal.ifrn.edu.br
-IFRN,Campus Macau,Campus,https://portal.ifrn.edu.br
-IFRN,Campus Pau dos Ferros,Campus,https://portal.ifrn.edu.br
-IFRN,Campus Apodi,Campus,https://portal.ifrn.edu.br
-IFRR,Campus Boa Vista,Campus,https://ifrr.edu.br
-IFRR,Campus Novo Paraíso,Campus,https://ifrr.edu.br
-IFRR,Campus Amajarí,Campus,https://ifrr.edu.br
-IFRS Campus Sertão,Campus Sertão,Campus,https://ifrs.edu.br/sertao
+IFES,Campus Venda Nova do Imigrante,Campus,https://www.ifes.edu.br
+CEFET-MG,Centro Federal de Educação Tecnológica de Minas Gerais,Instituto,https://www.cefetmg.br
+CEFET-RJ,Centro Federal de Educação Tecnológica Celso Suckow da Fonseca,Instituto,https://www.cefet-rj.br
+CEFET-MG,Campus Araxá,Campus,https://www.araxa.cefetmg.br
+CEFET-MG,Campus Belo Horizonte,Campus,https://www.belo-horizonte.cefetmg.br
+CEFET-MG,Campus Contagem,Campus,https://www.contagem.cefetmg.br
+CEFET-MG,Campus Curvelo,Campus,https://www.curvelo.cefetmg.br
+CEFET-MG,Campus Divinópolis,Campus,https://www.divinopolis.cefetmg.br
+CEFET-MG,Campus Leopoldina,Campus,https://www.leopoldina.cefetmg.br
+CEFET-MG,Campus Nepomuceno,Campus,https://www.nepomuceno.cefetmg.br
+CEFET-MG,Campus Timóteo,Campus,https://www.timoteo.cefetmg.br
+CEFET-MG,Campus Varginha,Campus,https://www.varginha.cefetmg.br
+CEFET-RJ,Campus Angra dos Reis,Campus,https://www.angra.cefet-rj.br
+CEFET-RJ,Campus Itaguaí,Campus,https://www.itaguai.cefet-rj.br
+CEFET-RJ,Campus Maracanã,Campus,https://www.maracana.cefet-rj.br
+CEFET-RJ,Campus Maria da Graça,Campus,https://www.mariadagraca.cefet-rj.br
+CEFET-RJ,Campus Nova Friburgo,Campus,https://www.novafriburgo.cefet-rj.br
+CEFET-RJ,Campus Nova Iguaçu,Campus,https://www.novaiguacu.cefet-rj.br
+CEFET-RJ,Campus Petrópolis,Campus,https://www.petropolis.cefet-rj.br
+CEFET-RJ,Campus Valença,Campus,https://www.valenca.cefet-rj.br

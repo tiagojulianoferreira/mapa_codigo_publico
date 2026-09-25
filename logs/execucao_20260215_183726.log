@@ -1,0 +1,24 @@
+2026-02-15 18:37:30,133 - INFO - ======================================================================
+2026-02-15 18:37:30,133 - INFO - 🚀 INICIANDO BUSCA INTELIGENTE COM FEEDBACK LOOP
+2026-02-15 18:37:30,133 - INFO - ======================================================================
+2026-02-15 18:37:30,141 - INFO - 
+📚 Processando Institutos Federais...
+2026-02-15 18:37:30,142 - INFO - 
+============================================================
+2026-02-15 18:37:30,142 - INFO - 🏛️  Processando IFBA - Instituto Federal da Bahia
+2026-02-15 18:37:30,142 - INFO - ============================================================
+2026-02-15 18:37:30,142 - INFO - 
+🔄 Iteração 1/3 para IFBA
+2026-02-15 18:37:30,142 - INFO -   🔎 Testando: "ifba"
+Traceback (most recent call last):
+  File "/home/tiago/Documentos/projetos/mapa_codigo_publico/github_busca_inteligente.py", line 499, in <module>
+    main()
+  File "/home/tiago/Documentos/projetos/mapa_codigo_publico/github_busca_inteligente.py", line 460, in main
+    resultado_if = buscador.processar_instituicoes_com_inteligencia(df_if)
+  File "/home/tiago/Documentos/projetos/mapa_codigo_publico/github_busca_inteligente.py", line 371, in processar_instituicoes_com_inteligencia
+    repos_encontrados = self.buscar_com_feedback_loop(sigla, nome, campus)
+  File "/home/tiago/Documentos/projetos/mapa_codigo_publico/github_busca_inteligente.py", line 254, in buscar_com_feedback_loop
+    eficiencia = self.calcular_eficiencia_query(query, resultados)
+  File "/home/tiago/Documentos/projetos/mapa_codigo_publico/github_busca_inteligente.py", line 148, in calcular_eficiencia_query
+    desc = repo.get('description', '').lower()
+AttributeError: 'NoneType' object has no attribute 'lower'
