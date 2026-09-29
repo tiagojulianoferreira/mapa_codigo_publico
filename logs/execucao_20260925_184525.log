@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "/home/tiago/Documentos/Pessoal/codigos/mapa_codigo_publico/github_busca_inteligente.py", line 1, in <module>
+    import pandas as pd
+ModuleNotFoundError: No module named 'pandas'

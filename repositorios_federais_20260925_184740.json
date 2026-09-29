@@ -1,4 +1,13 @@
 {
+  "metadata": {
+    "timestamp_consulta": "2026-09-25T18:47:40.119726",
+    "data_consulta": "2026-09-25",
+    "hora_consulta": "18:47:40",
+    "versao_script": "2.1.0",
+    "total_instituicoes": 496,
+    "total_repositorios": 32105,
+    "filtro_idioma": "português"
+  },
   "institutions_data": [
     {
       "Sigla": "IFBA",

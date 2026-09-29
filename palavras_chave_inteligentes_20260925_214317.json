@@ -1,0 +1,808 @@
+{
+  "timestamp_consulta": "2026-09-25T18:47:40.122077",
+  "institutions_keywords": [
+    {
+      "Sigla": "IFBA",
+      "Palavras_Chave": [
+        "classroom",
+        "github",
+        "sistema",
+        "sistemas",
+        "campus",
+        "ifba",
+        "trabalho",
+        "curso",
+        "para",
+        "atividades",
+        "desenvolvimento",
+        "ifbaiano",
+        "disciplina",
+        "projeto",
+        "seminario"
+      ]
+    },
+    {
+      "Sigla": "IFB",
+      "Palavras_Chave": [
+        "classroom",
+        "utils",
+        "ifba",
+        "django",
+        "curso",
+        "para",
+        "center",
+        "crypto",
+        "ifb",
+        "firmware",
+        "projeto",
+        "server",
+        "project",
+        "service",
+        "seminario"
+      ]
+    },
+    {
+      "Sigla": "IFES",
+      "Palavras_Chave": [
+        "task",
+        "const",
+        "ifest",
+        "baidu ife",
+        "disciplina",
+        "campus",
+        "trabalho",
+        "function",
+        "curso",
+        "return",
+        "ife",
+        "ifes",
+        "baidu",
+        "projeto",
+        "project"
+      ]
+    },
+    {
+      "Sigla": "IFRN",
+      "Palavras_Chave": [
+        "carlos",
+        "desenvolvido",
+        "sistemas",
+        "campus",
+        "federal",
+        "instituto",
+        "curso",
+        "para",
+        "ifsp",
+        "ifsc",
+        "desenvolvimento",
+        "disciplina",
+        "paulo",
+        "projeto",
+        "ifrn"
+      ]
+    },
+    {
+      "Sigla": "IFRR",
+      "Palavras_Chave": [
+        "github",
+        "sistema",
+        "ifrr",
+        "content",
+        "desenvolvido",
+        "sistemas",
+        "roraima",
+        "curso",
+        "para",
+        "site",
+        "desenvolvimento",
+        "tads",
+        "componente",
+        "disciplina",
+        "projeto"
+      ]
+    },
+    {
+      "Sigla": "IFMG",
+      "Palavras_Chave": [
+        "sistema",
+        "desenvolvido",
+        "sistemas",
+        "campus",
+        "federal",
+        "instituto",
+        "trabalho",
+        "curso",
+        "para",
+        "instituto federal",
+        "ifmg",
+        "tecnologia",
+        "desenvolvimento",
+        "disciplina",
+        "projeto"
+      ]
+    },
+    {
+      "Sigla": "IFSUL",
+      "Palavras_Chave": [
+        "sistema",
+        "desenvolvido",
+        "sistemas",
+        "campus",
+        "federal",
+        "instituto",
+        "trabalho",
+        "curso",
+        "para",
+        "instituto federal",
+        "tecnologia",
+        "desenvolvimento",
+        "disciplina",
+        "ifsul",
+        "projeto"
+      ]
+    },
+    {
+      "Sigla": "IFRJ",
+      "Palavras_Chave": [
+        "sistema",
+        "desenvolvido",
+        "sistemas",
+        "campus",
+        "federal",
+        "instituto",
+        "trabalho",
+        "curso",
+        "ifrj",
+        "para",
+        "instituto federal",
+        "tecnologia",
+        "disciplina",
+        "projeto",
+        "paulo"
+      ]
+    },
+    {
+      "Sigla": "IFAL",
+      "Palavras_Chave": [
+        "config",
+        "github",
+        "ifal",
+        "profile",
+        "trabalho",
+        "files",
+        "ifall",
+        "curso",
+        "para",
+        "alagoas",
+        "site",
+        "native",
+        "react",
+        "disciplina",
+        "projeto"
+      ]
+    },
+    {
+      "Sigla": "IFMA",
+      "Palavras_Chave": [
+        "sistema",
+        "desenvolvido",
+        "sistemas",
+        "campus",
+        "federal",
+        "instituto",
+        "trabalho",
+        "curso",
+        "para",
+        "instituto federal",
+        "tecnologia",
+        "desenvolvimento",
+        "disciplina",
+        "ifma",
+        "projeto"
+      ]
+    },
+    {
+      "Sigla": "IFPE",
+      "Palavras_Chave": [
+        "ifpe",
+        "sistema",
+        "desenvolvido",
+        "sistemas",
+        "campus",
+        "federal",
+        "instituto",
+        "trabalho",
+        "curso",
+        "para",
+        "instituto federal",
+        "desenvolvimento",
+        "tecnologia",
+        "disciplina",
+        "projeto"
+      ]
+    },
+    {
+      "Sigla": "IFPI",
+      "Palavras_Chave": [
+        "sala",
+        "ifpi",
+        "desenvolvido",
+        "sistemas",
+        "campus",
+        "trabalho",
+        "ads",
+        "curso",
+        "para",
+        "atividades",
+        "site",
+        "desenvolvimento",
+        "disciplina",
+        "projeto",
+        "algoritmos"
+      ]
+    },
+    {
+      "Sigla": "IFRO",
+      "Palavras_Chave": [
+        "config",
+        "github",
+        "profile",
+        "campus",
+        "ifro",
+        "files",
+        "curso",
+        "para",
+        "site",
+        "ifrog",
+        "ifrost",
+        "oficina",
+        "ifros",
+        "atividade",
+        "projeto"
+      ]
+    },
+    {
+      "Sigla": "IFPB",
+      "Palavras_Chave": [
+        "sistema",
+        "dados",
+        "sistemas",
+        "campus",
+        "curso",
+        "para",
+        "internet",
+        "site",
+        "desenvolvimento",
+        "projetos",
+        "disciplina",
+        "web",
+        "ifpb",
+        "projeto",
+        "project"
+      ]
+    },
+    {
+      "Sigla": "IFPA",
+      "Palavras_Chave": [
+        "sistema",
+        "desenvolvido",
+        "dados",
+        "campus",
+        "pinball",
+        "ifpan",
+        "curso",
+        "para",
+        "mobile",
+        "site",
+        "desenvolvimento",
+        "ifpa",
+        "disciplina",
+        "atividade",
+        "projeto"
+      ]
+    },
+    {
+      "Sigla": "IFCE",
+      "Palavras_Chave": [
+        "python",
+        "sistema",
+        "crato",
+        "dados",
+        "campus",
+        "trabalho",
+        "curso",
+        "para",
+        "java",
+        "atividades",
+        "cadeira",
+        "ifce",
+        "alunos",
+        "disciplina",
+        "projeto"
+      ]
+    },
+    {
+      "Sigla": "IFPR",
+      "Palavras_Chave": [
+        "sistema",
+        "desenvolvido",
+        "campus",
+        "trabalho",
+        "curso",
+        "para",
+        "site",
+        "ifprgit",
+        "desenvolvimento",
+        "tads",
+        "ifpr",
+        "disciplina",
+        "ifproject",
+        "project",
+        "projeto"
+      ]
+    },
+    {
+      "Sigla": "IFSP",
+      "Palavras_Chave": [
+        "semestre",
+        "sistema",
+        "dados",
+        "sistemas",
+        "campus",
+        "trabalho",
+        "curso",
+        "para",
+        "desenvolvimento",
+        "final",
+        "disciplina",
+        "web",
+        "project",
+        "projeto",
+        "ifsp"
+      ]
+    },
+    {
+      "Sigla": "IFSC",
+      "Palavras_Chave": [
+        "sistemas",
+        "engenharia",
+        "code",
+        "para",
+        "curso",
+        "details",
+        "codes",
+        "java",
+        "data",
+        "bank",
+        "ifsc",
+        "disciplina",
+        "using",
+        "indian",
+        "projeto"
+      ]
+    },
+    {
+      "Sigla": "IFTM",
+      "Palavras_Chave": [
+        "sistemas",
+        "iftm",
+        "campus",
+        "centro",
+        "trabalho",
+        "curso",
+        "para",
+        "internet",
+        "durante",
+        "atividades",
+        "tecnologia",
+        "projetos",
+        "disciplina",
+        "aula",
+        "projeto"
+      ]
+    },
+    {
+      "Sigla": "IFNMG",
+      "Palavras_Chave": [
+        "ifnmg",
+        "sistema",
+        "primeiro",
+        "backend",
+        "campus",
+        "salinas",
+        "rest",
+        "para",
+        "site",
+        "yearbook",
+        "desenvolvimento",
+        "digital",
+        "disciplina",
+        "web",
+        "projeto"
+      ]
+    },
+    {
+      "Sigla": "IFSULDEMINAS",
+      "Palavras_Chave": [
+        "caldas",
+        "machado",
+        "ifsuldeminas",
+        "desenvolvido",
+        "dados",
+        "sistemas",
+        "campus",
+        "trabalho",
+        "curso",
+        "para",
+        "desenvolvimento",
+        "ifsuldeminas campus",
+        "disciplina",
+        "atividade",
+        "projeto"
+      ]
+    },
+    {
+      "Sigla": "IFGoiano",
+      "Palavras_Chave": [
+        "estrutura",
+        "ifgoiano",
+        "github",
+        "dados",
+        "sistemas",
+        "campus",
+        "orientada",
+        "curso",
+        "para",
+        "java",
+        "objetos",
+        "goiano",
+        "site",
+        "disciplina",
+        "projeto"
+      ]
+    },
+    {
+      "Sigla": "IFG",
+      "Palavras_Chave": [
+        "python",
+        "github",
+        "content",
+        "trabalho",
+        "ifg",
+        "ifgram",
+        "para",
+        "data",
+        "java",
+        "with",
+        "ifgf",
+        "website",
+        "test",
+        "project",
+        "projeto"
+      ]
+    },
+    {
+      "Sigla": "IFSEMG",
+      "Palavras_Chave": [
+        "python",
+        "ionic",
+        "sistemas",
+        "campus",
+        "trabalho",
+        "sudeste",
+        "curso",
+        "java",
+        "para",
+        "linguagem",
+        "desenvolvimento",
+        "disciplina",
+        "pomba",
+        "ifsemg",
+        "projeto"
+      ]
+    },
+    {
+      "Sigla": "IFMS",
+      "Palavras_Chave": [
+        "github",
+        "sistema",
+        "ifmslego",
+        "ifms",
+        "management",
+        "campus",
+        "trabalho",
+        "curso",
+        "para",
+        "ifm",
+        "system",
+        "atividade",
+        "aula",
+        "projeto",
+        "project"
+      ]
+    },
+    {
+      "Sigla": "IFAP",
+      "Palavras_Chave": [
+        "ifapme",
+        "ifapp",
+        "sistemas",
+        "campus",
+        "ifba",
+        "federal",
+        "conquista",
+        "curso",
+        "para",
+        "site",
+        "ifap",
+        "ifapa",
+        "disciplina",
+        "project",
+        "projeto"
+      ]
+    },
+    {
+      "Sigla": "IFAM",
+      "Palavras_Chave": [
+        "minicurso",
+        "estrutura",
+        "github",
+        "estrutura dados",
+        "dados",
+        "disciplina",
+        "ifame",
+        "curso",
+        "ifam",
+        "para",
+        "ifams",
+        "ifamily",
+        "ifam estrutura",
+        "project",
+        "projeto"
+      ]
+    },
+    {
+      "Sigla": "IFMT",
+      "Palavras_Chave": [
+        "sala",
+        "sistema",
+        "ifmt",
+        "sistemas",
+        "campus",
+        "curso",
+        "para",
+        "internet",
+        "atividades",
+        "realizadas",
+        "desenvolvimento",
+        "disciplina",
+        "atividade",
+        "aula",
+        "projeto"
+      ]
+    },
+    {
+      "Sigla": "IFTO",
+      "Palavras_Chave": [
+        "ifto",
+        "sistema",
+        "plus",
+        "iftools",
+        "sistemas",
+        "campus",
+        "curso",
+        "para",
+        "atividades",
+        "desenvolvimento",
+        "iftop",
+        "disciplina",
+        "web",
+        "aula",
+        "projeto"
+      ]
+    },
+    {
+      "Sigla": "IFAC",
+      "Palavras_Chave": [
+        "paper",
+        "code",
+        "ifac",
+        "ifactory",
+        "this",
+        "with",
+        "model",
+        "project",
+        "based",
+        "control",
+        "projeto",
+        "network",
+        "iface",
+        "interface",
+        "interfaces"
+      ]
+    },
+    {
+      "Sigla": "IFFar",
+      "Palavras_Chave": [
+        "semestre",
+        "sistema",
+        "dados",
+        "campus",
+        "santo",
+        "trabalho",
+        "curso",
+        "para",
+        "amaro",
+        "site",
+        "semana",
+        "oficina",
+        "disciplina",
+        "projeto",
+        "iffar"
+      ]
+    },
+    {
+      "Sigla": "IFS",
+      "Palavras_Chave": [
+        "function",
+        "case",
+        "data",
+        "then",
+        "transparent",
+        "return",
+        "yellow",
+        "ifsc",
+        "local",
+        "break",
+        "esac",
+        "else",
+        "ifs",
+        "echo",
+        "ifsp"
+      ]
+    },
+    {
+      "Sigla": "IFRS",
+      "Palavras_Chave": [
+        "accounting",
+        "credit",
+        "trabalho",
+        "campus",
+        "curso",
+        "risk",
+        "para",
+        "fuwmove",
+        "ifrs",
+        "opts",
+        "financial",
+        "html",
+        "ifr",
+        "free",
+        "projeto"
+      ]
+    },
+    {
+      "Sigla": "IFC",
+      "Palavras_Chave": [
+        "ifc",
+        "python",
+        "sistemas",
+        "campus",
+        "federal",
+        "instituto",
+        "files",
+        "curso",
+        "para",
+        "instituto federal",
+        "trabalho",
+        "tecnologia",
+        "disciplina",
+        "bim",
+        "projeto"
+      ]
+    },
+    {
+      "Sigla": "IFBAIANO",
+      "Palavras_Chave": [
+        "python",
+        "campus",
+        "curso",
+        "para",
+        "rede",
+        "aulas",
+        "cepedi",
+        "baiano",
+        "ifbaiano",
+        "nuvem",
+        "disciplina",
+        "atividade",
+        "virtual",
+        "projeto",
+        "algoritmos"
+      ]
+    },
+    {
+      "Sigla": "IFRS Campus Sertão",
+      "Palavras_Chave": [
+        "condominio",
+        "campus",
+        "ifrs campus sertão",
+        "juventude",
+        "campus sertão",
+        "curso",
+        "para",
+        "ifrs campus",
+        "atividades",
+        "ifrs",
+        "semana",
+        "website",
+        "desenvolvimento",
+        "sertão",
+        "disciplina",
+        "projeto"
+      ]
+    },
+    {
+      "Sigla": "IFSul",
+      "Palavras_Chave": [
+        "ifsuldeminas",
+        "sistema",
+        "desenvolvido",
+        "sistemas",
+        "campus",
+        "trabalho",
+        "curso",
+        "para",
+        "site",
+        "desenvolvimento",
+        "disciplina",
+        "ifsul",
+        "atividade",
+        "aula",
+        "projeto"
+      ]
+    },
+    {
+      "Sigla": "CEFET-MG",
+      "Palavras_Chave": [
+        "programação",
+        "tp0",
+        "programação web",
+        "tp0 curso",
+        "trabalho",
+        "curso",
+        "web",
+        "para",
+        "cefet mg",
+        "cefet-mg",
+        "tp0 tp0",
+        "web cefet",
+        "disciplina",
+        "cefet",
+        "mg",
+        "projeto"
+      ]
+    },
+    {
+      "Sigla": "CEFET-RJ",
+      "Palavras_Chave": [
+        "cefet-rj",
+        "repository",
+        "dados",
+        "sistemas",
+        "trabalho",
+        "arquivos",
+        "curso",
+        "para",
+        "cefet rj",
+        "rj",
+        "software",
+        "trabalhos",
+        "disciplina",
+        "cefet",
+        "projeto",
+        "algoritmos"
+      ]
+    }
+  ]
+}

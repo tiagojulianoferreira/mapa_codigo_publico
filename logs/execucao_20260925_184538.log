@@ -1,0 +1,21 @@
+2026-09-25 18:45:39,861 - INFO - ======================================================================
+2026-09-25 18:45:39,861 - INFO - 🚀 INICIANDO BUSCA INTELIGENTE COM FEEDBACK LOOP E FILTRO DE IDIOMA
+2026-09-25 18:45:39,861 - INFO - ======================================================================
+[nltk_data] Downloading package punkt to /home/tiago/nltk_data...
+[nltk_data]   Unzipping tokenizers/punkt.zip.
+[nltk_data] Downloading package stopwords to /home/tiago/nltk_data...
+[nltk_data]   Unzipping corpora/stopwords.zip.
+2026-09-25 18:45:40,713 - INFO - 
+📚 Processando Institutos Federais...
+2026-09-25 18:45:40,723 - INFO - 
+============================================================
+2026-09-25 18:45:40,723 - INFO - 🏛️  Processando IFBA - Instituto Federal da Bahia
+2026-09-25 18:45:40,723 - INFO - ============================================================
+2026-09-25 18:45:40,723 - INFO - 
+🔄 Iteração 1/3 para IFBA
+2026-09-25 18:45:40,723 - INFO -   🔎 Testando: "ifba"
+2026-09-25 18:45:40,953 - ERROR -       ❌ Erro: 401 Client Error: Unauthorized for url: https://api.github.com/search/repositories?q=%22ifba%22&sort=stars&order=desc&per_page=100&page=1
+2026-09-25 18:45:40,953 - INFO -      ✅ 0 resultados (eficiência: 0.00)
+2026-09-25 18:45:41,953 - INFO -   🔎 Testando: "instituto federal"
+2026-09-25 18:45:42,164 - ERROR -       ❌ Erro: 401 Client Error: Unauthorized for url: https://api.github.com/search/repositories?q=%22instituto+federal%22&sort=stars&order=desc&per_page=100&page=1
+2026-09-25 18:45:42,165 - INFO -      ✅ 0 resultados (eficiência: 0.00)
